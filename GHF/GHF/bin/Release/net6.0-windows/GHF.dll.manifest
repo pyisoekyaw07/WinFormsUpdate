@@ -89,22 +89,22 @@
       <dsig:DigestValue>PxBNSxbEzktbbEW/nvKRxxzkV8jtmf02bweYCIRne30=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.dll" size="116736">
+  <file name="GHF.dll" size="118272">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2ajQCgfKQtqrIq7pLsKX3lr17rLujvUl1pEODS+1ueM=</dsig:DigestValue>
+      <dsig:DigestValue>SH2VNRnYYpAnR0CEdqMmfO7FVt4Jz0+RAZGjrPjmrDM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.exe" size="147968">
+  <file name="GHF.exe" size="147456">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Xc3EhqRV1XSQfLWlt/ZovASp+KGSfGLpSmNLS4QtgCg=</dsig:DigestValue>
+      <dsig:DigestValue>1Yowz4Q00j+8JeyCV+dlOHayAyTDl8nxPWceIkmmjk4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.runtimeconfig.json" size="372">
