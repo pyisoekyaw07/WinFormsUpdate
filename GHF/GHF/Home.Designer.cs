@@ -49,6 +49,7 @@
             cashierToolStripMenuItem = new ToolStripMenuItem();
             gold1 = new Gold();
             master1 = new Master();
+            label3 = new Label();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -68,6 +69,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(panel4);
@@ -158,7 +160,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { goldToolStripMenuItem1, whiteGoldToolStripMenuItem1, gemDiamondToolStripMenuItem, cashierToolStripMenuItem });
             menuStrip2.Location = new Point(11, 13);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(404, 29);
+            menuStrip2.Size = new Size(284, 29);
             menuStrip2.TabIndex = 1;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -187,20 +189,19 @@
             // 
             registerToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { test1ToolStripMenuItem, test2ToolStripMenuItem });
             registerToolStripMenuItem1.Name = "registerToolStripMenuItem1";
-            registerToolStripMenuItem1.Size = new Size(180, 26);
+            registerToolStripMenuItem1.Size = new Size(121, 26);
             registerToolStripMenuItem1.Text = "Register";
             // 
             // test1ToolStripMenuItem
             // 
             test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
-            test1ToolStripMenuItem.Size = new Size(180, 26);
+            test1ToolStripMenuItem.Size = new Size(110, 26);
             test1ToolStripMenuItem.Text = "Test 1";
-        
             // 
             // test2ToolStripMenuItem
             // 
             test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
-            test2ToolStripMenuItem.Size = new Size(180, 26);
+            test2ToolStripMenuItem.Size = new Size(110, 26);
             test2ToolStripMenuItem.Text = "Test 2";
             // 
             // gemDiamondToolStripMenuItem
@@ -230,6 +231,16 @@
             master1.Name = "master1";
             master1.Size = new Size(1300, 477);
             master1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(1220, 41);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 21);
+            label3.TabIndex = 7;
+            label3.Text = "Ver 1.0.0";
             // 
             // Form2
             // 
@@ -277,5 +288,6 @@
         private Button button2;
         private Master master1;
         private Button button3;
+        private Label label3;
     }
 }
