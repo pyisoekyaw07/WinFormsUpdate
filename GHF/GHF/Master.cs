@@ -154,9 +154,7 @@ namespace GHF
 
         private void btn_item_Click(object sender, EventArgs e)
         {
-            Pan_item.Show();
         }
-
     }
 
 }
