@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shwe Nan Taw\\Desktop\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj": {}
+    "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shwe Nan Taw\\Desktop\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj": {
+    "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shwe Nan Taw\\Desktop\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj",
+        "projectUniqueName": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj",
         "projectName": "GHF",
-        "projectPath": "C:\\Users\\Shwe Nan Taw\\Desktop\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj",
+        "projectPath": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj",
         "packagesPath": "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shwe Nan Taw\\Desktop\\WinFormsUpdate\\GHF\\GHF\\obj\\",
+        "outputPath": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

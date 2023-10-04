@@ -33,7 +33,6 @@ namespace GHF
             gold1.Show();
             master1.Hide();
 
-
         }
 
         private void button2_Click(object sender, EventArgs e)

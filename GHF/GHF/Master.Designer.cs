@@ -39,9 +39,8 @@
             itemtype_combo = new ComboBox();
             txt_master_item = new TextBox();
             Parentitem_combo = new ComboBox();
-            btn_sourceremark = new Button();
-            btn_goldtype = new Button();
             btn_item = new Button();
+            button2 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             Pan_item.SuspendLayout();
@@ -64,14 +63,12 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1282, 458);
             tabControl1.TabIndex = 4;
-
             // 
             // tabPage1
             // 
             tabPage1.BackColor = Color.Transparent;
+            tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(Pan_item);
-            tabPage1.Controls.Add(btn_sourceremark);
-            tabPage1.Controls.Add(btn_goldtype);
             tabPage1.Controls.Add(btn_item);
             tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
@@ -93,7 +90,7 @@
             Pan_item.Controls.Add(Parentitem_combo);
             Pan_item.Location = new Point(6, 48);
             Pan_item.Name = "Pan_item";
-            Pan_item.Size = new Size(512, 346);
+            Pan_item.Size = new Size(523, 346);
             Pan_item.TabIndex = 22;
             // 
             // label2
@@ -161,24 +158,7 @@
             Parentitem_combo.Name = "Parentitem_combo";
             Parentitem_combo.Size = new Size(283, 29);
             Parentitem_combo.TabIndex = 16;
-            // 
-            // btn_sourceremark
-            // 
-            btn_sourceremark.Location = new Point(228, 6);
-            btn_sourceremark.Name = "btn_sourceremark";
-            btn_sourceremark.Size = new Size(109, 36);
-            btn_sourceremark.TabIndex = 21;
-            btn_sourceremark.Text = "Source Remark";
-            btn_sourceremark.UseVisualStyleBackColor = true;
-            // 
-            // btn_goldtype
-            // 
-            btn_goldtype.Location = new Point(117, 6);
-            btn_goldtype.Name = "btn_goldtype";
-            btn_goldtype.Size = new Size(109, 36);
-            btn_goldtype.TabIndex = 20;
-            btn_goldtype.Text = "Gold Type";
-            btn_goldtype.UseVisualStyleBackColor = true;
+            Parentitem_combo.Click += Parentitem_combo_Click;
             // 
             // btn_item
             // 
@@ -189,6 +169,16 @@
             btn_item.Text = "Item";
             btn_item.UseVisualStyleBackColor = true;
             btn_item.Click += btn_item_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(121, 6);
+            button2.Name = "button2";
+            button2.Size = new Size(109, 36);
+            button2.TabIndex = 23;
+            button2.Text = "Gold Type";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Master
             // 
@@ -218,9 +208,8 @@
         private ComboBox Parentitem_combo;
         private TextBox txt_master_item;
         private CheckBox chk_parent;
-        private Button btn_sourceremark;
-        private Button btn_goldtype;
         private Button btn_item;
         private Panel Pan_item;
+        private Button button2;
     }
 }

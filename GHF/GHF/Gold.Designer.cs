@@ -541,6 +541,7 @@
             // 
             // pictureBox
             // 
+            pictureBox.BorderStyle = BorderStyle.FixedSingle;
             pictureBox.Image = (Image)resources.GetObject("pictureBox.Image");
             pictureBox.Location = new Point(1057, 8);
             pictureBox.Name = "pictureBox";
@@ -569,18 +570,24 @@
             // 
             // comboBox3
             // 
+            comboBox3.DropDownHeight = 100;
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.FormattingEnabled = true;
+            comboBox3.IntegralHeight = false;
             comboBox3.Location = new Point(149, 137);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(298, 29);
             comboBox3.TabIndex = 57;
- 
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            comboBox3.SelectionChangeCommitted += comboBox3_SelectionChangeCommitted;
+            comboBox3.Click += comboBox3_Click;
             // 
             // comboBox4
             // 
+            comboBox4.DropDownHeight = 100;
             comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox4.FormattingEnabled = true;
+            comboBox4.IntegralHeight = false;
             comboBox4.Location = new Point(149, 183);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(298, 29);

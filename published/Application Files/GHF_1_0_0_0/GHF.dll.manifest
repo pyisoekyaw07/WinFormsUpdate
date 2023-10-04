@@ -89,13 +89,13 @@
       <dsig:DigestValue>PxBNSxbEzktbbEW/nvKRxxzkV8jtmf02bweYCIRne30=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.dll" size="118272">
+  <file name="GHF.dll" size="126976">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SH2VNRnYYpAnR0CEdqMmfO7FVt4Jz0+RAZGjrPjmrDM=</dsig:DigestValue>
+      <dsig:DigestValue>wRwSdjAoNLc6I0nmEqyq3uLwYBbxMvoAwy/eWEkegTQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.exe" size="147456">
