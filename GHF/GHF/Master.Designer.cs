@@ -31,6 +31,8 @@
             label1 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            comboBox1 = new ComboBox();
+            groupBox1 = new GroupBox();
             Pan_item = new Panel();
             label2 = new Label();
             btn_save = new Button();
@@ -39,17 +41,16 @@
             itemtype_combo = new ComboBox();
             txt_master_item = new TextBox();
             Parentitem_combo = new ComboBox();
-            btn_item = new Button();
-            button2 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            groupBox1.SuspendLayout();
             Pan_item.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(62, 102);
+            label1.Location = new Point(37, 102);
             label1.Name = "label1";
             label1.Size = new Size(33, 21);
             label1.TabIndex = 0;
@@ -61,21 +62,41 @@
             tabControl1.Location = new Point(3, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1282, 458);
+            tabControl1.Size = new Size(1282, 471);
             tabControl1.TabIndex = 4;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = Color.Transparent;
-            tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(Pan_item);
-            tabPage1.Controls.Add(btn_item);
+            tabPage1.Controls.Add(comboBox1);
+            tabPage1.Controls.Add(groupBox1);
             tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1274, 424);
+            tabPage1.Size = new Size(1274, 437);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Product Master";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Item/Itemname", "GoldType", "Gold Price", "Source Remark" });
+            comboBox1.Location = new Point(6, 13);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(300, 29);
+            comboBox1.TabIndex = 26;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(Pan_item);
+            groupBox1.Location = new Point(6, 48);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1228, 383);
+            groupBox1.TabIndex = 25;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
             // 
             // Pan_item
             // 
@@ -88,15 +109,15 @@
             Pan_item.Controls.Add(itemtype_combo);
             Pan_item.Controls.Add(txt_master_item);
             Pan_item.Controls.Add(Parentitem_combo);
-            Pan_item.Location = new Point(6, 48);
+            Pan_item.Location = new Point(18, 27);
             Pan_item.Name = "Pan_item";
-            Pan_item.Size = new Size(523, 346);
+            Pan_item.Size = new Size(512, 346);
             Pan_item.TabIndex = 22;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(62, 45);
+            label2.Location = new Point(37, 45);
             label2.Name = "label2";
             label2.Size = new Size(61, 21);
             label2.TabIndex = 11;
@@ -160,26 +181,6 @@
             Parentitem_combo.TabIndex = 16;
             Parentitem_combo.Click += Parentitem_combo_Click;
             // 
-            // btn_item
-            // 
-            btn_item.Location = new Point(6, 6);
-            btn_item.Name = "btn_item";
-            btn_item.Size = new Size(109, 36);
-            btn_item.TabIndex = 19;
-            btn_item.Text = "Item";
-            btn_item.UseVisualStyleBackColor = true;
-            btn_item.Click += btn_item_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(121, 6);
-            button2.Name = "button2";
-            button2.Size = new Size(109, 36);
-            button2.TabIndex = 23;
-            button2.Text = "Gold Type";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // Master
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -191,6 +192,7 @@
             Leave += Master_Leave;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
             Pan_item.ResumeLayout(false);
             Pan_item.PerformLayout();
             ResumeLayout(false);
@@ -208,8 +210,8 @@
         private ComboBox Parentitem_combo;
         private TextBox txt_master_item;
         private CheckBox chk_parent;
-        private Button btn_item;
         private Panel Pan_item;
-        private Button button2;
+        private GroupBox groupBox1;
+        private ComboBox comboBox1;
     }
 }

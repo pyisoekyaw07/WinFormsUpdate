@@ -558,6 +558,8 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(298, 29);
             comboBox1.TabIndex = 55;
+        
+            comboBox1.Click += comboBox1_Click;
             // 
             // comboBox2
             // 
@@ -567,6 +569,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(122, 29);
             comboBox2.TabIndex = 56;
+            comboBox2.Click += comboBox2_Click;
             // 
             // comboBox3
             // 
@@ -579,7 +582,6 @@
             comboBox3.Size = new Size(298, 29);
             comboBox3.TabIndex = 57;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
-            comboBox3.SelectionChangeCommitted += comboBox3_SelectionChangeCommitted;
             comboBox3.Click += comboBox3_Click;
             // 
             // comboBox4
@@ -810,7 +812,6 @@
             Controls.Add(label1);
             Name = "Gold";
             Size = new Size(1404, 698);
-            Load += Gold_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);

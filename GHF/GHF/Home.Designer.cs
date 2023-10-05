@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button1 = new Button();
             panel2 = new Panel();
+            button4 = new Button();
+            label3 = new Label();
             button3 = new Button();
             button2 = new Button();
             panel4 = new Panel();
@@ -47,9 +49,8 @@
             test2ToolStripMenuItem = new ToolStripMenuItem();
             gemDiamondToolStripMenuItem = new ToolStripMenuItem();
             cashierToolStripMenuItem = new ToolStripMenuItem();
-            gold1 = new Gold();
             master1 = new Master();
-            label3 = new Label();
+            gold1 = new Gold();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -69,6 +70,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
@@ -82,9 +84,29 @@
             panel2.Size = new Size(1478, 88);
             panel2.TabIndex = 2;
             // 
+            // button4
+            // 
+            button4.Location = new Point(213, 57);
+            button4.Name = "button4";
+            button4.Size = new Size(161, 31);
+            button4.TabIndex = 8;
+            button4.Text = "Home";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(1220, 41);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 21);
+            label3.TabIndex = 7;
+            label3.Text = "Ver 1.0.0";
+            // 
             // button3
             // 
-            button3.Location = new Point(523, 57);
+            button3.Location = new Point(560, 57);
             button3.Name = "button3";
             button3.Size = new Size(161, 31);
             button3.TabIndex = 6;
@@ -93,7 +115,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(356, 57);
+            button2.Location = new Point(387, 57);
             button2.Name = "button2";
             button2.Size = new Size(161, 31);
             button2.TabIndex = 5;
@@ -174,7 +196,7 @@
             // registerToolStripMenuItem
             // 
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            registerToolStripMenuItem.Size = new Size(121, 26);
+            registerToolStripMenuItem.Size = new Size(180, 26);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
@@ -216,6 +238,13 @@
             cashierToolStripMenuItem.Size = new Size(60, 25);
             cashierToolStripMenuItem.Text = "Cashier";
             // 
+            // master1
+            // 
+            master1.Location = new Point(3, 130);
+            master1.Name = "master1";
+            master1.Size = new Size(1300, 477);
+            master1.TabIndex = 5;
+            // 
             // gold1
             // 
             gold1.AutoSize = true;
@@ -224,23 +253,6 @@
             gold1.Name = "gold1";
             gold1.Size = new Size(1478, 789);
             gold1.TabIndex = 4;
-            // 
-            // master1
-            // 
-            master1.Location = new Point(0, 144);
-            master1.Name = "master1";
-            master1.Size = new Size(1300, 477);
-            master1.TabIndex = 5;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1220, 41);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 21);
-            label3.TabIndex = 7;
-            label3.Text = "Ver 1.0.0";
             // 
             // Form2
             // 
@@ -289,5 +301,6 @@
         private Master master1;
         private Button button3;
         private Label label3;
+        private Button button4;
     }
 }

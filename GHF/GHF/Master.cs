@@ -10,12 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Controls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.Win32.SafeHandles;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace GHF
 {
     public partial class Master : System.Windows.Forms.UserControl
     {
-        private object connn;
+        private object connn; /*SQL Connection*/
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
 
         public Master()
@@ -23,76 +26,163 @@ namespace GHF
             InitializeComponent();
         }
 
-        private void Master_Load(object sender, EventArgs e)
+        private void Master_Load(object sender, EventArgs e)/*user control form load*/
         {
             Parentitem_combo.Hide();
             Pan_item.Hide();
+            groupBox1.Hide();
         }
-        private void Master_Leave(object sender, EventArgs e)
+        private void Master_Leave(object sender, EventArgs e)/*user control form leave*/
         {
             chk_parent.Checked = false;
             Pan_item.Hide();
+            groupBox1.Hide();
+            /*comboBox1.Items.Clear();*/
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)/*Save button; insert Item,Goldtype,Source Remark*/
 
         {
-            if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == false)
+            if (comboBox1.SelectedIndex == 0)/*choose main master type (item/itemname)*/
             {
-                con.Open();
-                SqlCommand goldcmd = new SqlCommand("insert into golditem values(@gold)", con);
-                goldcmd.Parameters.AddWithValue("@gold", txt_master_item.Text);
-                goldcmd.ExecuteNonQuery();
+                if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == false)
                 {
-                    MessageBox.Show("success");
-                    txt_master_item.Text = "";
+                    con.Open();
+                    SqlCommand goldcmd = new SqlCommand("insert into golditem values(@gold)", con);
+                    goldcmd.Parameters.AddWithValue("@gold", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
+                    con.Close();
                 }
-                con.Close();
+                else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "" && chk_parent.Checked == false)
+                {
+                    con.Open();
+                    SqlCommand goldcmd = new SqlCommand("insert into whitegold_item values(@whitegold)", con);
+                    goldcmd.Parameters.AddWithValue("@whitegold", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
+                    con.Close();
+                }
+                else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "" && chk_parent.Checked == false)
+                {
+                    con.Open();
+                    SqlCommand goldcmd = new SqlCommand("insert into gems_item values(@gems)", con);
+                    goldcmd.Parameters.AddWithValue("@gems", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
+                    con.Close();
+
+                }
+                else if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == true)
+                {
+                    con.Open();
+                    SqlCommand goldcmd = new SqlCommand("insert into gold_itemname values(@Item,@Itemname)", con);
+                    goldcmd.Parameters.AddWithValue("@Item", Parentitem_combo.Text);
+                    goldcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Check Item");
+                }
             }
-            else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "" && chk_parent.Checked == false)
+            else if (comboBox1.SelectedIndex == 1)/*choose main master type (GoldType)*/
             {
-                con.Open();
-                SqlCommand goldcmd = new SqlCommand("insert into whitegold_item values(@whitegold)", con);
-                goldcmd.Parameters.AddWithValue("@whitegold", txt_master_item.Text);
-                goldcmd.ExecuteNonQuery();
+                if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
                 {
-                    MessageBox.Show("success");
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into gold_type values('" + txt_master_item.Text + "')";
+                    cmd.ExecuteNonQuery();
+
                     txt_master_item.Text = "";
+
+                    con.Close();
+                    MessageBox.Show("Success");
                 }
-                con.Close();
-            }
-            else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "" && chk_parent.Checked == false)
+                else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into whitegold_type values('" + txt_master_item.Text + "')";
+                    cmd.ExecuteNonQuery();
+
+                    txt_master_item.Text = "";
+
+                    con.Close();
+                    MessageBox.Show("Success");
+                }
+                else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into gem_type values('" + txt_master_item.Text + "')";
+                    cmd.ExecuteNonQuery();
+
+                    txt_master_item.Text = "";
+
+                    con.Close();
+                    MessageBox.Show("Success");
+                }
+
+            }else if (comboBox1.SelectedIndex == 2)
             {
-                con.Open();
-                SqlCommand goldcmd = new SqlCommand("insert into gems_item values(@gems)", con);
-                goldcmd.Parameters.AddWithValue("@gems", txt_master_item.Text);
-                goldcmd.ExecuteNonQuery();
+                if (itemtype_combo.SelectedIndex==0 && txt_master_item.Text != "")
                 {
-                    MessageBox.Show("success");
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into gold_price values('" + txt_master_item.Text + "')";
+                    cmd.ExecuteNonQuery();
+
                     txt_master_item.Text = "";
+
+                    con.Close();
+                    MessageBox.Show("Success");
                 }
-                con.Close();
 
             }
-            else if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == true)
+            else if (comboBox1.SelectedIndex == 3) /*choose main master type (source remark)*/
             {
-                con.Open();
-                SqlCommand goldcmd = new SqlCommand("insert into gold_itemname values(@Item,@Itemname)", con);
-                goldcmd.Parameters.AddWithValue("@Item", Parentitem_combo.Text);
-                goldcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
-                goldcmd.ExecuteNonQuery();
+                if (txt_master_item.Text != "")
                 {
-                    MessageBox.Show("success");
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into source_remark values('" + txt_master_item.Text + "')";
+                    cmd.ExecuteNonQuery();
+
                     txt_master_item.Text = "";
+
+                    con.Close();
+                    MessageBox.Show("Success");
                 }
-                con.Close();
+
             }
             else
             {
-                MessageBox.Show("Check Item");
+                MessageBox.Show("check");
             }
 
+
         }
-        private void chk_parent_CheckedChanged(object sender, EventArgs e)
+        private void chk_parent_CheckedChanged(object sender, EventArgs e)/*check box*/
         {
             if (chk_parent.Checked)
             {
@@ -103,16 +193,8 @@ namespace GHF
                 Parentitem_combo.Hide();
             }
         }
-        private void btn_item_Click(object sender, EventArgs e)
-        {
-            Pan_item.Show();
-            label1.Text = "Item";
-            chk_parent.Show();
-            itemtype_combo.Show();
-            label2.Show();
-        }
 
-        private void Parentitem_combo_Click(object sender, EventArgs e)
+        private void Parentitem_combo_Click(object sender, EventArgs e)/*insert itemname*/
         {
             if (itemtype_combo.SelectedIndex == 0)
             {
@@ -172,12 +254,48 @@ namespace GHF
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)/*choose master input type*/
         {
-            label1.Text = "Gold Type";
-            chk_parent.Hide();
-            itemtype_combo.Hide();
-            label2.Hide();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                groupBox1.Show();
+                Pan_item.Show();
+                label1.Text = "Item";
+                chk_parent.Show();
+                itemtype_combo.Show();
+                label2.Show();
+                groupBox1.Text = "Item";
+                itemtype_combo.Enabled = true;
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                groupBox1.Show();
+                label1.Text = "Gold Type";
+                chk_parent.Hide();
+                Pan_item.Show();
+                groupBox1.Text = "Gold Type";
+                itemtype_combo.Enabled = true;
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                groupBox1.Show();
+                groupBox1.Text = "Gold Price";
+                label1.Text = "Gold Price";
+                chk_parent.Hide();
+                Pan_item.Show();
+                itemtype_combo.Enabled = true;
+
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                itemtype_combo.Enabled = false;
+                label1.Text = "Source Remark";
+                groupBox1.Text = "Source Remark";
+                groupBox1.Show();
+                Pan_item.Show();
+                chk_parent.Hide();
+            }
         }
     }
 

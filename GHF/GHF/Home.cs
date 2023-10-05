@@ -39,9 +39,15 @@ namespace GHF
         {
             master1.Show();
             gold1.Hide();
+            panel1.Hide();
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+            master1.Hide();
 
+        }
     }
 }
