@@ -15,6 +15,17 @@ namespace GHF
     {
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
 
+        private static Gold _instance;
+        public static Gold Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Gold();
+                return _instance;
+            }
+        }
+
         public Gold()
         {
             InitializeComponent();
@@ -31,7 +42,7 @@ namespace GHF
             d = DateTime.Now;
             txt_date.Text = d.ToString("dd/MMM/yyyy");
             txt_time.Text = DateTime.Now.ToLongTimeString();
-           
+
         }
 
 
@@ -49,10 +60,10 @@ namespace GHF
 
         }
 
-        private void comboBox3_Click(object sender, EventArgs e)/*Show Item*/
+        /*private void comboBox3_Click(object sender, EventArgs e)*//*Show Item*//*
         {
             item();
-        }
+        }*/
         public void item()/*function item*/
         {
             comboBox4.Items.Clear();
@@ -89,11 +100,11 @@ namespace GHF
             }
             con.Close();
         }
-
-        private void comboBox2_Click(object sender, EventArgs e)/*show Goldtype*/
-        {
-            Gtype();
-        }
+        /*
+                private void comboBox2_Click(object sender, EventArgs e)*//*show Goldtype*//*
+                {
+                    Gtype();
+                }*/
         public void Gtype()/*function Gold type */
         {
             comboBox2.Items.Clear();
@@ -112,13 +123,6 @@ namespace GHF
             con.Close();
         }
 
-        private void comboBox1_Click(object sender, EventArgs e)/*show source remark*/
-        {
-            sourceremark();
-          /*  Gtype();
-            item();
-            goldprice();*/
-        }
         public void sourceremark()/*function source remark */
         {
             comboBox1.Items.Clear();
@@ -132,7 +136,7 @@ namespace GHF
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                comboBox1.Items.Add(dr["source_remark"].ToString());
+                comboBox1.Items.Add(dr["remark"].ToString());
             }
             con.Close();
         }
@@ -154,5 +158,19 @@ namespace GHF
             con.Close();
         }
 
+        private void Gold_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+     /* private void Gold_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
+        }*/
+
+        /*  private void comboBox1_Click_1(object sender, EventArgs e)
+          {
+              sourceremark();
+          }*/
     }
 }

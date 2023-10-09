@@ -103,47 +103,47 @@ namespace GHF
             {
                 if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
                 {
+
                     con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "insert into gold_type values('" + txt_master_item.Text + "')";
-                    cmd.ExecuteNonQuery();
-
-                    txt_master_item.Text = "";
-
+                    SqlCommand goldcmd = new SqlCommand("insert into gold_type values(@gold)", con);
+                    goldcmd.Parameters.AddWithValue("@gold", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
                     con.Close();
-                    MessageBox.Show("Success");
+
                 }
                 else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "")
                 {
                     con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "insert into whitegold_type values('" + txt_master_item.Text + "')";
-                    cmd.ExecuteNonQuery();
-
-                    txt_master_item.Text = "";
-
+                    SqlCommand goldcmd = new SqlCommand("insert into whitegold_type values(@whitegold)", con);
+                    goldcmd.Parameters.AddWithValue("@whitegold", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
                     con.Close();
-                    MessageBox.Show("Success");
                 }
                 else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "")
                 {
                     con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "insert into gem_type values('" + txt_master_item.Text + "')";
-                    cmd.ExecuteNonQuery();
-
-                    txt_master_item.Text = "";
-
+                    SqlCommand goldcmd = new SqlCommand("insert into gem_type values(@gem)", con);
+                    goldcmd.Parameters.AddWithValue("@gem", txt_master_item.Text);
+                    goldcmd.ExecuteNonQuery();
+                    {
+                        MessageBox.Show("success");
+                        txt_master_item.Text = "";
+                    }
                     con.Close();
-                    MessageBox.Show("Success");
                 }
 
-            }else if (comboBox1.SelectedIndex == 2)
+            }
+            else if (comboBox1.SelectedIndex == 2)/*choose main master type (Goldprice)*/
             {
-                if (itemtype_combo.SelectedIndex==0 && txt_master_item.Text != "")
+                if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
@@ -160,19 +160,15 @@ namespace GHF
             }
             else if (comboBox1.SelectedIndex == 3) /*choose main master type (source remark)*/
             {
-                if (txt_master_item.Text != "")
+                con.Open();
+                SqlCommand goldcmd = new SqlCommand("insert into source_remark values(@remark)", con);
+                goldcmd.Parameters.AddWithValue("@remark", txt_master_item.Text);
+                goldcmd.ExecuteNonQuery();
                 {
-                    con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "insert into source_remark values('" + txt_master_item.Text + "')";
-                    cmd.ExecuteNonQuery();
-
+                    MessageBox.Show("success");
                     txt_master_item.Text = "";
-
-                    con.Close();
-                    MessageBox.Show("Success");
                 }
+                con.Close();
 
             }
             else
@@ -295,6 +291,7 @@ namespace GHF
                 groupBox1.Show();
                 Pan_item.Show();
                 chk_parent.Hide();
+
             }
         }
     }

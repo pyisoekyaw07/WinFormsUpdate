@@ -25,6 +25,7 @@ namespace GHF
             /*this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;*/
             this.WindowState = FormWindowState.Maximized;
+          
 
         }
 
