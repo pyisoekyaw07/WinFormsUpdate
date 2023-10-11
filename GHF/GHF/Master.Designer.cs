@@ -41,6 +41,7 @@
             itemtype_combo = new ComboBox();
             txt_master_item = new TextBox();
             Parentitem_combo = new ComboBox();
+            comboBox2 = new ComboBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -59,7 +60,7 @@
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
-            tabControl1.Location = new Point(3, 3);
+            tabControl1.Location = new Point(15, 22);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1282, 471);
@@ -68,6 +69,7 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.Transparent;
+            tabPage1.Controls.Add(comboBox2);
             tabPage1.Controls.Add(comboBox1);
             tabPage1.Controls.Add(groupBox1);
             tabPage1.Location = new Point(4, 30);
@@ -81,7 +83,7 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Item/Itemname", "GoldType", "Gold Price", "Source Remark" });
+            comboBox1.Items.AddRange(new object[] { "Item/Itemname", "GoldType", "Gold Price", "Source Remark", "count" });
             comboBox1.Location = new Point(6, 13);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(300, 29);
@@ -181,6 +183,15 @@
             Parentitem_combo.TabIndex = 16;
             Parentitem_combo.Click += Parentitem_combo_Click;
             // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Gold type", "goldprice", "item", "sourcere", "counter" });
+            comboBox2.Location = new Point(377, 21);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 29);
+            comboBox2.TabIndex = 27;
+            // 
             // Master
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -213,5 +224,6 @@
         private Panel Pan_item;
         private GroupBox groupBox1;
         private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }

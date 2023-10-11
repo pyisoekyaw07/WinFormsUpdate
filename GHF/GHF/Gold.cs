@@ -29,11 +29,7 @@ namespace GHF
         public Gold()
         {
             InitializeComponent();
-            sourceremark();
-            Gtype();
-            item();
-            goldprice();
-
+         
         }
 
         private void timer1_Tick(object sender, EventArgs e)/*Date and Time Format*/
@@ -163,10 +159,24 @@ namespace GHF
 
         }
 
-     /* private void Gold_Load(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello");
-        }*/
+
+        }
+
+        private void Gold_Load(object sender, EventArgs e)
+        {
+            sourceremark();
+            Gtype();
+            item();
+            goldprice();
+
+        }
+
+        /* private void Gold_Load(object sender, EventArgs e)
+           {
+               MessageBox.Show("Hello");
+           }*/
 
         /*  private void comboBox1_Click_1(object sender, EventArgs e)
           {

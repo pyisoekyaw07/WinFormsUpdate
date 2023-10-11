@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button1 = new Button();
             panel2 = new Panel();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
             button4 = new Button();
             label3 = new Label();
             button3 = new Button();
@@ -49,8 +51,7 @@
             test2ToolStripMenuItem = new ToolStripMenuItem();
             gemDiamondToolStripMenuItem = new ToolStripMenuItem();
             cashierToolStripMenuItem = new ToolStripMenuItem();
-            master1 = new Master();
-            gold1 = new Gold();
+            mainpanel = new Panel();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -70,6 +71,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
+            panel2.Controls.Add(radioButton2);
+            panel2.Controls.Add(radioButton1);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(button3);
@@ -83,6 +86,33 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1478, 88);
             panel2.TabIndex = 2;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.ForeColor = Color.White;
+            radioButton2.Location = new Point(1006, 28);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(47, 25);
+            radioButton2.TabIndex = 10;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Eng";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.Click += radioButton2_Click;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.ForeColor = Color.White;
+            radioButton1.Location = new Point(924, 28);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(76, 25);
+            radioButton1.TabIndex = 9;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Myanmar";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            radioButton1.Click += radioButton1_Click;
             // 
             // button4
             // 
@@ -98,7 +128,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(1220, 41);
+            label3.Location = new Point(1228, 57);
             label3.Name = "label3";
             label3.Size = new Size(53, 21);
             label3.TabIndex = 7;
@@ -112,6 +142,7 @@
             button3.TabIndex = 6;
             button3.Text = "Report";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -196,7 +227,7 @@
             // registerToolStripMenuItem
             // 
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            registerToolStripMenuItem.Size = new Size(180, 26);
+            registerToolStripMenuItem.Size = new Size(121, 26);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
@@ -238,29 +269,20 @@
             cashierToolStripMenuItem.Size = new Size(60, 25);
             cashierToolStripMenuItem.Text = "Cashier";
             // 
-            // master1
+            // mainpanel
             // 
-            master1.Location = new Point(3, 130);
-            master1.Name = "master1";
-            master1.Size = new Size(1300, 477);
-            master1.TabIndex = 5;
-            // 
-            // gold1
-            // 
-            gold1.AutoSize = true;
-            gold1.Dock = DockStyle.Fill;
-            gold1.Location = new Point(0, 138);
-            gold1.Name = "gold1";
-            gold1.Size = new Size(1478, 789);
-            gold1.TabIndex = 4;
+            mainpanel.Dock = DockStyle.Fill;
+            mainpanel.Location = new Point(0, 138);
+            mainpanel.Name = "mainpanel";
+            mainpanel.Size = new Size(1478, 789);
+            mainpanel.TabIndex = 4;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1478, 927);
-            Controls.Add(master1);
-            Controls.Add(gold1);
+            Controls.Add(mainpanel);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "Form2";
@@ -275,7 +297,6 @@
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -296,11 +317,12 @@
         private Panel panel4;
         private ToolStripMenuItem cashierToolStripMenuItem;
         private ToolStripMenuItem registerToolStripMenuItem;
-        private Gold gold1;
         private Button button2;
-        private Master master1;
         private Button button3;
         private Label label3;
         private Button button4;
+        private Panel mainpanel;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }

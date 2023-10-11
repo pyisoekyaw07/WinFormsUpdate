@@ -18,7 +18,7 @@ namespace GHF
 {
     public partial class Master : System.Windows.Forms.UserControl
     {
-        private object connn; /*SQL Connection*/
+        private object conn; /*SQL Connection*/
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
 
         public Master()
@@ -104,10 +104,12 @@ namespace GHF
                 if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
                 {
 
+                    string query = "INSERT INTO gold_type([gold])VALUES(N'" + txt_master_item.Text + "')";
+                    SqlCommand goldcmd = new SqlCommand(query, con);
+                    /* goldcmd.Parameters.AddWithValue("@gold",( txt_master_item.Text));*/
                     con.Open();
-                    SqlCommand goldcmd = new SqlCommand("insert into gold_type values(@gold)", con);
-                    goldcmd.Parameters.AddWithValue("@gold", txt_master_item.Text);
                     goldcmd.ExecuteNonQuery();
+
                     {
                         MessageBox.Show("success");
                         txt_master_item.Text = "";

@@ -558,6 +558,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(298, 29);
             comboBox1.TabIndex = 55;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // comboBox2
             // 
@@ -808,7 +809,7 @@
             Controls.Add(label1);
             Name = "Gold";
             Size = new Size(1404, 698);
-           
+            Load += Gold_Load;
             VisibleChanged += Gold_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
