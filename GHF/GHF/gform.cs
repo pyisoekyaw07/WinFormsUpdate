@@ -18,10 +18,17 @@ namespace GHF
         public gform()
         {
             InitializeComponent();
+            goldprice();
+            counter();
+            item();
+            sourceremark();
+            Gtype();
+
         }
 
         private void gform_Load(object sender, EventArgs e)
         {
+
             check_language.Text = Form2.setvalueformyan;
             if (check_language.Text == "myanmar")
             {
@@ -31,148 +38,139 @@ namespace GHF
             {
                 eng();
             }
-
-            item();
-            Gtype();
-            sourceremark();
-            goldprice();
-            counter();
+            
+           
 
         }
-        private void timer1_Tick_1(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)/*Date and Time*/
         {
             DateTime d = new DateTime();
             d = DateTime.Now;
             txt_date.Text = d.ToString("dd/MMM/yyyy");
             txt_time.Text = DateTime.Now.ToLongTimeString();
         }
-        private void btn_add_photo_Click(object sender, EventArgs e)/*Photo Upload Button*/
-        {
-
-
-        }
-
         public void item()/*function item*/
         {
             comboBox4.Items.Clear();
             comboBox3.Items.Clear();
 
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from golditem";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            string sqlquery = "select * from golditem";
+            SqlCommand cmd = new SqlCommand(sqlquery, con);
+
+            try
             {
-                comboBox3.Items.Add(dr["gold"].ToString());
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBox3.Items.Add(reader["Golditem"].ToString());
+                }
             }
-            con.Close();
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
         }
         public void Gtype()/*function Gold type */
         {
             comboBox2.Items.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from g_type";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            string sqlquery = "select * from g_type";
+            SqlCommand cmd = new SqlCommand(sqlquery, con);
+
+            try
             {
-                comboBox2.Items.Add(dr["gold"].ToString());
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBox2.Items.Add(reader["Gold_Type"].ToString());
+                }
             }
-            con.Close();
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         public void sourceremark()/*function source remark */
         {
             comboBox1.Items.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from source_remark";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            string sqlquery = "select * from source_remark";
+            SqlCommand cmd = new SqlCommand(sqlquery, con);
+
+            try
             {
-                comboBox1.Items.Add(dr["remark"].ToString());
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBox1.Items.Add(reader["Source_Remark"].ToString());
+                }
             }
-            con.Close();
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         public void goldprice()/*function goldprice */
         {
-            /* comboBox1.Items.Clear();*/
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from gold_price";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                textBox8.Text = dr["gold_price"].ToString();
-            }
-            con.Close();
-        }
+            string sqlquery = "select * from goldprice";
+            SqlCommand cmd = new SqlCommand(sqlquery, con);
 
-        private void btn_add_photo_Click_1(object sender, EventArgs e)
+            try
+            {
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    textBox8.Text = reader["Gold_Price"].ToString();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public void counter()/*function counter */
         {
-            OpenFileDialog open = new OpenFileDialog();
+            string sqlquery = "select * from counter";
+            SqlCommand cmd = new SqlCommand(sqlquery, con);
 
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
+            try
             {
-                pictureBox.Image = new Bitmap(open.FileName);
-                // image file path  
-                /* textBox1.Text = open.FileName;*/
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    textBox27.Text = reader["Gold"].ToString();
+                }
             }
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox4.Items.Clear();
-
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from gold_itemname where Item=N'" + comboBox3.SelectedItem.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            catch (SqlException ex)
             {
-                comboBox4.Items.Add(dr["Itemname"].ToString());
+                MessageBox.Show(ex.Message);
             }
-            con.Close();
-        }
-        public void counter()/*function goldprice */
-        {
-            /* comboBox1.Items.Clear();*/
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from counter";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            finally
             {
-                textBox27.Text = dr["gold"].ToString();
+                con.Close();
             }
-            con.Close();
         }
-        public void myanmar()
+        public void myanmar()/*function myanmar language*/
         {
             label1.Text = "ရက်စွဲ";
             label2.Text = "အချိန်";
@@ -202,7 +200,7 @@ namespace GHF
             button3.Text = "ပြန်ကြည့်မည်";
             btn_add_photo.Text = "ပုံထည့်သွင်းရန်";
         }
-        public void eng()
+        public void eng()/*function english language*/
         {
             label1.Text = "Date";
             label2.Text = "Time";
@@ -232,7 +230,58 @@ namespace GHF
             button3.Text = "Review";
             btn_add_photo.Text = "Add Photo";
         }
+        private void btn_add_photo_Click_1(object sender, EventArgs e)/*Add Photo*/
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.Image = new Bitmap(open.FileName);
+                // image file path  
+                /* textBox1.Text = open.FileName;*/
+            }
+
+        }
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)/*Item ComboBox*/
+        {
+            comboBox4.Items.Clear();
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from gold_itemname where Item=N'" + comboBox3.SelectedItem.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBox4.Items.Add(dr["Itemname"].ToString());
+            }
+            con.Close();
+        }
 
 
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            sourceremark();
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            Gtype();
+        }
+
+        private void comboBox3_Click(object sender, EventArgs e)
+        {
+            item();
+        }
+
+        private void textBox8_DoubleClick(object sender, EventArgs e)
+        {
+
+            textBox8.ReadOnly = false;
+        }
     }
 }

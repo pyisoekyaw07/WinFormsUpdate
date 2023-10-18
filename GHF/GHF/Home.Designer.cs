@@ -31,13 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button1 = new Button();
             panel2 = new Panel();
+            button5 = new Button();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             button4 = new Button();
-            label3 = new Label();
             button3 = new Button();
             button2 = new Button();
             panel4 = new Panel();
+            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -61,7 +62,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(42, 28);
+            button1.Location = new Point(42, 21);
             button1.Name = "button1";
             button1.Size = new Size(103, 35);
             button1.TabIndex = 0;
@@ -71,10 +72,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
+            panel2.Controls.Add(button5);
             panel2.Controls.Add(radioButton2);
             panel2.Controls.Add(radioButton1);
             panel2.Controls.Add(button4);
-            panel2.Controls.Add(label3);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(panel4);
@@ -87,11 +88,21 @@
             panel2.Size = new Size(1478, 88);
             panel2.TabIndex = 2;
             // 
+            // button5
+            // 
+            button5.Location = new Point(401, 57);
+            button5.Name = "button5";
+            button5.Size = new Size(161, 31);
+            button5.TabIndex = 11;
+            button5.Text = "Sale / Register";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
             radioButton2.ForeColor = Color.White;
-            radioButton2.Location = new Point(1006, 28);
+            radioButton2.Location = new Point(1263, 28);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(47, 25);
             radioButton2.TabIndex = 10;
@@ -104,7 +115,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.ForeColor = Color.White;
-            radioButton1.Location = new Point(924, 28);
+            radioButton1.Location = new Point(1181, 28);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(76, 25);
             radioButton1.TabIndex = 9;
@@ -116,7 +127,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(213, 57);
+            button4.Location = new Point(244, 57);
             button4.Name = "button4";
             button4.Size = new Size(161, 31);
             button4.TabIndex = 8;
@@ -124,19 +135,9 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1228, 57);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 21);
-            label3.TabIndex = 7;
-            label3.Text = "Ver 1.0.0";
-            // 
             // button3
             // 
-            button3.Location = new Point(560, 57);
+            button3.Location = new Point(714, 57);
             button3.Name = "button3";
             button3.Size = new Size(161, 31);
             button3.TabIndex = 6;
@@ -146,7 +147,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(387, 57);
+            button2.Location = new Point(557, 57);
             button2.Name = "button2";
             button2.Size = new Size(161, 31);
             button2.TabIndex = 5;
@@ -157,11 +158,22 @@
             // panel4
             // 
             panel4.Controls.Add(button1);
+            panel4.Controls.Add(label3);
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(1321, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(157, 88);
             panel4.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(69, 64);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 21);
+            label3.TabIndex = 7;
+            label3.Text = "Ver 1.0.0";
             // 
             // label2
             // 
@@ -291,6 +303,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -324,5 +337,6 @@
         private Panel mainpanel;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
+        private Button button5;
     }
 }

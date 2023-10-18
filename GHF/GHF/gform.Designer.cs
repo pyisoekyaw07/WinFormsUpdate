@@ -221,6 +221,7 @@
             comboBox3.Size = new Size(310, 29);
             comboBox3.TabIndex = 120;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            comboBox3.Click += comboBox3_Click;
             // 
             // comboBox2
             // 
@@ -230,6 +231,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(122, 29);
             comboBox2.TabIndex = 119;
+            comboBox2.Click += comboBox2_Click;
             // 
             // comboBox1
             // 
@@ -239,6 +241,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(310, 29);
             comboBox1.TabIndex = 118;
+            comboBox1.Click += comboBox1_Click;
             // 
             // pictureBox
             // 
@@ -622,11 +625,12 @@
             // textBox8
             // 
             textBox8.BackColor = Color.LightSteelBlue;
-            textBox8.Enabled = false;
             textBox8.Location = new Point(358, 155);
             textBox8.Name = "textBox8";
+            textBox8.ReadOnly = true;
             textBox8.Size = new Size(122, 28);
             textBox8.TabIndex = 81;
+            textBox8.DoubleClick += textBox8_DoubleClick;
             // 
             // label8
             // 
@@ -707,9 +711,9 @@
             // txt_time
             // 
             txt_time.BackColor = Color.LightSteelBlue;
-            txt_time.Enabled = false;
             txt_time.Location = new Point(358, 22);
             txt_time.Name = "txt_time";
+            txt_time.ReadOnly = true;
             txt_time.Size = new Size(122, 28);
             txt_time.TabIndex = 72;
             // 
@@ -726,9 +730,9 @@
             // txt_date
             // 
             txt_date.BackColor = Color.LightSteelBlue;
-            txt_date.Enabled = false;
             txt_date.Location = new Point(170, 22);
             txt_date.Name = "txt_date";
+            txt_date.ReadOnly = true;
             txt_date.Size = new Size(122, 28);
             txt_date.TabIndex = 70;
             // 

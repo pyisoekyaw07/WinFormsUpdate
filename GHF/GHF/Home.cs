@@ -28,6 +28,7 @@ namespace GHF
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -38,6 +39,8 @@ namespace GHF
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;*/
             radioButton1.Checked = true;
             this.WindowState = FormWindowState.Maximized;
+            formload(new login());
+            menuStrip2.Hide();
         }
 
 
@@ -46,6 +49,8 @@ namespace GHF
             /*  gold1.Show();*/
             /* master1.Hide();*/
             formload(new gform());
+            panel1.Show();
+            menuStrip2.Show();
 
         }
 
@@ -55,19 +60,31 @@ namespace GHF
               gold1.Hide();*/
             /* panel1.Hide();*/
             formload(new master2());
+            menuStrip2.Show();
+
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /* panel1.Show();
-             master1.Hide();*/
+            formload(new login());
+            menuStrip2.Hide();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+            menuStrip2.Show();
+            formload(new gform());
+
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            formload(new gform());
+
+
         }
         /*-----------------Change language----------------------------------*/
         public static string setvalueformyan = "";
@@ -86,6 +103,7 @@ namespace GHF
         {
             setvalueformyan = "eng";
         }
+
         /*-----------------------------------------------------------------------------*/
     }
 }

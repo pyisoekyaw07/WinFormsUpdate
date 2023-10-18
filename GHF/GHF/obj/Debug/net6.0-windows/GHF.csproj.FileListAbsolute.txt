@@ -141,9 +141,7 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\ru
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.AssemblyReference.cache
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Gold.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Form2.resources
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Master.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Properties.Resources.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Whitegold.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.GenerateResource.cache
@@ -159,3 +157,4 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GH
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\ref\GHF.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.gform.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.master2.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.login.resources
