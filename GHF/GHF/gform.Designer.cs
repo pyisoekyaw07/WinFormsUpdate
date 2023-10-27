@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gform));
             btn_add_photo = new Button();
             dataGridView2 = new DataGridView();
+            invoice = new DataGridViewTextBoxColumn();
+            productid = new DataGridViewTextBoxColumn();
             Date = new DataGridViewTextBoxColumn();
             Time = new DataGridViewTextBoxColumn();
             remark = new DataGridViewTextBoxColumn();
@@ -56,7 +58,6 @@
             label16 = new Label();
             label15 = new Label();
             label14 = new Label();
-            label13 = new Label();
             label12 = new Label();
             label11 = new Label();
             button3 = new Button();
@@ -71,22 +72,21 @@
             button1 = new Button();
             label10 = new Label();
             textBox29 = new TextBox();
-            textBox28 = new TextBox();
             textBox27 = new TextBox();
-            textBox26 = new TextBox();
+            txt_pur_no = new TextBox();
             textBox25 = new TextBox();
             textBox24 = new TextBox();
-            textBox23 = new TextBox();
-            textBox22 = new TextBox();
-            textBox21 = new TextBox();
+            txt_totalamt = new TextBox();
+            txt_rep = new TextBox();
+            txt_mcost = new TextBox();
             textBox17 = new TextBox();
             textBox18 = new TextBox();
             textBox19 = new TextBox();
             textBox20 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
+            txt_YC = new TextBox();
+            txt_YY = new TextBox();
+            txt_YP = new TextBox();
+            txt_YK = new TextBox();
             textBox12 = new TextBox();
             textBox11 = new TextBox();
             textBox10 = new TextBox();
@@ -96,7 +96,7 @@
             label9 = new Label();
             textBox7 = new TextBox();
             label7 = new Label();
-            textBox6 = new TextBox();
+            txt_gm = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -104,14 +104,27 @@
             label2 = new Label();
             txt_date = new TextBox();
             label1 = new Label();
-            check_language = new Label();
+            groupBox1 = new GroupBox();
+            check_language = new TextBox();
+            label28 = new Label();
+            label27 = new Label();
+            label26 = new Label();
+            label24 = new Label();
+            txt_temparay = new TextBox();
+            txt_result_id = new TextBox();
+            label25 = new Label();
+            txt_Dece = new TextBox();
+            txt_temparay_pid = new TextBox();
+            txt_result_pid = new TextBox();
+            txt_Dece_pid = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_add_photo
             // 
-            btn_add_photo.Location = new Point(1112, 155);
+            btn_add_photo.Location = new Point(1106, 154);
             btn_add_photo.Name = "btn_add_photo";
             btn_add_photo.Size = new Size(107, 33);
             btn_add_photo.TabIndex = 127;
@@ -121,15 +134,26 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.AllowUserToAddRows = false;
             dataGridView2.BackgroundColor = SystemColors.InactiveCaption;
             dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Date, Time, remark, goldtype, Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
-            dataGridView2.Location = new Point(685, 242);
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { invoice, productid, Date, Time, remark, goldtype, Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
+            dataGridView2.Location = new Point(685, 245);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 30;
             dataGridView2.Size = new Size(702, 242);
             dataGridView2.TabIndex = 122;
+            // 
+            // invoice
+            // 
+            invoice.HeaderText = "စက်ဘောက်ချာနံပါတ်";
+            invoice.Name = "invoice";
+            // 
+            // productid
+            // 
+            productid.HeaderText = "ဘားကုဒ်နံပါတ်";
+            productid.Name = "productid";
             // 
             // Date
             // 
@@ -208,7 +232,7 @@
             comboBox4.Location = new Point(170, 245);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(310, 29);
-            comboBox4.TabIndex = 121;
+            comboBox4.TabIndex = 5;
             // 
             // comboBox3
             // 
@@ -219,7 +243,7 @@
             comboBox3.Location = new Point(170, 199);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(310, 29);
-            comboBox3.TabIndex = 120;
+            comboBox3.TabIndex = 4;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             comboBox3.Click += comboBox3_Click;
             // 
@@ -230,7 +254,7 @@
             comboBox2.Location = new Point(170, 155);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(122, 29);
-            comboBox2.TabIndex = 119;
+            comboBox2.TabIndex = 3;
             comboBox2.Click += comboBox2_Click;
             // 
             // comboBox1
@@ -240,16 +264,16 @@
             comboBox1.Location = new Point(170, 112);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(310, 29);
-            comboBox1.TabIndex = 118;
+            comboBox1.TabIndex = 2;
             comboBox1.Click += comboBox1_Click;
             // 
             // pictureBox
             // 
-            pictureBox.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox.BorderStyle = BorderStyle.Fixed3D;
             pictureBox.Image = (Image)resources.GetObject("pictureBox.Image");
             pictureBox.Location = new Point(1062, 20);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(197, 123);
+            pictureBox.Size = new Size(191, 117);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.TabIndex = 117;
             pictureBox.TabStop = false;
@@ -308,7 +332,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(682, 155);
+            label15.Location = new Point(682, 113);
             label15.Name = "label15";
             label15.Size = new Size(87, 22);
             label15.TabIndex = 111;
@@ -318,21 +342,11 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(682, 113);
+            label14.Location = new Point(682, 71);
             label14.Name = "label14";
             label14.Size = new Size(112, 22);
             label14.TabIndex = 110;
             label14.Text = "အရောင်းကောင်တာ";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(685, 70);
-            label13.Name = "label13";
-            label13.Size = new Size(115, 22);
-            label13.TabIndex = 109;
-            label13.Text = "စာရင်းသွင်းသူအမည်";
             // 
             // label12
             // 
@@ -439,6 +453,7 @@
             button1.TabIndex = 104;
             button1.Text = "သိမ်းဆည်းမည်";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label10
             // 
@@ -454,35 +469,26 @@
             // 
             textBox29.BackColor = Color.LightSteelBlue;
             textBox29.Enabled = false;
-            textBox29.Location = new Point(825, 151);
+            textBox29.Location = new Point(825, 109);
             textBox29.Name = "textBox29";
             textBox29.Size = new Size(207, 28);
             textBox29.TabIndex = 102;
-            // 
-            // textBox28
-            // 
-            textBox28.BackColor = Color.LightSteelBlue;
-            textBox28.Enabled = false;
-            textBox28.Location = new Point(825, 64);
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(207, 28);
-            textBox28.TabIndex = 101;
             // 
             // textBox27
             // 
             textBox27.BackColor = Color.LightSteelBlue;
             textBox27.Enabled = false;
-            textBox27.Location = new Point(825, 107);
+            textBox27.Location = new Point(825, 65);
             textBox27.Name = "textBox27";
             textBox27.Size = new Size(207, 28);
             textBox27.TabIndex = 100;
             // 
-            // textBox26
+            // txt_pur_no
             // 
-            textBox26.Location = new Point(170, 68);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(189, 28);
-            textBox26.TabIndex = 99;
+            txt_pur_no.Location = new Point(170, 68);
+            txt_pur_no.Name = "txt_pur_no";
+            txt_pur_no.Size = new Size(189, 28);
+            txt_pur_no.TabIndex = 1;
             // 
             // textBox25
             // 
@@ -490,36 +496,44 @@
             textBox25.Enabled = false;
             textBox25.Location = new Point(825, 20);
             textBox25.Name = "textBox25";
+            textBox25.ReadOnly = true;
             textBox25.Size = new Size(207, 28);
             textBox25.TabIndex = 98;
+            textBox25.TabStop = false;
             // 
             // textBox24
             // 
             textBox24.Location = new Point(170, 596);
             textBox24.Name = "textBox24";
             textBox24.Size = new Size(298, 28);
-            textBox24.TabIndex = 97;
+            textBox24.TabIndex = 13;
+            textBox24.Leave += textBox24_Leave;
             // 
-            // textBox23
+            // txt_totalamt
             // 
-            textBox23.Location = new Point(170, 549);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(189, 28);
-            textBox23.TabIndex = 96;
+            txt_totalamt.Enabled = false;
+            txt_totalamt.Location = new Point(170, 549);
+            txt_totalamt.Name = "txt_totalamt";
+            txt_totalamt.Size = new Size(189, 28);
+            txt_totalamt.TabIndex = 96;
             // 
-            // textBox22
+            // txt_rep
             // 
-            textBox22.Location = new Point(170, 506);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(189, 28);
-            textBox22.TabIndex = 95;
+            txt_rep.Location = new Point(170, 506);
+            txt_rep.Name = "txt_rep";
+            txt_rep.Size = new Size(189, 28);
+            txt_rep.TabIndex = 12;
+            txt_rep.KeyPress += txt_rep_KeyPress;
+            txt_rep.Leave += txt_rep_Leave;
             // 
-            // textBox21
+            // txt_mcost
             // 
-            textBox21.Location = new Point(170, 462);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(189, 28);
-            textBox21.TabIndex = 94;
+            txt_mcost.Location = new Point(170, 462);
+            txt_mcost.Name = "txt_mcost";
+            txt_mcost.Size = new Size(189, 28);
+            txt_mcost.TabIndex = 11;
+            txt_mcost.KeyPress += txt_mcost_KeyPress;
+            txt_mcost.Leave += txt_mcost_Leave;
             // 
             // textBox17
             // 
@@ -557,33 +571,37 @@
             textBox20.Size = new Size(59, 28);
             textBox20.TabIndex = 90;
             // 
-            // textBox13
+            // txt_YC
             // 
-            textBox13.Location = new Point(365, 369);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(59, 28);
-            textBox13.TabIndex = 89;
+            txt_YC.Location = new Point(365, 369);
+            txt_YC.Name = "txt_YC";
+            txt_YC.Size = new Size(59, 28);
+            txt_YC.TabIndex = 10;
+            txt_YC.KeyPress += txt_YC_KeyPress;
             // 
-            // textBox14
+            // txt_YY
             // 
-            textBox14.Location = new Point(300, 369);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(59, 28);
-            textBox14.TabIndex = 88;
+            txt_YY.Location = new Point(300, 369);
+            txt_YY.Name = "txt_YY";
+            txt_YY.Size = new Size(59, 28);
+            txt_YY.TabIndex = 9;
+            txt_YY.KeyPress += txt_YY_KeyPress;
             // 
-            // textBox15
+            // txt_YP
             // 
-            textBox15.Location = new Point(235, 369);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(59, 28);
-            textBox15.TabIndex = 87;
+            txt_YP.Location = new Point(235, 369);
+            txt_YP.Name = "txt_YP";
+            txt_YP.Size = new Size(59, 28);
+            txt_YP.TabIndex = 8;
+            txt_YP.KeyPress += txt_YP_KeyPress;
             // 
-            // textBox16
+            // txt_YK
             // 
-            textBox16.Location = new Point(170, 369);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(59, 28);
-            textBox16.TabIndex = 86;
+            txt_YK.Location = new Point(170, 369);
+            txt_YK.Name = "txt_YK";
+            txt_YK.Size = new Size(59, 28);
+            txt_YK.TabIndex = 7;
+            txt_YK.KeyPress += txt_YK_KeyPress;
             // 
             // textBox12
             // 
@@ -629,7 +647,7 @@
             textBox8.Name = "textBox8";
             textBox8.ReadOnly = true;
             textBox8.Size = new Size(122, 28);
-            textBox8.TabIndex = 81;
+            textBox8.TabIndex = 200;
             textBox8.DoubleClick += textBox8_DoubleClick;
             // 
             // label8
@@ -671,12 +689,13 @@
             label7.TabIndex = 77;
             label7.Text = "အလျော့တွက်";
             // 
-            // textBox6
+            // txt_gm
             // 
-            textBox6.Location = new Point(170, 286);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(122, 28);
-            textBox6.TabIndex = 76;
+            txt_gm.Location = new Point(170, 286);
+            txt_gm.Name = "txt_gm";
+            txt_gm.Size = new Size(122, 28);
+            txt_gm.TabIndex = 6;
+            txt_gm.KeyPress += txt_gm_KeyPress;
             // 
             // label6
             // 
@@ -711,6 +730,7 @@
             // txt_time
             // 
             txt_time.BackColor = Color.LightSteelBlue;
+            txt_time.Enabled = false;
             txt_time.Location = new Point(358, 22);
             txt_time.Name = "txt_time";
             txt_time.ReadOnly = true;
@@ -730,6 +750,7 @@
             // txt_date
             // 
             txt_date.BackColor = Color.LightSteelBlue;
+            txt_date.Enabled = false;
             txt_date.Location = new Point(170, 22);
             txt_date.Name = "txt_date";
             txt_date.ReadOnly = true;
@@ -746,23 +767,131 @@
             label1.TabIndex = 69;
             label1.Text = "ရက်စွဲ";
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(check_language);
+            groupBox1.Controls.Add(label28);
+            groupBox1.Controls.Add(label27);
+            groupBox1.Controls.Add(label26);
+            groupBox1.Controls.Add(label24);
+            groupBox1.Controls.Add(txt_temparay);
+            groupBox1.Controls.Add(txt_result_id);
+            groupBox1.Controls.Add(label25);
+            groupBox1.Controls.Add(txt_Dece);
+            groupBox1.Controls.Add(txt_temparay_pid);
+            groupBox1.Controls.Add(txt_result_pid);
+            groupBox1.Controls.Add(txt_Dece_pid);
+            groupBox1.Location = new Point(688, 591);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(729, 156);
+            groupBox1.TabIndex = 130;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "requirment for calculation";
+            groupBox1.Visible = false;
+            // 
             // check_language
             // 
-            check_language.AutoSize = true;
-            check_language.Location = new Point(854, 662);
+            check_language.Location = new Point(12, 125);
             check_language.Name = "check_language";
-            check_language.Size = new Size(59, 21);
-            check_language.TabIndex = 129;
-            check_language.Text = "myanmar";
-            check_language.Visible = false;
+            check_language.Size = new Size(100, 28);
+            check_language.TabIndex = 149;
+            check_language.TextChanged += check_language_TextChanged_1;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(3, 98);
+            label28.Name = "label28";
+            label28.Size = new Size(69, 21);
+            label28.TabIndex = 148;
+            label28.Text = "product No";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(3, 51);
+            label27.Name = "label27";
+            label27.Size = new Size(65, 21);
+            label27.TabIndex = 147;
+            label27.Text = "invoice No";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(249, 25);
+            label26.Name = "label26";
+            label26.Size = new Size(63, 21);
+            label26.TabIndex = 146;
+            label26.Text = "temparray";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(137, 25);
+            label24.Name = "label24";
+            label24.Size = new Size(52, 21);
+            label24.TabIndex = 145;
+            label24.Text = "result Id";
+            // 
+            // txt_temparay
+            // 
+            txt_temparay.Location = new Point(249, 49);
+            txt_temparay.Name = "txt_temparay";
+            txt_temparay.Size = new Size(100, 28);
+            txt_temparay.TabIndex = 144;
+            // 
+            // txt_result_id
+            // 
+            txt_result_id.Location = new Point(136, 49);
+            txt_result_id.Name = "txt_result_id";
+            txt_result_id.Size = new Size(107, 28);
+            txt_result_id.TabIndex = 143;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(71, 24);
+            label25.Name = "label25";
+            label25.Size = new Size(51, 21);
+            label25.TabIndex = 141;
+            label25.Text = "Decre Id";
+            // 
+            // txt_Dece
+            // 
+            txt_Dece.Location = new Point(73, 48);
+            txt_Dece.Name = "txt_Dece";
+            txt_Dece.Size = new Size(57, 28);
+            txt_Dece.TabIndex = 139;
+            // 
+            // txt_temparay_pid
+            // 
+            txt_temparay_pid.Location = new Point(249, 91);
+            txt_temparay_pid.Name = "txt_temparay_pid";
+            txt_temparay_pid.Size = new Size(100, 28);
+            txt_temparay_pid.TabIndex = 138;
+            // 
+            // txt_result_pid
+            // 
+            txt_result_pid.Location = new Point(137, 91);
+            txt_result_pid.Name = "txt_result_pid";
+            txt_result_pid.Size = new Size(106, 28);
+            txt_result_pid.TabIndex = 137;
+            // 
+            // txt_Dece_pid
+            // 
+            txt_Dece_pid.Location = new Point(71, 91);
+            txt_Dece_pid.Name = "txt_Dece_pid";
+            txt_Dece_pid.Size = new Size(57, 28);
+            txt_Dece_pid.TabIndex = 136;
             // 
             // gform
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            BackColor = Color.White;
             ClientSize = new Size(1429, 759);
-            Controls.Add(check_language);
+            Controls.Add(groupBox1);
             Controls.Add(btn_add_photo);
             Controls.Add(dataGridView2);
             Controls.Add(comboBox4);
@@ -777,7 +906,6 @@
             Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
-            Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(button3);
@@ -790,22 +918,21 @@
             Controls.Add(button1);
             Controls.Add(label10);
             Controls.Add(textBox29);
-            Controls.Add(textBox28);
             Controls.Add(textBox27);
-            Controls.Add(textBox26);
+            Controls.Add(txt_pur_no);
             Controls.Add(textBox25);
             Controls.Add(textBox24);
-            Controls.Add(textBox23);
-            Controls.Add(textBox22);
-            Controls.Add(textBox21);
+            Controls.Add(txt_totalamt);
+            Controls.Add(txt_rep);
+            Controls.Add(txt_mcost);
             Controls.Add(textBox17);
             Controls.Add(textBox18);
             Controls.Add(textBox19);
             Controls.Add(textBox20);
-            Controls.Add(textBox13);
-            Controls.Add(textBox14);
-            Controls.Add(textBox15);
-            Controls.Add(textBox16);
+            Controls.Add(txt_YC);
+            Controls.Add(txt_YY);
+            Controls.Add(txt_YP);
+            Controls.Add(txt_YK);
             Controls.Add(textBox12);
             Controls.Add(textBox11);
             Controls.Add(textBox10);
@@ -815,7 +942,7 @@
             Controls.Add(label9);
             Controls.Add(textBox7);
             Controls.Add(label7);
-            Controls.Add(textBox6);
+            Controls.Add(txt_gm);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -829,6 +956,8 @@
             Load += gform_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -837,18 +966,6 @@
 
         private Button btn_add_photo;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn Date;
-        private DataGridViewTextBoxColumn Time;
-        private DataGridViewTextBoxColumn remark;
-        private DataGridViewTextBoxColumn goldtype;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
         private ComboBox comboBox4;
         private ComboBox comboBox3;
         private ComboBox comboBox2;
@@ -861,7 +978,6 @@
         private Label label16;
         private Label label15;
         private Label label14;
-        private Label label13;
         private Label label12;
         private Label label11;
         private Button button3;
@@ -876,22 +992,21 @@
         private Button button1;
         private Label label10;
         private TextBox textBox29;
-        private TextBox textBox28;
         private TextBox textBox27;
-        private TextBox textBox26;
+        private TextBox txt_pur_no;
         private TextBox textBox25;
         private TextBox textBox24;
-        private TextBox textBox23;
-        private TextBox textBox22;
-        private TextBox textBox21;
+        private TextBox txt_totalamt;
+        private TextBox txt_rep;
+        private TextBox txt_mcost;
         private TextBox textBox17;
         private TextBox textBox18;
         private TextBox textBox19;
         private TextBox textBox20;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
+        private TextBox txt_YC;
+        private TextBox txt_YY;
+        private TextBox txt_YP;
+        private TextBox txt_YK;
         private TextBox textBox12;
         private TextBox textBox11;
         private TextBox textBox10;
@@ -901,7 +1016,7 @@
         private Label label9;
         private TextBox textBox7;
         private Label label7;
-        private TextBox textBox6;
+        private TextBox txt_gm;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -909,6 +1024,32 @@
         private Label label2;
         private TextBox txt_date;
         private Label label1;
-        private Label check_language;
+        private GroupBox groupBox1;
+        private TextBox txt_temparay_pid;
+        private TextBox txt_result_pid;
+        private TextBox txt_Dece_pid;
+        private Label label25;
+        private TextBox txt_Dece;
+        private TextBox txt_result_id;
+        private TextBox txt_temparay;
+        private Label label24;
+        private Label label28;
+        private Label label27;
+        private Label label26;
+        private DataGridViewTextBoxColumn invoice;
+        private DataGridViewTextBoxColumn productid;
+        private DataGridViewTextBoxColumn Date;
+        private DataGridViewTextBoxColumn Time;
+        private DataGridViewTextBoxColumn remark;
+        private DataGridViewTextBoxColumn goldtype;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private TextBox check_language;
     }
 }

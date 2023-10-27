@@ -39,7 +39,7 @@ namespace GHF
 
         }
 
-        /*--------------------------------------------------------------အချိန်နှင့်နာရီ-------------------------------------------------------------------------*/
+        /*--------------------------------------------------------------အချိန်နှင့်နာရီ-----------------------------------------------------------------*/
         private void timer1_Tick(object sender, EventArgs e)
         {
 
@@ -49,20 +49,20 @@ namespace GHF
             txt_Time.Text = DateTime.Now.ToLongTimeString();
 
         }
-        /*------------------------------------------------------------------------------------------------------------------------------------------------*/
+        /*----------------------------------------------------------------------------------------------------------------------------------------*/
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
             if (comboBox1.SelectedIndex == 0)
             {
-                groupBox1.Show();
+                /* groupBox1.Show();*/
                 Pan_item.Show();
                 label1.Text = "Item";
                 chk_parent.Show();
                 chk_parent.Checked = false;
                 itemtype_combo.Show();
                 label2.Show();
-                groupBox1.Text = "Item";
+                /*groupBox1.Text = "Item";*/
                 itemtype_combo.Enabled = true;
                 pen_counter.Hide();
                 itemtype_combo.SelectedIndex = -1;
@@ -70,13 +70,13 @@ namespace GHF
             }
             else if (comboBox1.SelectedIndex == 1)
             {
-                groupBox1.Show();
+                /* groupBox1.Show();*/
                 label1.Text = "Gold Type";
                 label2.Text = "Type";
                 chk_parent.Hide();
                 Parentitem_combo.Hide();
                 Pan_item.Show();
-                groupBox1.Text = "Gold Type";
+                /*groupBox1.Text = "Gold Type";*/
                 itemtype_combo.Enabled = true;
                 pen_counter.Hide();
                 itemtype_combo.SelectedIndex = -1;
@@ -85,8 +85,8 @@ namespace GHF
             }
             else if (comboBox1.SelectedIndex == 2)
             {
-                groupBox1.Show();
-                groupBox1.Text = "Gold Price";
+                /*groupBox1.Show();*/
+                /* groupBox1.Text = "Gold Price";*/
                 label1.Text = "Gold Price";
                 label2.Text = "Type";
                 chk_parent.Hide();
@@ -102,8 +102,8 @@ namespace GHF
             {
                 itemtype_combo.Enabled = false;
                 label1.Text = "Source Remark";
-                groupBox1.Text = "Source Remark";
-                groupBox1.Show();
+                /*groupBox1.Text = "Source Remark";*/
+                /*groupBox1.Show();*/
                 Pan_item.Show();
                 chk_parent.Hide();
                 Parentitem_combo.Hide();
@@ -115,8 +115,8 @@ namespace GHF
             }
             else if (comboBox1.SelectedIndex == 4)
             {
-                groupBox1.Show();
-                groupBox1.Text = "Counter";
+                /* groupBox1.Show();*/
+                /* groupBox1.Text = "Counter";*/
                 Pan_item.Hide();
                 pen_counter.Show();
                 itemtype_combo.SelectedIndex = -1;
@@ -126,7 +126,7 @@ namespace GHF
             }
         }
 
-        /*-----------------------------------------------------မာစတာဖောင်တွင်ရှိသော function များစုစည်း---------------------------------------------------------*/
+        /*-----------------------------------------------------မာစတာဖောင်တွင်ရှိသော function များ-------------------------------------------------*/
 
         public void showitem()/*Show Item To Table Function*/
         {
@@ -174,8 +174,17 @@ namespace GHF
             adpt.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+        public void shop()/*Show shop To Table Function*/
+        {
+            adpt = new SqlDataAdapter("select * from shop", con);
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dataGridView2.DataSource = dt;
+        }
 
-        /*-------------------------------------------------------------------Save Button-------------------------------------------------------------------*/
+        /*---------------------------------------------------Product Master Tab-------------------------------------------*/
+
+        /*-------------------------------------------------------------------Save Button-------------------------------------------------------*/
         private void btn_save_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)/*Item*/
@@ -599,11 +608,11 @@ namespace GHF
 
         }
 
-        /*------------------------------------------------------------txt_update change-------------------------------------------------------------*/
+        /*------------------------------------------------------------txt_update change----------------------------------------------------------*/
         private void txt_update_TextChanged(object sender, EventArgs e)
         {
-            btn_save.Enabled = false;
-            button1.Enabled = true;
+            /* btn_save.Enabled = false;
+             button1.Enabled = true;*/
         }
 
         /*------------------------------------------------------------CheckBox-------------------------------------------------------------------*/
@@ -717,6 +726,8 @@ namespace GHF
                 i = dataGridView1.CurrentCell.RowIndex;
                 /*j = dataGridView1.CurrentCell.ColumnIndex;*/
                 txt_update.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+
+
             }
             else if (comboBox1.SelectedIndex == 1 && itemtype_combo.SelectedIndex == 0 && chk_parent.Checked == false)
             {
@@ -733,5 +744,70 @@ namespace GHF
                 txt_update.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             }
         }
+
+        /*--------------------------------------------------------------------------------------------------------------------*/
+
+        /*-----------------------------------------------------------Shop Tab-------------------------------------------------*/
+        private void btn_shop_save_Click(object sender, EventArgs e)/*Shop Save Button*/
+        {
+            /*validate*/
+            con.Open();
+            SqlCommand valcmd = new SqlCommand("select Branchname from shop where Branchname=@Branchname", con);
+            valcmd.Parameters.AddWithValue("@Branchname", txt_branch_name.Text);
+            SqlDataReader reader1;
+            reader1 = valcmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                MessageBox.Show("Already Have");
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                string query = "INSERT INTO shop([Date],[Time],[Shopname],[Branchname])" +
+                    "VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_shop_name.Text + "',N'" + txt_branch_name.Text + "')";
+                SqlCommand goldcmd = new SqlCommand(query, con);
+                con.Open();
+                goldcmd.ExecuteNonQuery();
+
+                {
+                    MessageBox.Show("Success");
+                    txt_shop_name.Text = "";
+                    txt_branch_name.Text = "";
+                }
+                con.Close();
+                shop();
+
+            }
+        }
+        private void btn_View_Click(object sender, EventArgs e)
+        {
+            shop();
+        }
+        /*-----------------------------------------------------------radiobutton master form-------------------------------------------------*/
+        bool isChecked = false;
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            isChecked = radioButton1.Checked;
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked && !isChecked)
+            {
+                radioButton1.Checked = false;
+                button1.Enabled = false;
+                btn_save.Enabled = true;
+            }
+
+            else
+            {
+                radioButton1.Checked = true;
+                isChecked = false;
+                button1.Enabled = true;
+                btn_save.Enabled = false;
+            }
+        }
+        /*---------------------------------------------------------------------------------------------------------------------*/
     }
 }

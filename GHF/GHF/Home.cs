@@ -39,8 +39,10 @@ namespace GHF
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;*/
             radioButton1.Checked = true;
             this.WindowState = FormWindowState.Maximized;
-            formload(new login());
-            menuStrip2.Hide();
+            /*formload(new wallpaper());*/
+            panel1.Show();
+            panel1.BackColor = Color.White;
+            /*lbl_username.Text = login.username;*/
         }
 
 
@@ -49,8 +51,7 @@ namespace GHF
             /*  gold1.Show();*/
             /* master1.Hide();*/
             formload(new gform());
-            panel1.Show();
-            menuStrip2.Show();
+
 
         }
 
@@ -58,25 +59,19 @@ namespace GHF
         {
             /*  master1.Show();
               gold1.Hide();*/
-            /* panel1.Hide();*/
+            panel1.Hide();
             formload(new master2());
-            menuStrip2.Show();
-
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            formload(new login());
-            menuStrip2.Hide();
 
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
             panel1.Show();
-            menuStrip2.Show();
-            formload(new gform());
+            formload(new wallpaper());
+            panel1.BackColor = Color.White;
+
 
 
         }
@@ -88,21 +83,32 @@ namespace GHF
         }
         /*-----------------Change language----------------------------------*/
         public static string setvalueformyan = "";
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
             setvalueformyan = "myanmar";
+            gform.language = setvalueformyan;
+
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
             setvalueformyan = "eng";
+            gform.language = setvalueformyan;
         }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login showlogin = new login();
+            showlogin.Show();
+        }
+
 
         /*-----------------------------------------------------------------------------*/
     }

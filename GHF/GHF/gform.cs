@@ -9,27 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics.Contracts;
 
 namespace GHF
 {
     public partial class gform : Form
     {
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
+        SqlCommand cmd;
+        SqlDataAdapter adpt;
+        DataTable dt;
+        DataSet ds;
+        string sql;
+
         public gform()
         {
             InitializeComponent();
             goldprice();
             counter();
-            item();
-            sourceremark();
-            Gtype();
+
+            /*  item();
+              sourceremark();
+              Gtype();
+              autoid();*/
 
         }
 
         private void gform_Load(object sender, EventArgs e)
         {
-
-            check_language.Text = Form2.setvalueformyan;
+            /*check_language.Text = Form2.setvalueformyan;
             if (check_language.Text == "myanmar")
             {
                 myanmar();
@@ -37,17 +45,21 @@ namespace GHF
             else if (check_language.Text == "eng")
             {
                 eng();
-            }
-            
-           
+            }*/
+
+            invoiceid();
+            pid();
 
         }
-        private void timer1_Tick_1(object sender, EventArgs e)/*Date and Time*/
+        public void timer1_Tick_1(object sender, EventArgs e)/*Date and Time*/
         {
             DateTime d = new DateTime();
             d = DateTime.Now;
             txt_date.Text = d.ToString("dd/MMM/yyyy");
             txt_time.Text = DateTime.Now.ToLongTimeString();
+
+            /*txt_result_id.Text = (txt_form.Text) + (txt_shop.Text) + (txt_date2.Text) + "-" + (txt_code.Text).ToString();*/
+
         }
         public void item()/*function item*/
         {
@@ -184,7 +196,6 @@ namespace GHF
             label10.Text = "ပစ္စည်းအမျိုးအစား";
             label11.Text = "";
             label12.Text = "အ၀ယ်ဘောက်ချာနံပါတ်";
-            label13.Text = "စာရင်းသွင်းသူအမည်";
             label14.Text = "အရောင်းကောင်တာ";
             label15.Text = "ဘားကုဒ်နံပါတ်";
             label16.Text = "စုစုပေါင်းရွှေချိန်";
@@ -214,7 +225,6 @@ namespace GHF
             label10.Text = "Item Name";
             label11.Text = "";
             label12.Text = "Purchase Voc.No";
-            label13.Text = "Register Name";
             label14.Text = "Sale Counter";
             label15.Text = "Barcode";
             label16.Text = "စုစုပေါင်းရွှေချိန်";
@@ -229,6 +239,151 @@ namespace GHF
             button2.Text = "Cancel";
             button3.Text = "Review";
             btn_add_photo.Text = "Add Photo";
+        }
+
+
+        public void invoiceid()/*function Invoice Number*/
+        {
+
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                sql = "select * from g_register";
+                cmd = new SqlCommand(sql, con);
+                var maxid = cmd.ExecuteScalar() as string;
+
+                if (maxid == null)
+
+                {
+                    string form = "GR";
+                    string shop = login.shoptext;
+                    string date = DateTime.Now.ToString("ddMMyy");
+                    string id = "0001";
+                    textBox25.Text = form + shop + date + "-" + id;
+
+                }
+                else
+                {
+                    sql = "select * from g_register";
+                    cmd = new SqlCommand(sql, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+
+                    {
+                        txt_result_id.Text = reader["SaleVoucher"].ToString();
+                        string[] temparray = txt_result_id.Text.Split('-');
+                        txt_temparay.Text = temparray[0];
+                        txt_Dece.Text = temparray[1];
+                        int i = Convert.ToInt32(txt_Dece.Text);
+                        i++;
+                        txt_Dece.Text = i.ToString();
+                        string autoid = txt_temparay.Text + "-" + String.Format("{0:0000}", i);
+                        txt_Dece.Text = autoid;
+                        textBox25.Text = autoid;
+
+                    }
+
+                }
+
+                con.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        public void show_reg_data()/*Show Register Data To Table Function*/
+        {
+            string invoiceno = textBox25.Text;
+            string productid = textBox29.Text;
+            con.Open();
+            sql = "insert into g_register(SaleVoucher,ProductID) " +
+                "values(@SaleVoucher,@ProductID) ";
+            cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@SaleVoucher", invoiceno);
+            cmd.Parameters.AddWithValue("@ProductID", productid);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("success");
+            pid();
+            /*adpt = new SqlDataAdapter("select * from g_register", con);
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dataGridView2.DataSource = dt;*/
+
+
+
+        }
+        public void pid()/*function Product Number*/
+        {
+
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                sql = "select * from g_register";
+                cmd = new SqlCommand(sql, con);
+                var maxid = cmd.ExecuteScalar() as string;
+
+                if (maxid == null)
+
+                {
+                    string shop = "A";
+                    string date = DateTime.Now.ToString("ddMMyy");
+                    string id = "0001";
+                    textBox29.Text = shop + date + "-" + id;
+
+                }
+                else
+                {
+                    sql = "select * from g_register";
+                    cmd = new SqlCommand(sql, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+
+                    {
+                        txt_result_pid.Text = reader["ProductID"].ToString();
+                        string[] temparray = txt_result_pid.Text.Split('-');
+                        txt_temparay_pid.Text = temparray[0];
+                        txt_Dece_pid.Text = temparray[1];
+                        int i = Convert.ToInt32(txt_Dece_pid.Text);
+                        i++;
+                        txt_Dece_pid.Text = i.ToString();
+                        string autoid = txt_temparay_pid.Text + "-" + String.Format("{0:0000}", i);
+                        txt_Dece_pid.Text = autoid;
+                        textBox29.Text = autoid;
+
+                    }
+                }
+                con.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)/*Save Button*/
+        {
+            string checkvalue = textBox25.Text;
+            if (textBox25.Text == checkvalue)
+            {
+                MessageBox.Show("Invoice Number Is Save");
+            }
+            else
+            {
+                MessageBox.Show("Invoice Number Is Not Save");
+            }
+            invoiceid();
+
         }
         private void btn_add_photo_Click_1(object sender, EventArgs e)/*Add Photo*/
         {
@@ -261,27 +416,119 @@ namespace GHF
             }
             con.Close();
         }
-
-
         private void comboBox1_Click(object sender, EventArgs e)
         {
             sourceremark();
         }
-
         private void comboBox2_Click(object sender, EventArgs e)
         {
             Gtype();
         }
-
         private void comboBox3_Click(object sender, EventArgs e)
         {
             item();
         }
-
         private void textBox8_DoubleClick(object sender, EventArgs e)
         {
 
             textBox8.ReadOnly = false;
         }
+
+        public static string language = "";
+        public void lan()
+        {
+            check_language.Text = language;
+            if (check_language.Text == "myanmar")
+            {
+                myanmar();
+            }
+            else if (check_language.Text == "eng")
+            {
+                eng();
+            }
+        }
+
+        private void check_language_TextChanged_1(object sender, EventArgs e)
+        {
+            lan();
+        }
+
+        private void textBox24_Leave(object sender, EventArgs e)
+        {
+            show_reg_data();
+
+
+        }
+
+        private void txt_gm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_YK_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_YP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_YY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_YC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_mcost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+
+
+            }
+        }
+
+        private void txt_rep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_mcost_Leave(object sender, EventArgs e)
+        {
+
+            txt_mcost.Text = string.Format("{0:n}", double.Parse(txt_mcost.Text));
+        }
+
+        private void txt_rep_Leave(object sender, EventArgs e)
+        {
+            txt_rep.Text= string.Format("{0:n}", double.Parse(txt_rep.Text));
+        }
     }
 }
+

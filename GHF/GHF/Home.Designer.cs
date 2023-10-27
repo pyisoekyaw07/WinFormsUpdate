@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button1 = new Button();
             panel2 = new Panel();
+            lbl_username = new Label();
+            pictureBox3 = new PictureBox();
             button5 = new Button();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            button4 = new Button();
+            label3 = new Label();
             button3 = new Button();
             button2 = new Button();
             panel4 = new Panel();
-            label3 = new Label();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -53,29 +54,34 @@
             gemDiamondToolStripMenuItem = new ToolStripMenuItem();
             cashierToolStripMenuItem = new ToolStripMenuItem();
             mainpanel = new Panel();
+            pictureBox2 = new PictureBox();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             menuStrip2.SuspendLayout();
+            mainpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(42, 21);
+            button1.Location = new Point(42, 28);
             button1.Name = "button1";
-            button1.Size = new Size(103, 35);
+            button1.Size = new Size(103, 31);
             button1.TabIndex = 0;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
+            panel2.Controls.Add(lbl_username);
+            panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(button5);
-            panel2.Controls.Add(radioButton2);
-            panel2.Controls.Add(radioButton1);
-            panel2.Controls.Add(button4);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(panel4);
@@ -88,56 +94,49 @@
             panel2.Size = new Size(1478, 88);
             panel2.TabIndex = 2;
             // 
+            // lbl_username
+            // 
+            lbl_username.AutoSize = true;
+            lbl_username.ForeColor = Color.White;
+            lbl_username.Location = new Point(1198, 33);
+            lbl_username.Name = "lbl_username";
+            lbl_username.Size = new Size(41, 21);
+            lbl_username.TabIndex = 13;
+            lbl_username.Text = "label4";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1159, 25);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(33, 29);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 12;
+            pictureBox3.TabStop = false;
+            // 
             // button5
             // 
-            button5.Location = new Point(401, 57);
+            button5.Location = new Point(328, 28);
             button5.Name = "button5";
             button5.Size = new Size(161, 31);
             button5.TabIndex = 11;
-            button5.Text = "Sale / Register";
+            button5.Text = "Home";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
-            // radioButton2
+            // label3
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.ForeColor = Color.White;
-            radioButton2.Location = new Point(1263, 28);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(47, 25);
-            radioButton2.TabIndex = 10;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Eng";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.Click += radioButton2_Click;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.ForeColor = Color.White;
-            radioButton1.Location = new Point(1181, 28);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(76, 25);
-            radioButton1.TabIndex = 9;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Myanmar";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
-            radioButton1.Click += radioButton1_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(244, 57);
-            button4.Name = "button4";
-            button4.Size = new Size(161, 31);
-            button4.TabIndex = 8;
-            button4.Text = "Home";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(1159, 64);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 21);
+            label3.TabIndex = 7;
+            label3.Text = "Ver 1.1.0";
             // 
             // button3
             // 
-            button3.Location = new Point(714, 57);
+            button3.Location = new Point(662, 28);
             button3.Name = "button3";
             button3.Size = new Size(161, 31);
             button3.TabIndex = 6;
@@ -147,7 +146,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(557, 57);
+            button2.Location = new Point(495, 28);
             button2.Name = "button2";
             button2.Size = new Size(161, 31);
             button2.TabIndex = 5;
@@ -158,29 +157,46 @@
             // panel4
             // 
             panel4.Controls.Add(button1);
-            panel4.Controls.Add(label3);
+            panel4.Controls.Add(radioButton1);
+            panel4.Controls.Add(radioButton2);
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(1321, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(157, 88);
             panel4.TabIndex = 3;
             // 
-            // label3
+            // radioButton1
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(69, 64);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 21);
-            label3.TabIndex = 7;
-            label3.Text = "Ver 1.0.0";
+            radioButton1.AutoSize = true;
+            radioButton1.ForeColor = Color.White;
+            radioButton1.Location = new Point(20, 60);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(76, 25);
+            radioButton1.TabIndex = 9;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Myanmar";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.Click += radioButton1_Click;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.ForeColor = Color.White;
+            radioButton2.Location = new Point(102, 60);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(47, 25);
+            radioButton2.TabIndex = 10;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Eng";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.Click += radioButton2_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(87, 60);
+            label2.Location = new Point(90, 60);
             label2.Name = "label2";
             label2.Size = new Size(57, 17);
             label2.TabIndex = 2;
@@ -191,7 +207,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(87, 31);
+            label1.Location = new Point(90, 31);
             label1.Name = "label1";
             label1.Size = new Size(101, 25);
             label1.TabIndex = 0;
@@ -283,11 +299,24 @@
             // 
             // mainpanel
             // 
+            mainpanel.BackColor = Color.White;
+            mainpanel.Controls.Add(pictureBox2);
             mainpanel.Dock = DockStyle.Fill;
             mainpanel.Location = new Point(0, 138);
             mainpanel.Name = "mainpanel";
             mainpanel.Size = new Size(1478, 789);
             mainpanel.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(1478, 789);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // Form2
             // 
@@ -298,10 +327,11 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "Form2";
-            Text = "Home";
+            FormClosed += Form2_FormClosed;
             Load += Form2_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -309,6 +339,8 @@
             panel1.PerformLayout();
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
+            mainpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -333,10 +365,12 @@
         private Button button2;
         private Button button3;
         private Label label3;
-        private Button button4;
         private Panel mainpanel;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Button button5;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label lbl_username;
     }
 }

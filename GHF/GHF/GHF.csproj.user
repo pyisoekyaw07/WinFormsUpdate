@@ -16,6 +16,9 @@
     <Compile Update="master2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="wallpaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Whitegold.cs">
       <SubType>UserControl</SubType>
     </Compile>
