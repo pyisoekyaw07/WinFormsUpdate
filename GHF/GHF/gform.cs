@@ -292,7 +292,7 @@ namespace GHF
                         i++;
                         txt_Dece.Text = i.ToString();
                         string autoid = txt_temparay.Text + "-" + String.Format("{0:0000}", i);
-                       /* txt_Dece.Text = autoid;*/
+                        /* txt_Dece.Text = autoid;*/
                         textBox25.Text = autoid;
 
                     }
@@ -310,21 +310,21 @@ namespace GHF
         }
         public void show_reg_piddata()/*Show Register Data To Table Function*/
         {
-           /* pid();*/
+            /* pid();*/
             /* string invoiceno = textBox25.Text;
              string productid = textBox29.Text;*/
-            for(int i=0; i < DGW_register.Rows.Count; i++)
+            for (int i = 0; i < DGW_register.Rows.Count; i++)
             {
-                
+
                 cmd = new SqlCommand("insert into g_register(SaleVoucher,ProductID) " +
-                     "values('"+ DGW_register.Rows[i].Cells[0].Value + "','"+ DGW_register.Rows[i].Cells[1].Value + "') ",con);
+                     "values('" + DGW_register.Rows[i].Cells[0].Value + "','" + DGW_register.Rows[i].Cells[1].Value + "') ", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("success");
-                
+
             }
-            
+
 
             /*adpt = new SqlDataAdapter("select * from g_register", con);
             dt = new DataTable();
@@ -358,7 +358,7 @@ namespace GHF
                 }
                 else
                 {
-                   
+
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
                     cmd.Connection = con;
@@ -371,7 +371,7 @@ namespace GHF
                         string pid = sr.GetValue(0).ToString();
                         txt_result_pid.Text = pid;
                         string[] temparray = txt_result_pid.Text.Split('-');
-                        txt_temparay_pid.Text= shop + date;
+                        txt_temparay_pid.Text = shop + date;
                         txt_Dece_pid.Text = temparray[1];
                         int i = Convert.ToInt32(txt_Dece_pid.Text);
                         i++;
@@ -379,7 +379,7 @@ namespace GHF
                         string autoid = txt_temparay_pid.Text + "-" + String.Format("{0:0000}", i);
                         txt_Dece_pid.Text = autoid;
                         textBox29.Text = autoid;
-                    }        
+                    }
                 }
                 con.Close();
             }

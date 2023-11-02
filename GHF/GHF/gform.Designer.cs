@@ -90,6 +90,9 @@
             txt_date = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            txt_incre_pid = new TextBox();
+            txt_temparray_proid = new TextBox();
+            txt_ince_proid = new TextBox();
             check_language = new TextBox();
             label28 = new Label();
             label27 = new Label();
@@ -103,9 +106,6 @@
             txt_result_pid = new TextBox();
             txt_Dece_pid = new TextBox();
             btn_add = new Button();
-            txt_ince_proid = new TextBox();
-            txt_temparray_proid = new TextBox();
-            txt_incre_pid = new TextBox();
             DGW_register = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
@@ -694,6 +694,28 @@
             groupBox1.TabIndex = 130;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
+            groupBox1.Visible = false;
+            // 
+            // txt_incre_pid
+            // 
+            txt_incre_pid.Location = new Point(250, 143);
+            txt_incre_pid.Name = "txt_incre_pid";
+            txt_incre_pid.Size = new Size(100, 28);
+            txt_incre_pid.TabIndex = 152;
+            // 
+            // txt_temparray_proid
+            // 
+            txt_temparray_proid.Location = new Point(137, 143);
+            txt_temparray_proid.Name = "txt_temparray_proid";
+            txt_temparray_proid.Size = new Size(107, 28);
+            txt_temparray_proid.TabIndex = 151;
+            // 
+            // txt_ince_proid
+            // 
+            txt_ince_proid.Location = new Point(71, 143);
+            txt_ince_proid.Name = "txt_ince_proid";
+            txt_ince_proid.Size = new Size(57, 28);
+            txt_ince_proid.TabIndex = 150;
             // 
             // check_language
             // 
@@ -804,27 +826,6 @@
             btn_add.TextAlign = ContentAlignment.MiddleRight;
             btn_add.UseVisualStyleBackColor = true;
             btn_add.Click += btn_add_Click;
-            // 
-            // txt_ince_proid
-            // 
-            txt_ince_proid.Location = new Point(71, 143);
-            txt_ince_proid.Name = "txt_ince_proid";
-            txt_ince_proid.Size = new Size(57, 28);
-            txt_ince_proid.TabIndex = 150;
-            // 
-            // txt_temparray_proid
-            // 
-            txt_temparray_proid.Location = new Point(137, 143);
-            txt_temparray_proid.Name = "txt_temparray_proid";
-            txt_temparray_proid.Size = new Size(107, 28);
-            txt_temparray_proid.TabIndex = 151;
-            // 
-            // txt_incre_pid
-            // 
-            txt_incre_pid.Location = new Point(250, 143);
-            txt_incre_pid.Name = "txt_incre_pid";
-            txt_incre_pid.Size = new Size(100, 28);
-            txt_incre_pid.TabIndex = 152;
             // 
             // DGW_register
             // 
