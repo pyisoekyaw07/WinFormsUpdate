@@ -63,6 +63,16 @@ namespace GHF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _25694 {
+            get {
+                object obj = ResourceManager.GetObject("25694", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fast_Speed_Test_PNG_Cutout {
             get {
                 object obj = ResourceManager.GetObject("Fast-Speed-Test-PNG-Cutout", resourceCulture);

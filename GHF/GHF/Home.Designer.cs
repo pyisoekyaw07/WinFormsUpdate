@@ -32,11 +32,11 @@
             button1 = new Button();
             panel2 = new Panel();
             lbl_username = new Label();
-            pictureBox3 = new PictureBox();
-            button5 = new Button();
-            label3 = new Label();
             button3 = new Button();
             button2 = new Button();
+            btn_home = new Button();
+            pictureBox3 = new PictureBox();
+            label3 = new Label();
             panel4 = new Panel();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
@@ -67,9 +67,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(42, 28);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(20, 28);
             button1.Name = "button1";
-            button1.Size = new Size(103, 31);
+            button1.Size = new Size(125, 31);
             button1.TabIndex = 0;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
@@ -79,11 +81,11 @@
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
             panel2.Controls.Add(lbl_username);
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(label3);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
+            panel2.Controls.Add(btn_home);
+            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
@@ -104,6 +106,43 @@
             lbl_username.TabIndex = 13;
             lbl_username.Text = "label4";
             // 
+            // button3
+            // 
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(575, 55);
+            button3.Name = "button3";
+            button3.Size = new Size(137, 31);
+            button3.TabIndex = 6;
+            button3.Text = "&Report";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(432, 55);
+            button2.Name = "button2";
+            button2.Size = new Size(137, 31);
+            button2.TabIndex = 5;
+            button2.Text = "Data &Master";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // btn_home
+            // 
+            btn_home.BackgroundImageLayout = ImageLayout.None;
+            btn_home.Image = (Image)resources.GetObject("btn_home.Image");
+            btn_home.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_home.Location = new Point(290, 55);
+            btn_home.Name = "btn_home";
+            btn_home.Size = new Size(137, 31);
+            btn_home.TabIndex = 11;
+            btn_home.Text = "&Home";
+            btn_home.UseVisualStyleBackColor = true;
+            btn_home.Click += btn_home_Click;
+            // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
@@ -114,16 +153,6 @@
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
             // 
-            // button5
-            // 
-            button5.Location = new Point(328, 28);
-            button5.Name = "button5";
-            button5.Size = new Size(161, 31);
-            button5.TabIndex = 11;
-            button5.Text = "Home";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -133,26 +162,6 @@
             label3.Size = new Size(53, 21);
             label3.TabIndex = 7;
             label3.Text = "Ver 1.1.0";
-            // 
-            // button3
-            // 
-            button3.Location = new Point(662, 28);
-            button3.Name = "button3";
-            button3.Size = new Size(161, 31);
-            button3.TabIndex = 6;
-            button3.Text = "Report";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(495, 28);
-            button2.Name = "button2";
-            button2.Size = new Size(161, 31);
-            button2.TabIndex = 5;
-            button2.Text = "Data Master";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // panel4
             // 
@@ -231,7 +240,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 88);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1478, 50);
+            panel1.Size = new Size(1478, 37);
             panel1.TabIndex = 3;
             // 
             // menuStrip2
@@ -239,7 +248,7 @@
             menuStrip2.BackColor = Color.Transparent;
             menuStrip2.Dock = DockStyle.None;
             menuStrip2.Items.AddRange(new ToolStripItem[] { goldToolStripMenuItem1, whiteGoldToolStripMenuItem1, gemDiamondToolStripMenuItem, cashierToolStripMenuItem });
-            menuStrip2.Location = new Point(11, 13);
+            menuStrip2.Location = new Point(8, 4);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Size = new Size(284, 29);
             menuStrip2.TabIndex = 1;
@@ -302,9 +311,9 @@
             mainpanel.BackColor = Color.White;
             mainpanel.Controls.Add(pictureBox2);
             mainpanel.Dock = DockStyle.Fill;
-            mainpanel.Location = new Point(0, 138);
+            mainpanel.Location = new Point(0, 125);
             mainpanel.Name = "mainpanel";
-            mainpanel.Size = new Size(1478, 789);
+            mainpanel.Size = new Size(1478, 802);
             mainpanel.TabIndex = 4;
             // 
             // pictureBox2
@@ -314,7 +323,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1478, 789);
+            pictureBox2.Size = new Size(1478, 802);
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
@@ -368,7 +377,7 @@
         private Panel mainpanel;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private Button button5;
+        private Button btn_home;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Label lbl_username;

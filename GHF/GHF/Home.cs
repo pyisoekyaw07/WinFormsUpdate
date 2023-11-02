@@ -37,7 +37,7 @@ namespace GHF
               master1.Hide();*/
             /*this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;*/
-            radioButton1.Checked = true;
+            radioButton2.Checked = true;
             this.WindowState = FormWindowState.Maximized;
             /*formload(new wallpaper());*/
             panel1.Show();
@@ -64,17 +64,6 @@ namespace GHF
 
         }
 
-
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            panel1.Show();
-            formload(new wallpaper());
-            panel1.BackColor = Color.White;
-
-
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -108,6 +97,14 @@ namespace GHF
             login showlogin = new login();
             showlogin.Show();
         }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+            formload(new wallpaper());
+            panel1.BackColor = Color.White;
+        }
+
 
 
         /*-----------------------------------------------------------------------------*/

@@ -31,21 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gform));
             btn_add_photo = new Button();
-            dataGridView2 = new DataGridView();
-            invoice = new DataGridViewTextBoxColumn();
-            productid = new DataGridViewTextBoxColumn();
-            Date = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            remark = new DataGridViewTextBoxColumn();
-            goldtype = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             comboBox4 = new ComboBox();
             comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
@@ -60,7 +45,7 @@
             label14 = new Label();
             label12 = new Label();
             label11 = new Label();
-            button3 = new Button();
+            btn_review = new Button();
             label23 = new Label();
             openFileDialog1 = new OpenFileDialog();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -68,14 +53,14 @@
             textBox3 = new TextBox();
             label22 = new Label();
             label21 = new Label();
-            button2 = new Button();
-            button1 = new Button();
+            btn_cancel = new Button();
+            btn_save = new Button();
             label10 = new Label();
             textBox29 = new TextBox();
             textBox27 = new TextBox();
             txt_pur_no = new TextBox();
             textBox25 = new TextBox();
-            textBox24 = new TextBox();
+            txt_remark = new TextBox();
             txt_totalamt = new TextBox();
             txt_rep = new TextBox();
             txt_mcost = new TextBox();
@@ -117,9 +102,14 @@
             txt_temparay_pid = new TextBox();
             txt_result_pid = new TextBox();
             txt_Dece_pid = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            btn_add = new Button();
+            txt_ince_proid = new TextBox();
+            txt_temparray_proid = new TextBox();
+            txt_incre_pid = new TextBox();
+            DGW_register = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DGW_register).BeginInit();
             SuspendLayout();
             // 
             // btn_add_photo
@@ -131,97 +121,6 @@
             btn_add_photo.Text = "ပုံထည့်သွင်းရန်";
             btn_add_photo.UseVisualStyleBackColor = true;
             btn_add_photo.Click += btn_add_photo_Click_1;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.AllowUserToAddRows = false;
-            dataGridView2.BackgroundColor = SystemColors.InactiveCaption;
-            dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { invoice, productid, Date, Time, remark, goldtype, Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
-            dataGridView2.Location = new Point(685, 245);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 30;
-            dataGridView2.Size = new Size(702, 242);
-            dataGridView2.TabIndex = 122;
-            // 
-            // invoice
-            // 
-            invoice.HeaderText = "စက်ဘောက်ချာနံပါတ်";
-            invoice.Name = "invoice";
-            // 
-            // productid
-            // 
-            productid.HeaderText = "ဘားကုဒ်နံပါတ်";
-            productid.Name = "productid";
-            // 
-            // Date
-            // 
-            Date.HeaderText = "ရက်စွဲ";
-            Date.Name = "Date";
-            // 
-            // Time
-            // 
-            Time.HeaderText = "အချိန်";
-            Time.Name = "Time";
-            // 
-            // remark
-            // 
-            remark.HeaderText = "အ၀င်မှတ်ချက်";
-            remark.Name = "remark";
-            remark.Width = 150;
-            // 
-            // goldtype
-            // 
-            goldtype.HeaderText = "ရွှေရည်";
-            goldtype.Name = "goldtype";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "ရွှေစျေး";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "ပစ္စည်းအမျိုးအစား";
-            Column2.Name = "Column2";
-            Column2.Width = 130;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "ပစ္စည်းအမျိုးအမည်";
-            Column3.Name = "Column3";
-            Column3.Width = 130;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "အလေးချိန်(ဂရမ်)";
-            Column4.Name = "Column4";
-            Column4.Width = 120;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "ကျပ်";
-            Column5.Name = "Column5";
-            Column5.Width = 80;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "ပဲ";
-            Column6.Name = "Column6";
-            Column6.Width = 80;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "ရွေး";
-            Column7.Name = "Column7";
-            Column7.Width = 80;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "ခြမ်း";
-            Column8.Name = "Column8";
-            Column8.Width = 80;
             // 
             // comboBox4
             // 
@@ -246,6 +145,7 @@
             comboBox3.TabIndex = 4;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             comboBox3.Click += comboBox3_Click;
+            comboBox3.KeyPress += comboBox3_KeyPress;
             // 
             // comboBox2
             // 
@@ -256,6 +156,7 @@
             comboBox2.Size = new Size(122, 29);
             comboBox2.TabIndex = 3;
             comboBox2.Click += comboBox2_Click;
+            comboBox2.KeyPress += comboBox2_KeyPress;
             // 
             // comboBox1
             // 
@@ -266,6 +167,7 @@
             comboBox1.Size = new Size(310, 29);
             comboBox1.TabIndex = 2;
             comboBox1.Click += comboBox1_Click;
+            comboBox1.KeyPress += comboBox1_KeyPress;
             // 
             // pictureBox
             // 
@@ -367,14 +269,14 @@
             label11.Size = new Size(0, 22);
             label11.TabIndex = 107;
             // 
-            // button3
+            // btn_review
             // 
-            button3.Location = new Point(486, 653);
-            button3.Name = "button3";
-            button3.Size = new Size(196, 38);
-            button3.TabIndex = 106;
-            button3.Text = "ပြန်ကြည့်မည်";
-            button3.UseVisualStyleBackColor = true;
+            btn_review.Location = new Point(458, 653);
+            btn_review.Name = "btn_review";
+            btn_review.Size = new Size(196, 38);
+            btn_review.TabIndex = 106;
+            btn_review.Text = "&Preview";
+            btn_review.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -436,24 +338,26 @@
             label21.TabIndex = 123;
             label21.Text = "စုစုပေါင်းအခုရေ";
             // 
-            // button2
+            // btn_cancel
             // 
-            button2.Location = new Point(255, 653);
-            button2.Name = "button2";
-            button2.Size = new Size(196, 38);
-            button2.TabIndex = 105;
-            button2.Text = "ပယ်ဖျက်မည်";
-            button2.UseVisualStyleBackColor = true;
+            btn_cancel.Location = new Point(243, 653);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(196, 38);
+            btn_cancel.TabIndex = 105;
+            btn_cancel.Text = "&Cancel";
+            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
-            // button1
+            // btn_save
             // 
-            button1.Location = new Point(30, 653);
-            button1.Name = "button1";
-            button1.Size = new Size(196, 38);
-            button1.TabIndex = 104;
-            button1.Text = "သိမ်းဆည်းမည်";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_save.Location = new Point(30, 653);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(196, 38);
+            btn_save.TabIndex = 104;
+            btn_save.Text = "&Save";
+            btn_save.UseVisualStyleBackColor = true;
+            btn_save.Click += button1_Click;
+            btn_save.KeyDown += btn_save_KeyDown;
             // 
             // label10
             // 
@@ -501,13 +405,13 @@
             textBox25.TabIndex = 98;
             textBox25.TabStop = false;
             // 
-            // textBox24
+            // txt_remark
             // 
-            textBox24.Location = new Point(170, 596);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(298, 28);
-            textBox24.TabIndex = 13;
-            textBox24.Leave += textBox24_Leave;
+            txt_remark.Location = new Point(170, 596);
+            txt_remark.Name = "txt_remark";
+            txt_remark.Size = new Size(298, 28);
+            txt_remark.TabIndex = 13;
+            txt_remark.KeyDown += txt_remark_KeyDown;
             // 
             // txt_totalamt
             // 
@@ -769,6 +673,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txt_incre_pid);
+            groupBox1.Controls.Add(txt_temparray_proid);
+            groupBox1.Controls.Add(txt_ince_proid);
             groupBox1.Controls.Add(check_language);
             groupBox1.Controls.Add(label28);
             groupBox1.Controls.Add(label27);
@@ -783,18 +690,18 @@
             groupBox1.Controls.Add(txt_Dece_pid);
             groupBox1.Location = new Point(688, 591);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(729, 156);
+            groupBox1.Size = new Size(729, 192);
             groupBox1.TabIndex = 130;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
-            groupBox1.Visible = false;
             // 
             // check_language
             // 
-            check_language.Location = new Point(12, 125);
+            check_language.Location = new Point(386, 49);
             check_language.Name = "check_language";
             check_language.Size = new Size(100, 28);
             check_language.TabIndex = 149;
+            check_language.Text = "myanmar";
             check_language.TextChanged += check_language_TextChanged_1;
             // 
             // label28
@@ -879,10 +786,55 @@
             // 
             // txt_Dece_pid
             // 
-            txt_Dece_pid.Location = new Point(71, 91);
+            txt_Dece_pid.Location = new Point(73, 93);
             txt_Dece_pid.Name = "txt_Dece_pid";
             txt_Dece_pid.Size = new Size(57, 28);
             txt_Dece_pid.TabIndex = 136;
+            // 
+            // btn_add
+            // 
+            btn_add.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_add.Image = (Image)resources.GetObject("btn_add.Image");
+            btn_add.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_add.Location = new Point(473, 596);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(55, 29);
+            btn_add.TabIndex = 14;
+            btn_add.Text = "&Add";
+            btn_add.TextAlign = ContentAlignment.MiddleRight;
+            btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
+            // 
+            // txt_ince_proid
+            // 
+            txt_ince_proid.Location = new Point(71, 143);
+            txt_ince_proid.Name = "txt_ince_proid";
+            txt_ince_proid.Size = new Size(57, 28);
+            txt_ince_proid.TabIndex = 150;
+            // 
+            // txt_temparray_proid
+            // 
+            txt_temparray_proid.Location = new Point(137, 143);
+            txt_temparray_proid.Name = "txt_temparray_proid";
+            txt_temparray_proid.Size = new Size(107, 28);
+            txt_temparray_proid.TabIndex = 151;
+            // 
+            // txt_incre_pid
+            // 
+            txt_incre_pid.Location = new Point(250, 143);
+            txt_incre_pid.Name = "txt_incre_pid";
+            txt_incre_pid.Size = new Size(100, 28);
+            txt_incre_pid.TabIndex = 152;
+            // 
+            // DGW_register
+            // 
+            DGW_register.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DGW_register.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGW_register.Location = new Point(682, 220);
+            DGW_register.Name = "DGW_register";
+            DGW_register.RowTemplate.Height = 30;
+            DGW_register.Size = new Size(668, 150);
+            DGW_register.TabIndex = 201;
             // 
             // gform
             // 
@@ -890,10 +842,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.White;
-            ClientSize = new Size(1429, 759);
+            ClientSize = new Size(1429, 828);
+            Controls.Add(DGW_register);
+            Controls.Add(btn_add);
             Controls.Add(groupBox1);
             Controls.Add(btn_add_photo);
-            Controls.Add(dataGridView2);
             Controls.Add(comboBox4);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
@@ -908,20 +861,20 @@
             Controls.Add(label14);
             Controls.Add(label12);
             Controls.Add(label11);
-            Controls.Add(button3);
+            Controls.Add(btn_review);
             Controls.Add(label23);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(label22);
             Controls.Add(label21);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_cancel);
+            Controls.Add(btn_save);
             Controls.Add(label10);
             Controls.Add(textBox29);
             Controls.Add(textBox27);
             Controls.Add(txt_pur_no);
             Controls.Add(textBox25);
-            Controls.Add(textBox24);
+            Controls.Add(txt_remark);
             Controls.Add(txt_totalamt);
             Controls.Add(txt_rep);
             Controls.Add(txt_mcost);
@@ -954,10 +907,10 @@
             Name = "gform";
             Text = "gform";
             Load += gform_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DGW_register).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -965,7 +918,6 @@
         #endregion
 
         private Button btn_add_photo;
-        private DataGridView dataGridView2;
         private ComboBox comboBox4;
         private ComboBox comboBox3;
         private ComboBox comboBox2;
@@ -980,7 +932,7 @@
         private Label label14;
         private Label label12;
         private Label label11;
-        private Button button3;
+        private Button btn_review;
         private Label label23;
         private OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Timer timer1;
@@ -988,14 +940,14 @@
         private TextBox textBox3;
         private Label label22;
         private Label label21;
-        private Button button2;
-        private Button button1;
+        private Button btn_cancel;
+        private Button btn_save;
         private Label label10;
         private TextBox textBox29;
         private TextBox textBox27;
         private TextBox txt_pur_no;
         private TextBox textBox25;
-        private TextBox textBox24;
+        private TextBox txt_remark;
         private TextBox txt_totalamt;
         private TextBox txt_rep;
         private TextBox txt_mcost;
@@ -1036,20 +988,11 @@
         private Label label28;
         private Label label27;
         private Label label26;
-        private DataGridViewTextBoxColumn invoice;
-        private DataGridViewTextBoxColumn productid;
-        private DataGridViewTextBoxColumn Date;
-        private DataGridViewTextBoxColumn Time;
-        private DataGridViewTextBoxColumn remark;
-        private DataGridViewTextBoxColumn goldtype;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
         private TextBox check_language;
+        private Button btn_add;
+        private TextBox txt_incre_pid;
+        private TextBox txt_temparray_proid;
+        private TextBox txt_ince_proid;
+        private DataGridView DGW_register;
     }
 }

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics.Contracts;
+using Azure.Identity;
+using System.Web;
 
 namespace GHF
 {
@@ -28,13 +30,8 @@ namespace GHF
             goldprice();
             counter();
 
-            /*  item();
-              sourceremark();
-              Gtype();
-              autoid();*/
-
         }
-
+        DataTable dtb = new DataTable();
         private void gform_Load(object sender, EventArgs e)
         {
             /*check_language.Text = Form2.setvalueformyan;
@@ -49,6 +46,10 @@ namespace GHF
 
             invoiceid();
             pid();
+            dtb.Columns.Add("SaleVoucher", Type.GetType("System.String"));
+            dtb.Columns.Add("ProductID", Type.GetType("System.String"));
+            DGW_register.DataSource = dtb;
+            DGW_register.AllowUserToAddRows = false;
 
         }
         public void timer1_Tick_1(object sender, EventArgs e)/*Date and Time*/
@@ -206,9 +207,9 @@ namespace GHF
             label21.Text = "စုစုပေါင်းအခုရေ";
             label22.Text = "စုစုပေါင်းတန်ဖိုး";
             label23.Text = "စက်ဘောက်ချာနံပါတ်";
-            button1.Text = "သိမ်းဆည်းမည်";
-            button2.Text = "ပယ်ဖျက်မည်";
-            button3.Text = "ပြန်ကြည့်မည်";
+            btn_save.Text = "သိမ်းဆည်းမည်";
+            btn_cancel.Text = "ပယ်ဖျက်မည်";
+            btn_review.Text = "ပြန်ကြည့်မည်";
             btn_add_photo.Text = "ပုံထည့်သွင်းရန်";
         }
         public void eng()/*function english language*/
@@ -235,9 +236,9 @@ namespace GHF
             label21.Text = "Total Qty";
             label22.Text = "Total Amount";
             label23.Text = "Voucher No";
-            button1.Text = "Save";
-            button2.Text = "Cancel";
-            button3.Text = "Review";
+            btn_save.Text = "Save";
+            btn_cancel.Text = "Cancel";
+            btn_review.Text = "Review";
             btn_add_photo.Text = "Add Photo";
         }
 
@@ -260,7 +261,8 @@ namespace GHF
 
                 {
                     string form = "GR";
-                    string shop = login.shoptext;
+                    /*string shop = login.shoptext;*/
+                    string shop = "A";
                     string date = DateTime.Now.ToString("ddMMyy");
                     string id = "0001";
                     textBox25.Text = form + shop + date + "-" + id;
@@ -268,21 +270,29 @@ namespace GHF
                 }
                 else
                 {
-                    sql = "select * from g_register";
-                    cmd = new SqlCommand(sql, con);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+
+                    SqlCommand cmd = new SqlCommand();
+                    SqlDataReader sr = null;
+                    cmd.Connection = con;
+                    cmd.CommandText = "select top(1) SaleVoucher from g_register order by SaleVoucher desc";
+                    sr = cmd.ExecuteReader();
+                    if (sr.Read())
 
                     {
-                        txt_result_id.Text = reader["SaleVoucher"].ToString();
+                        string form = "GR";
+                        string num = textBox29.Text;
+                        string shop = "A";
+                        string date = DateTime.Now.ToString("ddMMyy");
+                        string pid = sr.GetValue(0).ToString();
+                        txt_result_id.Text = pid;
                         string[] temparray = txt_result_id.Text.Split('-');
-                        txt_temparay.Text = temparray[0];
+                        txt_temparay.Text = form + shop + date;
                         txt_Dece.Text = temparray[1];
                         int i = Convert.ToInt32(txt_Dece.Text);
                         i++;
                         txt_Dece.Text = i.ToString();
                         string autoid = txt_temparay.Text + "-" + String.Format("{0:0000}", i);
-                        txt_Dece.Text = autoid;
+                       /* txt_Dece.Text = autoid;*/
                         textBox25.Text = autoid;
 
                     }
@@ -298,26 +308,28 @@ namespace GHF
             }
 
         }
-        public void show_reg_data()/*Show Register Data To Table Function*/
+        public void show_reg_piddata()/*Show Register Data To Table Function*/
         {
-            string invoiceno = textBox25.Text;
-            string productid = textBox29.Text;
-            con.Open();
-            sql = "insert into g_register(SaleVoucher,ProductID) " +
-                "values(@SaleVoucher,@ProductID) ";
-            cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@SaleVoucher", invoiceno);
-            cmd.Parameters.AddWithValue("@ProductID", productid);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("success");
-            pid();
+           /* pid();*/
+            /* string invoiceno = textBox25.Text;
+             string productid = textBox29.Text;*/
+            for(int i=0; i < DGW_register.Rows.Count; i++)
+            {
+                
+                cmd = new SqlCommand("insert into g_register(SaleVoucher,ProductID) " +
+                     "values('"+ DGW_register.Rows[i].Cells[0].Value + "','"+ DGW_register.Rows[i].Cells[1].Value + "') ",con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("success");
+                
+            }
+            
+
             /*adpt = new SqlDataAdapter("select * from g_register", con);
             dt = new DataTable();
             adpt.Fill(dt);
             dataGridView2.DataSource = dt;*/
-
-
 
         }
         public void pid()/*function Product Number*/
@@ -337,6 +349,7 @@ namespace GHF
                 if (maxid == null)
 
                 {
+                    /*string shop = login.shoptext;*/
                     string shop = "A";
                     string date = DateTime.Now.ToString("ddMMyy");
                     string id = "0001";
@@ -345,15 +358,20 @@ namespace GHF
                 }
                 else
                 {
-                    sql = "select * from g_register";
-                    cmd = new SqlCommand(sql, con);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
-
+                   
+                    SqlCommand cmd = new SqlCommand();
+                    SqlDataReader sr = null;
+                    cmd.Connection = con;
+                    cmd.CommandText = "select top(1) ProductID from g_register order by ProductID desc";
+                    sr = cmd.ExecuteReader();
+                    if (sr.Read())
                     {
-                        txt_result_pid.Text = reader["ProductID"].ToString();
+                        string shop = "A";
+                        string date = DateTime.Now.ToString("ddMMyy");
+                        string pid = sr.GetValue(0).ToString();
+                        txt_result_pid.Text = pid;
                         string[] temparray = txt_result_pid.Text.Split('-');
-                        txt_temparay_pid.Text = temparray[0];
+                        txt_temparay_pid.Text= shop + date;
                         txt_Dece_pid.Text = temparray[1];
                         int i = Convert.ToInt32(txt_Dece_pid.Text);
                         i++;
@@ -361,8 +379,7 @@ namespace GHF
                         string autoid = txt_temparay_pid.Text + "-" + String.Format("{0:0000}", i);
                         txt_Dece_pid.Text = autoid;
                         textBox29.Text = autoid;
-
-                    }
+                    }        
                 }
                 con.Close();
             }
@@ -373,7 +390,7 @@ namespace GHF
         }
         private void button1_Click(object sender, EventArgs e)/*Save Button*/
         {
-            string checkvalue = textBox25.Text;
+            /*string checkvalue = textBox25.Text;
             if (textBox25.Text == checkvalue)
             {
                 MessageBox.Show("Invoice Number Is Save");
@@ -381,7 +398,18 @@ namespace GHF
             else
             {
                 MessageBox.Show("Invoice Number Is Not Save");
+            }*/
+            /*if (txt_gm.Text == "")
+            {
+                MessageBox.Show("အချက်အလက်များပြန်လည်စစ်ဆေးပေးပါ");
             }
+            else
+            {
+                invoiceid();
+                MessageBox.Show("သိမ်းဆည်းပြီးပါပြီ");
+            }*/
+            show_reg_piddata();
+            pid();
             invoiceid();
 
         }
@@ -453,13 +481,6 @@ namespace GHF
             lan();
         }
 
-        private void textBox24_Leave(object sender, EventArgs e)
-        {
-            show_reg_data();
-
-
-        }
-
         private void txt_gm_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
@@ -521,13 +542,88 @@ namespace GHF
 
         private void txt_mcost_Leave(object sender, EventArgs e)
         {
+            if (txt_mcost.Text == "")
+            {
+                txt_mcost.Text = "0";
+            }
+            else
+            {
+                txt_mcost.Text = string.Format("{0:n}", double.Parse(txt_mcost.Text));
+            }
 
-            txt_mcost.Text = string.Format("{0:n}", double.Parse(txt_mcost.Text));
         }
 
         private void txt_rep_Leave(object sender, EventArgs e)
         {
-            txt_rep.Text= string.Format("{0:n}", double.Parse(txt_rep.Text));
+            if (txt_rep.Text == "")
+            {
+                txt_rep.Text = "0";
+            }
+            else
+            {
+                txt_rep.Text = string.Format("{0:n}", double.Parse(txt_rep.Text));
+            }
+
+        }
+
+        private void txt_remark_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                show_reg_piddata();
+                txt_gm.Focus();
+            }
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            comboBox1.DroppedDown = true;
+            sourceremark();
+        }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            comboBox2.DroppedDown = true;
+            Gtype();
+        }
+
+        private void comboBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            comboBox3.DroppedDown = true;
+            item();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+            /*show_reg_piddata();*/
+            comboBox3.Focus();
+            dtb.Rows.Add(textBox25.Text, textBox29.Text);
+            DGW_register.AllowUserToAddRows = false;
+            string shop = "A";
+            string date = DateTime.Now.ToString("ddMMyy");
+            txt_ince_proid.Text = textBox29.Text;
+            string[] temparray = txt_ince_proid.Text.Split('-');
+            txt_temparray_proid.Text = shop + date;
+            txt_incre_pid.Text = temparray[1];
+            int i = Convert.ToInt32(txt_incre_pid.Text);
+            i++;
+            string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
+            textBox29.Text = autopoid;
+
+        }
+
+        private void btn_save_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.S)
+            {
+
+            }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
