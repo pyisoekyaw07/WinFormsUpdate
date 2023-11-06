@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Diagnostics.Contracts;
 using Azure.Identity;
 using System.Web;
+using System.Windows.Media.Converters;
 
 namespace GHF
 {
@@ -31,7 +32,7 @@ namespace GHF
             counter();
 
         }
-        DataTable dtb = new DataTable();
+        /*DataTable dtb = new DataTable();*/
         private void gform_Load(object sender, EventArgs e)
         {
             /*check_language.Text = Form2.setvalueformyan;
@@ -46,12 +47,13 @@ namespace GHF
 
             invoiceid();
             pid();
-            dtb.Columns.Add("SaleVoucher", Type.GetType("System.String"));
+            /*dtb.Columns.Add("SaleVoucher", Type.GetType("System.String"));
             dtb.Columns.Add("ProductID", Type.GetType("System.String"));
-            DGW_register.DataSource = dtb;
-            DGW_register.AllowUserToAddRows = false;
+            DGW_register.DataSource = dtb;*/
+            /*DGW_register.AllowUserToAddRows = false;*/
 
         }
+        /*-------------------------------------------Function Group----------------------------------------------*/
         public void timer1_Tick_1(object sender, EventArgs e)/*Date and Time*/
         {
             DateTime d = new DateTime();
@@ -241,8 +243,6 @@ namespace GHF
             btn_review.Text = "Review";
             btn_add_photo.Text = "Add Photo";
         }
-
-
         public void invoiceid()/*function Invoice Number*/
         {
 
@@ -304,7 +304,7 @@ namespace GHF
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                /* MessageBox.Show(ex.Message);*/
             }
 
         }
@@ -321,11 +321,10 @@ namespace GHF
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("success");
-
+                DGW_register.Rows.Clear();
             }
 
-
+            MessageBox.Show("success");
             /*adpt = new SqlDataAdapter("select * from g_register", con);
             dt = new DataTable();
             adpt.Fill(dt);
@@ -385,51 +384,53 @@ namespace GHF
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                /* MessageBox.Show(ex.Message);*/
             }
         }
-        private void button1_Click(object sender, EventArgs e)/*Save Button*/
+
+        public void calculategm()/*function claculation gm to kyp*/
         {
-            /*string checkvalue = textBox25.Text;
-            if (textBox25.Text == checkvalue)
+            double intk, intp, inty, ints, tk, tp, ty, ts, k, p, y, s = 0;
+            string chks = "0";
+            string svalue = "0";
+            double gm = 0;
+            if (txt_gm.Text == "")
             {
-                MessageBox.Show("Invoice Number Is Save");
+                txt_s.Text="0";
+                txt_gm.Text = "0";
             }
-            else
-            {
-                MessageBox.Show("Invoice Number Is Not Save");
-            }*/
-            /*if (txt_gm.Text == "")
-            {
-                MessageBox.Show("အချက်အလက်များပြန်လည်စစ်ဆေးပေးပါ");
+            intk = Math.Floor(double.Parse(txt_gm.Text) / double.Parse("16.6"));
+            tk = double.Parse(txt_gm.Text) / double.Parse("16.6");
+            txt_k.Text = intk.ToString();
+
+            tp = (tk - intk) * 16;
+            intp = Math.Floor((tk - intk) * 16);
+            txt_p.Text = intp.ToString();
+
+            ty = (tp - intp) * 8;
+            inty = Math.Floor((tp - intp) * 8);
+            txt_y.Text = inty.ToString();
+
+            ts = ty - inty;
+            chks = ts.ToString("0.##");
+            if (double.Parse(chks) >= 0.25 && double.Parse(chks) <= 0.49)
+            {     
+                txt_s.Text = "1";
             }
-            else
-            {
-                invoiceid();
-                MessageBox.Show("သိမ်းဆည်းပြီးပါပြီ");
-            }*/
-            show_reg_piddata();
-            pid();
-            invoiceid();
+            else if (double.Parse(chks) >= 0.50 && double.Parse(chks) <= 0.74)
+            {     
+                txt_s.Text = "1";
+            }
+            else if (double.Parse(chks) >= 0.75 && double.Parse(chks) <= 0.9)
+            {         
+                txt_s.Text = "3";
+            }
 
         }
-        private void btn_add_photo_Click_1(object sender, EventArgs e)/*Add Photo*/
-        {
-            OpenFileDialog open = new OpenFileDialog();
-
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox.Image = new Bitmap(open.FileName);
-                // image file path  
-                /* textBox1.Text = open.FileName;*/
-            }
-
-        }
+        /*--------------------------------------------------------------------------------------------------------------------*/
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)/*Item ComboBox*/
         {
             comboBox4.Items.Clear();
-
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -447,21 +448,21 @@ namespace GHF
         private void comboBox1_Click(object sender, EventArgs e)
         {
             sourceremark();
-        }
+        }/*Source Remark*/
         private void comboBox2_Click(object sender, EventArgs e)
         {
             Gtype();
-        }
+        }/*Gtype*/
         private void comboBox3_Click(object sender, EventArgs e)
         {
             item();
-        }
+        }/*Item*/
         private void textBox8_DoubleClick(object sender, EventArgs e)
         {
 
             textBox8.ReadOnly = false;
-        }
-
+        }/*Change Gold Price*/
+        /*--------------------------------------------Change Language------------------------------------------------------------*/
         public static string language = "";
         public void lan()
         {
@@ -475,18 +476,22 @@ namespace GHF
                 eng();
             }
         }
-
         private void check_language_TextChanged_1(object sender, EventArgs e)
         {
             lan();
         }
-
+        /*--------------------------------------------Validate Textbox and Focus-------------------------------------------------*/
         private void txt_gm_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
+
+        }
+        private void txt_gm_TextChanged(object sender, EventArgs e)
+        {
+            calculategm();
         }
 
         private void txt_YK_KeyPress(object sender, KeyPressEventArgs e)
@@ -575,6 +580,7 @@ namespace GHF
             }
         }
 
+        /*---------------------------------------------Get Data Combobox------------------------------------------------------*/
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             comboBox1.DroppedDown = true;
@@ -592,14 +598,14 @@ namespace GHF
             comboBox3.DroppedDown = true;
             item();
         }
-
-        private void btn_add_Click(object sender, EventArgs e)
+        /*--------------------------------------------------------------------------------------------------------------------*/
+        private void btn_add_Click(object sender, EventArgs e)/*Add Button*/
         {
 
             /*show_reg_piddata();*/
             comboBox3.Focus();
-            dtb.Rows.Add(textBox25.Text, textBox29.Text);
-            DGW_register.AllowUserToAddRows = false;
+            DGW_register.Rows.Add(textBox25.Text, textBox29.Text);
+            /*DGW_register.AllowUserToAddRows = false;*/
             string shop = "A";
             string date = DateTime.Now.ToString("ddMMyy");
             txt_ince_proid.Text = textBox29.Text;
@@ -612,19 +618,52 @@ namespace GHF
             textBox29.Text = autopoid;
 
         }
-
-        private void btn_save_KeyDown(object sender, KeyEventArgs e)
+        private void button1_Click(object sender, EventArgs e)/*Save Button*/
         {
-            if (e.KeyCode == Keys.S)
+            /*string checkvalue = textBox25.Text;
+            if (textBox25.Text == checkvalue)
             {
-
+                MessageBox.Show("Invoice Number Is Save");
             }
+            else
+            {
+                MessageBox.Show("Invoice Number Is Not Save");
+            }*/
+            /*if (txt_gm.Text == "")
+            {
+                MessageBox.Show("အချက်အလက်များပြန်လည်စစ်ဆေးပေးပါ");
+            }
+            else
+            {
+                invoiceid();
+                MessageBox.Show("သိမ်းဆည်းပြီးပါပြီ");
+            }*/
+            show_reg_piddata();
+            pid();
+            invoiceid();
+
+
+        }
+        private void btn_add_photo_Click_1(object sender, EventArgs e)/*Add Photo*/
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.Image = new Bitmap(open.FileName);
+                // image file path  
+                /* textBox1.Text = open.FileName;*/
+            }
+
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }
 
