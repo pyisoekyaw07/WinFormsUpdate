@@ -33,6 +33,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            txt_item = new TextBox();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             txt_update = new TextBox();
@@ -93,7 +94,8 @@
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = Color.Transparent;
+            tabPage1.BackColor = Color.White;
+            tabPage1.Controls.Add(txt_item);
             tabPage1.Controls.Add(panel1);
             tabPage1.Controls.Add(txt_update);
             tabPage1.Controls.Add(Pan_item);
@@ -106,6 +108,14 @@
             tabPage1.Size = new Size(1274, 480);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Product Master";
+            // 
+            // txt_item
+            // 
+            txt_item.Location = new Point(822, 364);
+            txt_item.Name = "txt_item";
+            txt_item.Size = new Size(220, 30);
+            txt_item.TabIndex = 28;
+            txt_item.Visible = false;
             // 
             // panel1
             // 
@@ -478,6 +488,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1419, 532);
             Controls.Add(txt_Date);
             Controls.Add(txt_Time);
@@ -542,5 +553,6 @@
         private Button btn_View;
         private RadioButton radioButton1;
         private Panel panel1;
+        private TextBox txt_item;
     }
 }

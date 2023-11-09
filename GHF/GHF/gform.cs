@@ -47,10 +47,7 @@ namespace GHF
 
             invoiceid();
             pid();
-            /*dtb.Columns.Add("SaleVoucher", Type.GetType("System.String"));
-            dtb.Columns.Add("ProductID", Type.GetType("System.String"));
-            DGW_register.DataSource = dtb;*/
-            /*DGW_register.AllowUserToAddRows = false;*/
+
 
         }
         /*-------------------------------------------Function Group----------------------------------------------*/
@@ -207,7 +204,7 @@ namespace GHF
             label19.Text = "စုစုပေါင်းတန်ဖိုး";
             label20.Text = "မှတ်ချက်";
             label21.Text = "စုစုပေါင်းအခုရေ";
-            label22.Text = "စုစုပေါင်းတန်ဖိုး";
+
             label23.Text = "စက်ဘောက်ချာနံပါတ်";
             btn_save.Text = "သိမ်းဆည်းမည်";
             btn_cancel.Text = "ပယ်ဖျက်မည်";
@@ -236,7 +233,7 @@ namespace GHF
             label19.Text = "Total Amount";
             label20.Text = "Remark";
             label21.Text = "Total Qty";
-            label22.Text = "Total Amount";
+
             label23.Text = "Voucher No";
             btn_save.Text = "Save";
             btn_cancel.Text = "Cancel";
@@ -322,9 +319,10 @@ namespace GHF
                 cmd.ExecuteNonQuery();
                 con.Close();
                 DGW_register.Rows.Clear();
+                MessageBox.Show("success");
             }
 
-            MessageBox.Show("success");
+
             /*adpt = new SqlDataAdapter("select * from g_register", con);
             dt = new DataTable();
             adpt.Fill(dt);
@@ -396,7 +394,7 @@ namespace GHF
             double gm = 0;
             if (txt_gm.Text == "")
             {
-                txt_s.Text="0";
+                txt_s.Text = "0";
                 txt_gm.Text = "0";
             }
             intk = Math.Floor(double.Parse(txt_gm.Text) / double.Parse("16.6"));
@@ -414,18 +412,32 @@ namespace GHF
             ts = ty - inty;
             chks = ts.ToString("0.##");
             if (double.Parse(chks) >= 0.25 && double.Parse(chks) <= 0.49)
-            {     
+            {
                 txt_s.Text = "1";
+               /* label31.Text = "";
+                label31.Text = "စိပ်";*/
             }
             else if (double.Parse(chks) >= 0.50 && double.Parse(chks) <= 0.74)
-            {     
+            {
                 txt_s.Text = "1";
+               /* label31.Text = "";
+                label31.Text = "ခြမ်း";*/
             }
             else if (double.Parse(chks) >= 0.75 && double.Parse(chks) <= 0.9)
-            {         
+            {
                 txt_s.Text = "3";
+               /* label31.Text = "";
+                label31.Text = "စိပ်";*/
             }
-
+            else
+            {
+                if (double.Parse(chks) < 0.25)
+                {
+                    txt_s.Text = "0";
+                  /*  label31.Text = "";
+                    label31.Text = "စိပ်";*/
+                }
+            }
         }
         /*--------------------------------------------------------------------------------------------------------------------*/
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)/*Item ComboBox*/
@@ -658,12 +670,19 @@ namespace GHF
 
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+        private void btn_review_Click(object sender, EventArgs e)
         {
-
+            Form frm3 = new g_reg_preview();
+            frm3.ShowDialog();
         }
 
+        private void btn_cancel_Click(object sender, EventArgs e)
 
+        {
+            pid();
+            invoiceid();
+            DGW_register.Rows.Clear();
+        }
     }
 }
 

@@ -511,7 +511,7 @@ namespace GHF
                         SqlCommand itemcmd = new SqlCommand("update gold_itemname set Date=@Date,Time=@Time,Item=@Item,Itemname=@Itemname where Itemname =N'" + txt_update.Text + "'", con);
                         itemcmd.Parameters.AddWithValue("@Date", txt_Date.Text);
                         itemcmd.Parameters.AddWithValue("@Time", txt_Time.Text);
-                        itemcmd.Parameters.AddWithValue("@Item", Parentitem_combo.Text);
+                        itemcmd.Parameters.AddWithValue("@Item", txt_item.Text);
                         itemcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
                         con.Open();
                         itemcmd.ExecuteNonQuery();
@@ -718,6 +718,7 @@ namespace GHF
                 int i, j;
                 i = dataGridView1.CurrentCell.RowIndex;
                 /*j = dataGridView1.CurrentCell.ColumnIndex;*/
+
                 txt_update.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             }
             else if (comboBox1.SelectedIndex == 0 && itemtype_combo.SelectedIndex == 0 && chk_parent.Checked == true)
@@ -725,6 +726,7 @@ namespace GHF
                 int i, j;
                 i = dataGridView1.CurrentCell.RowIndex;
                 /*j = dataGridView1.CurrentCell.ColumnIndex;*/
+                txt_item.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
                 txt_update.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
 
 
@@ -798,6 +800,7 @@ namespace GHF
                 radioButton1.Checked = false;
                 button1.Enabled = false;
                 btn_save.Enabled = true;
+                Parentitem_combo.Enabled = true;
             }
 
             else
@@ -806,6 +809,7 @@ namespace GHF
                 isChecked = false;
                 button1.Enabled = true;
                 btn_save.Enabled = false;
+                Parentitem_combo.Enabled = false;
             }
         }
         /*---------------------------------------------------------------------------------------------------------------------*/

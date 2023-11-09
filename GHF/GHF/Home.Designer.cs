@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            button1 = new Button();
             panel2 = new Panel();
-            lbl_username = new Label();
-            button3 = new Button();
-            button2 = new Button();
-            btn_home = new Button();
+            panel6 = new Panel();
+            pan_line_home = new Panel();
+            pan_line_master = new Panel();
+            lbl_report = new Label();
+            lbl_master = new Label();
+            lbl_Home = new Label();
+            panel3 = new Panel();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             pictureBox3 = new PictureBox();
-            label3 = new Label();
-            panel4 = new Panel();
             radioButton1 = new RadioButton();
+            lbl_username = new Label();
             radioButton2 = new RadioButton();
             label2 = new Label();
             label1 = new Label();
@@ -56,8 +58,9 @@
             mainpanel = new Panel();
             pictureBox2 = new PictureBox();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             menuStrip2.SuspendLayout();
@@ -65,138 +68,165 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(20, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(125, 31);
-            button1.TabIndex = 0;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
-            panel2.Controls.Add(lbl_username);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(btn_home);
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(pan_line_home);
+            panel2.Controls.Add(pan_line_master);
+            panel2.Controls.Add(lbl_report);
+            panel2.Controls.Add(lbl_master);
+            panel2.Controls.Add(lbl_Home);
+            panel2.Controls.Add(panel3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
+            panel2.ForeColor = SystemColors.ButtonHighlight;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1478, 88);
+            panel2.Size = new Size(1478, 63);
             panel2.TabIndex = 2;
             // 
-            // lbl_username
+            // panel6
             // 
-            lbl_username.AutoSize = true;
-            lbl_username.ForeColor = Color.White;
-            lbl_username.Location = new Point(1198, 33);
-            lbl_username.Name = "lbl_username";
-            lbl_username.Size = new Size(41, 21);
-            lbl_username.TabIndex = 13;
-            lbl_username.Text = "label4";
+            panel6.BackColor = Color.FromArgb(167, 167, 167);
+            panel6.Location = new Point(535, 47);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(80, 5);
+            panel6.TabIndex = 24;
+            panel6.Visible = false;
             // 
-            // button3
+            // pan_line_home
             // 
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(575, 55);
-            button3.Name = "button3";
-            button3.Size = new Size(137, 31);
-            button3.TabIndex = 6;
-            button3.Text = "&Report";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            pan_line_home.BackColor = Color.White;
+            pan_line_home.ForeColor = Color.White;
+            pan_line_home.Location = new Point(359, 47);
+            pan_line_home.Name = "pan_line_home";
+            pan_line_home.Size = new Size(80, 5);
+            pan_line_home.TabIndex = 24;
             // 
-            // button2
+            // pan_line_master
             // 
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(432, 55);
-            button2.Name = "button2";
-            button2.Size = new Size(137, 31);
-            button2.TabIndex = 5;
-            button2.Text = "Data &Master";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            pan_line_master.BackColor = Color.FromArgb(167, 167, 167);
+            pan_line_master.Location = new Point(447, 47);
+            pan_line_master.Name = "pan_line_master";
+            pan_line_master.Size = new Size(80, 5);
+            pan_line_master.TabIndex = 23;
+            pan_line_master.Visible = false;
             // 
-            // btn_home
+            // lbl_report
             // 
-            btn_home.BackgroundImageLayout = ImageLayout.None;
-            btn_home.Image = (Image)resources.GetObject("btn_home.Image");
-            btn_home.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_home.Location = new Point(290, 55);
-            btn_home.Name = "btn_home";
-            btn_home.Size = new Size(137, 31);
-            btn_home.TabIndex = 11;
-            btn_home.Text = "&Home";
-            btn_home.UseVisualStyleBackColor = true;
-            btn_home.Click += btn_home_Click;
+            lbl_report.AutoSize = true;
+            lbl_report.BackColor = Color.Transparent;
+            lbl_report.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_report.ForeColor = Color.FromArgb(167, 167, 167);
+            lbl_report.Location = new Point(549, 23);
+            lbl_report.Name = "lbl_report";
+            lbl_report.Size = new Size(47, 22);
+            lbl_report.TabIndex = 21;
+            lbl_report.Text = "Report";
+            // 
+            // lbl_master
+            // 
+            lbl_master.AutoSize = true;
+            lbl_master.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_master.ForeColor = Color.FromArgb(167, 167, 167);
+            lbl_master.Location = new Point(449, 23);
+            lbl_master.Name = "lbl_master";
+            lbl_master.Size = new Size(76, 22);
+            lbl_master.TabIndex = 20;
+            lbl_master.Text = "Data Master";
+            lbl_master.Click += lbl_master_Click;
+            // 
+            // lbl_Home
+            // 
+            lbl_Home.AutoSize = true;
+            lbl_Home.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Home.ForeColor = Color.White;
+            lbl_Home.Location = new Point(379, 23);
+            lbl_Home.Name = "lbl_Home";
+            lbl_Home.Size = new Size(42, 22);
+            lbl_Home.TabIndex = 0;
+            lbl_Home.Text = "Home";
+            lbl_Home.Click += lbl_Home_Click;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Transparent;
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(iconPictureBox1);
+            panel3.Controls.Add(pictureBox3);
+            panel3.Controls.Add(radioButton1);
+            panel3.Controls.Add(lbl_username);
+            panel3.Controls.Add(radioButton2);
+            panel3.Dock = DockStyle.Right;
+            panel3.ForeColor = Color.White;
+            panel3.Location = new Point(1186, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(292, 63);
+            panel3.TabIndex = 16;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.FromArgb(24, 47, 81);
+            iconPictureBox1.ForeColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            iconPictureBox1.IconColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.Location = new Point(255, 16);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(32, 32);
+            iconPictureBox1.TabIndex = 17;
+            iconPictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1159, 25);
+            pictureBox3.Location = new Point(210, 16);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(33, 29);
+            pictureBox3.Size = new Size(37, 31);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1159, 64);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 21);
-            label3.TabIndex = 7;
-            label3.Text = "Ver 1.1.0";
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(button1);
-            panel4.Controls.Add(radioButton1);
-            panel4.Controls.Add(radioButton2);
-            panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(1321, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(157, 88);
-            panel4.TabIndex = 3;
-            // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             radioButton1.ForeColor = Color.White;
-            radioButton1.Location = new Point(20, 60);
+            radioButton1.Image = (Image)resources.GetObject("radioButton1.Image");
+            radioButton1.Location = new Point(76, 23);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(76, 25);
+            radioButton1.Size = new Size(38, 24);
             radioButton1.TabIndex = 9;
             radioButton1.TabStop = true;
-            radioButton1.Text = "Myanmar";
             radioButton1.UseVisualStyleBackColor = true;
             radioButton1.Click += radioButton1_Click;
+            // 
+            // lbl_username
+            // 
+            lbl_username.AutoSize = true;
+            lbl_username.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_username.ForeColor = Color.White;
+            lbl_username.Location = new Point(124, 23);
+            lbl_username.Name = "lbl_username";
+            lbl_username.Size = new Size(84, 22);
+            lbl_username.TabIndex = 13;
+            lbl_username.Text = "Pyi Soe Kyaw";
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
+            radioButton2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             radioButton2.ForeColor = Color.White;
-            radioButton2.Location = new Point(102, 60);
+            radioButton2.Image = (Image)resources.GetObject("radioButton2.Image");
+            radioButton2.ImageAlign = ContentAlignment.MiddleRight;
+            radioButton2.Location = new Point(28, 23);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(47, 25);
+            radioButton2.Size = new Size(38, 24);
             radioButton2.TabIndex = 10;
             radioButton2.TabStop = true;
-            radioButton2.Text = "Eng";
             radioButton2.UseVisualStyleBackColor = true;
             radioButton2.Click += radioButton2_Click;
             // 
@@ -205,29 +235,29 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(90, 60);
+            label2.Location = new Point(141, 30);
             label2.Name = "label2";
-            label2.Size = new Size(57, 17);
+            label2.Size = new Size(30, 17);
             label2.TabIndex = 2;
-            label2.Text = "Location";
+            label2.Text = "pos";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Pyidaungsu", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(90, 31);
+            label1.Location = new Point(66, 4);
             label1.Name = "label1";
-            label1.Size = new Size(101, 25);
+            label1.Size = new Size(92, 63);
             label1.TabIndex = 0;
-            label1.Text = "App Name";
+            label1.Text = "GHF";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 7);
+            pictureBox1.Location = new Point(0, 9);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(91, 75);
+            pictureBox1.Size = new Size(82, 47);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -238,19 +268,20 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(menuStrip2);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 88);
+            panel1.Location = new Point(0, 63);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1478, 37);
+            panel1.Size = new Size(1478, 33);
             panel1.TabIndex = 3;
             // 
             // menuStrip2
             // 
             menuStrip2.BackColor = Color.Transparent;
             menuStrip2.Dock = DockStyle.None;
+            menuStrip2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip2.Items.AddRange(new ToolStripItem[] { goldToolStripMenuItem1, whiteGoldToolStripMenuItem1, gemDiamondToolStripMenuItem, cashierToolStripMenuItem });
-            menuStrip2.Location = new Point(8, 4);
+            menuStrip2.Location = new Point(8, 2);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(284, 29);
+            menuStrip2.Size = new Size(295, 30);
             menuStrip2.TabIndex = 1;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -258,13 +289,15 @@
             // 
             goldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem });
             goldToolStripMenuItem1.Name = "goldToolStripMenuItem1";
-            goldToolStripMenuItem1.Size = new Size(46, 25);
+            goldToolStripMenuItem1.Size = new Size(47, 26);
             goldToolStripMenuItem1.Text = "Gold";
             // 
             // registerToolStripMenuItem
             // 
+            registerToolStripMenuItem.Image = (Image)resources.GetObject("registerToolStripMenuItem.Image");
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            registerToolStripMenuItem.Size = new Size(121, 26);
+            registerToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.R;
+            registerToolStripMenuItem.Size = new Size(167, 26);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
@@ -272,38 +305,38 @@
             // 
             whiteGoldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem1 });
             whiteGoldToolStripMenuItem1.Name = "whiteGoldToolStripMenuItem1";
-            whiteGoldToolStripMenuItem1.Size = new Size(75, 25);
+            whiteGoldToolStripMenuItem1.Size = new Size(77, 26);
             whiteGoldToolStripMenuItem1.Text = "WhiteGold";
             // 
             // registerToolStripMenuItem1
             // 
             registerToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { test1ToolStripMenuItem, test2ToolStripMenuItem });
             registerToolStripMenuItem1.Name = "registerToolStripMenuItem1";
-            registerToolStripMenuItem1.Size = new Size(121, 26);
+            registerToolStripMenuItem1.Size = new Size(124, 26);
             registerToolStripMenuItem1.Text = "Register";
             // 
             // test1ToolStripMenuItem
             // 
             test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
-            test1ToolStripMenuItem.Size = new Size(110, 26);
+            test1ToolStripMenuItem.Size = new Size(112, 26);
             test1ToolStripMenuItem.Text = "Test 1";
             // 
             // test2ToolStripMenuItem
             // 
             test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
-            test2ToolStripMenuItem.Size = new Size(110, 26);
+            test2ToolStripMenuItem.Size = new Size(112, 26);
             test2ToolStripMenuItem.Text = "Test 2";
             // 
             // gemDiamondToolStripMenuItem
             // 
             gemDiamondToolStripMenuItem.Name = "gemDiamondToolStripMenuItem";
-            gemDiamondToolStripMenuItem.Size = new Size(95, 25);
+            gemDiamondToolStripMenuItem.Size = new Size(101, 26);
             gemDiamondToolStripMenuItem.Text = "Gem Diamond";
             // 
             // cashierToolStripMenuItem
             // 
             cashierToolStripMenuItem.Name = "cashierToolStripMenuItem";
-            cashierToolStripMenuItem.Size = new Size(60, 25);
+            cashierToolStripMenuItem.Size = new Size(62, 26);
             cashierToolStripMenuItem.Text = "Cashier";
             // 
             // mainpanel
@@ -311,9 +344,9 @@
             mainpanel.BackColor = Color.White;
             mainpanel.Controls.Add(pictureBox2);
             mainpanel.Dock = DockStyle.Fill;
-            mainpanel.Location = new Point(0, 125);
+            mainpanel.Location = new Point(0, 96);
             mainpanel.Name = "mainpanel";
-            mainpanel.Size = new Size(1478, 802);
+            mainpanel.Size = new Size(1478, 643);
             mainpanel.TabIndex = 4;
             // 
             // pictureBox2
@@ -323,7 +356,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1478, 802);
+            pictureBox2.Size = new Size(1478, 643);
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
@@ -331,7 +364,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1478, 927);
+            ClientSize = new Size(1478, 739);
             Controls.Add(mainpanel);
             Controls.Add(panel1);
             Controls.Add(panel2);
@@ -340,9 +373,10 @@
             Load += Form2_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -354,8 +388,6 @@
         }
 
         #endregion
-
-        private Button button1;
         private Panel panel2;
         private MenuStrip menuStrip2;
         private ToolStripMenuItem goldToolStripMenuItem1;
@@ -368,18 +400,21 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
-        private Panel panel4;
         private ToolStripMenuItem cashierToolStripMenuItem;
         private ToolStripMenuItem registerToolStripMenuItem;
-        private Button button2;
-        private Button button3;
-        private Label label3;
         private Panel mainpanel;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private Button btn_home;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Label lbl_username;
+        private Panel panel3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Label lbl_Home;
+        private Label lbl_report;
+        private Label lbl_master;
+        private Panel panel6;
+        private Panel pan_line_home;
+        private Panel pan_line_master;
     }
 }

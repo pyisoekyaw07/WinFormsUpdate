@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Identity.Client;
+using System.Windows.Media.Animation;
 
 namespace GHF
 {
@@ -43,6 +44,8 @@ namespace GHF
             panel1.Show();
             panel1.BackColor = Color.White;
             /*lbl_username.Text = login.username;*/
+
+
         }
 
 
@@ -55,21 +58,7 @@ namespace GHF
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*  master1.Show();
-              gold1.Hide();*/
-            panel1.Hide();
-            formload(new master2());
 
-        }
-
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-
-        }
         /*-----------------Change language----------------------------------*/
         public static string setvalueformyan = "";
 
@@ -98,14 +87,34 @@ namespace GHF
             showlogin.Show();
         }
 
-        private void btn_home_Click(object sender, EventArgs e)
+        private void lbl_Home_Click(object sender, EventArgs e)
         {
             panel1.Show();
             formload(new wallpaper());
             panel1.BackColor = Color.White;
+            lbl_master.ForeColor = Color.FromArgb(167, 167, 167);
+            pan_line_master.BackColor = Color.FromArgb(167, 167, 167);
+            pan_line_master.Visible = false;
+            lbl_Home.ForeColor = Color.White;
+            pan_line_home.BackColor = Color.White;
+            pan_line_home.Visible = true;
+
         }
 
+        private void lbl_master_Click(object sender, EventArgs e)
+        {
+            /*  master1.Show();
+             gold1.Hide();*/
+            panel1.Hide();
+            formload(new master2());
+            lbl_master.ForeColor = Color.White;
+            pan_line_master.BackColor = Color.White;
+            pan_line_master.Visible = true;
+            lbl_Home.ForeColor = Color.FromArgb(167, 167, 167);
+            pan_line_home.BackColor = Color.FromArgb(167, 167, 167);
+            pan_line_home.Visible = false;
 
+        }
 
         /*-----------------------------------------------------------------------------*/
     }
