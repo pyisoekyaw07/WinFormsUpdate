@@ -414,28 +414,28 @@ namespace GHF
             if (double.Parse(chks) >= 0.25 && double.Parse(chks) <= 0.49)
             {
                 txt_s.Text = "1";
-               /* label31.Text = "";
-                label31.Text = "စိပ်";*/
+               
             }
             else if (double.Parse(chks) >= 0.50 && double.Parse(chks) <= 0.74)
             {
-                txt_s.Text = "1";
-               /* label31.Text = "";
-                label31.Text = "ခြမ်း";*/
+                txt_s.Text = "2";
+              
             }
             else if (double.Parse(chks) >= 0.75 && double.Parse(chks) <= 0.9)
             {
                 txt_s.Text = "3";
-               /* label31.Text = "";
-                label31.Text = "စိပ်";*/
+                
+            }else if (double.Parse(chks) >= 0.9 && double.Parse(chks) <= 1)
+            {
+                txt_s.Text = "0";
+                txt_y.Text = (inty+1).ToString();
             }
             else
             {
                 if (double.Parse(chks) < 0.25)
                 {
                     txt_s.Text = "0";
-                  /*  label31.Text = "";
-                    label31.Text = "စိပ်";*/
+                   
                 }
             }
         }
