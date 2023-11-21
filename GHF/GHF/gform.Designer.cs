@@ -395,7 +395,7 @@
             txt_pur_no.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_pur_no.Location = new Point(170, 67);
             txt_pur_no.Name = "txt_pur_no";
-            txt_pur_no.Size = new Size(189, 30);
+            txt_pur_no.Size = new Size(175, 30);
             txt_pur_no.TabIndex = 1;
             // 
             // textBox25
@@ -917,7 +917,7 @@
             DGW_register.Location = new Point(682, 225);
             DGW_register.Name = "DGW_register";
             DGW_register.RowTemplate.Height = 30;
-            DGW_register.Size = new Size(1985, 239);
+            DGW_register.Size = new Size(2015, 239);
             DGW_register.TabIndex = 201;
             // 
             // voucher

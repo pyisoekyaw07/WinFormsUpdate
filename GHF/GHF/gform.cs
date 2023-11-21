@@ -637,7 +637,8 @@ namespace GHF
                 T_wastageK = double.Parse(total_K.Text); T_wastageP = double.Parse(total_P.Text);
                 T_wastageY = double.Parse(total_Y.Text); T_wastageS = double.Parse(total_S.Text);
                 mcost = double.Parse(txt_mcost.Text); reploss = double.Parse(txt_rep.Text);
-                wastageamount = Math.Round(((T_wastageS / 4) + (T_wastageY / 8) + (T_wastageP / 16) + T_wastageK) * double.Parse(txt_goldprice.Text));
+                wastageamount = Math.Round(((((T_wastageS / 4) + T_wastageY) / 8 + T_wastageP) / 16 + T_wastageK) * double.Parse(txt_goldprice.Text));
+                
                 totalamt = (wastageamount + mcost) - reploss;
                 txt_totalamt.Text = totalamt.ToString();
             }
