@@ -30,16 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel2 = new Panel();
-            panel6 = new Panel();
-            pan_line_home = new Panel();
-            pan_line_master = new Panel();
+            pan_rep = new Panel();
+            ico_rep = new FontAwesome.Sharp.IconPictureBox();
             lbl_report = new Label();
+            panel6 = new Panel();
+            pan_master = new Panel();
+            ico_master = new FontAwesome.Sharp.IconPictureBox();
             lbl_master = new Label();
-            lbl_Home = new Label();
-            panel3 = new Panel();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            pictureBox3 = new PictureBox();
+            pan_line_master = new Panel();
             radioButton1 = new RadioButton();
+            pan_home = new Panel();
+            ico_home = new FontAwesome.Sharp.IconPictureBox();
+            lbl_Home = new Label();
+            pan_line_home = new Panel();
+            panel3 = new Panel();
+            iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             lbl_username = new Label();
             radioButton2 = new RadioButton();
             label2 = new Label();
@@ -58,9 +64,15 @@
             mainpanel = new Panel();
             pictureBox2 = new PictureBox();
             panel2.SuspendLayout();
+            pan_rep.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ico_rep).BeginInit();
+            pan_master.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ico_master).BeginInit();
+            pan_home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ico_home).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             menuStrip2.SuspendLayout();
@@ -71,13 +83,12 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
-            panel2.Controls.Add(panel6);
-            panel2.Controls.Add(pan_line_home);
-            panel2.Controls.Add(pan_line_master);
-            panel2.Controls.Add(lbl_report);
-            panel2.Controls.Add(lbl_master);
-            panel2.Controls.Add(lbl_Home);
+            panel2.Controls.Add(pan_rep);
+            panel2.Controls.Add(pan_master);
+            panel2.Controls.Add(radioButton1);
+            panel2.Controls.Add(pan_home);
             panel2.Controls.Add(panel3);
+            panel2.Controls.Add(radioButton2);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
@@ -88,32 +99,29 @@
             panel2.Size = new Size(1478, 63);
             panel2.TabIndex = 2;
             // 
-            // panel6
+            // pan_rep
             // 
-            panel6.BackColor = Color.FromArgb(167, 167, 167);
-            panel6.Location = new Point(535, 47);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(80, 5);
-            panel6.TabIndex = 24;
-            panel6.Visible = false;
+            pan_rep.Controls.Add(ico_rep);
+            pan_rep.Controls.Add(lbl_report);
+            pan_rep.Controls.Add(panel6);
+            pan_rep.Location = new Point(530, 12);
+            pan_rep.Name = "pan_rep";
+            pan_rep.Size = new Size(99, 44);
+            pan_rep.TabIndex = 31;
             // 
-            // pan_line_home
+            // ico_rep
             // 
-            pan_line_home.BackColor = Color.White;
-            pan_line_home.ForeColor = Color.White;
-            pan_line_home.Location = new Point(359, 47);
-            pan_line_home.Name = "pan_line_home";
-            pan_line_home.Size = new Size(80, 5);
-            pan_line_home.TabIndex = 24;
-            // 
-            // pan_line_master
-            // 
-            pan_line_master.BackColor = Color.FromArgb(167, 167, 167);
-            pan_line_master.Location = new Point(447, 47);
-            pan_line_master.Name = "pan_line_master";
-            pan_line_master.Size = new Size(80, 5);
-            pan_line_master.TabIndex = 23;
-            pan_line_master.Visible = false;
+            ico_rep.BackColor = Color.FromArgb(24, 47, 81);
+            ico_rep.ForeColor = Color.FromArgb(167, 167, 167);
+            ico_rep.IconChar = FontAwesome.Sharp.IconChar.File;
+            ico_rep.IconColor = Color.FromArgb(167, 167, 167);
+            ico_rep.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ico_rep.IconSize = 28;
+            ico_rep.Location = new Point(12, 5);
+            ico_rep.Name = "ico_rep";
+            ico_rep.Size = new Size(28, 29);
+            ico_rep.TabIndex = 28;
+            ico_rep.TabStop = false;
             // 
             // lbl_report
             // 
@@ -121,51 +129,153 @@
             lbl_report.BackColor = Color.Transparent;
             lbl_report.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_report.ForeColor = Color.FromArgb(167, 167, 167);
-            lbl_report.Location = new Point(549, 23);
+            lbl_report.Location = new Point(42, 9);
             lbl_report.Name = "lbl_report";
             lbl_report.Size = new Size(47, 22);
             lbl_report.TabIndex = 21;
             lbl_report.Text = "Report";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(167, 167, 167);
+            panel6.Location = new Point(9, 34);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(80, 4);
+            panel6.TabIndex = 24;
+            panel6.Visible = false;
+            // 
+            // pan_master
+            // 
+            pan_master.Controls.Add(ico_master);
+            pan_master.Controls.Add(lbl_master);
+            pan_master.Controls.Add(pan_line_master);
+            pan_master.Location = new Point(399, 12);
+            pan_master.Name = "pan_master";
+            pan_master.Size = new Size(125, 44);
+            pan_master.TabIndex = 30;
+            pan_master.Click += pan_master_Click;
+            // 
+            // ico_master
+            // 
+            ico_master.BackColor = Color.FromArgb(24, 47, 81);
+            ico_master.ForeColor = Color.FromArgb(167, 167, 167);
+            ico_master.IconChar = FontAwesome.Sharp.IconChar.Database;
+            ico_master.IconColor = Color.FromArgb(167, 167, 167);
+            ico_master.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ico_master.IconSize = 28;
+            ico_master.Location = new Point(8, 7);
+            ico_master.Name = "ico_master";
+            ico_master.Size = new Size(35, 27);
+            ico_master.TabIndex = 27;
+            ico_master.TabStop = false;
             // 
             // lbl_master
             // 
             lbl_master.AutoSize = true;
             lbl_master.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_master.ForeColor = Color.FromArgb(167, 167, 167);
-            lbl_master.Location = new Point(449, 23);
+            lbl_master.Location = new Point(39, 11);
             lbl_master.Name = "lbl_master";
             lbl_master.Size = new Size(76, 22);
             lbl_master.TabIndex = 20;
             lbl_master.Text = "Data Master";
             lbl_master.Click += lbl_master_Click;
             // 
+            // pan_line_master
+            // 
+            pan_line_master.BackColor = Color.FromArgb(167, 167, 167);
+            pan_line_master.Location = new Point(8, 35);
+            pan_line_master.Name = "pan_line_master";
+            pan_line_master.Size = new Size(110, 4);
+            pan_line_master.TabIndex = 23;
+            pan_line_master.Visible = false;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton1.ForeColor = Color.White;
+            radioButton1.Image = (Image)resources.GetObject("radioButton1.Image");
+            radioButton1.Location = new Point(1234, 27);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(38, 24);
+            radioButton1.TabIndex = 9;
+            radioButton1.TabStop = true;
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.Click += radioButton1_Click;
+            // 
+            // pan_home
+            // 
+            pan_home.Controls.Add(ico_home);
+            pan_home.Controls.Add(lbl_Home);
+            pan_home.Controls.Add(pan_line_home);
+            pan_home.Location = new Point(290, 12);
+            pan_home.Name = "pan_home";
+            pan_home.Size = new Size(103, 44);
+            pan_home.TabIndex = 29;
+            pan_home.Click += pan_home_Click;
+            // 
+            // ico_home
+            // 
+            ico_home.BackColor = Color.FromArgb(24, 47, 81);
+            ico_home.ForeColor = SystemColors.ButtonHighlight;
+            ico_home.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            ico_home.IconColor = SystemColors.ButtonHighlight;
+            ico_home.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ico_home.IconSize = 28;
+            ico_home.Location = new Point(13, 5);
+            ico_home.Name = "ico_home";
+            ico_home.Size = new Size(32, 28);
+            ico_home.TabIndex = 26;
+            ico_home.TabStop = false;
+            // 
             // lbl_Home
             // 
             lbl_Home.AutoSize = true;
             lbl_Home.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_Home.ForeColor = Color.White;
-            lbl_Home.Location = new Point(379, 23);
+            lbl_Home.Location = new Point(48, 10);
             lbl_Home.Name = "lbl_Home";
             lbl_Home.Size = new Size(42, 22);
             lbl_Home.TabIndex = 0;
             lbl_Home.Text = "Home";
             lbl_Home.Click += lbl_Home_Click;
             // 
+            // pan_line_home
+            // 
+            pan_line_home.BackColor = Color.White;
+            pan_line_home.ForeColor = Color.White;
+            pan_line_home.Location = new Point(13, 35);
+            pan_line_home.Name = "pan_line_home";
+            pan_line_home.Size = new Size(80, 4);
+            pan_line_home.TabIndex = 24;
+            // 
             // panel3
             // 
             panel3.BackColor = Color.Transparent;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(iconPictureBox5);
             panel3.Controls.Add(iconPictureBox1);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(radioButton1);
             panel3.Controls.Add(lbl_username);
-            panel3.Controls.Add(radioButton2);
             panel3.Dock = DockStyle.Right;
             panel3.ForeColor = Color.White;
-            panel3.Location = new Point(1186, 0);
+            panel3.Location = new Point(1277, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(292, 63);
+            panel3.Size = new Size(201, 63);
             panel3.TabIndex = 16;
+            // 
+            // iconPictureBox5
+            // 
+            iconPictureBox5.BackColor = Color.FromArgb(24, 47, 81);
+            iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            iconPictureBox5.IconColor = Color.White;
+            iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox5.IconSize = 27;
+            iconPictureBox5.Location = new Point(73, 3);
+            iconPictureBox5.Name = "iconPictureBox5";
+            iconPictureBox5.Size = new Size(28, 27);
+            iconPictureBox5.TabIndex = 29;
+            iconPictureBox5.TabStop = false;
             // 
             // iconPictureBox1
             // 
@@ -174,42 +284,18 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             iconPictureBox1.IconColor = SystemColors.ButtonHighlight;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.Location = new Point(255, 16);
+            iconPictureBox1.Location = new Point(152, 16);
             iconPictureBox1.Name = "iconPictureBox1";
             iconPictureBox1.Size = new Size(32, 32);
             iconPictureBox1.TabIndex = 17;
             iconPictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(210, 16);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(37, 31);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 12;
-            pictureBox3.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.ForeColor = Color.White;
-            radioButton1.Image = (Image)resources.GetObject("radioButton1.Image");
-            radioButton1.Location = new Point(76, 23);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(38, 24);
-            radioButton1.TabIndex = 9;
-            radioButton1.TabStop = true;
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.Click += radioButton1_Click;
             // 
             // lbl_username
             // 
             lbl_username.AutoSize = true;
             lbl_username.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_username.ForeColor = Color.White;
-            lbl_username.Location = new Point(124, 23);
+            lbl_username.Location = new Point(46, 33);
             lbl_username.Name = "lbl_username";
             lbl_username.Size = new Size(84, 22);
             lbl_username.TabIndex = 13;
@@ -222,7 +308,7 @@
             radioButton2.ForeColor = Color.White;
             radioButton2.Image = (Image)resources.GetObject("radioButton2.Image");
             radioButton2.ImageAlign = ContentAlignment.MiddleRight;
-            radioButton2.Location = new Point(28, 23);
+            radioButton2.Location = new Point(1186, 27);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(38, 24);
             radioButton2.TabIndex = 10;
@@ -373,10 +459,19 @@
             Load += Form2_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            pan_rep.ResumeLayout(false);
+            pan_rep.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ico_rep).EndInit();
+            pan_master.ResumeLayout(false);
+            pan_master.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ico_master).EndInit();
+            pan_home.ResumeLayout(false);
+            pan_home.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ico_home).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -406,7 +501,6 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
         private Label lbl_username;
         private Panel panel3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
@@ -416,5 +510,12 @@
         private Panel panel6;
         private Panel pan_line_home;
         private Panel pan_line_master;
+        private FontAwesome.Sharp.IconPictureBox ico_home;
+        private FontAwesome.Sharp.IconPictureBox ico_rep;
+        private FontAwesome.Sharp.IconPictureBox ico_master;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private Panel pan_home;
+        private Panel pan_rep;
+        private Panel pan_master;
     }
 }

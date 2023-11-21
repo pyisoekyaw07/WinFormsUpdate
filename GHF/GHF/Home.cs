@@ -86,8 +86,7 @@ namespace GHF
             login showlogin = new login();
             showlogin.Show();
         }
-
-        private void lbl_Home_Click(object sender, EventArgs e)
+        public void homeclick()
         {
             panel1.Show();
             formload(new wallpaper());
@@ -98,13 +97,14 @@ namespace GHF
             lbl_Home.ForeColor = Color.White;
             pan_line_home.BackColor = Color.White;
             pan_line_home.Visible = true;
-
+            ico_home.ForeColor = Color.White;
+            ico_master.ForeColor = Color.FromArgb(167, 167, 167);
+            ico_rep.ForeColor = Color.FromArgb(167, 167, 167);
         }
-
-        private void lbl_master_Click(object sender, EventArgs e)
+        public void masterclick()
         {
             /*  master1.Show();
-             gold1.Hide();*/
+            gold1.Hide();*/
             panel1.Hide();
             formload(new master2());
             lbl_master.ForeColor = Color.White;
@@ -113,8 +113,30 @@ namespace GHF
             lbl_Home.ForeColor = Color.FromArgb(167, 167, 167);
             pan_line_home.BackColor = Color.FromArgb(167, 167, 167);
             pan_line_home.Visible = false;
-
+            ico_home.ForeColor = Color.FromArgb(167, 167, 167);
+            ico_master.ForeColor = Color.White;
+            ico_rep.ForeColor = Color.FromArgb(167, 167, 167);
         }
+        private void pan_home_Click(object sender, EventArgs e)
+        {
+            homeclick();
+        }
+
+        private void pan_master_Click(object sender, EventArgs e)
+        {
+            masterclick();
+        }
+
+        private void lbl_Home_Click(object sender, EventArgs e)
+        {
+            homeclick();
+        }
+
+        private void lbl_master_Click(object sender, EventArgs e)
+        {
+            masterclick();
+        }
+
 
         /*-----------------------------------------------------------------------------*/
     }

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Net.Security;
+using System.Net.NetworkInformation;
+using static System.Net.WebRequestMethods;
 
 namespace GHF
 {
@@ -20,7 +22,6 @@ namespace GHF
         SqlDataAdapter adpt;
         DataTable dt;
         SqlCommandBuilder scb;
-
 
 
         public master2()
@@ -182,240 +183,252 @@ namespace GHF
             dataGridView2.DataSource = dt;
         }
 
+        public void checkinternetconnection()
+        {
+            if (NetworkInterface.GetIsNetworkAvailable()) 
+            {
+                if (comboBox1.SelectedIndex == 0)/*Item*/
+                {
+                    if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == false)/*ွGold*/
+                    {
+
+                        /*validate*/
+                        con.Open();
+                        SqlCommand valcmd = new SqlCommand("select GoldItem from golditem where GoldItem=@GoldItem", con);
+                        valcmd.Parameters.AddWithValue("@GoldItem", txt_master_item.Text);
+                        SqlDataReader reader1;
+                        reader1 = valcmd.ExecuteReader();
+                        if (reader1.Read())
+                        {
+                            MessageBox.Show("Already Have");
+                            con.Close();
+                        }
+                        else
+                        {
+                            /*Save*/
+                            con.Close();
+                            SqlCommand goldcmd = new SqlCommand("insert into golditem values(@Date,@Time,@GoldItem)", con);
+                            goldcmd.Parameters.AddWithValue("@Date", txt_Date.Text);
+                            goldcmd.Parameters.AddWithValue("@Time", txt_Time.Text);
+                            goldcmd.Parameters.AddWithValue("@GoldItem", txt_master_item.Text);
+                            con.Open();
+                            goldcmd.ExecuteNonQuery();
+                            {
+                                MessageBox.Show("success");
+                                txt_master_item.Text = "";
+                            }
+                            con.Close();
+                            showitem();
+                        }
+
+
+                    }
+                    else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "" && chk_parent.Checked == false)/*WhiteGold*/
+                    {
+                        con.Open();
+                        SqlCommand goldcmd = new SqlCommand("insert into whitegold_item values(@whitegold)", con);
+                        goldcmd.Parameters.AddWithValue("@whitegold", txt_master_item.Text);
+                        goldcmd.ExecuteNonQuery();
+                        {
+                            MessageBox.Show("success");
+                            txt_master_item.Text = "";
+                        }
+                        con.Close();
+                    }
+                    else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "" && chk_parent.Checked == false)/*Gems*/
+                    {
+                        con.Open();
+                        SqlCommand goldcmd = new SqlCommand("insert into gems_item values(@gems)", con);
+                        goldcmd.Parameters.AddWithValue("@gems", txt_master_item.Text);
+                        goldcmd.ExecuteNonQuery();
+                        {
+                            MessageBox.Show("success");
+                            txt_master_item.Text = "";
+                        }
+                        con.Close();
+
+                    }
+                    /*-------------------------------------------------Itemname----------------------------------------------------------------*/
+                    else if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == true)/*Gold*/
+                    {
+
+                        /*validate*/
+                        con.Open();
+                        SqlCommand valcmd = new SqlCommand("select Itemname from gold_itemname where Itemname=@Itemname", con);
+                        valcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
+                        SqlDataReader reader1;
+                        reader1 = valcmd.ExecuteReader();
+                        if (reader1.Read())
+                        {
+                            MessageBox.Show("Already Have");
+                            con.Close();
+                        }
+                        else
+                        {
+                            /*Save*/
+                            con.Close();
+                            SqlCommand goldcmd = new SqlCommand("insert into gold_itemname values(@Date,@Time,@Item,@Itemname)", con);
+                            goldcmd.Parameters.AddWithValue("@Date", txt_Date.Text);
+                            goldcmd.Parameters.AddWithValue("@Time", txt_Time.Text);
+                            goldcmd.Parameters.AddWithValue("@Item", Parentitem_combo.Text);
+                            goldcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
+                            con.Open();
+                            goldcmd.ExecuteNonQuery();
+                            {
+                                MessageBox.Show("success");
+                                txt_master_item.Text = "";
+                            }
+                            con.Close();
+                            showitemname();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Check Item");
+                    }
+                }
+                /*----------------------------------------------------------------------------------------------------------------------*/
+
+                else if (comboBox1.SelectedIndex == 1)/*Gold Type*/
+                {
+
+                    if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
+                    {
+                        /*validate*/
+                        con.Open();
+                        SqlCommand valcmd = new SqlCommand("select Gold_Type from g_type where Gold_Type=@Gold_Type", con);
+                        valcmd.Parameters.AddWithValue("@Gold_Type", txt_master_item.Text);
+                        SqlDataReader reader1;
+                        reader1 = valcmd.ExecuteReader();
+                        if (reader1.Read())
+                        {
+                            MessageBox.Show("Already Have");
+                            con.Close();
+                        }
+                        else
+                        {
+                            con.Close();
+                            string query = "INSERT INTO g_type([Date],[Time],[Gold_Type])VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_master_item.Text + "')";
+                            SqlCommand goldcmd = new SqlCommand(query, con);
+                            con.Open();
+                            goldcmd.ExecuteNonQuery();
+
+                            {
+                                MessageBox.Show("Success");
+                                txt_master_item.Text = "";
+                            }
+                            con.Close();
+                            showgoldtype();
+                        }
+
+
+                    }
+                    else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "")/*WhiteGold Type*/
+                    {
+                        string query = "INSERT INTO whitegold_type([whitegold])VALUES(N'" + txt_master_item.Text + "')";
+                        SqlCommand goldcmd = new SqlCommand(query, con);
+                        con.Open();
+                        goldcmd.ExecuteNonQuery();
+
+                        {
+                            MessageBox.Show("Success");
+                            txt_master_item.Text = "";
+                        }
+                        con.Close();
+                    }
+                    else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "")/*Gem Type*/
+                    {
+                        string query = "INSERT INTO gem_type([gem])VALUES(N'" + txt_master_item.Text + "')";
+                        SqlCommand goldcmd = new SqlCommand(query, con);
+                        con.Open();
+                        goldcmd.ExecuteNonQuery();
+
+                        {
+                            MessageBox.Show("Success");
+                            txt_master_item.Text = "";
+                        }
+                        con.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Check");
+                    }
+                }
+                /*----------------------------------------------------------------------------------------------------------------------------*/
+                else if (comboBox1.SelectedIndex == 2)/*Goldprice*/
+                {
+                    if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
+                    {
+                        string query = "INSERT INTO goldprice([Date],[Time],[Gold_Price])VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_master_item.Text + "')";
+                        SqlCommand goldcmd = new SqlCommand(query, con);
+                        con.Open();
+                        goldcmd.ExecuteNonQuery();
+
+                        {
+                            MessageBox.Show("Success");
+                            txt_master_item.Text = "";
+                        }
+                        con.Close();
+                        showgoldprice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Check");
+                    }
+                }
+                /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+                else if (comboBox1.SelectedIndex == 3) /*source remark*/
+                {
+
+                    if (txt_master_item.Text != "")
+                    {
+                        /*validate*/
+                        con.Open();
+                        SqlCommand valcmd = new SqlCommand("select Source_Remark from source_remark where Source_Remark=@Source_Remark", con);
+                        valcmd.Parameters.AddWithValue("@Source_Remark", txt_master_item.Text);
+                        SqlDataReader reader1;
+                        reader1 = valcmd.ExecuteReader();
+                        if (reader1.Read())
+                        {
+                            MessageBox.Show("Already Have");
+                            con.Close();
+                        }
+                        else
+                        {
+                            con.Close();
+                            string query = "INSERT INTO source_remark([Date],[Time],[Source_Remark])VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_master_item.Text + "')";
+                            SqlCommand goldcmd = new SqlCommand(query, con);
+                            con.Open();
+                            goldcmd.ExecuteNonQuery();
+
+                            {
+                                MessageBox.Show("Success");
+                                txt_master_item.Text = "";
+                            }
+                            con.Close();
+                            showsourceremark();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("check");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Internet Connection","Check Internet Connect", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
+
         /*---------------------------------------------------Product Master Tab-------------------------------------------*/
 
         /*-------------------------------------------------------------------Save Button-------------------------------------------------------*/
         private void btn_save_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)/*Item*/
-            {
-                if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == false)/*ွGold*/
-                {
-
-                    /*validate*/
-                    con.Open();
-                    SqlCommand valcmd = new SqlCommand("select GoldItem from golditem where GoldItem=@GoldItem", con);
-                    valcmd.Parameters.AddWithValue("@GoldItem", txt_master_item.Text);
-                    SqlDataReader reader1;
-                    reader1 = valcmd.ExecuteReader();
-                    if (reader1.Read())
-                    {
-                        MessageBox.Show("Already Have");
-                        con.Close();
-                    }
-                    else
-                    {
-                        /*Save*/
-                        con.Close();
-                        SqlCommand goldcmd = new SqlCommand("insert into golditem values(@Date,@Time,@GoldItem)", con);
-                        goldcmd.Parameters.AddWithValue("@Date", txt_Date.Text);
-                        goldcmd.Parameters.AddWithValue("@Time", txt_Time.Text);
-                        goldcmd.Parameters.AddWithValue("@GoldItem", txt_master_item.Text);
-                        con.Open();
-                        goldcmd.ExecuteNonQuery();
-                        {
-                            MessageBox.Show("success");
-                            txt_master_item.Text = "";
-                        }
-                        con.Close();
-                        showitem();
-                    }
-
-
-                }
-                else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "" && chk_parent.Checked == false)/*WhiteGold*/
-                {
-                    con.Open();
-                    SqlCommand goldcmd = new SqlCommand("insert into whitegold_item values(@whitegold)", con);
-                    goldcmd.Parameters.AddWithValue("@whitegold", txt_master_item.Text);
-                    goldcmd.ExecuteNonQuery();
-                    {
-                        MessageBox.Show("success");
-                        txt_master_item.Text = "";
-                    }
-                    con.Close();
-                }
-                else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "" && chk_parent.Checked == false)/*Gems*/
-                {
-                    con.Open();
-                    SqlCommand goldcmd = new SqlCommand("insert into gems_item values(@gems)", con);
-                    goldcmd.Parameters.AddWithValue("@gems", txt_master_item.Text);
-                    goldcmd.ExecuteNonQuery();
-                    {
-                        MessageBox.Show("success");
-                        txt_master_item.Text = "";
-                    }
-                    con.Close();
-
-                }
-                /*-------------------------------------------------Itemname----------------------------------------------------------------*/
-                else if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "" && chk_parent.Checked == true)/*Gold*/
-                {
-
-                    /*validate*/
-                    con.Open();
-                    SqlCommand valcmd = new SqlCommand("select Itemname from gold_itemname where Itemname=@Itemname", con);
-                    valcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
-                    SqlDataReader reader1;
-                    reader1 = valcmd.ExecuteReader();
-                    if (reader1.Read())
-                    {
-                        MessageBox.Show("Already Have");
-                        con.Close();
-                    }
-                    else
-                    {
-                        /*Save*/
-                        con.Close();
-                        SqlCommand goldcmd = new SqlCommand("insert into gold_itemname values(@Date,@Time,@Item,@Itemname)", con);
-                        goldcmd.Parameters.AddWithValue("@Date", txt_Date.Text);
-                        goldcmd.Parameters.AddWithValue("@Time", txt_Time.Text);
-                        goldcmd.Parameters.AddWithValue("@Item", Parentitem_combo.Text);
-                        goldcmd.Parameters.AddWithValue("@Itemname", txt_master_item.Text);
-                        con.Open();
-                        goldcmd.ExecuteNonQuery();
-                        {
-                            MessageBox.Show("success");
-                            txt_master_item.Text = "";
-                        }
-                        con.Close();
-                        showitemname();
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Check Item");
-                }
-            }
-            /*----------------------------------------------------------------------------------------------------------------------*/
-
-            else if (comboBox1.SelectedIndex == 1)/*Gold Type*/
-            {
-
-                if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
-                {
-                    /*validate*/
-                    con.Open();
-                    SqlCommand valcmd = new SqlCommand("select Gold_Type from g_type where Gold_Type=@Gold_Type", con);
-                    valcmd.Parameters.AddWithValue("@Gold_Type", txt_master_item.Text);
-                    SqlDataReader reader1;
-                    reader1 = valcmd.ExecuteReader();
-                    if (reader1.Read())
-                    {
-                        MessageBox.Show("Already Have");
-                        con.Close();
-                    }
-                    else
-                    {
-                        con.Close();
-                        string query = "INSERT INTO g_type([Date],[Time],[Gold_Type])VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_master_item.Text + "')";
-                        SqlCommand goldcmd = new SqlCommand(query, con);
-                        con.Open();
-                        goldcmd.ExecuteNonQuery();
-
-                        {
-                            MessageBox.Show("Success");
-                            txt_master_item.Text = "";
-                        }
-                        con.Close();
-                        showgoldtype();
-                    }
-
-
-                }
-                else if (itemtype_combo.SelectedIndex == 1 && txt_master_item.Text != "")/*WhiteGold Type*/
-                {
-                    string query = "INSERT INTO whitegold_type([whitegold])VALUES(N'" + txt_master_item.Text + "')";
-                    SqlCommand goldcmd = new SqlCommand(query, con);
-                    con.Open();
-                    goldcmd.ExecuteNonQuery();
-
-                    {
-                        MessageBox.Show("Success");
-                        txt_master_item.Text = "";
-                    }
-                    con.Close();
-                }
-                else if (itemtype_combo.SelectedIndex == 2 && txt_master_item.Text != "")/*Gem Type*/
-                {
-                    string query = "INSERT INTO gem_type([gem])VALUES(N'" + txt_master_item.Text + "')";
-                    SqlCommand goldcmd = new SqlCommand(query, con);
-                    con.Open();
-                    goldcmd.ExecuteNonQuery();
-
-                    {
-                        MessageBox.Show("Success");
-                        txt_master_item.Text = "";
-                    }
-                    con.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Check");
-                }
-            }
-            /*----------------------------------------------------------------------------------------------------------------------------*/
-            else if (comboBox1.SelectedIndex == 2)/*Goldprice*/
-            {
-                if (itemtype_combo.SelectedIndex == 0 && txt_master_item.Text != "")
-                {
-                    string query = "INSERT INTO goldprice([Date],[Time],[Gold_Price])VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_master_item.Text + "')";
-                    SqlCommand goldcmd = new SqlCommand(query, con);
-                    con.Open();
-                    goldcmd.ExecuteNonQuery();
-
-                    {
-                        MessageBox.Show("Success");
-                        txt_master_item.Text = "";
-                    }
-                    con.Close();
-                    showgoldprice();
-                }
-                else
-                {
-                    MessageBox.Show("Check");
-                }
-            }
-            /*-------------------------------------------------------------------------------------------------------------------------------------------*/
-            else if (comboBox1.SelectedIndex == 3) /*source remark*/
-            {
-
-                if (txt_master_item.Text != "")
-                {
-                    /*validate*/
-                    con.Open();
-                    SqlCommand valcmd = new SqlCommand("select Source_Remark from source_remark where Source_Remark=@Source_Remark", con);
-                    valcmd.Parameters.AddWithValue("@Source_Remark", txt_master_item.Text);
-                    SqlDataReader reader1;
-                    reader1 = valcmd.ExecuteReader();
-                    if (reader1.Read())
-                    {
-                        MessageBox.Show("Already Have");
-                        con.Close();
-                    }
-                    else
-                    {
-                        con.Close();
-                        string query = "INSERT INTO source_remark([Date],[Time],[Source_Remark])VALUES('" + txt_Date.Text + "','" + txt_Time.Text + "',N'" + txt_master_item.Text + "')";
-                        SqlCommand goldcmd = new SqlCommand(query, con);
-                        con.Open();
-                        goldcmd.ExecuteNonQuery();
-
-                        {
-                            MessageBox.Show("Success");
-                            txt_master_item.Text = "";
-                        }
-                        con.Close();
-                        showsourceremark();
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("check");
-                }
-            }
+            checkinternetconnection();
         }
         /*------------------------------------------------------------Counter Form Save Button--------------------------------------------------*/
         private void btn_counter_save_Click(object sender, EventArgs e)/*Counter*/
@@ -583,7 +596,7 @@ namespace GHF
                     else
                     {
                         con.Close();
-                        SqlCommand itemcmd = new SqlCommand("update source_remark set Date=@Date,Time=@Time,Source_Remark=@Source_Remark where Soruce_Remark=N'" + txt_update.Text + "'", con);
+                        SqlCommand itemcmd = new SqlCommand("update source_remark set Date=@Date,Time=@Time,Source_Remark=@Source_Remark where Source_Remark=N'" + txt_update.Text + "'", con);
                         itemcmd.Parameters.AddWithValue("@Date", txt_Date.Text);
                         itemcmd.Parameters.AddWithValue("@Time", txt_Time.Text);
                         itemcmd.Parameters.AddWithValue("@Source_Remark", txt_master_item.Text);
@@ -786,7 +799,7 @@ namespace GHF
         {
             shop();
         }
-        /*-----------------------------------------------------------radiobutton master form-------------------------------------------------*/
+        /*--------------------------------------------------------radiobutton master form update mode-------------------------*/
         bool isChecked = false;
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {

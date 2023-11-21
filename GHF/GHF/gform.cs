@@ -13,6 +13,7 @@ using System.Diagnostics.Contracts;
 using Azure.Identity;
 using System.Web;
 using System.Windows.Media.Converters;
+using System.Xml.Linq;
 
 namespace GHF
 {
@@ -147,7 +148,7 @@ namespace GHF
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    textBox8.Text = reader["Gold_Price"].ToString();
+                    txt_goldprice.Text = reader["Gold_Price"].ToString();
                 }
             }
             catch (SqlException ex)
@@ -385,17 +386,131 @@ namespace GHF
                 /* MessageBox.Show(ex.Message);*/
             }
         }
-
-        public void calculategm()/*function claculation gm to kyp*/
+        private void validatefunction()
         {
-            double intk, intp, inty, ints, tk, tp, ty, ts, k, p, y, s = 0;
+            bool ok = true;
+            if (comboBox1.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox1, "required");
+            }
+            else
+            {
+                errorProvider1.SetError(comboBox1, null);
+
+            }
+            if (comboBox2.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox2, "Plese Select Gold Type");
+            }
+            else
+            {
+                errorProvider1.SetError(comboBox2, null);
+
+            }
+            if (comboBox3.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox3, "Plese Select Item");
+            }
+            else
+            {
+                errorProvider1.SetError(comboBox3, null);
+
+            }
+            if (comboBox4.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox4, "Plese Select Itemname");
+            }
+            else
+            {
+                errorProvider1.SetError(comboBox4, null);
+
+            }
+            if (txt_gm.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txt_gm, "Plese Insert Gm");
+            }
+            else if (txt_gm.Text == "0")
+            {
+                errorProvider1.SetError(txt_gm, "Plese Insert Gm");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txt_gm, null);
+            }
+            if (txt_totalamt.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txt_totalamt, "Not Set Value");
+            }
+            else if (txt_totalamt.Text == "0")
+            {
+                errorProvider1.SetError(txt_totalamt, "Not Set Value");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txt_totalamt, null);
+            }
+
+
+        }/*Validate Form*/
+        public void calculategm()/*function claculation TOTAL AMOUNT*/
+        {
+            double intk, intp, inty, ints, tk, tp, ty, ts, totalK, totalP, totalY, totalS, resultP, resultP2, resultP3, resultP4,
+                resultY, resultY2, resultY3, resultY4, resultS, resultS2, resultS3, resultS4, T_wastageK, T_wastageP,
+                T_wastageY, T_wastageS, wastageamount, mcost, reploss, totalamt = 0;
             string chks = "0";
             string svalue = "0";
             double gm = 0;
+            /*---------------------- Gm To KPY Method------------------------*/
             if (txt_gm.Text == "")
             {
                 txt_s.Text = "0";
                 txt_gm.Text = "0";
+                txt_gm.SelectionStart = 0;
+                txt_gm.SelectionLength = txt_gm.Text.Length;
+            }
+            if (txt_mcost.Text == "")
+            {
+                txt_mcost.Text = "0";
+                txt_mcost.SelectionStart = 0;
+                txt_mcost.SelectionLength = txt_mcost.Text.Length;
+            }
+            if (txt_rep.Text == "")
+            {
+                txt_rep.Text = "0";
+                txt_rep.SelectionStart = 0;
+                txt_rep.SelectionLength = txt_rep.Text.Length;
+            }
+            if (txt_YK.Text == "")
+            {
+                txt_YK.Text = "0";
+                txt_YK.SelectionStart = 0;
+                txt_YK.SelectionLength = txt_YK.Text.Length;
+            }
+            if (txt_YP.Text == "")
+            {
+                txt_YP.Text = "0";
+                txt_YP.SelectionStart = 0;
+                txt_YP.SelectionLength = txt_YP.Text.Length;
+            }
+            if (txt_YY.Text == "")
+            {
+                txt_YY.Text = "0";
+                txt_YY.SelectionStart = 0;
+                txt_YY.SelectionLength = txt_YY.Text.Length;
+            }
+            if (txt_YC.Text == "")
+            {
+                txt_YC.Text = "0";
+                txt_YC.SelectionStart = 0;
+                txt_YC.SelectionLength = txt_YC.Text.Length;
             }
             intk = Math.Floor(double.Parse(txt_gm.Text) / double.Parse("16.6"));
             tk = double.Parse(txt_gm.Text) / double.Parse("16.6");
@@ -414,30 +529,119 @@ namespace GHF
             if (double.Parse(chks) >= 0.25 && double.Parse(chks) <= 0.49)
             {
                 txt_s.Text = "1";
-               
+
             }
             else if (double.Parse(chks) >= 0.50 && double.Parse(chks) <= 0.74)
             {
                 txt_s.Text = "2";
-              
+
             }
             else if (double.Parse(chks) >= 0.75 && double.Parse(chks) <= 0.9)
             {
                 txt_s.Text = "3";
-                
-            }else if (double.Parse(chks) >= 0.9 && double.Parse(chks) <= 1)
+
+            }
+            else if (double.Parse(chks) >= 0.9 && double.Parse(chks) <= 1)
             {
                 txt_s.Text = "0";
-                txt_y.Text = (inty+1).ToString();
+                txt_y.Text = (inty + 1).ToString();
             }
             else
             {
                 if (double.Parse(chks) < 0.25)
                 {
                     txt_s.Text = "0";
-                   
+
                 }
             }
+            /*---------------------- Total KPYS Method------------------------*/
+
+            if (txt_YK.Text != "" || txt_YK.Text != "0" || txt_YP.Text != "" || txt_YP.Text != "0" || txt_YY.Text != "" || txt_YY.Text != "0" || txt_YC.Text != "" || txt_YC.Text != "0")
+            {
+                if (txt_YK.Text != "")
+                {
+                    double sumK1 = double.Parse(txt_k.Text);
+                    double sumK2 = double.Parse(txt_YK.Text);
+                    totalK = sumK1 + sumK2;
+                    total_K.Text = totalK.ToString();
+                    T_wastageK = double.Parse(total_K.Text);
+                }
+
+                if (txt_YP.Text != "")
+                {
+                    totalP = double.Parse(txt_p.Text) + double.Parse(txt_YP.Text);
+                    if (totalP >= 16)
+                    {
+                        resultP = Math.Floor(totalP / 16);
+                        resultP2 = totalP / 16;
+                        resultP3 = Math.Floor((resultP2 - resultP) * 16);
+                        resultP4 = double.Parse(total_K.Text) + resultP;
+                        total_P.Text = resultP3.ToString();
+                        total_K.Text = resultP4.ToString();
+                        T_wastageP = double.Parse(total_P.Text);
+                        T_wastageK = double.Parse(total_K.Text);
+                    }
+                    else
+                    {
+                        total_P.Text = totalP.ToString();
+                        T_wastageP = double.Parse(total_P.Text);
+                    }
+                }
+
+                if (txt_YY.Text != "")
+                {
+                    totalY = double.Parse(txt_y.Text) + double.Parse(txt_YY.Text);
+                    if (totalY >= 8)
+                    {
+                        resultY = Math.Floor(totalY / 8);
+                        resultY2 = totalY / 8;
+                        resultY3 = Math.Floor((resultY2 - resultY) * 8);
+                        resultY4 = double.Parse(total_P.Text) + resultY;
+                        total_Y.Text = resultY3.ToString();
+                        total_P.Text = resultY4.ToString();
+                        T_wastageY = double.Parse(total_Y.Text);
+                        T_wastageP = double.Parse(total_P.Text);
+                    }
+                    else
+                    {
+                        total_Y.Text = totalY.ToString();
+                        T_wastageY = double.Parse(total_Y.Text);
+                    }
+                }
+
+                if (txt_YC.Text != "")
+                {
+                    totalS = double.Parse(txt_s.Text) + double.Parse(txt_YC.Text);
+                    if (totalS >= 4)
+                    {
+                        resultS = Math.Floor(totalS / 4);
+                        resultS2 = totalS / 4;
+                        resultS3 = Math.Floor((resultS2 - resultS) * 4);
+                        resultS4 = double.Parse(total_Y.Text) + resultS;
+                        total_S.Text = resultS3.ToString();
+                        total_Y.Text = resultS4.ToString();
+                        T_wastageS = double.Parse(total_S.Text);
+                        T_wastageY = double.Parse(total_Y.Text);
+                    }
+                    else
+                    {
+                        total_S.Text = totalS.ToString();
+                        T_wastageS = double.Parse(total_S.Text);
+                    }
+                }
+            }
+            /*------------------------------------------------Total Amount------------------------------------------------*/
+            if (total_K.Text != "" && total_P.Text != "" && total_Y.Text != "" && total_S.Text != "")
+            {
+
+                T_wastageK = double.Parse(total_K.Text); T_wastageP = double.Parse(total_P.Text);
+                T_wastageY = double.Parse(total_Y.Text); T_wastageS = double.Parse(total_S.Text);
+                mcost = double.Parse(txt_mcost.Text); reploss = double.Parse(txt_rep.Text);
+                wastageamount = Math.Round(((T_wastageS / 4) + (T_wastageY / 8) + (T_wastageP / 16) + T_wastageK) * double.Parse(txt_goldprice.Text));
+                totalamt = (wastageamount + mcost) - reploss;
+                txt_totalamt.Text = totalamt.ToString();
+            }
+
         }
         /*--------------------------------------------------------------------------------------------------------------------*/
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)/*Item ComboBox*/
@@ -456,6 +660,7 @@ namespace GHF
                 comboBox4.Items.Add(dr["Itemname"].ToString());
             }
             con.Close();
+            errorProvider1.SetError(comboBox3, null);
         }
         private void comboBox1_Click(object sender, EventArgs e)
         {
@@ -472,7 +677,7 @@ namespace GHF
         private void textBox8_DoubleClick(object sender, EventArgs e)
         {
 
-            textBox8.ReadOnly = false;
+            txt_goldprice.ReadOnly = false;
         }/*Change Gold Price*/
         /*--------------------------------------------Change Language------------------------------------------------------------*/
         public static string language = "";
@@ -503,7 +708,10 @@ namespace GHF
         }
         private void txt_gm_TextChanged(object sender, EventArgs e)
         {
+            validatefunction();
             calculategm();
+            errorProvider1.SetError(txt_gm, null);
+
         }
 
         private void txt_YK_KeyPress(object sender, KeyPressEventArgs e)
@@ -567,7 +775,7 @@ namespace GHF
             {
                 txt_mcost.Text = string.Format("{0:n}", double.Parse(txt_mcost.Text));
             }
-
+            calculategm();
         }
 
         private void txt_rep_Leave(object sender, EventArgs e)
@@ -580,7 +788,7 @@ namespace GHF
             {
                 txt_rep.Text = string.Format("{0:n}", double.Parse(txt_rep.Text));
             }
-
+            calculategm();
         }
 
         private void txt_remark_KeyDown(object sender, KeyEventArgs e)
@@ -613,23 +821,32 @@ namespace GHF
         /*--------------------------------------------------------------------------------------------------------------------*/
         private void btn_add_Click(object sender, EventArgs e)/*Add Button*/
         {
+            if (comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "" || comboBox4.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+            {
+                validatefunction();
+            }
+            else
+            {
+                /*show_reg_piddata();*/
+                comboBox3.Focus();
+                DGW_register.Rows.Add(textBox25.Text, textBox29.Text);
+                /*DGW_register.AllowUserToAddRows = false;*/
+                string shop = "A";
+                string date = DateTime.Now.ToString("ddMMyy");
+                txt_ince_proid.Text = textBox29.Text;
+                string[] temparray = txt_ince_proid.Text.Split('-');
+                txt_temparray_proid.Text = shop + date;
+                txt_incre_pid.Text = temparray[1];
+                int i = Convert.ToInt32(txt_incre_pid.Text);
+                i++;
+                string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
+                textBox29.Text = autopoid;
+            }
 
-            /*show_reg_piddata();*/
-            comboBox3.Focus();
-            DGW_register.Rows.Add(textBox25.Text, textBox29.Text);
-            /*DGW_register.AllowUserToAddRows = false;*/
-            string shop = "A";
-            string date = DateTime.Now.ToString("ddMMyy");
-            txt_ince_proid.Text = textBox29.Text;
-            string[] temparray = txt_ince_proid.Text.Split('-');
-            txt_temparray_proid.Text = shop + date;
-            txt_incre_pid.Text = temparray[1];
-            int i = Convert.ToInt32(txt_incre_pid.Text);
-            i++;
-            string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
-            textBox29.Text = autopoid;
+
 
         }
+
         private void button1_Click(object sender, EventArgs e)/*Save Button*/
         {
             /*string checkvalue = textBox25.Text;
@@ -682,6 +899,126 @@ namespace GHF
             pid();
             invoiceid();
             DGW_register.Rows.Clear();
+        }
+
+        private void txt_YP_TextChanged(object sender, EventArgs e)
+        {
+
+            double p = 16;
+            if (txt_YP.Text == "")
+            {
+                txt_YP.Text = "";
+
+            }
+            else if (double.Parse(txt_YP.Text) > p)
+            {
+                MessageBox.Show(" အလျော့တွက် 16 \"ပဲ\" နှင့်အထက် ဖြစ်နေပါသည်");
+                txt_YP.Text = "0";
+                txt_YP.SelectionStart = 0;
+                txt_YP.SelectionLength = txt_YP.Text.Length;
+            }
+            calculategm();
+        }
+
+        private void txt_YY_TextChanged(object sender, EventArgs e)
+        {
+            double p = 8;
+            if (txt_YY.Text == "")
+            {
+                txt_YY.Text = "";
+
+            }
+            else if (double.Parse(txt_YY.Text) > p)
+            {
+                MessageBox.Show(" အလျော့တွက် 8 \"ရွေး\" နှင့်အထက် ဖြစ်နေပါသည်");
+                txt_YY.Text = "0";
+                txt_YY.SelectionStart = 0;
+                txt_YY.SelectionLength = txt_YY.Text.Length;
+            }
+            calculategm();
+        }
+
+        private void txt_YC_TextChanged(object sender, EventArgs e)
+        {
+            double p = 4;
+            if (txt_YC.Text == "")
+            {
+                txt_YC.Text = "";
+
+            }
+            else if (double.Parse(txt_YC.Text) > p)
+            {
+                MessageBox.Show("အလျော့တွက် 4 \"စိတ်\" နှင့်အထက် ဖြစ်နေပါသည်");
+                txt_YC.Text = "0";
+                txt_YC.SelectionStart = 0;
+                txt_YC.SelectionLength = txt_YC.Text.Length;
+            }
+            calculategm();
+        }
+
+        private void txt_YK_Leave(object sender, EventArgs e)
+        {
+
+            calculategm();
+
+        }
+        private void txt_YP_Leave(object sender, EventArgs e)
+        {
+
+            calculategm();
+        }
+        private void txt_YY_Leave(object sender, EventArgs e)
+        {
+
+            calculategm();
+        }
+        private void txt_YC_Leave(object sender, EventArgs e)
+        {
+
+            calculategm();
+        }
+
+        private void txt_gm_Leave(object sender, EventArgs e)
+        {
+            calculategm();
+        }
+
+        private void txt_YK_TextChanged(object sender, EventArgs e)
+        {
+            calculategm();
+
+        }
+
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(comboBox1, null);
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(comboBox2, null);
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(comboBox4, null);
+        }
+
+        private void txt_mcost_TextChanged(object sender, EventArgs e)
+        {
+            calculategm();
+        }
+
+        private void txt_rep_TextChanged(object sender, EventArgs e)
+        {
+            calculategm();
+        }
+
+        private void txt_totalamt_TextChanged(object sender, EventArgs e)
+        {
+            validatefunction();
         }
     }
 }
