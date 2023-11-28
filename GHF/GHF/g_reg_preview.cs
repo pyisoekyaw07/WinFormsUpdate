@@ -7,14 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace GHF
 {
     public partial class g_reg_preview : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
         public g_reg_preview()
         {
             InitializeComponent();
+
+        }
+
+        private void g_reg_preview_Load(object sender, EventArgs e)
+        {
+            showdata();
+        }
+
+        private void showdata()
+        {
+            con.Open();
+            string query = "Select * From regs";
+            SqlDataAdapter da= new SqlDataAdapter(query, con);
+            DataTable dt= new DataTable();
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+            con.Close();
         }
     }
 }
+
+
+

@@ -14,6 +14,7 @@ using Azure.Identity;
 using System.Web;
 using System.Windows.Media.Converters;
 using System.Xml.Linq;
+using System.Windows.Media;
 
 namespace GHF
 {
@@ -46,11 +47,120 @@ namespace GHF
                 eng();
             }*/
 
+
+            {
+
+                /*for (int j = 0; j < this.dataGridView1.ColumnCount; j++)
+                {
+                    this.dataGridView1.Columns[j].Width = 100;
+                }*/
+
+                this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+                this.dataGridView1.ColumnHeadersHeight = this.dataGridView1.ColumnHeadersHeight * 2;
+                this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
+                this.dataGridView1.CellPainting += new DataGridViewCellPaintingEventHandler(dataGridView1_CellPainting);
+                this.dataGridView1.Paint += new PaintEventHandler(dataGridView1_Paint);
+                this.dataGridView1.Paint += new PaintEventHandler(dataGridView1_Paint2);
+                this.dataGridView1.Paint += new PaintEventHandler(dataGridView1_Paint3);
+                this.dataGridView1.Scroll += new ScrollEventHandler(dataGridView1_Scroll);
+                this.dataGridView1.ColumnWidthChanged += new DataGridViewColumnEventHandler(dataGridView1_ColumnWidthChanged);
+            }
+
             invoiceid();
             pid();
 
+        }
+
+        private void dataGridView1_ColumnWidthChanged(object sender, DataGridViewColumnEventArgs e)
+        {
+            Rectangle rtHeader = this.dataGridView1.DisplayRectangle;
+            rtHeader.Height = this.dataGridView1.ColumnHeadersHeight / 2;
+            this.dataGridView1.Invalidate(rtHeader);
+        }
+
+        private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
+        {
+            Rectangle rtHeader = this.dataGridView1.DisplayRectangle;
+            rtHeader.Height = this.dataGridView1.ColumnHeadersHeight / 2;
+            this.dataGridView1.Invalidate(rtHeader);
+        }
+
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(11, -1, true);
+            int w2 = dataGridView1.GetCellDisplayRectangle(11, -1, true).Width;
+            int w3 = dataGridView1.GetCellDisplayRectangle(11, -1, true).Width;
+            int w4 = dataGridView1.GetCellDisplayRectangle(11, -1, true).Width;
+            r1.X += 1;
+            r1.Y += 1;
+            r1.Width = r1.Width + w2 + w3 + w4;
+            r1.Height = r1.Height / 2 - 2;
+            e.Graphics.FillRectangle(new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor), r1);
+
+            StringFormat format = new StringFormat();
+
+            format.Alignment = StringAlignment.Center;
+            format.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString("ရွှေအသားတင်", dataGridView1.ColumnHeadersDefaultCellStyle.Font,
+                new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.BackColor), r1, format);
 
         }
+
+        private void dataGridView1_Paint2(object sender, PaintEventArgs e)
+        {
+            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(15, -1, true);
+            int w2 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
+            int w3 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
+            int w4 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
+            r1.X += 1;
+            r1.Y += 1;
+            r1.Width = r1.Width + w2 + w3 + w4;
+            r1.Height = r1.Height / 2 - 2;
+            e.Graphics.FillRectangle(new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.BackColor), r1);
+
+            StringFormat format = new StringFormat();
+
+            format.Alignment = StringAlignment.Center;
+            format.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString("အလျော့တွက်", dataGridView1.ColumnHeadersDefaultCellStyle.Font,
+                new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor), r1, format);
+        }
+
+        private void dataGridView1_Paint3(object sender, PaintEventArgs e)
+        {
+            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(19, -1, true);
+            int w2 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
+            int w3 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
+            int w4 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
+            r1.X += 1;
+            r1.Y += 1;
+            r1.Width = r1.Width + w2 + w3 + w4;
+            r1.Height = r1.Height / 2 - 2;
+            e.Graphics.FillRectangle(new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor), r1);
+
+            StringFormat format = new StringFormat();
+
+            format.Alignment = StringAlignment.Center;
+            format.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString("စုစုပေါင်းရွှေချိန်", dataGridView1.ColumnHeadersDefaultCellStyle.Font,
+                new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.BackColor), r1, format);
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex == -1 && e.ColumnIndex > -1)
+            {
+                Rectangle r2 = e.CellBounds;
+                r2.Y += e.CellBounds.Height / 2;
+                r2.Height = e.CellBounds.Height / 2;
+                e.PaintBackground(r2, true);
+                e.PaintContent(r2);
+                e.Handled = true;
+            }
+        }
+
+
+
         /*-------------------------------------------Function Group----------------------------------------------*/
         public void timer1_Tick_1(object sender, EventArgs e)/*Date and Time*/
         {
@@ -64,8 +174,8 @@ namespace GHF
         }
         public void item()/*function item*/
         {
-            comboBox4.Items.Clear();
-            comboBox3.Items.Clear();
+            cmb_itemname.Items.Clear();
+            cmb_item.Items.Clear();
 
             string sqlquery = "select * from golditem";
             SqlCommand cmd = new SqlCommand(sqlquery, con);
@@ -76,7 +186,7 @@ namespace GHF
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    comboBox3.Items.Add(reader["Golditem"].ToString());
+                    cmb_item.Items.Add(reader["Golditem"].ToString());
                 }
             }
             catch (SqlException ex)
@@ -91,7 +201,7 @@ namespace GHF
         }
         public void Gtype()/*function Gold type */
         {
-            comboBox2.Items.Clear();
+            cmb_gt.Items.Clear();
             string sqlquery = "select * from g_type";
             SqlCommand cmd = new SqlCommand(sqlquery, con);
 
@@ -101,7 +211,7 @@ namespace GHF
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    comboBox2.Items.Add(reader["Gold_Type"].ToString());
+                    cmb_gt.Items.Add(reader["Gold_Type"].ToString());
                 }
             }
             catch (SqlException ex)
@@ -115,7 +225,7 @@ namespace GHF
         }
         public void sourceremark()/*function source remark */
         {
-            comboBox1.Items.Clear();
+            cmb_remark.Items.Clear();
             string sqlquery = "select * from source_remark";
             SqlCommand cmd = new SqlCommand(sqlquery, con);
 
@@ -125,7 +235,7 @@ namespace GHF
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    comboBox1.Items.Add(reader["Source_Remark"].ToString());
+                    cmb_remark.Items.Add(reader["Source_Remark"].ToString());
                 }
             }
             catch (SqlException ex)
@@ -171,7 +281,7 @@ namespace GHF
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    textBox27.Text = reader["Gold"].ToString();
+                    txt_counter.Text = reader["Gold"].ToString();
                 }
             }
             catch (SqlException ex)
@@ -251,7 +361,7 @@ namespace GHF
                     con.Open();
                 }
 
-                sql = "select * from g_register";
+                sql = "select * from g_reg";
                 cmd = new SqlCommand(sql, con);
                 var maxid = cmd.ExecuteScalar() as string;
 
@@ -263,7 +373,7 @@ namespace GHF
                     string shop = "A";
                     string date = DateTime.Now.ToString("ddMMyy");
                     string id = "0001";
-                    textBox25.Text = form + shop + date + "-" + id;
+                    txt_voucher.Text = form + shop + date + "-" + id;
 
                 }
                 else
@@ -272,13 +382,13 @@ namespace GHF
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
                     cmd.Connection = con;
-                    cmd.CommandText = "select top(1) SaleVoucher from g_register order by SaleVoucher desc";
+                    cmd.CommandText = "select top(1) SaleVoucher from g_reg order by SaleVoucher desc";
                     sr = cmd.ExecuteReader();
                     if (sr.Read())
 
                     {
                         string form = "GR";
-                        string num = textBox29.Text;
+                        string num = txt_barcode.Text;
                         string shop = "A";
                         string date = DateTime.Now.ToString("ddMMyy");
                         string pid = sr.GetValue(0).ToString();
@@ -291,7 +401,7 @@ namespace GHF
                         txt_Dece.Text = i.ToString();
                         string autoid = txt_temparay.Text + "-" + String.Format("{0:0000}", i);
                         /* txt_Dece.Text = autoid;*/
-                        textBox25.Text = autoid;
+                        txt_voucher.Text = autoid;
 
                     }
 
@@ -311,18 +421,52 @@ namespace GHF
             /* pid();*/
             /* string invoiceno = textBox25.Text;
              string productid = textBox29.Text;*/
-            for (int i = 0; i < DGW_register.Rows.Count; i++)
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
 
-                cmd = new SqlCommand("insert into g_register(SaleVoucher,ProductID) " +
-                     "values('" + DGW_register.Rows[i].Cells[0].Value + "','" + DGW_register.Rows[i].Cells[1].Value + "') ", con);
+                cmd = new SqlCommand("insert into regs(SaleVoucher,ProductrID,date,time,enter_remark,purvoucher,goldtype,goldprice,item,itemname," +
+               "gm,k,p,y,s,wk,wp,wy,ws,tk,tp,ty,ts,mcost,repamt,totalamt,remark,employee,image) values(@SaleVoucher,@ProductID,@date,@time,@enter_remark," +
+               "@purvoucher,@goldtype,@goldprice,@item,@itemname,@gm,@k,@p,@y,@s,@wk,@wp,@wy,@ws,@tk,@tp,@ty,@ts,@mcost,@repamt,@totalamt,@remark,@employee,@image)", con);
+
+                cmd.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value);
+                cmd.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value);
+                cmd.Parameters.AddWithValue("@date", dataGridView1.Rows[i].Cells[1].Value);
+                cmd.Parameters.AddWithValue("@time", dataGridView1.Rows[i].Cells[2].Value);
+                cmd.Parameters.AddWithValue("@enter_remark", dataGridView1.Rows[i].Cells[4].Value);
+                cmd.Parameters.AddWithValue("@purvoucher", dataGridView1.Rows[i].Cells[4].Value);
+                cmd.Parameters.AddWithValue("@goldtype", dataGridView1.Rows[i].Cells[7].Value);
+                cmd.Parameters.AddWithValue("@goldprice", dataGridView1.Rows[i].Cells[8].Value);
+                cmd.Parameters.AddWithValue("@item", dataGridView1.Rows[i].Cells[9].Value);
+                cmd.Parameters.AddWithValue("@itemname", dataGridView1.Rows[i].Cells[10].Value);
+                cmd.Parameters.AddWithValue("@gm", dataGridView1.Rows[i].Cells[11].Value);
+                cmd.Parameters.AddWithValue("@k", dataGridView1.Rows[i].Cells[12].Value);
+                cmd.Parameters.AddWithValue("@p", dataGridView1.Rows[i].Cells[13].Value);
+                cmd.Parameters.AddWithValue("@y", dataGridView1.Rows[i].Cells[14].Value);
+                cmd.Parameters.AddWithValue("@s", dataGridView1.Rows[i].Cells[15].Value);
+                cmd.Parameters.AddWithValue("@wk", dataGridView1.Rows[i].Cells[16].Value);
+                cmd.Parameters.AddWithValue("@wp", dataGridView1.Rows[i].Cells[17].Value);
+                cmd.Parameters.AddWithValue("@wy", dataGridView1.Rows[i].Cells[18].Value);
+                cmd.Parameters.AddWithValue("@ws", dataGridView1.Rows[i].Cells[19].Value);
+                cmd.Parameters.AddWithValue("@tk", dataGridView1.Rows[i].Cells[20].Value);
+                cmd.Parameters.AddWithValue("@tp", dataGridView1.Rows[i].Cells[21].Value);
+                cmd.Parameters.AddWithValue("@ty", dataGridView1.Rows[i].Cells[22].Value);
+                cmd.Parameters.AddWithValue("@ts", dataGridView1.Rows[i].Cells[23].Value);
+                cmd.Parameters.AddWithValue("@mcost", dataGridView1.Rows[i].Cells[24].Value);
+                cmd.Parameters.AddWithValue("@repamt", dataGridView1.Rows[i].Cells[25].Value);
+                cmd.Parameters.AddWithValue("@totalamt", dataGridView1.Rows[i].Cells[26].Value);
+                cmd.Parameters.AddWithValue("@remark", dataGridView1.Rows[i].Cells[27].Value);
+                cmd.Parameters.AddWithValue("@employee", dataGridView1.Rows[i].Cells[28].Value);
+                byte[] img = (byte[])dataGridView1.Rows[i].Cells[0].Value;
+                cmd.Parameters.AddWithValue("@image", img);
+
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                DGW_register.Rows.Clear();
-                MessageBox.Show("success");
-            }
 
+            }
+            dataGridView1.Rows.Clear();
+            MessageBox.Show("success");
 
             /*adpt = new SqlDataAdapter("select * from g_register", con);
             dt = new DataTable();
@@ -330,6 +474,7 @@ namespace GHF
             dataGridView2.DataSource = dt;*/
 
         }
+
         public void pid()/*function Product Number*/
         {
 
@@ -340,7 +485,7 @@ namespace GHF
                     con.Open();
                 }
 
-                sql = "select * from g_register";
+                sql = "select * from g_reg";
                 cmd = new SqlCommand(sql, con);
                 var maxid = cmd.ExecuteScalar() as string;
 
@@ -351,7 +496,7 @@ namespace GHF
                     string shop = "A";
                     string date = DateTime.Now.ToString("ddMMyy");
                     string id = "0001";
-                    textBox29.Text = shop + date + "-" + id;
+                    txt_barcode.Text = shop + date + "-" + id;
 
                 }
                 else
@@ -360,7 +505,7 @@ namespace GHF
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
                     cmd.Connection = con;
-                    cmd.CommandText = "select top(1) ProductID from g_register order by ProductID desc";
+                    cmd.CommandText = "select top(1) ProductID from g_reg order by ProductID desc";
                     sr = cmd.ExecuteReader();
                     if (sr.Read())
                     {
@@ -376,7 +521,7 @@ namespace GHF
                         txt_Dece_pid.Text = i.ToString();
                         string autoid = txt_temparay_pid.Text + "-" + String.Format("{0:0000}", i);
                         txt_Dece_pid.Text = autoid;
-                        textBox29.Text = autoid;
+                        txt_barcode.Text = autoid;
                     }
                 }
                 con.Close();
@@ -389,44 +534,44 @@ namespace GHF
         private void validatefunction()
         {
             bool ok = true;
-            if (comboBox1.Text == "")
+            if (cmb_remark.Text == "")
             {
                 ok = false;
-                errorProvider1.SetError(comboBox1, "required");
+                errorProvider1.SetError(cmb_remark, "required");
             }
             else
             {
-                errorProvider1.SetError(comboBox1, null);
+                errorProvider1.SetError(cmb_remark, null);
 
             }
-            if (comboBox2.Text == "")
+            if (cmb_gt.Text == "")
             {
                 ok = false;
-                errorProvider1.SetError(comboBox2, "Plese Select Gold Type");
+                errorProvider1.SetError(cmb_gt, "Plese Select Gold Type");
             }
             else
             {
-                errorProvider1.SetError(comboBox2, null);
+                errorProvider1.SetError(cmb_gt, null);
 
             }
-            if (comboBox3.Text == "")
+            if (cmb_item.Text == "")
             {
                 ok = false;
-                errorProvider1.SetError(comboBox3, "Plese Select Item");
+                errorProvider1.SetError(cmb_item, "Plese Select Item");
             }
             else
             {
-                errorProvider1.SetError(comboBox3, null);
+                errorProvider1.SetError(cmb_item, null);
 
             }
-            if (comboBox4.Text == "")
+            if (cmb_itemname.Text == "")
             {
                 ok = false;
-                errorProvider1.SetError(comboBox4, "Plese Select Itemname");
+                errorProvider1.SetError(cmb_itemname, "Plese Select Itemname");
             }
             else
             {
-                errorProvider1.SetError(comboBox4, null);
+                errorProvider1.SetError(cmb_itemname, null);
 
             }
             if (txt_gm.Text == "")
@@ -488,29 +633,29 @@ namespace GHF
                 txt_rep.SelectionStart = 0;
                 txt_rep.SelectionLength = txt_rep.Text.Length;
             }
-            if (txt_YK.Text == "")
+            if (txt_WK.Text == "")
             {
-                txt_YK.Text = "0";
-                txt_YK.SelectionStart = 0;
-                txt_YK.SelectionLength = txt_YK.Text.Length;
+                txt_WK.Text = "0";
+                txt_WK.SelectionStart = 0;
+                txt_WK.SelectionLength = txt_WK.Text.Length;
             }
-            if (txt_YP.Text == "")
+            if (txt_WP.Text == "")
             {
-                txt_YP.Text = "0";
-                txt_YP.SelectionStart = 0;
-                txt_YP.SelectionLength = txt_YP.Text.Length;
+                txt_WP.Text = "0";
+                txt_WP.SelectionStart = 0;
+                txt_WP.SelectionLength = txt_WP.Text.Length;
             }
-            if (txt_YY.Text == "")
+            if (txt_WY.Text == "")
             {
-                txt_YY.Text = "0";
-                txt_YY.SelectionStart = 0;
-                txt_YY.SelectionLength = txt_YY.Text.Length;
+                txt_WY.Text = "0";
+                txt_WY.SelectionStart = 0;
+                txt_WY.SelectionLength = txt_WY.Text.Length;
             }
-            if (txt_YC.Text == "")
+            if (txt_WC.Text == "")
             {
-                txt_YC.Text = "0";
-                txt_YC.SelectionStart = 0;
-                txt_YC.SelectionLength = txt_YC.Text.Length;
+                txt_WC.Text = "0";
+                txt_WC.SelectionStart = 0;
+                txt_WC.SelectionLength = txt_WC.Text.Length;
             }
             intk = Math.Floor(double.Parse(txt_gm.Text) / double.Parse("16.6"));
             tk = double.Parse(txt_gm.Text) / double.Parse("16.6");
@@ -556,20 +701,20 @@ namespace GHF
             }
             /*---------------------- Total KPYS Method------------------------*/
 
-            if (txt_YK.Text != "" || txt_YK.Text != "0" || txt_YP.Text != "" || txt_YP.Text != "0" || txt_YY.Text != "" || txt_YY.Text != "0" || txt_YC.Text != "" || txt_YC.Text != "0")
+            if (txt_WK.Text != "" || txt_WK.Text != "0" || txt_WP.Text != "" || txt_WP.Text != "0" || txt_WY.Text != "" || txt_WY.Text != "0" || txt_WC.Text != "" || txt_WC.Text != "0")
             {
-                if (txt_YK.Text != "")
+                if (txt_WK.Text != "")
                 {
                     double sumK1 = double.Parse(txt_k.Text);
-                    double sumK2 = double.Parse(txt_YK.Text);
+                    double sumK2 = double.Parse(txt_WK.Text);
                     totalK = sumK1 + sumK2;
                     total_K.Text = totalK.ToString();
                     T_wastageK = double.Parse(total_K.Text);
                 }
 
-                if (txt_YP.Text != "")
+                if (txt_WP.Text != "")
                 {
-                    totalP = double.Parse(txt_p.Text) + double.Parse(txt_YP.Text);
+                    totalP = double.Parse(txt_p.Text) + double.Parse(txt_WP.Text);
                     if (totalP >= 16)
                     {
                         resultP = Math.Floor(totalP / 16);
@@ -588,9 +733,9 @@ namespace GHF
                     }
                 }
 
-                if (txt_YY.Text != "")
+                if (txt_WY.Text != "")
                 {
-                    totalY = double.Parse(txt_y.Text) + double.Parse(txt_YY.Text);
+                    totalY = double.Parse(txt_y.Text) + double.Parse(txt_WY.Text);
                     if (totalY >= 8)
                     {
                         resultY = Math.Floor(totalY / 8);
@@ -609,9 +754,9 @@ namespace GHF
                     }
                 }
 
-                if (txt_YC.Text != "")
+                if (txt_WC.Text != "")
                 {
-                    totalS = double.Parse(txt_s.Text) + double.Parse(txt_YC.Text);
+                    totalS = double.Parse(txt_s.Text) + double.Parse(txt_WC.Text);
                     if (totalS >= 4)
                     {
                         resultS = Math.Floor(totalS / 4);
@@ -638,7 +783,7 @@ namespace GHF
                 T_wastageY = double.Parse(total_Y.Text); T_wastageS = double.Parse(total_S.Text);
                 mcost = double.Parse(txt_mcost.Text); reploss = double.Parse(txt_rep.Text);
                 wastageamount = Math.Round(((((T_wastageS / 4) + T_wastageY) / 8 + T_wastageP) / 16 + T_wastageK) * double.Parse(txt_goldprice.Text));
-                
+
                 totalamt = (wastageamount + mcost) - reploss;
                 txt_totalamt.Text = totalamt.ToString();
             }
@@ -647,21 +792,21 @@ namespace GHF
         /*--------------------------------------------------------------------------------------------------------------------*/
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)/*Item ComboBox*/
         {
-            comboBox4.Items.Clear();
+            cmb_itemname.Items.Clear();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from gold_itemname where Item=N'" + comboBox3.SelectedItem.ToString() + "'";
+            cmd.CommandText = "select * from gold_itemname where Item=N'" + cmb_item.SelectedItem.ToString() + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                comboBox4.Items.Add(dr["Itemname"].ToString());
+                cmb_itemname.Items.Add(dr["Itemname"].ToString());
             }
             con.Close();
-            errorProvider1.SetError(comboBox3, null);
+            errorProvider1.SetError(cmb_item, null);
         }
         private void comboBox1_Click(object sender, EventArgs e)
         {
@@ -707,6 +852,7 @@ namespace GHF
             }
 
         }
+
         private void txt_gm_TextChanged(object sender, EventArgs e)
         {
             validatefunction();
@@ -804,46 +950,80 @@ namespace GHF
         /*---------------------------------------------Get Data Combobox------------------------------------------------------*/
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            comboBox1.DroppedDown = true;
+            cmb_remark.DroppedDown = true;
             sourceremark();
         }
 
         private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            comboBox2.DroppedDown = true;
+            cmb_gt.DroppedDown = true;
             Gtype();
         }
 
         private void comboBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            comboBox3.DroppedDown = true;
+            cmb_item.DroppedDown = true;
             item();
         }
         /*--------------------------------------------------------------------------------------------------------------------*/
+
+        private void History_addGrid(string date, string time, string Voucher, string enter_remark, string purvoc, string barcode,
+            string goldtype, string gold_price, string items, string itemname, string gm, string k, string p, string y, string s,
+            string wk, string wp, string wy, string ws, string totalk, string totalp, string totaly, string totals, string mcost,
+            string repamt, string totalamt, string remark, string employee)
+        {
+            try
+            {
+                int no = 0;
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(dataGridView1);
+                newRow.Cells[1].Value = date; newRow.Cells[2].Value = time; newRow.Cells[3].Value = Voucher; newRow.Cells[4].Value = enter_remark;
+                newRow.Cells[5].Value = purvoc; newRow.Cells[6].Value = barcode; newRow.Cells[7].Value = goldtype; newRow.Cells[8].Value = gold_price;
+                newRow.Cells[9].Value = items; newRow.Cells[10].Value = itemname; newRow.Cells[11].Value = gm; newRow.Cells[12].Value = k;
+                newRow.Cells[13].Value = p; newRow.Cells[14].Value = y; newRow.Cells[15].Value = s; newRow.Cells[16].Value = wk;
+                newRow.Cells[17].Value = wp; newRow.Cells[18].Value = wy; newRow.Cells[19].Value = ws; newRow.Cells[20].Value = totalk;
+                newRow.Cells[21].Value = totalp; newRow.Cells[22].Value = totaly; newRow.Cells[23].Value = totals; newRow.Cells[24].Value = mcost;
+                newRow.Cells[25].Value = repamt; newRow.Cells[26].Value = totalamt; newRow.Cells[27].Value = remark; newRow.Cells[28].Value = employee;
+                dataGridView1.Rows.Add(newRow);
+                MemoryStream mmst = new MemoryStream();
+                pictureBox.Image.Save(mmst, pictureBox.Image.RawFormat);
+                byte[] img = mmst.ToArray();
+                newRow.Cells[0].Value = img;
+
+            }
+            catch { }
+        }
         private void btn_add_Click(object sender, EventArgs e)/*Add Button*/
         {
-            if (comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "" || comboBox4.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+            if (cmb_remark.Text == "" || cmb_gt.Text == "" || cmb_item.Text == "" || cmb_itemname.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
             {
                 validatefunction();
             }
             else
             {
+
+
+                History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
+                    cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
+                    total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, txt_remark.Text);
+
+
+
                 /*show_reg_piddata();*/
-                comboBox3.Focus();
-                DGW_register.Rows.Add(textBox25.Text, textBox29.Text);
+                cmb_item.Focus();
+                /* DGW_register.Rows.Add(textBox25.Text, textBox29.Text);*/
                 /*DGW_register.AllowUserToAddRows = false;*/
                 string shop = "A";
                 string date = DateTime.Now.ToString("ddMMyy");
-                txt_ince_proid.Text = textBox29.Text;
+                txt_ince_proid.Text = txt_barcode.Text;
                 string[] temparray = txt_ince_proid.Text.Split('-');
                 txt_temparray_proid.Text = shop + date;
                 txt_incre_pid.Text = temparray[1];
                 int i = Convert.ToInt32(txt_incre_pid.Text);
                 i++;
                 string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
-                textBox29.Text = autopoid;
+                txt_barcode.Text = autopoid;
             }
-
 
 
         }
@@ -899,24 +1079,24 @@ namespace GHF
         {
             pid();
             invoiceid();
-            DGW_register.Rows.Clear();
+            dataGridView1.Rows.Clear();
         }
 
         private void txt_YP_TextChanged(object sender, EventArgs e)
         {
 
             double p = 16;
-            if (txt_YP.Text == "")
+            if (txt_WP.Text == "")
             {
-                txt_YP.Text = "";
+                txt_WP.Text = "";
 
             }
-            else if (double.Parse(txt_YP.Text) > p)
+            else if (double.Parse(txt_WP.Text) > p)
             {
                 MessageBox.Show(" အလျော့တွက် 16 \"ပဲ\" နှင့်အထက် ဖြစ်နေပါသည်");
-                txt_YP.Text = "0";
-                txt_YP.SelectionStart = 0;
-                txt_YP.SelectionLength = txt_YP.Text.Length;
+                txt_WP.Text = "0";
+                txt_WP.SelectionStart = 0;
+                txt_WP.SelectionLength = txt_WP.Text.Length;
             }
             calculategm();
         }
@@ -924,17 +1104,17 @@ namespace GHF
         private void txt_YY_TextChanged(object sender, EventArgs e)
         {
             double p = 8;
-            if (txt_YY.Text == "")
+            if (txt_WY.Text == "")
             {
-                txt_YY.Text = "";
+                txt_WY.Text = "";
 
             }
-            else if (double.Parse(txt_YY.Text) > p)
+            else if (double.Parse(txt_WY.Text) > p)
             {
                 MessageBox.Show(" အလျော့တွက် 8 \"ရွေး\" နှင့်အထက် ဖြစ်နေပါသည်");
-                txt_YY.Text = "0";
-                txt_YY.SelectionStart = 0;
-                txt_YY.SelectionLength = txt_YY.Text.Length;
+                txt_WY.Text = "0";
+                txt_WY.SelectionStart = 0;
+                txt_WY.SelectionLength = txt_WY.Text.Length;
             }
             calculategm();
         }
@@ -942,17 +1122,17 @@ namespace GHF
         private void txt_YC_TextChanged(object sender, EventArgs e)
         {
             double p = 4;
-            if (txt_YC.Text == "")
+            if (txt_WC.Text == "")
             {
-                txt_YC.Text = "";
+                txt_WC.Text = "";
 
             }
-            else if (double.Parse(txt_YC.Text) > p)
+            else if (double.Parse(txt_WC.Text) > p)
             {
                 MessageBox.Show("အလျော့တွက် 4 \"စိတ်\" နှင့်အထက် ဖြစ်နေပါသည်");
-                txt_YC.Text = "0";
-                txt_YC.SelectionStart = 0;
-                txt_YC.SelectionLength = txt_YC.Text.Length;
+                txt_WC.Text = "0";
+                txt_WC.SelectionStart = 0;
+                txt_WC.SelectionLength = txt_WC.Text.Length;
             }
             calculategm();
         }
@@ -990,21 +1170,19 @@ namespace GHF
 
         }
 
-
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(comboBox1, null);
+            errorProvider1.SetError(cmb_remark, null);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(comboBox2, null);
+            errorProvider1.SetError(cmb_gt, null);
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(comboBox4, null);
+            errorProvider1.SetError(cmb_itemname, null);
         }
 
         private void txt_mcost_TextChanged(object sender, EventArgs e)

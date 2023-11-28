@@ -138,9 +138,9 @@
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(167, 167, 167);
-            panel6.Location = new Point(9, 34);
+            panel6.Location = new Point(-4, 34);
             panel6.Name = "panel6";
-            panel6.Size = new Size(80, 4);
+            panel6.Size = new Size(110, 3);
             panel6.TabIndex = 24;
             panel6.Visible = false;
             // 
@@ -162,7 +162,7 @@
             ico_master.IconChar = FontAwesome.Sharp.IconChar.Database;
             ico_master.IconColor = Color.FromArgb(167, 167, 167);
             ico_master.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ico_master.IconSize = 28;
+            ico_master.IconSize = 27;
             ico_master.Location = new Point(8, 7);
             ico_master.Name = "ico_master";
             ico_master.Size = new Size(35, 27);
@@ -186,7 +186,7 @@
             pan_line_master.BackColor = Color.FromArgb(167, 167, 167);
             pan_line_master.Location = new Point(8, 35);
             pan_line_master.Name = "pan_line_master";
-            pan_line_master.Size = new Size(110, 4);
+            pan_line_master.Size = new Size(110, 3);
             pan_line_master.TabIndex = 23;
             pan_line_master.Visible = false;
             // 
@@ -245,9 +245,9 @@
             // 
             pan_line_home.BackColor = Color.White;
             pan_line_home.ForeColor = Color.White;
-            pan_line_home.Location = new Point(13, 35);
+            pan_line_home.Location = new Point(1, 35);
             pan_line_home.Name = "pan_line_home";
-            pan_line_home.Size = new Size(80, 4);
+            pan_line_home.Size = new Size(110, 3);
             pan_line_home.TabIndex = 24;
             // 
             // panel3
