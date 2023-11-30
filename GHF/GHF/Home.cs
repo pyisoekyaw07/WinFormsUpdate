@@ -31,7 +31,7 @@ namespace GHF
             f.Show();
 
         }
-
+        public static string setvalueemployee = "";
         private void Form2_Load(object sender, EventArgs e)
         {
             /*  gold1.Hide();
@@ -44,7 +44,7 @@ namespace GHF
             panel1.Show();
             panel1.BackColor = Color.White;
             /*lbl_username.Text = login.username;*/
-
+            setvalueemployee = lbl_username.Text;
 
         }
 
@@ -137,6 +137,7 @@ namespace GHF
             masterclick();
         }
 
+  
 
         /*-----------------------------------------------------------------------------*/
     }

@@ -98,6 +98,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1478, 63);
             panel2.TabIndex = 2;
+          
             // 
             // pan_rep
             // 

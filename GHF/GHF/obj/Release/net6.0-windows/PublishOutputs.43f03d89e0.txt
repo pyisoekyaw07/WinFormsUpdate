@@ -2,6 +2,7 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\GHF.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\GHF.deps.json
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\GHF.runtimeconfig.json
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\GHF.dll.config
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\GHF.pdb
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Azure.Core.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Azure.Identity.dll

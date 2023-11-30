@@ -15,28 +15,32 @@ using System.Web;
 using System.Windows.Media.Converters;
 using System.Xml.Linq;
 using System.Windows.Media;
+using System.Configuration;
 
 namespace GHF
 {
+
+   
     public partial class gform : Form
     {
+
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
+
         SqlCommand cmd;
         SqlDataAdapter adpt;
         DataTable dt;
         DataSet ds;
         string sql;
-
         public gform()
         {
             InitializeComponent();
-            goldprice();
-            counter();
-
+           /* string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;*/
+            
         }
         /*DataTable dtb = new DataTable();*/
         private void gform_Load(object sender, EventArgs e)
         {
+            
             /*check_language.Text = Form2.setvalueformyan;
             if (check_language.Text == "myanmar")
             {
@@ -49,12 +53,6 @@ namespace GHF
 
 
             {
-
-                /*for (int j = 0; j < this.dataGridView1.ColumnCount; j++)
-                {
-                    this.dataGridView1.Columns[j].Width = 100;
-                }*/
-
                 this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
                 this.dataGridView1.ColumnHeadersHeight = this.dataGridView1.ColumnHeadersHeight * 2;
                 this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
@@ -68,6 +66,8 @@ namespace GHF
 
             invoiceid();
             pid();
+            goldprice();
+            counter();
 
         }
 
@@ -249,6 +249,7 @@ namespace GHF
         }
         public void goldprice()/*function goldprice */
         {
+            string goldprice = "0";
             string sqlquery = "select * from goldprice";
             SqlCommand cmd = new SqlCommand(sqlquery, con);
 
@@ -258,7 +259,9 @@ namespace GHF
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    txt_goldprice.Text = reader["Gold_Price"].ToString();
+                    goldprice = reader["Gold_Price"].ToString();
+                    txt_goldprice.Text=string.Format("{0:n0}", double.Parse(goldprice));
+
                 }
             }
             catch (SqlException ex)
@@ -361,7 +364,7 @@ namespace GHF
                     con.Open();
                 }
 
-                sql = "select * from g_reg";
+                sql = "SELECT SaleVoucher FROM reg_gold";
                 cmd = new SqlCommand(sql, con);
                 var maxid = cmd.ExecuteScalar() as string;
 
@@ -382,7 +385,7 @@ namespace GHF
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
                     cmd.Connection = con;
-                    cmd.CommandText = "select top(1) SaleVoucher from g_reg order by SaleVoucher desc";
+                    cmd.CommandText = "SELECT SaleVoucher FROM reg_gold ORDER BY SaleVoucher DESC";
                     sr = cmd.ExecuteReader();
                     if (sr.Read())
 
@@ -412,69 +415,10 @@ namespace GHF
             }
             catch (SqlException ex)
             {
-                /* MessageBox.Show(ex.Message);*/
+                MessageBox.Show(ex.Message);
             }
 
         }
-        public void show_reg_piddata()/*Show Register Data To Table Function*/
-        {
-            /* pid();*/
-            /* string invoiceno = textBox25.Text;
-             string productid = textBox29.Text;*/
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-
-                cmd = new SqlCommand("insert into regs(SaleVoucher,ProductrID,date,time,enter_remark,purvoucher,goldtype,goldprice,item,itemname," +
-               "gm,k,p,y,s,wk,wp,wy,ws,tk,tp,ty,ts,mcost,repamt,totalamt,remark,employee,image) values(@SaleVoucher,@ProductID,@date,@time,@enter_remark," +
-               "@purvoucher,@goldtype,@goldprice,@item,@itemname,@gm,@k,@p,@y,@s,@wk,@wp,@wy,@ws,@tk,@tp,@ty,@ts,@mcost,@repamt,@totalamt,@remark,@employee,@image)", con);
-
-                cmd.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value);
-                cmd.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value);
-                cmd.Parameters.AddWithValue("@date", dataGridView1.Rows[i].Cells[1].Value);
-                cmd.Parameters.AddWithValue("@time", dataGridView1.Rows[i].Cells[2].Value);
-                cmd.Parameters.AddWithValue("@enter_remark", dataGridView1.Rows[i].Cells[4].Value);
-                cmd.Parameters.AddWithValue("@purvoucher", dataGridView1.Rows[i].Cells[4].Value);
-                cmd.Parameters.AddWithValue("@goldtype", dataGridView1.Rows[i].Cells[7].Value);
-                cmd.Parameters.AddWithValue("@goldprice", dataGridView1.Rows[i].Cells[8].Value);
-                cmd.Parameters.AddWithValue("@item", dataGridView1.Rows[i].Cells[9].Value);
-                cmd.Parameters.AddWithValue("@itemname", dataGridView1.Rows[i].Cells[10].Value);
-                cmd.Parameters.AddWithValue("@gm", dataGridView1.Rows[i].Cells[11].Value);
-                cmd.Parameters.AddWithValue("@k", dataGridView1.Rows[i].Cells[12].Value);
-                cmd.Parameters.AddWithValue("@p", dataGridView1.Rows[i].Cells[13].Value);
-                cmd.Parameters.AddWithValue("@y", dataGridView1.Rows[i].Cells[14].Value);
-                cmd.Parameters.AddWithValue("@s", dataGridView1.Rows[i].Cells[15].Value);
-                cmd.Parameters.AddWithValue("@wk", dataGridView1.Rows[i].Cells[16].Value);
-                cmd.Parameters.AddWithValue("@wp", dataGridView1.Rows[i].Cells[17].Value);
-                cmd.Parameters.AddWithValue("@wy", dataGridView1.Rows[i].Cells[18].Value);
-                cmd.Parameters.AddWithValue("@ws", dataGridView1.Rows[i].Cells[19].Value);
-                cmd.Parameters.AddWithValue("@tk", dataGridView1.Rows[i].Cells[20].Value);
-                cmd.Parameters.AddWithValue("@tp", dataGridView1.Rows[i].Cells[21].Value);
-                cmd.Parameters.AddWithValue("@ty", dataGridView1.Rows[i].Cells[22].Value);
-                cmd.Parameters.AddWithValue("@ts", dataGridView1.Rows[i].Cells[23].Value);
-                cmd.Parameters.AddWithValue("@mcost", dataGridView1.Rows[i].Cells[24].Value);
-                cmd.Parameters.AddWithValue("@repamt", dataGridView1.Rows[i].Cells[25].Value);
-                cmd.Parameters.AddWithValue("@totalamt", dataGridView1.Rows[i].Cells[26].Value);
-                cmd.Parameters.AddWithValue("@remark", dataGridView1.Rows[i].Cells[27].Value);
-                cmd.Parameters.AddWithValue("@employee", dataGridView1.Rows[i].Cells[28].Value);
-                byte[] img = (byte[])dataGridView1.Rows[i].Cells[0].Value;
-                cmd.Parameters.AddWithValue("@image", img);
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-            }
-            dataGridView1.Rows.Clear();
-            MessageBox.Show("success");
-
-            /*adpt = new SqlDataAdapter("select * from g_register", con);
-            dt = new DataTable();
-            adpt.Fill(dt);
-            dataGridView2.DataSource = dt;*/
-
-        }
-
         public void pid()/*function Product Number*/
         {
 
@@ -485,7 +429,7 @@ namespace GHF
                     con.Open();
                 }
 
-                sql = "select * from g_reg";
+                sql = "SELECT ProductID FROM reg_gold";
                 cmd = new SqlCommand(sql, con);
                 var maxid = cmd.ExecuteScalar() as string;
 
@@ -505,7 +449,7 @@ namespace GHF
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
                     cmd.Connection = con;
-                    cmd.CommandText = "select top(1) ProductID from g_reg order by ProductID desc";
+                    cmd.CommandText = "SELECT ProductID FROM reg_gold ORDER BY ProductID DESC";
                     sr = cmd.ExecuteReader();
                     if (sr.Read())
                     {
@@ -530,6 +474,83 @@ namespace GHF
             {
                 /* MessageBox.Show(ex.Message);*/
             }
+        }
+        public void resetinvoice()
+        {
+            sql = "SELECT Date FROM reg_gold";
+            cmd = new SqlCommand(sql, con);
+            string maxid = cmd.ExecuteScalar() as string;
+            DateTime sysdate= DateTime.Now;
+            if (maxid==null)
+
+            {
+                string form = "GR";
+                /*string shop = login.shoptext;*/
+                string shop = "A";
+                string date = DateTime.Now.ToString("ddMMyy");
+                string id = "0001";
+                txt_voucher.Text = form + shop + date + "-" + id;
+
+            }
+        }
+        public void show_reg_piddata()/*Show Register Data To Table Function*/
+        {
+            /* pid();*/
+            /* string invoiceno = textBox25.Text;
+             string productid = textBox29.Text;*/
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+
+                cmd = new SqlCommand("insert into reg_gold(Image,Date,Time,SaleVoucher,Enter_Remark,PurVoucher,ProductID,GoldType,GoldPrice,Item," +
+               "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
+               "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee)", con);
+
+                byte[] img = (byte[])dataGridView1.Rows[i].Cells[0].Value;
+                cmd.Parameters.AddWithValue("@Image", img);
+                cmd.Parameters.AddWithValue("@Date", dataGridView1.Rows[i].Cells[1].Value);
+                cmd.Parameters.AddWithValue("@Time", dataGridView1.Rows[i].Cells[2].Value);
+                cmd.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value);
+                cmd.Parameters.AddWithValue("@Enter_Remark", dataGridView1.Rows[i].Cells[4].Value);
+                cmd.Parameters.AddWithValue("@PurVoucher", dataGridView1.Rows[i].Cells[5].Value);
+                cmd.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value);
+                cmd.Parameters.AddWithValue("@GoldType", dataGridView1.Rows[i].Cells[7].Value);
+                cmd.Parameters.AddWithValue("@GoldPrice", dataGridView1.Rows[i].Cells[8].Value);
+                cmd.Parameters.AddWithValue("@Item", dataGridView1.Rows[i].Cells[9].Value);
+                cmd.Parameters.AddWithValue("@ItemName", dataGridView1.Rows[i].Cells[10].Value);
+                cmd.Parameters.AddWithValue("@Gm", dataGridView1.Rows[i].Cells[11].Value);
+                cmd.Parameters.AddWithValue("@K", dataGridView1.Rows[i].Cells[12].Value);
+                cmd.Parameters.AddWithValue("@P", dataGridView1.Rows[i].Cells[13].Value);
+                cmd.Parameters.AddWithValue("@Y", dataGridView1.Rows[i].Cells[14].Value);
+                cmd.Parameters.AddWithValue("@S", dataGridView1.Rows[i].Cells[15].Value);
+                cmd.Parameters.AddWithValue("@WK", dataGridView1.Rows[i].Cells[16].Value);
+                cmd.Parameters.AddWithValue("@WP", dataGridView1.Rows[i].Cells[17].Value);
+                cmd.Parameters.AddWithValue("@WY", dataGridView1.Rows[i].Cells[18].Value);
+                cmd.Parameters.AddWithValue("@WS", dataGridView1.Rows[i].Cells[19].Value);
+                cmd.Parameters.AddWithValue("@TK", dataGridView1.Rows[i].Cells[20].Value);
+                cmd.Parameters.AddWithValue("@TP", dataGridView1.Rows[i].Cells[21].Value);
+                cmd.Parameters.AddWithValue("@TY", dataGridView1.Rows[i].Cells[22].Value);
+                cmd.Parameters.AddWithValue("@TS", dataGridView1.Rows[i].Cells[23].Value);
+                cmd.Parameters.AddWithValue("@Mcost", dataGridView1.Rows[i].Cells[24].Value);
+                cmd.Parameters.AddWithValue("@Repamt", dataGridView1.Rows[i].Cells[25].Value);
+                cmd.Parameters.AddWithValue("@Totalamt", dataGridView1.Rows[i].Cells[26].Value);
+                cmd.Parameters.AddWithValue("@Remark", dataGridView1.Rows[i].Cells[27].Value);
+                cmd.Parameters.AddWithValue("@Employee", dataGridView1.Rows[i].Cells[28].Value);
+
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            dataGridView1.Rows.Clear();
+            MessageBox.Show("success");
+
+            /*adpt = new SqlDataAdapter("select * from g_register", con);
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dataGridView2.DataSource = dt;*/
+
         }
         private void validatefunction()
         {
@@ -789,6 +810,7 @@ namespace GHF
             }
 
         }
+
         /*--------------------------------------------------------------------------------------------------------------------*/
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)/*Item ComboBox*/
         {
@@ -920,7 +942,7 @@ namespace GHF
             }
             else
             {
-                txt_mcost.Text = string.Format("{0:n}", double.Parse(txt_mcost.Text));
+                txt_mcost.Text = string.Format("{0:n0}", double.Parse(txt_mcost.Text));
             }
             calculategm();
         }
@@ -933,7 +955,7 @@ namespace GHF
             }
             else
             {
-                txt_rep.Text = string.Format("{0:n}", double.Parse(txt_rep.Text));
+                txt_rep.Text = string.Format("{0:n0}", double.Parse(txt_rep.Text));
             }
             calculategm();
         }
@@ -1001,11 +1023,12 @@ namespace GHF
             }
             else
             {
-
+                string empolyee = "";
+                empolyee = Form2.setvalueemployee;
 
                 History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
                     cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
-                    total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, txt_remark.Text);
+                    total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee);
 
 
 
@@ -1198,6 +1221,7 @@ namespace GHF
         private void txt_totalamt_TextChanged(object sender, EventArgs e)
         {
             validatefunction();
+            txt_totalamt.Text= string.Format("{0:n0}", double.Parse(txt_totalamt.Text));
         }
     }
 }

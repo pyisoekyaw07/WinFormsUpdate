@@ -106,17 +106,6 @@
             txt_Dece_pid = new TextBox();
             btn_add = new Button();
             dataGridView1 = new DataGridView();
-            label13 = new Label();
-            label29 = new Label();
-            label30 = new Label();
-            label31 = new Label();
-            panel1 = new Panel();
-            label32 = new Label();
-            panel2 = new Panel();
-            label22 = new Label();
-            label33 = new Label();
-            errorProvider1 = new ErrorProvider(components);
-            panel3 = new Panel();
             image = new DataGridViewImageColumn();
             date = new DataGridViewTextBoxColumn();
             time = new DataGridViewTextBoxColumn();
@@ -146,6 +135,17 @@
             total_amt = new DataGridViewTextBoxColumn();
             remark = new DataGridViewTextBoxColumn();
             employee = new DataGridViewTextBoxColumn();
+            label13 = new Label();
+            label29 = new Label();
+            label30 = new Label();
+            label31 = new Label();
+            panel1 = new Panel();
+            label32 = new Label();
+            panel2 = new Panel();
+            label22 = new Label();
+            label33 = new Label();
+            errorProvider1 = new ErrorProvider(components);
+            panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -798,9 +798,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(782, 665);
+            groupBox1.Location = new Point(685, 592);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(729, 64);
+            groupBox1.Size = new Size(729, 183);
             groupBox1.TabIndex = 130;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -968,122 +968,6 @@
             dataGridView1.RowTemplate.Height = 30;
             dataGridView1.Size = new Size(773, 300);
             dataGridView1.TabIndex = 201;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(185, 341);
-            label13.Name = "label13";
-            label13.Size = new Size(34, 22);
-            label13.TabIndex = 202;
-            label13.Text = "ကျပ်";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.BackColor = Color.Transparent;
-            label29.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(257, 341);
-            label29.Name = "label29";
-            label29.Size = new Size(18, 22);
-            label29.TabIndex = 203;
-            label29.Text = "ပဲ";
-            // 
-            // label30
-            // 
-            label30.AutoSize = true;
-            label30.BackColor = Color.Transparent;
-            label30.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(317, 340);
-            label30.Name = "label30";
-            label30.Size = new Size(30, 22);
-            label30.TabIndex = 204;
-            label30.Text = "ရွေး";
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.BackColor = Color.Transparent;
-            label31.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(381, 342);
-            label31.Name = "label31";
-            label31.Size = new Size(32, 22);
-            label31.TabIndex = 205;
-            label31.Text = "စိတ်";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.White;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label32);
-            panel1.Controls.Add(label21);
-            panel1.ForeColor = SystemColors.ButtonFace;
-            panel1.Location = new Point(685, 563);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(146, 58);
-            panel1.TabIndex = 206;
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label32.ForeColor = Color.DimGray;
-            label32.Location = new Point(65, 31);
-            label32.Name = "label32";
-            label32.Size = new Size(20, 27);
-            label32.TabIndex = 124;
-            label32.Text = "0";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label22);
-            panel2.Controls.Add(label33);
-            panel2.ForeColor = SystemColors.ButtonFace;
-            panel2.Location = new Point(853, 563);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(146, 58);
-            panel2.TabIndex = 207;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label22.ForeColor = Color.DimGray;
-            label22.Location = new Point(61, 31);
-            label22.Name = "label22";
-            label22.Size = new Size(20, 27);
-            label22.TabIndex = 124;
-            label22.Text = "0";
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(27, 4);
-            label33.Name = "label33";
-            label33.Size = new Size(89, 22);
-            label33.TabIndex = 123;
-            label33.Text = "စုစုပေါင်းတန်ဖိုး";
-            // 
-            // errorProvider1
-            // 
-            errorProvider1.BlinkRate = 400;
-            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorProvider1.ContainerControl = this;
-            errorProvider1.Icon = (Icon)resources.GetObject("errorProvider1.Icon");
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(dataGridView1);
-            panel3.Location = new Point(662, 196);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(801, 326);
-            panel3.TabIndex = 208;
             // 
             // image
             // 
@@ -1254,13 +1138,129 @@
             employee.Name = "employee";
             employee.Width = 150;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(185, 341);
+            label13.Name = "label13";
+            label13.Size = new Size(34, 22);
+            label13.TabIndex = 202;
+            label13.Text = "ကျပ်";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.BackColor = Color.Transparent;
+            label29.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label29.Location = new Point(257, 341);
+            label29.Name = "label29";
+            label29.Size = new Size(18, 22);
+            label29.TabIndex = 203;
+            label29.Text = "ပဲ";
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.BackColor = Color.Transparent;
+            label30.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label30.Location = new Point(317, 340);
+            label30.Name = "label30";
+            label30.Size = new Size(30, 22);
+            label30.TabIndex = 204;
+            label30.Text = "ရွေး";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.BackColor = Color.Transparent;
+            label31.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label31.Location = new Point(381, 342);
+            label31.Name = "label31";
+            label31.Size = new Size(32, 22);
+            label31.TabIndex = 205;
+            label31.Text = "စိတ်";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label32);
+            panel1.Controls.Add(label21);
+            panel1.ForeColor = SystemColors.ButtonFace;
+            panel1.Location = new Point(685, 528);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(146, 58);
+            panel1.TabIndex = 206;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label32.ForeColor = Color.DimGray;
+            label32.Location = new Point(65, 31);
+            label32.Name = "label32";
+            label32.Size = new Size(20, 27);
+            label32.TabIndex = 124;
+            label32.Text = "0";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label22);
+            panel2.Controls.Add(label33);
+            panel2.ForeColor = SystemColors.ButtonFace;
+            panel2.Location = new Point(853, 528);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(146, 58);
+            panel2.TabIndex = 207;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.ForeColor = Color.DimGray;
+            label22.Location = new Point(61, 31);
+            label22.Name = "label22";
+            label22.Size = new Size(20, 27);
+            label22.TabIndex = 124;
+            label22.Text = "0";
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label33.ForeColor = Color.DimGray;
+            label33.Location = new Point(27, 4);
+            label33.Name = "label33";
+            label33.Size = new Size(89, 22);
+            label33.TabIndex = 123;
+            label33.Text = "စုစုပေါင်းတန်ဖိုး";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.BlinkRate = 400;
+            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorProvider1.ContainerControl = this;
+            errorProvider1.Icon = (Icon)resources.GetObject("errorProvider1.Icon");
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(dataGridView1);
+            panel3.Location = new Point(662, 196);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(801, 326);
+            panel3.TabIndex = 208;
+            // 
             // gform
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.White;
-            ClientSize = new Size(1481, 741);
+            ClientSize = new Size(1481, 787);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);

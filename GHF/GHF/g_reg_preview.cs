@@ -23,17 +23,23 @@ namespace GHF
         private void g_reg_preview_Load(object sender, EventArgs e)
         {
             showdata();
+
         }
 
         private void showdata()
         {
             con.Open();
-            string query = "Select * From regs";
-            SqlDataAdapter da= new SqlDataAdapter(query, con);
-            DataTable dt= new DataTable();
+            string query = "Select * From reg_gold ";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
             da.Fill(dt);
-            dataGridView2.DataSource = dt;
+            dataGridView1.DataSource = dt;
             con.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            showdata();
         }
     }
 }
