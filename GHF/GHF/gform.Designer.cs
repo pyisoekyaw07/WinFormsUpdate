@@ -146,6 +146,7 @@
             label33 = new Label();
             errorProvider1 = new ErrorProvider(components);
             panel3 = new Panel();
+            timer2 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -1254,6 +1255,10 @@
             panel3.Size = new Size(801, 326);
             panel3.TabIndex = 208;
             // 
+            // timer2
+            // 
+            timer2.Tick += timer2_Tick;
+            // 
             // gform
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -1327,7 +1332,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "gform";
             Text = "gform";
-            WindowState = FormWindowState.Maximized;
             Load += gform_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             groupBox1.ResumeLayout(false);
@@ -1459,5 +1463,6 @@
         private DataGridViewTextBoxColumn total_amt;
         private DataGridViewTextBoxColumn remark;
         private DataGridViewTextBoxColumn employee;
+        private System.Windows.Forms.Timer timer2;
     }
 }

@@ -30,105 +30,158 @@
         {
             startdate = new DateTimePicker();
             enddate = new DateTimePicker();
-            label1 = new Label();
-            label2 = new Label();
             panel3 = new Panel();
+            panel1 = new Panel();
+            iconButton2 = new FontAwesome.Sharp.IconButton();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
+            label4 = new Label();
+            label3 = new Label();
+            txt_searchbox = new TextBox();
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // startdate
             // 
-            startdate.Location = new Point(39, 29);
+            startdate.Location = new Point(99, 12);
             startdate.Name = "startdate";
             startdate.Size = new Size(200, 28);
             startdate.TabIndex = 1;
+            startdate.Value = new DateTime(2023, 12, 1, 0, 0, 0, 0);
             // 
             // enddate
             // 
-            enddate.Location = new Point(264, 29);
+            enddate.Location = new Point(370, 13);
             enddate.Name = "enddate";
             enddate.Size = new Size(200, 28);
             enddate.TabIndex = 2;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(841, 404);
-            label1.Name = "label1";
-            label1.Size = new Size(48, 22);
-            label1.TabIndex = 3;
-            label1.Text = "Search";
-            label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(927, 403);
-            label2.Name = "label2";
-            label2.Size = new Size(36, 22);
-            label2.TabIndex = 4;
-            label2.Text = "Print";
-            // 
             // panel3
             // 
+            panel3.Controls.Add(panel1);
+            panel3.Controls.Add(iconButton2);
+            panel3.Controls.Add(iconButton1);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(txt_searchbox);
             panel3.Controls.Add(dataGridView1);
-            panel3.Location = new Point(39, 73);
+            panel3.Controls.Add(startdate);
+            panel3.Controls.Add(enddate);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(924, 326);
+            panel3.Size = new Size(1175, 470);
             panel3.TabIndex = 209;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.Gray;
+            panel1.Location = new Point(3, 91);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1173, 1);
+            panel1.TabIndex = 215;
+            // 
+            // iconButton2
+            // 
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Print;
+            iconButton2.IconColor = Color.SteelBlue;
+            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton2.IconSize = 30;
+            iconButton2.ImageAlign = ContentAlignment.MiddleRight;
+            iconButton2.Location = new Point(596, 49);
+            iconButton2.Name = "iconButton2";
+            iconButton2.Size = new Size(122, 31);
+            iconButton2.TabIndex = 214;
+            iconButton2.Text = "Print";
+            iconButton2.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+            iconButton1.IconColor = Color.SteelBlue;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.ImageAlign = ContentAlignment.MiddleRight;
+            iconButton1.Location = new Point(596, 12);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(122, 31);
+            iconButton1.TabIndex = 213;
+            iconButton1.Text = "Search";
+            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(312, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(49, 21);
+            label4.TabIndex = 212;
+            label4.Text = "To Date";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(32, 15);
+            label3.Name = "label3";
+            label3.Size = new Size(63, 21);
+            label3.TabIndex = 211;
+            label3.Text = "From Date";
+            // 
+            // txt_searchbox
+            // 
+            txt_searchbox.Location = new Point(953, 16);
+            txt_searchbox.Name = "txt_searchbox";
+            txt_searchbox.PlaceholderText = "Search ProductID";
+            txt_searchbox.Size = new Size(180, 28);
+            txt_searchbox.TabIndex = 210;
+            txt_searchbox.TextChanged += txt_searchbox_TextChanged;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(15, 19);
+            dataGridView1.Location = new Point(32, 98);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(891, 287);
+            dataGridView1.Size = new Size(1101, 345);
             dataGridView1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(765, 32);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Search";
-            textBox1.Size = new Size(180, 28);
-            textBox1.TabIndex = 210;
             // 
             // g_reg_preview
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.White;
-            ClientSize = new Size(987, 435);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1175, 470);
             Controls.Add(panel3);
-            Controls.Add(label1);
-            Controls.Add(label2);
-            Controls.Add(enddate);
-            Controls.Add(startdate);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "g_reg_preview";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Gold Register Preview";
             Load += g_reg_preview_Load;
             panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         private DateTimePicker startdate;
         private DateTimePicker enddate;
-        private Label label1;
-        private Label label2;
         private Panel panel3;
+        private TextBox txt_searchbox;
+        private Label label4;
+        private Label label3;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private Panel panel1;
         private DataGridView dataGridView1;
-        private TextBox textBox1;
     }
 }

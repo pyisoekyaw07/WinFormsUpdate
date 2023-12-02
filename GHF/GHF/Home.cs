@@ -58,7 +58,6 @@ namespace GHF
 
         }
 
-
         /*-----------------Change language----------------------------------*/
         public static string setvalueformyan = "";
 
@@ -137,7 +136,8 @@ namespace GHF
             masterclick();
         }
 
-  
+
+
 
         /*-----------------------------------------------------------------------------*/
     }

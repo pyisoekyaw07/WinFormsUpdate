@@ -98,7 +98,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1478, 63);
             panel2.TabIndex = 2;
-          
             // 
             // pan_rep
             // 
@@ -439,23 +438,25 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.White;
-            pictureBox2.Dock = DockStyle.Fill;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Location = new Point(180, 230);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1478, 643);
+            pictureBox2.Size = new Size(472, 310);
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
+            pictureBox2.Visible = false;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(1478, 739);
             Controls.Add(mainpanel);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "Form2";
+            WindowState = FormWindowState.Maximized;
             FormClosed += Form2_FormClosed;
             Load += Form2_Load;
             panel2.ResumeLayout(false);
