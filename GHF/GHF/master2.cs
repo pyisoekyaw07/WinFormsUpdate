@@ -185,7 +185,7 @@ namespace GHF
 
         public void checkinternetconnection()
         {
-            if (NetworkInterface.GetIsNetworkAvailable()) 
+            if (NetworkInterface.GetIsNetworkAvailable())
             {
                 if (comboBox1.SelectedIndex == 0)/*Item*/
                 {
@@ -419,7 +419,7 @@ namespace GHF
             }
             else
             {
-                MessageBox.Show("No Internet Connection","Check Internet Connect", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("No Internet Connection", "Check Internet Connect", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

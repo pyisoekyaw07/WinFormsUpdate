@@ -88,9 +88,7 @@ C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\ru
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.AssemblyReference.cache
-C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Gold.resources
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Form2.resources
-C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Master.resources
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Properties.Resources.resources
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Whitegold.resources
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.GenerateResource.cache
@@ -159,5 +157,69 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GH
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.master2.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.login.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.wallpaper.resources
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_reg_preview.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.dll.config
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.exe
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.dll.config
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.deps.json
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.runtimeconfig.json
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.pdb
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.AssemblyReference.cache
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.gform.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_reg_preview.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Form2.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.login.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.master2.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Properties.Resources.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.wallpaper.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.Whitegold.resources
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.GenerateResource.cache
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.AssemblyInfoInputs.cache
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.AssemblyInfo.cs
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.CoreCompileInputs.cache
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.CopyComplete
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\refint\GHF.dll
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.pdb
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.genruntimeconfig.cache
+C:\Users\Zayyar Myint\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\ref\GHF.dll
+C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\GHF.dll.config
+C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.gform.resources
+C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_reg_preview.resources
+C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.login.resources
+C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.master2.resources
+C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.wallpaper.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF..resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.closing_stock.resources

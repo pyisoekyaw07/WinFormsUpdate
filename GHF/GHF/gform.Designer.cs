@@ -140,9 +140,9 @@
             label30 = new Label();
             label31 = new Label();
             panel1 = new Panel();
-            label32 = new Label();
+            lbl_totalgm = new Label();
             panel2 = new Panel();
-            label22 = new Label();
+            lbl_totalamt = new Label();
             label33 = new Label();
             errorProvider1 = new ErrorProvider(components);
             panel3 = new Panel();
@@ -159,9 +159,9 @@
             // btn_add_photo
             // 
             btn_add_photo.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_add_photo.Location = new Point(1151, 157);
+            btn_add_photo.Location = new Point(1082, 147);
             btn_add_photo.Name = "btn_add_photo";
-            btn_add_photo.Size = new Size(107, 33);
+            btn_add_photo.Size = new Size(107, 47);
             btn_add_photo.TabIndex = 127;
             btn_add_photo.Text = "ပုံထည့်သွင်းရန်";
             btn_add_photo.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             cmb_itemname.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_itemname.FormattingEnabled = true;
             cmb_itemname.IntegralHeight = false;
-            cmb_itemname.Location = new Point(170, 259);
+            cmb_itemname.Location = new Point(166, 288);
             cmb_itemname.Name = "cmb_itemname";
             cmb_itemname.Size = new Size(310, 30);
             cmb_itemname.TabIndex = 5;
@@ -187,7 +187,7 @@
             cmb_item.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_item.FormattingEnabled = true;
             cmb_item.IntegralHeight = false;
-            cmb_item.Location = new Point(170, 210);
+            cmb_item.Location = new Point(166, 232);
             cmb_item.Name = "cmb_item";
             cmb_item.Size = new Size(310, 30);
             cmb_item.TabIndex = 4;
@@ -200,7 +200,7 @@
             cmb_gt.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_gt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_gt.FormattingEnabled = true;
-            cmb_gt.Location = new Point(346, 162);
+            cmb_gt.Location = new Point(341, 181);
             cmb_gt.Name = "cmb_gt";
             cmb_gt.Size = new Size(134, 30);
             cmb_gt.TabIndex = 3;
@@ -215,7 +215,7 @@
             cmb_remark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_remark.FormattingEnabled = true;
             cmb_remark.IntegralHeight = false;
-            cmb_remark.Location = new Point(170, 114);
+            cmb_remark.Location = new Point(166, 127);
             cmb_remark.Name = "cmb_remark";
             cmb_remark.Size = new Size(310, 30);
             cmb_remark.TabIndex = 2;
@@ -227,9 +227,9 @@
             // 
             pictureBox.BorderStyle = BorderStyle.Fixed3D;
             pictureBox.Image = (Image)resources.GetObject("pictureBox.Image");
-            pictureBox.Location = new Point(1107, 23);
+            pictureBox.Location = new Point(1058, 23);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(191, 117);
+            pictureBox.Size = new Size(152, 117);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.TabIndex = 117;
             pictureBox.TabStop = false;
@@ -238,7 +238,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(34, 645);
+            label20.Location = new Point(29, 742);
             label20.Name = "label20";
             label20.Size = new Size(56, 22);
             label20.TabIndex = 116;
@@ -248,7 +248,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(34, 599);
+            label19.Location = new Point(29, 694);
             label19.Name = "label19";
             label19.Size = new Size(90, 22);
             label19.TabIndex = 115;
@@ -258,7 +258,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(33, 553);
+            label18.Location = new Point(28, 642);
             label18.Name = "label18";
             label18.Size = new Size(100, 22);
             label18.TabIndex = 114;
@@ -268,7 +268,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(34, 504);
+            label17.Location = new Point(29, 589);
             label17.Name = "label17";
             label17.Size = new Size(46, 22);
             label17.TabIndex = 113;
@@ -278,7 +278,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(34, 459);
+            label16.Location = new Point(29, 536);
             label16.Name = "label16";
             label16.Size = new Size(90, 22);
             label16.TabIndex = 112;
@@ -288,7 +288,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(682, 108);
+            label15.Location = new Point(649, 108);
             label15.Name = "label15";
             label15.Size = new Size(87, 22);
             label15.TabIndex = 111;
@@ -298,7 +298,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(682, 68);
+            label14.Location = new Point(649, 68);
             label14.Name = "label14";
             label14.Size = new Size(112, 22);
             label14.TabIndex = 110;
@@ -308,7 +308,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(32, 71);
+            label12.Location = new Point(28, 76);
             label12.Name = "label12";
             label12.Size = new Size(133, 22);
             label12.TabIndex = 108;
@@ -318,7 +318,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(685, 35);
+            label11.Location = new Point(637, 35);
             label11.Name = "label11";
             label11.Size = new Size(0, 22);
             label11.TabIndex = 107;
@@ -326,9 +326,9 @@
             // btn_review
             // 
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(460, 703);
+            btn_review.Location = new Point(460, 809);
             btn_review.Name = "btn_review";
-            btn_review.Size = new Size(196, 38);
+            btn_review.Size = new Size(196, 35);
             btn_review.TabIndex = 106;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = true;
@@ -338,7 +338,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(682, 29);
+            label23.Location = new Point(649, 29);
             label23.Name = "label23";
             label23.Size = new Size(121, 22);
             label23.TabIndex = 128;
@@ -358,18 +358,18 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(28, 4);
+            label21.Location = new Point(17, 13);
             label21.Name = "label21";
-            label21.Size = new Size(90, 22);
+            label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
-            label21.Text = "စုစုပေါင်းအခုရေ";
+            label21.Text = "စုစုပေါင်းဂရမ်ချိန်";
             // 
             // btn_cancel
             // 
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(245, 703);
+            btn_cancel.Location = new Point(245, 809);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(196, 38);
+            btn_cancel.Size = new Size(196, 35);
             btn_cancel.TabIndex = 105;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
@@ -378,9 +378,9 @@
             // btn_save
             // 
             btn_save.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_save.Location = new Point(32, 703);
+            btn_save.Location = new Point(32, 809);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(196, 38);
+            btn_save.Size = new Size(196, 35);
             btn_save.TabIndex = 104;
             btn_save.Text = "&Save";
             btn_save.UseVisualStyleBackColor = true;
@@ -390,7 +390,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(30, 214);
+            label10.Location = new Point(25, 236);
             label10.Name = "label10";
             label10.Size = new Size(102, 22);
             label10.TabIndex = 103;
@@ -402,7 +402,7 @@
             txt_barcode.BorderStyle = BorderStyle.None;
             txt_barcode.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_barcode.ForeColor = Color.Black;
-            txt_barcode.Location = new Point(825, 104);
+            txt_barcode.Location = new Point(793, 104);
             txt_barcode.Multiline = true;
             txt_barcode.Name = "txt_barcode";
             txt_barcode.ReadOnly = true;
@@ -415,7 +415,7 @@
             txt_counter.BorderStyle = BorderStyle.None;
             txt_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_counter.ForeColor = Color.Black;
-            txt_counter.Location = new Point(825, 64);
+            txt_counter.Location = new Point(793, 64);
             txt_counter.Multiline = true;
             txt_counter.Name = "txt_counter";
             txt_counter.ReadOnly = true;
@@ -425,7 +425,7 @@
             // txt_pur_no
             // 
             txt_pur_no.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_pur_no.Location = new Point(170, 67);
+            txt_pur_no.Location = new Point(166, 71);
             txt_pur_no.Name = "txt_pur_no";
             txt_pur_no.Size = new Size(175, 30);
             txt_pur_no.TabIndex = 1;
@@ -436,7 +436,7 @@
             txt_voucher.BorderStyle = BorderStyle.None;
             txt_voucher.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_voucher.ForeColor = Color.Black;
-            txt_voucher.Location = new Point(825, 25);
+            txt_voucher.Location = new Point(793, 25);
             txt_voucher.Multiline = true;
             txt_voucher.Name = "txt_voucher";
             txt_voucher.ReadOnly = true;
@@ -447,7 +447,7 @@
             // txt_remark
             // 
             txt_remark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_remark.Location = new Point(173, 641);
+            txt_remark.Location = new Point(169, 738);
             txt_remark.Name = "txt_remark";
             txt_remark.Size = new Size(298, 30);
             txt_remark.TabIndex = 13;
@@ -459,7 +459,7 @@
             txt_totalamt.BorderStyle = BorderStyle.None;
             txt_totalamt.Enabled = false;
             txt_totalamt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_totalamt.Location = new Point(174, 596);
+            txt_totalamt.Location = new Point(169, 692);
             txt_totalamt.Multiline = true;
             txt_totalamt.Name = "txt_totalamt";
             txt_totalamt.Size = new Size(189, 28);
@@ -469,7 +469,7 @@
             // txt_rep
             // 
             txt_rep.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_rep.Location = new Point(173, 550);
+            txt_rep.Location = new Point(168, 638);
             txt_rep.Name = "txt_rep";
             txt_rep.Size = new Size(189, 30);
             txt_rep.TabIndex = 12;
@@ -480,7 +480,7 @@
             // txt_mcost
             // 
             txt_mcost.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_mcost.Location = new Point(173, 504);
+            txt_mcost.Location = new Point(169, 583);
             txt_mcost.Name = "txt_mcost";
             txt_mcost.Size = new Size(189, 30);
             txt_mcost.TabIndex = 11;
@@ -493,7 +493,7 @@
             total_S.BackColor = Color.FromArgb(173, 199, 217);
             total_S.BorderStyle = BorderStyle.None;
             total_S.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_S.Location = new Point(368, 459);
+            total_S.Location = new Point(364, 536);
             total_S.Multiline = true;
             total_S.Name = "total_S";
             total_S.ReadOnly = true;
@@ -506,7 +506,7 @@
             total_Y.BackColor = Color.FromArgb(173, 199, 217);
             total_Y.BorderStyle = BorderStyle.None;
             total_Y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_Y.Location = new Point(303, 459);
+            total_Y.Location = new Point(299, 536);
             total_Y.Multiline = true;
             total_Y.Name = "total_Y";
             total_Y.ReadOnly = true;
@@ -519,7 +519,7 @@
             total_P.BackColor = Color.FromArgb(173, 199, 217);
             total_P.BorderStyle = BorderStyle.None;
             total_P.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_P.Location = new Point(238, 459);
+            total_P.Location = new Point(233, 536);
             total_P.Multiline = true;
             total_P.Name = "total_P";
             total_P.ReadOnly = true;
@@ -532,7 +532,7 @@
             total_K.BackColor = Color.FromArgb(173, 199, 217);
             total_K.BorderStyle = BorderStyle.None;
             total_K.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_K.Location = new Point(173, 459);
+            total_K.Location = new Point(169, 536);
             total_K.Multiline = true;
             total_K.Name = "total_K";
             total_K.ReadOnly = true;
@@ -543,7 +543,7 @@
             // txt_WC
             // 
             txt_WC.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WC.Location = new Point(368, 411);
+            txt_WC.Location = new Point(364, 480);
             txt_WC.Name = "txt_WC";
             txt_WC.Size = new Size(59, 30);
             txt_WC.TabIndex = 10;
@@ -555,7 +555,7 @@
             // txt_WY
             // 
             txt_WY.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WY.Location = new Point(303, 411);
+            txt_WY.Location = new Point(299, 480);
             txt_WY.Name = "txt_WY";
             txt_WY.Size = new Size(59, 30);
             txt_WY.TabIndex = 9;
@@ -567,7 +567,7 @@
             // txt_WP
             // 
             txt_WP.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WP.Location = new Point(238, 411);
+            txt_WP.Location = new Point(233, 480);
             txt_WP.Name = "txt_WP";
             txt_WP.Size = new Size(59, 30);
             txt_WP.TabIndex = 8;
@@ -579,7 +579,7 @@
             // txt_WK
             // 
             txt_WK.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WK.Location = new Point(172, 411);
+            txt_WK.Location = new Point(167, 480);
             txt_WK.Name = "txt_WK";
             txt_WK.Size = new Size(59, 30);
             txt_WK.TabIndex = 7;
@@ -593,7 +593,7 @@
             txt_s.BackColor = Color.FromArgb(173, 199, 217);
             txt_s.BorderStyle = BorderStyle.None;
             txt_s.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_s.Location = new Point(367, 371);
+            txt_s.Location = new Point(362, 436);
             txt_s.Multiline = true;
             txt_s.Name = "txt_s";
             txt_s.ReadOnly = true;
@@ -606,7 +606,7 @@
             txt_y.BackColor = Color.FromArgb(173, 199, 217);
             txt_y.BorderStyle = BorderStyle.None;
             txt_y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_y.Location = new Point(302, 371);
+            txt_y.Location = new Point(298, 436);
             txt_y.Multiline = true;
             txt_y.Name = "txt_y";
             txt_y.ReadOnly = true;
@@ -619,7 +619,7 @@
             txt_p.BackColor = Color.FromArgb(173, 199, 217);
             txt_p.BorderStyle = BorderStyle.None;
             txt_p.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_p.Location = new Point(237, 371);
+            txt_p.Location = new Point(233, 436);
             txt_p.Multiline = true;
             txt_p.Name = "txt_p";
             txt_p.ReadOnly = true;
@@ -631,7 +631,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(30, 119);
+            label3.Location = new Point(25, 131);
             label3.Name = "label3";
             label3.Size = new Size(118, 22);
             label3.TabIndex = 82;
@@ -643,7 +643,7 @@
             txt_goldprice.BorderStyle = BorderStyle.None;
             txt_goldprice.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_goldprice.ForeColor = Color.Black;
-            txt_goldprice.Location = new Point(170, 164);
+            txt_goldprice.Location = new Point(166, 183);
             txt_goldprice.Multiline = true;
             txt_goldprice.Name = "txt_goldprice";
             txt_goldprice.ReadOnly = true;
@@ -655,7 +655,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(30, 167);
+            label8.Location = new Point(26, 185);
             label8.Name = "label8";
             label8.Size = new Size(48, 22);
             label8.TabIndex = 80;
@@ -666,7 +666,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(298, 164);
+            label9.Location = new Point(293, 183);
             label9.Name = "label9";
             label9.Size = new Size(47, 22);
             label9.TabIndex = 79;
@@ -677,7 +677,7 @@
             txt_k.BackColor = Color.FromArgb(173, 199, 217);
             txt_k.BorderStyle = BorderStyle.None;
             txt_k.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_k.Location = new Point(172, 371);
+            txt_k.Location = new Point(167, 436);
             txt_k.Multiline = true;
             txt_k.Name = "txt_k";
             txt_k.ReadOnly = true;
@@ -689,7 +689,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(32, 415);
+            label7.Location = new Point(28, 484);
             label7.Name = "label7";
             label7.Size = new Size(80, 22);
             label7.TabIndex = 77;
@@ -698,7 +698,7 @@
             // txt_gm
             // 
             txt_gm.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_gm.Location = new Point(170, 306);
+            txt_gm.Location = new Point(166, 342);
             txt_gm.Name = "txt_gm";
             txt_gm.Size = new Size(122, 30);
             txt_gm.TabIndex = 6;
@@ -710,7 +710,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(30, 373);
+            label6.Location = new Point(25, 438);
             label6.Name = "label6";
             label6.Size = new Size(83, 22);
             label6.TabIndex = 75;
@@ -720,7 +720,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(30, 312);
+            label5.Location = new Point(25, 349);
             label5.Name = "label5";
             label5.Size = new Size(100, 22);
             label5.TabIndex = 74;
@@ -730,7 +730,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(30, 263);
+            label4.Location = new Point(25, 291);
             label4.Name = "label4";
             label4.Size = new Size(105, 22);
             label4.TabIndex = 73;
@@ -742,7 +742,7 @@
             txt_time.BorderStyle = BorderStyle.None;
             txt_time.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_time.ForeColor = Color.Black;
-            txt_time.Location = new Point(346, 23);
+            txt_time.Location = new Point(341, 23);
             txt_time.Multiline = true;
             txt_time.Name = "txt_time";
             txt_time.ReadOnly = true;
@@ -753,7 +753,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(305, 27);
+            label2.Location = new Point(301, 27);
             label2.Name = "label2";
             label2.Size = new Size(40, 22);
             label2.TabIndex = 71;
@@ -765,7 +765,7 @@
             txt_date.BorderStyle = BorderStyle.None;
             txt_date.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_date.ForeColor = Color.Black;
-            txt_date.Location = new Point(170, 23);
+            txt_date.Location = new Point(166, 23);
             txt_date.Multiline = true;
             txt_date.Name = "txt_date";
             txt_date.ReadOnly = true;
@@ -776,7 +776,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(32, 27);
+            label1.Location = new Point(28, 27);
             label1.Name = "label1";
             label1.Size = new Size(40, 22);
             label1.TabIndex = 69;
@@ -799,9 +799,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(685, 592);
+            groupBox1.Location = new Point(658, 673);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(729, 183);
+            groupBox1.Size = new Size(729, 196);
             groupBox1.TabIndex = 130;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -809,28 +809,28 @@
             // 
             // txt_incre_pid
             // 
-            txt_incre_pid.Location = new Point(250, 145);
+            txt_incre_pid.Location = new Point(265, 145);
             txt_incre_pid.Name = "txt_incre_pid";
             txt_incre_pid.Size = new Size(100, 28);
             txt_incre_pid.TabIndex = 152;
             // 
             // txt_temparray_proid
             // 
-            txt_temparray_proid.Location = new Point(137, 145);
+            txt_temparray_proid.Location = new Point(152, 145);
             txt_temparray_proid.Name = "txt_temparray_proid";
             txt_temparray_proid.Size = new Size(107, 28);
             txt_temparray_proid.TabIndex = 151;
             // 
             // txt_ince_proid
             // 
-            txt_ince_proid.Location = new Point(71, 145);
+            txt_ince_proid.Location = new Point(86, 145);
             txt_ince_proid.Name = "txt_ince_proid";
             txt_ince_proid.Size = new Size(57, 28);
             txt_ince_proid.TabIndex = 150;
             // 
             // check_language
             // 
-            check_language.Location = new Point(386, 51);
+            check_language.Location = new Point(401, 51);
             check_language.Name = "check_language";
             check_language.Size = new Size(100, 28);
             check_language.TabIndex = 149;
@@ -840,7 +840,7 @@
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(3, 100);
+            label28.Location = new Point(18, 100);
             label28.Name = "label28";
             label28.Size = new Size(69, 21);
             label28.TabIndex = 148;
@@ -849,7 +849,7 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(3, 53);
+            label27.Location = new Point(18, 52);
             label27.Name = "label27";
             label27.Size = new Size(65, 21);
             label27.TabIndex = 147;
@@ -858,7 +858,7 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(249, 25);
+            label26.Location = new Point(264, 25);
             label26.Name = "label26";
             label26.Size = new Size(63, 21);
             label26.TabIndex = 146;
@@ -867,7 +867,7 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(137, 25);
+            label24.Location = new Point(152, 25);
             label24.Name = "label24";
             label24.Size = new Size(52, 21);
             label24.TabIndex = 145;
@@ -875,14 +875,14 @@
             // 
             // txt_temparay
             // 
-            txt_temparay.Location = new Point(249, 51);
+            txt_temparay.Location = new Point(264, 51);
             txt_temparay.Name = "txt_temparay";
             txt_temparay.Size = new Size(100, 28);
             txt_temparay.TabIndex = 144;
             // 
             // txt_result_id
             // 
-            txt_result_id.Location = new Point(136, 51);
+            txt_result_id.Location = new Point(151, 51);
             txt_result_id.Name = "txt_result_id";
             txt_result_id.Size = new Size(107, 28);
             txt_result_id.TabIndex = 143;
@@ -890,7 +890,7 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(71, 24);
+            label25.Location = new Point(86, 24);
             label25.Name = "label25";
             label25.Size = new Size(51, 21);
             label25.TabIndex = 141;
@@ -898,28 +898,28 @@
             // 
             // txt_Dece
             // 
-            txt_Dece.Location = new Point(73, 50);
+            txt_Dece.Location = new Point(88, 50);
             txt_Dece.Name = "txt_Dece";
             txt_Dece.Size = new Size(57, 28);
             txt_Dece.TabIndex = 139;
             // 
             // txt_temparay_pid
             // 
-            txt_temparay_pid.Location = new Point(249, 93);
+            txt_temparay_pid.Location = new Point(264, 93);
             txt_temparay_pid.Name = "txt_temparay_pid";
             txt_temparay_pid.Size = new Size(100, 28);
             txt_temparay_pid.TabIndex = 138;
             // 
             // txt_result_pid
             // 
-            txt_result_pid.Location = new Point(137, 93);
+            txt_result_pid.Location = new Point(152, 93);
             txt_result_pid.Name = "txt_result_pid";
             txt_result_pid.Size = new Size(106, 28);
             txt_result_pid.TabIndex = 137;
             // 
             // txt_Dece_pid
             // 
-            txt_Dece_pid.Location = new Point(73, 95);
+            txt_Dece_pid.Location = new Point(88, 94);
             txt_Dece_pid.Name = "txt_Dece_pid";
             txt_Dece_pid.Size = new Size(57, 28);
             txt_Dece_pid.TabIndex = 136;
@@ -929,9 +929,9 @@
             btn_add.BackgroundImageLayout = ImageLayout.Stretch;
             btn_add.Image = (Image)resources.GetObject("btn_add.Image");
             btn_add.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add.Location = new Point(476, 641);
+            btn_add.Location = new Point(472, 738);
             btn_add.Name = "btn_add";
-            btn_add.Size = new Size(55, 30);
+            btn_add.Size = new Size(55, 38);
             btn_add.TabIndex = 14;
             btn_add.Text = "&Add";
             btn_add.TextAlign = ContentAlignment.MiddleRight;
@@ -953,7 +953,7 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee });
-            dataGridView1.Location = new Point(21, 14);
+            dataGridView1.Location = new Point(30, 14);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -967,175 +967,210 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(773, 300);
+            dataGridView1.Size = new Size(773, 227);
             dataGridView1.TabIndex = 201;
             // 
             // image
             // 
             image.HeaderText = "ဓါတ်ပုံ";
             image.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            image.MinimumWidth = 6;
             image.Name = "image";
+            image.Width = 125;
             // 
             // date
             // 
             date.HeaderText = "ရက်စွဲ";
+            date.MinimumWidth = 6;
             date.Name = "date";
+            date.Width = 125;
             // 
             // time
             // 
             time.HeaderText = "အချိန်";
+            time.MinimumWidth = 6;
             time.Name = "time";
+            time.Width = 125;
             // 
             // Voucher
             // 
             Voucher.HeaderText = "ဘောက်ချာနံပါတ်";
+            Voucher.MinimumWidth = 6;
             Voucher.Name = "Voucher";
             Voucher.Width = 150;
             // 
             // enter_remark
             // 
             enter_remark.HeaderText = "အ၀င်စာရင်းမှတ်ချက်";
+            enter_remark.MinimumWidth = 6;
             enter_remark.Name = "enter_remark";
             enter_remark.Width = 132;
             // 
             // purvoc
             // 
             purvoc.HeaderText = "အ၀ယ်ဘောက်ချာနံပါတ်";
+            purvoc.MinimumWidth = 6;
             purvoc.Name = "purvoc";
             purvoc.Width = 148;
             // 
             // barcode
             // 
             barcode.HeaderText = "ဘားကုဒ်နံပါတ်";
+            barcode.MinimumWidth = 6;
             barcode.Name = "barcode";
             barcode.Width = 105;
             // 
             // goldtype
             // 
             goldtype.HeaderText = "ရွှေရည်";
+            goldtype.MinimumWidth = 6;
             goldtype.Name = "goldtype";
             goldtype.Width = 68;
             // 
             // gold_price
             // 
             gold_price.HeaderText = "ရွှေစျေး";
+            gold_price.MinimumWidth = 6;
             gold_price.Name = "gold_price";
             gold_price.Width = 68;
             // 
             // Items
             // 
             Items.HeaderText = "ပစ္စည်းအမျိုးအစား";
+            Items.MinimumWidth = 6;
             Items.Name = "Items";
             Items.Width = 119;
             // 
             // item_name
             // 
             item_name.HeaderText = "ပစ္စည်းအမျိုးအမည်";
+            item_name.MinimumWidth = 6;
             item_name.Name = "item_name";
             item_name.Width = 122;
             // 
             // gm
             // 
             gm.HeaderText = "ဂရမ်ချိန်";
+            gm.MinimumWidth = 6;
             gm.Name = "gm";
             gm.Width = 72;
             // 
             // K
             // 
             K.HeaderText = "ကျပ်";
+            K.MinimumWidth = 6;
             K.Name = "K";
             K.Width = 57;
             // 
             // P
             // 
             P.HeaderText = "ပဲ";
+            P.MinimumWidth = 6;
             P.Name = "P";
             P.Width = 57;
             // 
             // Y
             // 
             Y.HeaderText = "ရွေး";
+            Y.MinimumWidth = 6;
             Y.Name = "Y";
             Y.Width = 57;
             // 
             // S
             // 
             S.HeaderText = "စိတ်";
+            S.MinimumWidth = 6;
             S.Name = "S";
             S.Width = 57;
             // 
             // wk
             // 
             wk.HeaderText = "ကျပ်";
+            wk.MinimumWidth = 6;
             wk.Name = "wk";
             wk.Width = 57;
             // 
             // wp
             // 
             wp.HeaderText = "ပဲ";
+            wp.MinimumWidth = 6;
             wp.Name = "wp";
             wp.Width = 57;
             // 
             // wy
             // 
             wy.HeaderText = "ရွေး";
+            wy.MinimumWidth = 6;
             wy.Name = "wy";
             wy.Width = 57;
             // 
             // ws
             // 
             ws.HeaderText = "စိတ်";
+            ws.MinimumWidth = 6;
             ws.Name = "ws";
             ws.Width = 57;
             // 
             // tk
             // 
             tk.HeaderText = "ကျပ်";
+            tk.MinimumWidth = 6;
             tk.Name = "tk";
             tk.Width = 57;
             // 
             // tp
             // 
             tp.HeaderText = "ပဲ";
+            tp.MinimumWidth = 6;
             tp.Name = "tp";
             tp.Width = 57;
             // 
             // ty
             // 
             ty.HeaderText = "ရွေး";
+            ty.MinimumWidth = 6;
             ty.Name = "ty";
             ty.Width = 57;
             // 
             // ts
             // 
             ts.HeaderText = "စိတ်";
+            ts.MinimumWidth = 6;
             ts.Name = "ts";
             ts.Width = 57;
             // 
             // mcost
             // 
             mcost.HeaderText = "လက်ခ";
+            mcost.MinimumWidth = 6;
             mcost.Name = "mcost";
+            mcost.Width = 125;
             // 
             // repamt
             // 
             repamt.HeaderText = "ပြန်လဲအရှုံးတန်ဖိုး";
+            repamt.MinimumWidth = 6;
             repamt.Name = "repamt";
+            repamt.Width = 125;
             // 
             // total_amt
             // 
             total_amt.HeaderText = "စုစုပေါင်းတန်ဖိုး";
+            total_amt.MinimumWidth = 6;
             total_amt.Name = "total_amt";
+            total_amt.Width = 125;
             // 
             // remark
             // 
             remark.HeaderText = "မှတ်ချက်";
+            remark.MinimumWidth = 6;
             remark.Name = "remark";
             remark.Width = 200;
             // 
             // employee
             // 
             employee.HeaderText = "စာရင်းသွင်းသူအမည်";
+            employee.MinimumWidth = 6;
             employee.Name = "employee";
             employee.Width = 150;
             // 
@@ -1144,7 +1179,7 @@
             label13.AutoSize = true;
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(185, 341);
+            label13.Location = new Point(181, 394);
             label13.Name = "label13";
             label13.Size = new Size(34, 22);
             label13.TabIndex = 202;
@@ -1155,7 +1190,7 @@
             label29.AutoSize = true;
             label29.BackColor = Color.Transparent;
             label29.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(257, 341);
+            label29.Location = new Point(253, 394);
             label29.Name = "label29";
             label29.Size = new Size(18, 22);
             label29.TabIndex = 203;
@@ -1166,7 +1201,7 @@
             label30.AutoSize = true;
             label30.BackColor = Color.Transparent;
             label30.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(317, 340);
+            label30.Location = new Point(313, 393);
             label30.Name = "label30";
             label30.Size = new Size(30, 22);
             label30.TabIndex = 204;
@@ -1177,7 +1212,7 @@
             label31.AutoSize = true;
             label31.BackColor = Color.Transparent;
             label31.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(381, 342);
+            label31.Location = new Point(377, 395);
             label31.Name = "label31";
             label31.Size = new Size(32, 22);
             label31.TabIndex = 205;
@@ -1187,54 +1222,55 @@
             // 
             panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label32);
+            panel1.Controls.Add(lbl_totalgm);
             panel1.Controls.Add(label21);
             panel1.ForeColor = SystemColors.ButtonFace;
-            panel1.Location = new Point(685, 528);
+            panel1.Location = new Point(654, 505);
             panel1.Name = "panel1";
-            panel1.Size = new Size(146, 58);
+            panel1.Size = new Size(253, 59);
             panel1.TabIndex = 206;
             // 
-            // label32
+            // lbl_totalgm
             // 
-            label32.AutoSize = true;
-            label32.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label32.ForeColor = Color.DimGray;
-            label32.Location = new Point(65, 31);
-            label32.Name = "label32";
-            label32.Size = new Size(20, 27);
-            label32.TabIndex = 124;
-            label32.Text = "0";
+            lbl_totalgm.AutoSize = true;
+            lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_totalgm.ForeColor = Color.DimGray;
+            lbl_totalgm.Location = new Point(139, 9);
+            lbl_totalgm.Name = "lbl_totalgm";
+            lbl_totalgm.Size = new Size(20, 27);
+            lbl_totalgm.TabIndex = 124;
+            lbl_totalgm.Text = "0";
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label22);
+            panel2.Controls.Add(lbl_totalamt);
             panel2.Controls.Add(label33);
             panel2.ForeColor = SystemColors.ButtonFace;
-            panel2.Location = new Point(853, 528);
+            panel2.Location = new Point(922, 505);
             panel2.Name = "panel2";
-            panel2.Size = new Size(146, 58);
+            panel2.Size = new Size(253, 59);
             panel2.TabIndex = 207;
             // 
-            // label22
+            // lbl_totalamt
             // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label22.ForeColor = Color.DimGray;
-            label22.Location = new Point(61, 31);
-            label22.Name = "label22";
-            label22.Size = new Size(20, 27);
-            label22.TabIndex = 124;
-            label22.Text = "0";
+            lbl_totalamt.AutoSize = true;
+            lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_totalamt.ForeColor = Color.DimGray;
+            lbl_totalamt.Location = new Point(130, 9);
+            lbl_totalamt.Name = "lbl_totalamt";
+            lbl_totalamt.Size = new Size(20, 27);
+            lbl_totalamt.TabIndex = 124;
+            lbl_totalamt.Text = "0";
+            lbl_totalamt.TextChanged += lbl_totalamt_TextChanged;
             // 
             // label33
             // 
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(27, 4);
+            label33.Location = new Point(18, 13);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1250,9 +1286,9 @@
             // panel3
             // 
             panel3.Controls.Add(dataGridView1);
-            panel3.Location = new Point(662, 196);
+            panel3.Location = new Point(624, 234);
             panel3.Name = "panel3";
-            panel3.Size = new Size(801, 326);
+            panel3.Size = new Size(828, 256);
             panel3.TabIndex = 208;
             // 
             // timer2
@@ -1265,7 +1301,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.White;
-            ClientSize = new Size(1481, 787);
+            ClientSize = new Size(1456, 980);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -1428,9 +1464,9 @@
         private Label label30;
         private Label label31;
         private Panel panel1;
-        private Label label32;
+        private Label lbl_totalgm;
         private Panel panel2;
-        private Label label22;
+        private Label lbl_totalamt;
         private Label label33;
         private ErrorProvider errorProvider1;
         private Panel panel3;

@@ -29,6 +29,7 @@ namespace GHF
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
+            this.WindowState = FormWindowState.Maximized;
 
         }
         public static string setvalueemployee = "";
@@ -45,6 +46,7 @@ namespace GHF
             panel1.BackColor = Color.White;
             /*lbl_username.Text = login.username;*/
             setvalueemployee = lbl_username.Text;
+
 
         }
 
@@ -65,6 +67,7 @@ namespace GHF
         {
             setvalueformyan = "myanmar";
             gform.language = setvalueformyan;
+
 
         }
 
@@ -135,6 +138,18 @@ namespace GHF
         {
             masterclick();
         }
+
+        private void closingStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formload(new closing_stock());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
 
 
 

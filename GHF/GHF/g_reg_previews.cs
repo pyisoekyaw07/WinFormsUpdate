@@ -69,7 +69,7 @@ namespace GHF
         private void txt_searchbox_TextChanged(object sender, EventArgs e)
         {
             con.Open();
-            string sql = "SELECT * FROM reg_gold Where ProductID='" + txt_searchbox.Text.ToString() + "'";
+            string sql = "SELECT * FROM reg_gold Where SaleVoucher='" + txt_searchbox.Text.ToString() + "'";
             SqlDataAdapter adp = new SqlDataAdapter(sql, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);

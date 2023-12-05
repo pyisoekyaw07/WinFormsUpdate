@@ -18,6 +18,8 @@ using System.Windows.Media;
 using System.Configuration;
 using System.Runtime;
 using System.Runtime.InteropServices;
+using System.Globalization;
+using static Azure.Core.HttpHeader;
 
 namespace GHF
 {
@@ -40,6 +42,7 @@ namespace GHF
             InitializeComponent();
             /* string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;*/
 
+            this.WindowState = FormWindowState.Maximized;
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -52,7 +55,7 @@ namespace GHF
                 if (check == "True")
                 {
                     invoiceid();
-                    pid();
+                    resetpid();
                     goldprice();
                     counter();
                 }
@@ -64,11 +67,11 @@ namespace GHF
                 }
             }
         }
-       
+
         private void gform_Load(object sender, EventArgs e)
         {
 
-            /*check_language.Text = Form2.setvalueformyan;
+            check_language.Text = Form2.setvalueformyan;
             if (check_language.Text == "myanmar")
             {
                 myanmar();
@@ -76,7 +79,7 @@ namespace GHF
             else if (check_language.Text == "eng")
             {
                 eng();
-            }*/
+            }
             timer2.Interval = 200;
             timer2.Start();
 
@@ -110,7 +113,7 @@ namespace GHF
 
         private void dataGridView1_Paint(object sender, PaintEventArgs e)
         {
-            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(11, -1, true);
+            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(12, -1, true);
             int w2 = dataGridView1.GetCellDisplayRectangle(11, -1, true).Width;
             int w3 = dataGridView1.GetCellDisplayRectangle(11, -1, true).Width;
             int w4 = dataGridView1.GetCellDisplayRectangle(11, -1, true).Width;
@@ -131,7 +134,7 @@ namespace GHF
 
         private void dataGridView1_Paint2(object sender, PaintEventArgs e)
         {
-            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(15, -1, true);
+            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(16, -1, true);
             int w2 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
             int w3 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
             int w4 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
@@ -151,7 +154,7 @@ namespace GHF
 
         private void dataGridView1_Paint3(object sender, PaintEventArgs e)
         {
-            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(19, -1, true);
+            Rectangle r1 = dataGridView1.GetCellDisplayRectangle(20, -1, true);
             int w2 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
             int w3 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
             int w4 = dataGridView1.GetCellDisplayRectangle(20, -1, true).Width;
@@ -497,23 +500,36 @@ namespace GHF
                 /* MessageBox.Show(ex.Message);*/
             }
         }
-        public void resetinvoice()
+        public void resetpid()
         {
-            sql = "SELECT Date FROM reg_gold";
-            cmd = new SqlCommand(sql, Con1);
-            string maxid = cmd.ExecuteScalar() as string;
-            DateTime sysdate = DateTime.Now;
-            if (maxid == null)
-
+            string date = DateTime.Now.ToString("dd/MMM/yyyy");
+            string serverdate = "0";
+            con.Open();
+            sql = "SELECT Date FROM reg_gold ORDER BY Date DESC";
+            cmd = new SqlCommand(sql, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
             {
-                string form = "GR";
-                /*string shop = login.shoptext;*/
-                string shop = "A";
-                string date = DateTime.Now.ToString("ddMMyy");
-                string id = "0001";
-                txt_voucher.Text = form + shop + date + "-" + id;
+                serverdate = dr.GetValue(0).ToString();
 
             }
+            con.Close();
+
+            if (DateTime.Parse(date, CultureInfo.InvariantCulture) > DateTime.Parse(serverdate, CultureInfo.InvariantCulture))
+
+            {
+                string shop = "A";
+                string date2 = DateTime.Now.ToString("ddMMyy");
+                string id = "0001";
+                txt_barcode.Text = shop + date2 + "-" + id;
+                MessageBox.Show("Code Is Reset");
+
+            }
+            else
+            {
+                pid();
+            }
+
         }
         public void show_reg_piddata()/*Show Register Data To Table Function*/
         {
@@ -572,7 +588,7 @@ namespace GHF
                     primarykey = Convert.ToInt32(cmd.ExecuteScalar());
 
                     /*cmd.ExecuteNonQuery();*/
-                    
+
                 }
 
                 con.Close();
@@ -661,6 +677,26 @@ namespace GHF
 
 
         }/*Validate Form*/
+
+        public void totalgm()
+        {
+            decimal gm = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            {
+                gm += Convert.ToDecimal(dataGridView1.Rows[i].Cells[11].Value);
+                lbl_totalgm.Text = gm.ToString();
+            }
+        }
+
+        public void totalamt()
+        {
+            decimal amt = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            {
+                amt += Convert.ToDecimal(dataGridView1.Rows[i].Cells[26].Value);
+                lbl_totalamt.Text = amt.ToString();
+            }
+        }
 
         public void clearform()
         {
@@ -1085,13 +1121,13 @@ namespace GHF
                     cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
                     total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee);
 
-
-
-                /*show_reg_piddata();*/
                 cmb_item.Focus();
                 clearform();
+
+                /*show_reg_piddata();*/
                 /* DGW_register.Rows.Add(textBox25.Text, textBox29.Text);*/
                 /*DGW_register.AllowUserToAddRows = false;*/
+
                 string shop = "A";
                 string date = DateTime.Now.ToString("ddMMyy");
                 txt_ince_proid.Text = txt_barcode.Text;
@@ -1102,6 +1138,9 @@ namespace GHF
                 i++;
                 string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
                 txt_barcode.Text = autopoid;
+
+                totalgm();
+                totalamt();
             }
 
 
@@ -1139,7 +1178,7 @@ namespace GHF
                 pid();
                 invoiceid();
             }
-            
+
         }
         private void btn_add_photo_Click_1(object sender, EventArgs e)/*Add Photo*/
         {
@@ -1308,7 +1347,10 @@ namespace GHF
             txt_totalamt.Text = string.Format("{0:n0}", double.Parse(txt_totalamt.Text));
         }
 
-       
+        private void lbl_totalamt_TextChanged(object sender, EventArgs e)
+        {
+            lbl_totalamt.Text = string.Format("{0:n0}", double.Parse(lbl_totalamt.Text));
+        }
     }
 }
 
