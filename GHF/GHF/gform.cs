@@ -941,7 +941,7 @@ namespace GHF
 
         private void check_language_TextChanged_1(object sender, EventArgs e)
         {
- 
+
             if (check_language.Text == "myanmar")
             {
                 myanmar();
