@@ -20,6 +20,10 @@ using System.Runtime;
 using System.Runtime.InteropServices;
 using System.Globalization;
 using static Azure.Core.HttpHeader;
+using System.Drawing.Imaging;
+using GHF.Properties;
+using System.DirectoryServices.ActiveDirectory;
+using System.Windows.Media.Media3D;
 
 namespace GHF
 {
@@ -44,6 +48,7 @@ namespace GHF
 
             this.WindowState = FormWindowState.Maximized;
         }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (true)//check new order
@@ -72,14 +77,6 @@ namespace GHF
         {
 
             check_language.Text = Form2.setvalueformyan;
-            if (check_language.Text == "myanmar")
-            {
-                myanmar();
-            }
-            else if (check_language.Text == "eng")
-            {
-                eng();
-            }
             timer2.Interval = 200;
             timer2.Start();
 
@@ -355,13 +352,13 @@ namespace GHF
             label1.Text = "Date";
             label2.Text = "Time";
             label3.Text = "Source Remark";
-            label4.Text = "Item";
+            label4.Text = "Item Name";
             label5.Text = "Gm";
             label6.Text = "ရွှေအသားတင်";
             label7.Text = "အလျော့တွက်";
             label8.Text = "Gold Price";
             label9.Text = "Gold Type";
-            label10.Text = "Item Name";
+            label10.Text = "Item";
             label11.Text = "";
             label12.Text = "Purchase Voc.No";
             label14.Text = "Sale Counter";
@@ -371,7 +368,8 @@ namespace GHF
             label18.Text = "Repurchase Amount";
             label19.Text = "Total Amount";
             label20.Text = "Remark";
-            label21.Text = "Total Qty";
+            label21.Text = "Total Gm";
+            label33.Text = "All Total Amount";
 
             label23.Text = "Voucher No";
             btn_save.Text = "Save";
@@ -711,6 +709,7 @@ namespace GHF
             txt_rep.Text = "0";
             txt_remark.Text = "";
 
+
         }
         public void calculategm()/*function claculation TOTAL AMOUNT*/
         {
@@ -940,9 +939,9 @@ namespace GHF
         public SqlConnection Con { get => Con1; set => Con1 = value; }
         public SqlConnection Con1 { get => con; set => con = value; }
 
-        public void lan()
+        private void check_language_TextChanged_1(object sender, EventArgs e)
         {
-            check_language.Text = language;
+ 
             if (check_language.Text == "myanmar")
             {
                 myanmar();
@@ -951,10 +950,6 @@ namespace GHF
             {
                 eng();
             }
-        }
-        private void check_language_TextChanged_1(object sender, EventArgs e)
-        {
-            lan();
         }
         /*--------------------------------------------Validate Textbox and Focus-------------------------------------------------*/
         private void txt_gm_KeyPress(object sender, KeyPressEventArgs e)
@@ -1051,14 +1046,7 @@ namespace GHF
             calculategm();
         }
 
-        private void txt_remark_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                show_reg_piddata();
-                txt_gm.Focus();
-            }
-        }
+
 
         /*---------------------------------------------Get Data Combobox------------------------------------------------------*/
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -1107,40 +1095,109 @@ namespace GHF
             catch { }
         }
         private void btn_add_Click(object sender, EventArgs e)/*Add Button*/
+
         {
-            if (cmb_remark.Text == "" || cmb_gt.Text == "" || cmb_item.Text == "" || cmb_itemname.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+
+            if (txt_edit_check.Text == "0")
             {
-                validatefunction();
+                if (cmb_remark.Text == "" || cmb_gt.Text == "" || cmb_item.Text == "" || cmb_itemname.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+                {
+                    validatefunction();
+                }
+                else
+                {
+                    string empolyee = "";
+                    empolyee = Form2.setvalueemployee;
+
+                    History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
+                        cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
+                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee);
+
+                    cmb_item.Focus();
+                    clearform();
+
+                    /*show_reg_piddata();*/
+                    /* DGW_register.Rows.Add(textBox25.Text, textBox29.Text);*/
+                    /*DGW_register.AllowUserToAddRows = false;*/
+
+                    string shop = "A";
+                    string date = DateTime.Now.ToString("ddMMyy");
+                    txt_ince_proid.Text = txt_barcode.Text;
+                    string[] temparray = txt_ince_proid.Text.Split('-');
+                    txt_temparray_proid.Text = shop + date;
+                    txt_incre_pid.Text = temparray[1];
+                    int i = Convert.ToInt32(txt_incre_pid.Text);
+                    i++;
+                    string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
+                    txt_barcode.Text = autopoid;
+
+                    totalgm();
+                    totalamt();
+                    txt_pur_no.Enabled = false;
+                    cmb_remark.Enabled = false;
+                    cmb_gt.Enabled = false;
+
+                    pictureBox.Image = Properties.Resources.ghf3;
+                    txt_edit_check.Text = "0";
+                }
             }
-            else
+
+            if (txt_edit_check.Text == "1")
             {
-                string empolyee = "";
-                empolyee = Form2.setvalueemployee;
 
-                History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
-                    cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
-                    total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee);
 
-                cmb_item.Focus();
-                clearform();
+                if (cmb_remark.Text == "" || cmb_gt.Text == "" || cmb_item.Text == "" || cmb_itemname.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+                {
+                    validatefunction();
+                }
+                else if (selectedRowIndex >= 0)
+                {
+                    string empolyee = "";
+                    empolyee = Form2.setvalueemployee;
+                    MemoryStream mmst = new MemoryStream();
+                    pictureBox.Image.Save(mmst, pictureBox.Image.RawFormat);
+                    byte[] img = mmst.ToArray();
 
-                /*show_reg_piddata();*/
-                /* DGW_register.Rows.Add(textBox25.Text, textBox29.Text);*/
-                /*DGW_register.AllowUserToAddRows = false;*/
+                    dataGridView1.Rows[selectedRowIndex].Cells[0].Value = img;
+                    dataGridView1.Rows[selectedRowIndex].Cells[1].Value = txt_date.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[2].Value = txt_time.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[4].Value = cmb_remark.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[5].Value = txt_pur_no.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[7].Value = cmb_gt.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[9].Value = cmb_item.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[10].Value = cmb_itemname.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[11].Value = txt_gm.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[12].Value = txt_k.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[13].Value = txt_p.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[14].Value = txt_y.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[15].Value = txt_s.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[16].Value = txt_WK.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[17].Value = txt_WP.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[18].Value = txt_WY.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[19].Value = txt_WC.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[20].Value = total_K.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[21].Value = total_P.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[22].Value = total_Y.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[23].Value = total_S.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[24].Value = txt_mcost.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[25].Value = txt_rep.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[26].Value = txt_totalamt.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[27].Value = txt_remark.Text;
 
-                string shop = "A";
-                string date = DateTime.Now.ToString("ddMMyy");
-                txt_ince_proid.Text = txt_barcode.Text;
-                string[] temparray = txt_ince_proid.Text.Split('-');
-                txt_temparray_proid.Text = shop + date;
-                txt_incre_pid.Text = temparray[1];
-                int i = Convert.ToInt32(txt_incre_pid.Text);
-                i++;
-                string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
-                txt_barcode.Text = autopoid;
+                    selectedRowIndex = -1;
 
-                totalgm();
-                totalamt();
+                    cmb_item.Focus();
+                    clearform();
+                    totalgm();
+                    totalamt();
+
+                    txt_pur_no.Enabled = false;
+                    cmb_remark.Enabled = false;
+                    cmb_gt.Enabled = false;
+
+                    pictureBox.Image = Properties.Resources.ghf3;
+                    txt_edit_check.Text = "0";
+                }
             }
 
 
@@ -1177,7 +1234,15 @@ namespace GHF
                 show_reg_piddata();
                 pid();
                 invoiceid();
+                clearform();
+                txt_pur_no.Enabled = true;
+                cmb_remark.Enabled = true;
+                cmb_gt.Enabled = true;
+                txt_pur_no.Text = "";
+                cmb_remark.Items.Clear();
+                cmb_gt.Items.Clear();
             }
+
 
         }
         private void btn_add_photo_Click_1(object sender, EventArgs e)/*Add Photo*/
@@ -1351,6 +1416,39 @@ namespace GHF
         {
             lbl_totalamt.Text = string.Format("{0:n0}", double.Parse(lbl_totalamt.Text));
         }
+        private int selectedRowIndex = -1;
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 29 && e.RowIndex > -1)
+            {
+                /*Form frm3 = new register_edit();
+                frm3.ShowDialog();*/
+                selectedRowIndex = e.RowIndex;
+                txt_edit_check.Text = "1";
+                txt_pur_no.Enabled = true;
+                cmb_remark.Enabled = true;
+                cmb_gt.Enabled = true;
+
+                byte[] data = (byte[])dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                MemoryStream ms = new MemoryStream(data);
+                pictureBox.Image = Image.FromStream(ms);
+
+                txt_pur_no.Text = dataGridView1.Rows[selectedRowIndex].Cells[5].Value.ToString();
+                /*cmb_item.Items.Add( dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
+                cmb_itemname.Items.Add(dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString());*/
+                txt_gm.Text = dataGridView1.Rows[selectedRowIndex].Cells[11].Value.ToString();
+                txt_WK.Text = dataGridView1.Rows[selectedRowIndex].Cells[16].Value.ToString();
+                txt_WP.Text = dataGridView1.Rows[selectedRowIndex].Cells[17].Value.ToString();
+                txt_WY.Text = dataGridView1.Rows[selectedRowIndex].Cells[18].Value.ToString();
+                txt_WC.Text = dataGridView1.Rows[selectedRowIndex].Cells[19].Value.ToString();
+                txt_mcost.Text = dataGridView1.Rows[selectedRowIndex].Cells[24].Value.ToString();
+                txt_rep.Text = dataGridView1.Rows[selectedRowIndex].Cells[25].Value.ToString();
+                txt_remark.Text = dataGridView1.Rows[selectedRowIndex].Cells[27].Value.ToString();
+
+            }
+
+        }
+
     }
 }
 

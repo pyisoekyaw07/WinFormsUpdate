@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel2 = new Panel();
+            radioButton3 = new RadioButton();
             pan_rep = new Panel();
             ico_rep = new FontAwesome.Sharp.IconPictureBox();
             lbl_report = new Label();
@@ -85,6 +86,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(24, 47, 81);
+            panel2.Controls.Add(radioButton3);
             panel2.Controls.Add(pan_rep);
             panel2.Controls.Add(pan_master);
             panel2.Controls.Add(pan_line_home);
@@ -99,8 +101,21 @@
             panel2.ForeColor = SystemColors.ButtonHighlight;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1443, 80);
+            panel2.Size = new Size(1443, 74);
             panel2.TabIndex = 2;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Checked = true;
+            radioButton3.Location = new Point(972, 26);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(97, 25);
+            radioButton3.TabIndex = 32;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "radioButton3";
+            radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.Visible = false;
             // 
             // pan_rep
             // 
@@ -212,7 +227,6 @@
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(38, 24);
             radioButton1.TabIndex = 9;
-            radioButton1.TabStop = true;
             radioButton1.UseVisualStyleBackColor = true;
             radioButton1.Click += radioButton1_Click;
             // 
@@ -263,7 +277,7 @@
             panel3.ForeColor = Color.White;
             panel3.Location = new Point(1242, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(201, 80);
+            panel3.Size = new Size(201, 74);
             panel3.TabIndex = 16;
             // 
             // iconPictureBox5
@@ -273,7 +287,7 @@
             iconPictureBox5.IconColor = Color.White;
             iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox5.IconSize = 27;
-            iconPictureBox5.Location = new Point(73, 3);
+            iconPictureBox5.Location = new Point(73, 8);
             iconPictureBox5.Name = "iconPictureBox5";
             iconPictureBox5.Size = new Size(28, 27);
             iconPictureBox5.TabIndex = 29;
@@ -298,7 +312,7 @@
             lbl_username.AutoSize = true;
             lbl_username.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_username.ForeColor = Color.White;
-            lbl_username.Location = new Point(46, 33);
+            lbl_username.Location = new Point(46, 38);
             lbl_username.Name = "lbl_username";
             lbl_username.Size = new Size(84, 22);
             lbl_username.TabIndex = 13;
@@ -315,7 +329,6 @@
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(38, 24);
             radioButton2.TabIndex = 10;
-            radioButton2.TabStop = true;
             radioButton2.UseVisualStyleBackColor = true;
             radioButton2.Click += radioButton2_Click;
             // 
@@ -357,11 +370,10 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(menuStrip2);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 80);
+            panel1.Location = new Point(0, 74);
             panel1.Name = "panel1";
             panel1.Size = new Size(1443, 41);
             panel1.TabIndex = 3;
-            panel1.Paint += panel1_Paint;
             // 
             // menuStrip2
             // 
@@ -451,9 +463,9 @@
             mainpanel.BackColor = Color.White;
             mainpanel.Controls.Add(pictureBox2);
             mainpanel.Dock = DockStyle.Fill;
-            mainpanel.Location = new Point(0, 121);
+            mainpanel.Location = new Point(0, 115);
             mainpanel.Name = "mainpanel";
-            mainpanel.Size = new Size(1443, 618);
+            mainpanel.Size = new Size(1443, 624);
             mainpanel.TabIndex = 4;
             // 
             // pictureBox2
@@ -543,5 +555,6 @@
         private Panel pan_master;
         private ToolStripMenuItem reportToolStripMenuItem;
         private ToolStripMenuItem closingStockToolStripMenuItem;
+        private RadioButton radioButton3;
     }
 }

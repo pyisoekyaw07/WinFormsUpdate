@@ -169,6 +169,7 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\GHF.dll.config
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\GHF..resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\GHF.closing_stock.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\GHF.register_edit.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\GHF.dll.manifest
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\GHF.application
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\GHF.dll.manifest

@@ -15,6 +15,7 @@ namespace GHF
 {
     public partial class Form2 : Form
     {
+        private gform form2Instance;
         public Form2()
         {
             InitializeComponent();
@@ -39,7 +40,8 @@ namespace GHF
               master1.Hide();*/
             /*this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;*/
-            radioButton2.Checked = true;
+            radioButton2.Checked = false;
+            radioButton1.Checked = false;
             this.WindowState = FormWindowState.Maximized;
             /*formload(new wallpaper());*/
             panel1.Show();
@@ -65,16 +67,34 @@ namespace GHF
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            setvalueformyan = "myanmar";
-            gform.language = setvalueformyan;
-
+            DialogResult dialogResult = MessageBox.Show("ဘာသာစကားပြောင်းလဲရာတွင် သွင်းနေဆဲအချက်အလက်များ ပျောက်ဆုံးနိုင်ပါသည်။", "ဘာသာစကားပြောင်းလဲခြင်း", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                setvalueformyan = "myanmar";
+                gform.language = setvalueformyan;
+                formload(new gform());
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                radioButton1.Checked = true;
+            }
 
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            setvalueformyan = "eng";
-            gform.language = setvalueformyan;
+            DialogResult dialogResult = MessageBox.Show("Data being entered may be lost when changing the language.", "Change Language", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                setvalueformyan = "eng";
+                gform.language = setvalueformyan;
+                formload(new gform());
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                radioButton2.Checked = true;
+            }
+
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
@@ -144,10 +164,7 @@ namespace GHF
             formload(new closing_stock());
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
 
 

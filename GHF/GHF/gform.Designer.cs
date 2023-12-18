@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gform));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             btn_add_photo = new Button();
             cmb_itemname = new ComboBox();
@@ -92,7 +93,6 @@
             txt_incre_pid = new TextBox();
             txt_temparray_proid = new TextBox();
             txt_ince_proid = new TextBox();
-            check_language = new TextBox();
             label28 = new Label();
             label27 = new Label();
             label26 = new Label();
@@ -104,6 +104,7 @@
             txt_temparay_pid = new TextBox();
             txt_result_pid = new TextBox();
             txt_Dece_pid = new TextBox();
+            check_language = new TextBox();
             btn_add = new Button();
             dataGridView1 = new DataGridView();
             image = new DataGridViewImageColumn();
@@ -135,6 +136,7 @@
             total_amt = new DataGridViewTextBoxColumn();
             remark = new DataGridViewTextBoxColumn();
             employee = new DataGridViewTextBoxColumn();
+            coledit = new DataGridViewImageColumn();
             label13 = new Label();
             label29 = new Label();
             label30 = new Label();
@@ -147,6 +149,8 @@
             errorProvider1 = new ErrorProvider(components);
             panel3 = new Panel();
             timer2 = new System.Windows.Forms.Timer(components);
+            txt_edit_check = new TextBox();
+            panel4 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -154,6 +158,7 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // btn_add_photo
@@ -162,7 +167,7 @@
             btn_add_photo.Location = new Point(1082, 147);
             btn_add_photo.Name = "btn_add_photo";
             btn_add_photo.Size = new Size(107, 47);
-            btn_add_photo.TabIndex = 127;
+            btn_add_photo.TabIndex = 14;
             btn_add_photo.Text = "ပုံထည့်သွင်းရန်";
             btn_add_photo.UseVisualStyleBackColor = true;
             btn_add_photo.Click += btn_add_photo_Click_1;
@@ -176,7 +181,7 @@
             cmb_itemname.IntegralHeight = false;
             cmb_itemname.Location = new Point(166, 288);
             cmb_itemname.Name = "cmb_itemname";
-            cmb_itemname.Size = new Size(310, 30);
+            cmb_itemname.Size = new Size(330, 30);
             cmb_itemname.TabIndex = 5;
             cmb_itemname.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
@@ -189,7 +194,7 @@
             cmb_item.IntegralHeight = false;
             cmb_item.Location = new Point(166, 232);
             cmb_item.Name = "cmb_item";
-            cmb_item.Size = new Size(310, 30);
+            cmb_item.Size = new Size(330, 30);
             cmb_item.TabIndex = 4;
             cmb_item.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             cmb_item.Click += comboBox3_Click;
@@ -200,7 +205,7 @@
             cmb_gt.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_gt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_gt.FormattingEnabled = true;
-            cmb_gt.Location = new Point(341, 181);
+            cmb_gt.Location = new Point(362, 180);
             cmb_gt.Name = "cmb_gt";
             cmb_gt.Size = new Size(134, 30);
             cmb_gt.TabIndex = 3;
@@ -217,7 +222,7 @@
             cmb_remark.IntegralHeight = false;
             cmb_remark.Location = new Point(166, 127);
             cmb_remark.Name = "cmb_remark";
-            cmb_remark.Size = new Size(310, 30);
+            cmb_remark.Size = new Size(330, 30);
             cmb_remark.TabIndex = 2;
             cmb_remark.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             cmb_remark.Click += comboBox1_Click;
@@ -226,7 +231,7 @@
             // pictureBox
             // 
             pictureBox.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox.Image = (Image)resources.GetObject("pictureBox.Image");
+            pictureBox.Image = Properties.Resources.ghf3;
             pictureBox.Location = new Point(1058, 23);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(152, 117);
@@ -278,7 +283,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(29, 536);
+            label16.Location = new Point(7, 135);
             label16.Name = "label16";
             label16.Size = new Size(90, 22);
             label16.TabIndex = 112;
@@ -451,7 +456,6 @@
             txt_remark.Name = "txt_remark";
             txt_remark.Size = new Size(298, 30);
             txt_remark.TabIndex = 13;
-            txt_remark.KeyDown += txt_remark_KeyDown;
             // 
             // txt_totalamt
             // 
@@ -493,7 +497,7 @@
             total_S.BackColor = Color.FromArgb(173, 199, 217);
             total_S.BorderStyle = BorderStyle.None;
             total_S.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_S.Location = new Point(364, 536);
+            total_S.Location = new Point(346, 134);
             total_S.Multiline = true;
             total_S.Name = "total_S";
             total_S.ReadOnly = true;
@@ -506,7 +510,7 @@
             total_Y.BackColor = Color.FromArgb(173, 199, 217);
             total_Y.BorderStyle = BorderStyle.None;
             total_Y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_Y.Location = new Point(299, 536);
+            total_Y.Location = new Point(281, 133);
             total_Y.Multiline = true;
             total_Y.Name = "total_Y";
             total_Y.ReadOnly = true;
@@ -519,7 +523,7 @@
             total_P.BackColor = Color.FromArgb(173, 199, 217);
             total_P.BorderStyle = BorderStyle.None;
             total_P.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_P.Location = new Point(233, 536);
+            total_P.Location = new Point(215, 133);
             total_P.Multiline = true;
             total_P.Name = "total_P";
             total_P.ReadOnly = true;
@@ -532,7 +536,7 @@
             total_K.BackColor = Color.FromArgb(173, 199, 217);
             total_K.BorderStyle = BorderStyle.None;
             total_K.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_K.Location = new Point(169, 536);
+            total_K.Location = new Point(149, 133);
             total_K.Multiline = true;
             total_K.Name = "total_K";
             total_K.ReadOnly = true;
@@ -543,7 +547,7 @@
             // txt_WC
             // 
             txt_WC.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WC.Location = new Point(364, 480);
+            txt_WC.Location = new Point(346, 87);
             txt_WC.Name = "txt_WC";
             txt_WC.Size = new Size(59, 30);
             txt_WC.TabIndex = 10;
@@ -555,7 +559,7 @@
             // txt_WY
             // 
             txt_WY.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WY.Location = new Point(299, 480);
+            txt_WY.Location = new Point(281, 87);
             txt_WY.Name = "txt_WY";
             txt_WY.Size = new Size(59, 30);
             txt_WY.TabIndex = 9;
@@ -567,7 +571,7 @@
             // txt_WP
             // 
             txt_WP.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WP.Location = new Point(233, 480);
+            txt_WP.Location = new Point(215, 87);
             txt_WP.Name = "txt_WP";
             txt_WP.Size = new Size(59, 30);
             txt_WP.TabIndex = 8;
@@ -579,7 +583,7 @@
             // txt_WK
             // 
             txt_WK.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WK.Location = new Point(167, 480);
+            txt_WK.Location = new Point(149, 87);
             txt_WK.Name = "txt_WK";
             txt_WK.Size = new Size(59, 30);
             txt_WK.TabIndex = 7;
@@ -593,7 +597,7 @@
             txt_s.BackColor = Color.FromArgb(173, 199, 217);
             txt_s.BorderStyle = BorderStyle.None;
             txt_s.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_s.Location = new Point(362, 436);
+            txt_s.Location = new Point(344, 46);
             txt_s.Multiline = true;
             txt_s.Name = "txt_s";
             txt_s.ReadOnly = true;
@@ -606,7 +610,7 @@
             txt_y.BackColor = Color.FromArgb(173, 199, 217);
             txt_y.BorderStyle = BorderStyle.None;
             txt_y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_y.Location = new Point(298, 436);
+            txt_y.Location = new Point(280, 46);
             txt_y.Multiline = true;
             txt_y.Name = "txt_y";
             txt_y.ReadOnly = true;
@@ -619,7 +623,7 @@
             txt_p.BackColor = Color.FromArgb(173, 199, 217);
             txt_p.BorderStyle = BorderStyle.None;
             txt_p.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_p.Location = new Point(233, 436);
+            txt_p.Location = new Point(215, 46);
             txt_p.Multiline = true;
             txt_p.Name = "txt_p";
             txt_p.ReadOnly = true;
@@ -647,7 +651,7 @@
             txt_goldprice.Multiline = true;
             txt_goldprice.Name = "txt_goldprice";
             txt_goldprice.ReadOnly = true;
-            txt_goldprice.Size = new Size(122, 28);
+            txt_goldprice.Size = new Size(126, 28);
             txt_goldprice.TabIndex = 200;
             txt_goldprice.DoubleClick += textBox8_DoubleClick;
             // 
@@ -666,18 +670,19 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(293, 183);
+            label9.Location = new Point(298, 183);
             label9.Name = "label9";
             label9.Size = new Size(47, 22);
             label9.TabIndex = 79;
             label9.Text = "ရွှေရည်";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txt_k
             // 
             txt_k.BackColor = Color.FromArgb(173, 199, 217);
             txt_k.BorderStyle = BorderStyle.None;
             txt_k.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_k.Location = new Point(167, 436);
+            txt_k.Location = new Point(149, 46);
             txt_k.Multiline = true;
             txt_k.Name = "txt_k";
             txt_k.ReadOnly = true;
@@ -689,7 +694,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(28, 484);
+            label7.Location = new Point(10, 91);
             label7.Name = "label7";
             label7.Size = new Size(80, 22);
             label7.TabIndex = 77;
@@ -710,7 +715,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(25, 438);
+            label6.Location = new Point(7, 48);
             label6.Name = "label6";
             label6.Size = new Size(83, 22);
             label6.TabIndex = 75;
@@ -742,7 +747,7 @@
             txt_time.BorderStyle = BorderStyle.None;
             txt_time.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_time.ForeColor = Color.Black;
-            txt_time.Location = new Point(341, 23);
+            txt_time.Location = new Point(362, 23);
             txt_time.Multiline = true;
             txt_time.Name = "txt_time";
             txt_time.ReadOnly = true;
@@ -753,7 +758,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(301, 27);
+            label2.Location = new Point(309, 27);
             label2.Name = "label2";
             label2.Size = new Size(40, 22);
             label2.TabIndex = 71;
@@ -769,7 +774,7 @@
             txt_date.Multiline = true;
             txt_date.Name = "txt_date";
             txt_date.ReadOnly = true;
-            txt_date.Size = new Size(134, 28);
+            txt_date.Size = new Size(126, 28);
             txt_date.TabIndex = 70;
             // 
             // label1
@@ -827,15 +832,6 @@
             txt_ince_proid.Name = "txt_ince_proid";
             txt_ince_proid.Size = new Size(57, 28);
             txt_ince_proid.TabIndex = 150;
-            // 
-            // check_language
-            // 
-            check_language.Location = new Point(401, 51);
-            check_language.Name = "check_language";
-            check_language.Size = new Size(100, 28);
-            check_language.TabIndex = 149;
-            check_language.Text = "myanmar";
-            check_language.TextChanged += check_language_TextChanged_1;
             // 
             // label28
             // 
@@ -924,6 +920,16 @@
             txt_Dece_pid.Size = new Size(57, 28);
             txt_Dece_pid.TabIndex = 136;
             // 
+            // check_language
+            // 
+            check_language.Location = new Point(417, 71);
+            check_language.Name = "check_language";
+            check_language.Size = new Size(100, 28);
+            check_language.TabIndex = 149;
+            check_language.Text = "myanmar";
+            check_language.Visible = false;
+            check_language.TextChanged += check_language_TextChanged_1;
+            // 
             // btn_add
             // 
             btn_add.BackgroundImageLayout = ImageLayout.Stretch;
@@ -932,7 +938,7 @@
             btn_add.Location = new Point(472, 738);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(55, 38);
-            btn_add.TabIndex = 14;
+            btn_add.TabIndex = 15;
             btn_add.Text = "&Add";
             btn_add.TextAlign = ContentAlignment.MiddleRight;
             btn_add.UseVisualStyleBackColor = true;
@@ -942,6 +948,7 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
@@ -952,23 +959,24 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, coledit });
             dataGridView1.Location = new Point(30, 14);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView1.RowTemplate.Height = 30;
             dataGridView1.Size = new Size(773, 227);
             dataGridView1.TabIndex = 201;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // image
             // 
@@ -1174,12 +1182,26 @@
             employee.Name = "employee";
             employee.Width = 150;
             // 
+            // coledit
+            // 
+            coledit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
+            coledit.DefaultCellStyle = dataGridViewCellStyle2;
+            coledit.Description = "Edit";
+            coledit.HeaderText = "";
+            coledit.Image = (Image)resources.GetObject("coledit.Image");
+            coledit.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            coledit.Name = "coledit";
+            coledit.Width = 5;
+            // 
             // label13
             // 
             label13.AutoSize = true;
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(181, 394);
+            label13.Location = new Point(163, 14);
             label13.Name = "label13";
             label13.Size = new Size(34, 22);
             label13.TabIndex = 202;
@@ -1190,7 +1212,7 @@
             label29.AutoSize = true;
             label29.BackColor = Color.Transparent;
             label29.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(253, 394);
+            label29.Location = new Point(235, 14);
             label29.Name = "label29";
             label29.Size = new Size(18, 22);
             label29.TabIndex = 203;
@@ -1201,7 +1223,7 @@
             label30.AutoSize = true;
             label30.BackColor = Color.Transparent;
             label30.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(313, 393);
+            label30.Location = new Point(295, 13);
             label30.Name = "label30";
             label30.Size = new Size(30, 22);
             label30.TabIndex = 204;
@@ -1212,7 +1234,7 @@
             label31.AutoSize = true;
             label31.BackColor = Color.Transparent;
             label31.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(377, 395);
+            label31.Location = new Point(359, 15);
             label31.Name = "label31";
             label31.Size = new Size(32, 22);
             label31.TabIndex = 205;
@@ -1221,13 +1243,12 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(lbl_totalgm);
             panel1.Controls.Add(label21);
             panel1.ForeColor = SystemColors.ButtonFace;
             panel1.Location = new Point(654, 505);
             panel1.Name = "panel1";
-            panel1.Size = new Size(253, 59);
+            panel1.Size = new Size(253, 53);
             panel1.TabIndex = 206;
             // 
             // lbl_totalgm
@@ -1244,13 +1265,12 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(lbl_totalamt);
             panel2.Controls.Add(label33);
             panel2.ForeColor = SystemColors.ButtonFace;
             panel2.Location = new Point(922, 505);
             panel2.Name = "panel2";
-            panel2.Size = new Size(253, 59);
+            panel2.Size = new Size(253, 53);
             panel2.TabIndex = 207;
             // 
             // lbl_totalamt
@@ -1295,6 +1315,43 @@
             // 
             timer2.Tick += timer2_Tick;
             // 
+            // txt_edit_check
+            // 
+            txt_edit_check.Location = new Point(533, 744);
+            txt_edit_check.Name = "txt_edit_check";
+            txt_edit_check.Size = new Size(100, 28);
+            txt_edit_check.TabIndex = 209;
+            txt_edit_check.Text = "0";
+            txt_edit_check.Visible = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.LemonChiffon;
+            panel4.BorderStyle = BorderStyle.Fixed3D;
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(txt_k);
+            panel4.Controls.Add(txt_p);
+            panel4.Controls.Add(txt_y);
+            panel4.Controls.Add(label31);
+            panel4.Controls.Add(txt_s);
+            panel4.Controls.Add(label30);
+            panel4.Controls.Add(txt_WK);
+            panel4.Controls.Add(label29);
+            panel4.Controls.Add(txt_WP);
+            panel4.Controls.Add(label13);
+            panel4.Controls.Add(txt_WY);
+            panel4.Controls.Add(txt_WC);
+            panel4.Controls.Add(total_K);
+            panel4.Controls.Add(total_P);
+            panel4.Controls.Add(total_Y);
+            panel4.Controls.Add(total_S);
+            panel4.Controls.Add(label16);
+            panel4.Location = new Point(12, 385);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(484, 183);
+            panel4.TabIndex = 210;
+            // 
             // gform
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -1302,13 +1359,11 @@
             AutoScroll = true;
             BackColor = Color.White;
             ClientSize = new Size(1456, 980);
+            Controls.Add(panel4);
+            Controls.Add(txt_edit_check);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(label31);
-            Controls.Add(label30);
-            Controls.Add(label29);
-            Controls.Add(label13);
             Controls.Add(btn_add);
             Controls.Add(groupBox1);
             Controls.Add(btn_add_photo);
@@ -1321,7 +1376,6 @@
             Controls.Add(label19);
             Controls.Add(label18);
             Controls.Add(label17);
-            Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(label12);
@@ -1339,25 +1393,11 @@
             Controls.Add(txt_totalamt);
             Controls.Add(txt_rep);
             Controls.Add(txt_mcost);
-            Controls.Add(total_S);
-            Controls.Add(total_Y);
-            Controls.Add(total_P);
-            Controls.Add(total_K);
-            Controls.Add(txt_WC);
-            Controls.Add(txt_WY);
-            Controls.Add(txt_WP);
-            Controls.Add(txt_WK);
-            Controls.Add(txt_s);
-            Controls.Add(txt_y);
-            Controls.Add(txt_p);
             Controls.Add(label3);
             Controls.Add(txt_goldprice);
             Controls.Add(label8);
             Controls.Add(label9);
-            Controls.Add(txt_k);
-            Controls.Add(label7);
             Controls.Add(txt_gm);
-            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(txt_time);
@@ -1379,6 +1419,8 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1470,6 +1512,7 @@
         private Label label33;
         private ErrorProvider errorProvider1;
         private Panel panel3;
+        private System.Windows.Forms.Timer timer2;
         private DataGridViewImageColumn image;
         private DataGridViewTextBoxColumn date;
         private DataGridViewTextBoxColumn time;
@@ -1499,6 +1542,8 @@
         private DataGridViewTextBoxColumn total_amt;
         private DataGridViewTextBoxColumn remark;
         private DataGridViewTextBoxColumn employee;
-        private System.Windows.Forms.Timer timer2;
+        private DataGridViewImageColumn coledit;
+        private TextBox txt_edit_check;
+        private Panel panel4;
     }
 }

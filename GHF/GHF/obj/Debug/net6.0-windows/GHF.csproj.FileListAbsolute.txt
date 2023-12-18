@@ -223,3 +223,4 @@ C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GH
 C:\Users\Shwe Nan Taw\Desktop\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.wallpaper.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF..resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.closing_stock.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.register_edit.resources
