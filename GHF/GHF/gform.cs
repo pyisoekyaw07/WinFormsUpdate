@@ -75,10 +75,11 @@ namespace GHF
 
         private void gform_Load(object sender, EventArgs e)
         {
-
+            txt_shop.Text = login.shopvalue;
             check_language.Text = Form2.setvalueformyan;
             timer2.Interval = 200;
             timer2.Start();
+
 
             {
                 this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -386,9 +387,11 @@ namespace GHF
                 {
                     Con1.Open();
                 }*/
+                string shopvalue = txt_shop.Text;
                 con.Open();
-                sql = "SELECT SaleVoucher FROM reg_gold";
-                cmd = new SqlCommand(sql, Con1);
+                sql = $"SELECT SaleVoucher FROM reg_gold WHERE Shop = @shoped ORDER BY SaleVoucher DESC";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@shoped", shopvalue);
                 var maxid = cmd.ExecuteScalar() as string;
 
                 if (maxid == null)
@@ -396,7 +399,7 @@ namespace GHF
                 {
                     string form = "GR";
                     /*string shop = login.shoptext;*/
-                    string shop = "A";
+                    string shop = login.shopvalue;
                     string date = DateTime.Now.ToString("ddMMyy");
                     string id = "0001";
                     txt_voucher.Text = form + shop + date + "-" + id;
@@ -404,18 +407,19 @@ namespace GHF
                 }
                 else
                 {
-
+                    
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
-                    cmd.Connection = Con1;
-                    cmd.CommandText = "SELECT SaleVoucher FROM reg_gold ORDER BY SaleVoucher DESC";
+                    cmd.Connection = con;
+                    cmd.CommandText = $"SELECT SaleVoucher FROM reg_gold WHERE Shop = @shoped ORDER BY SaleVoucher DESC";
+                    cmd.Parameters.AddWithValue("@shoped", shopvalue);
                     sr = cmd.ExecuteReader();
                     if (sr.Read())
 
                     {
                         string form = "GR";
                         string num = txt_barcode.Text;
-                        string shop = "A";
+                        string shop = login.shopvalue;
                         string date = DateTime.Now.ToString("ddMMyy");
                         string pid = sr.GetValue(0).ToString();
                         txt_result_id.Text = pid;
@@ -451,19 +455,23 @@ namespace GHF
                  {
                      Con1.Open();
                  }*/
+                string shopvalue = txt_shop.Text;
                 con.Open();
-                sql = "SELECT ProductID FROM reg_gold";
-                cmd = new SqlCommand(sql, Con1);
+                sql = $"SELECT ProductID FROM reg_gold WHERE Shop = @shoped ORDER BY ProductID DESC";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@shoped", shopvalue);
+               /* cmd = new SqlCommand(sql, Con1);*/
                 var maxid = cmd.ExecuteScalar() as string;
 
                 if (maxid == null)
 
                 {
                     /*string shop = login.shoptext;*/
-                    string shop = "A";
+                    string shop = login.shopvalue;
                     string date = DateTime.Now.ToString("ddMMyy");
                     string id = "0001";
                     txt_barcode.Text = shop + date + "-" + id;
+
 
                 }
                 else
@@ -471,12 +479,13 @@ namespace GHF
 
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
-                    cmd.Connection = Con1;
-                    cmd.CommandText = "SELECT ProductID FROM reg_gold ORDER BY ProductID DESC";
+                    cmd.Connection = con;
+                    cmd.CommandText = $"SELECT ProductID FROM reg_gold WHERE Shop = @shoped ORDER BY ProductID DESC";
+                    cmd.Parameters.AddWithValue("@shoped", shopvalue);
                     sr = cmd.ExecuteReader();
                     if (sr.Read())
                     {
-                        string shop = "A";
+                        string shop = login.shopvalue;
                         string date = DateTime.Now.ToString("ddMMyy");
                         string pid = sr.GetValue(0).ToString();
                         txt_result_pid.Text = pid;
@@ -498,34 +507,47 @@ namespace GHF
                 /* MessageBox.Show(ex.Message);*/
             }
         }
-        public void resetpid()
+        public void resetpid()/*function Reset Code Invoice and Product ID*/
         {
             string date = DateTime.Now.ToString("dd/MMM/yyyy");
             string serverdate = "0";
+            string shopvalue = txt_shop.Text;
+            string datevalue = "";
             con.Open();
-            sql = "SELECT Date FROM reg_gold ORDER BY Date DESC";
+            /*sql = "SELECT Date FROM reg_gold ORDER BY Date DESC";*/
+            sql = $"SELECT Date FROM reg_gold WHERE Shop = @shoped ORDER BY Date DESC";
             cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@shoped", shopvalue);
             SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+
+            if (dr.HasRows && dr.Read())
             {
                 serverdate = dr.GetValue(0).ToString();
-
+                datevalue = serverdate.ToString();
             }
             con.Close();
-
-            if (DateTime.Parse(date, CultureInfo.InvariantCulture) > DateTime.Parse(serverdate, CultureInfo.InvariantCulture))
-
+            if (datevalue=="" || DateTime.Parse(date,CultureInfo.InvariantCulture ) != DateTime.Parse(serverdate,CultureInfo.InvariantCulture))
             {
-                string shop = "A";
+                string shop = login.shopvalue;
                 string date2 = DateTime.Now.ToString("ddMMyy");
                 string id = "0001";
                 txt_barcode.Text = shop + date2 + "-" + id;
+
+                string form = "GR";
+                string ivshop = login.shopvalue;
+                string ivdate = DateTime.Now.ToString("ddMMyy");
+                string ivid = "0001";
+                txt_voucher.Text = form + ivshop + ivdate + "-" + ivid;
+
                 MessageBox.Show("Code Is Reset");
 
             }
-            else
+
+            else 
+
             {
                 pid();
+
             }
 
         }
@@ -548,9 +570,10 @@ namespace GHF
                 }
                 else
                 {
+
                     cmd = new SqlCommand("insert into reg_gold(Image,Date,Time,SaleVoucher,Enter_Remark,PurVoucher,ProductID,GoldType,GoldPrice,Item," +
-                    "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
-                    "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee)", con);
+                    "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee,Shop,Form) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
+                    "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee,@Shop,@Form)", con);
 
                     byte[] img = (byte[])dataGridView1.Rows[i].Cells[0].Value;
                     cmd.Parameters.AddWithValue("@Image", img);
@@ -582,19 +605,20 @@ namespace GHF
                     cmd.Parameters.AddWithValue("@Totalamt", dataGridView1.Rows[i].Cells[26].Value);
                     cmd.Parameters.AddWithValue("@Remark", dataGridView1.Rows[i].Cells[27].Value);
                     cmd.Parameters.AddWithValue("@Employee", dataGridView1.Rows[i].Cells[28].Value);
+                    cmd.Parameters.AddWithValue("@Shop", dataGridView1.Rows[i].Cells[29].Value);
+                    cmd.Parameters.AddWithValue("@Form", dataGridView1.Rows[i].Cells[30].Value);
+
 
                     primarykey = Convert.ToInt32(cmd.ExecuteScalar());
 
                     /*cmd.ExecuteNonQuery();*/
-
+                    MessageBox.Show("success");
                 }
 
                 con.Close();
-
+                dataGridView1.Rows.Clear();
             }
-            dataGridView1.Rows.Clear();
-            MessageBox.Show("success");
-
+           
             /*adpt = new SqlDataAdapter("select * from g_register", con);
             dt = new DataTable();
             adpt.Fill(dt);
@@ -1071,7 +1095,7 @@ namespace GHF
         private void History_addGrid(string date, string time, string Voucher, string enter_remark, string purvoc, string barcode,
             string goldtype, string gold_price, string items, string itemname, string gm, string k, string p, string y, string s,
             string wk, string wp, string wy, string ws, string totalk, string totalp, string totaly, string totals, string mcost,
-            string repamt, string totalamt, string remark, string employee)
+            string repamt, string totalamt, string remark, string employee,string shop,string form)
         {
             try
             {
@@ -1085,6 +1109,8 @@ namespace GHF
                 newRow.Cells[17].Value = wp; newRow.Cells[18].Value = wy; newRow.Cells[19].Value = ws; newRow.Cells[20].Value = totalk;
                 newRow.Cells[21].Value = totalp; newRow.Cells[22].Value = totaly; newRow.Cells[23].Value = totals; newRow.Cells[24].Value = mcost;
                 newRow.Cells[25].Value = repamt; newRow.Cells[26].Value = totalamt; newRow.Cells[27].Value = remark; newRow.Cells[28].Value = employee;
+                newRow.Cells[29].Value = shop; newRow.Cells[30].Value = form;
+
                 dataGridView1.Rows.Add(newRow);
                 MemoryStream mmst = new MemoryStream();
                 pictureBox.Image.Save(mmst, pictureBox.Image.RawFormat);
@@ -1109,9 +1135,10 @@ namespace GHF
                     string empolyee = "";
                     empolyee = Form2.setvalueemployee;
 
+
                     History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
                         cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
-                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee);
+                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee,txt_shop.Text,textBox2.Text);
 
                     cmb_item.Focus();
                     clearform();
@@ -1120,7 +1147,7 @@ namespace GHF
                     /* DGW_register.Rows.Add(textBox25.Text, textBox29.Text);*/
                     /*DGW_register.AllowUserToAddRows = false;*/
 
-                    string shop = "A";
+                    string shop = login.shopvalue;
                     string date = DateTime.Now.ToString("ddMMyy");
                     txt_ince_proid.Text = txt_barcode.Text;
                     string[] temparray = txt_ince_proid.Text.Split('-');
@@ -1281,8 +1308,8 @@ namespace GHF
                 //Get rid of the overlay form  
                 overlayForm.Dispose();
             }*/
-            Form frm3 = new g_reg_preview();
-            frm3.ShowDialog();
+            /*Form frm3 = new g_reg_preview();
+            frm3.ShowDialog();*/
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

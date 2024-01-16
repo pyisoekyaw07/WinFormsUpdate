@@ -21,7 +21,7 @@ namespace GHF
 
         private void login_Load(object sender, EventArgs e)
         {
-
+            branch();
         }
 
         public void branch()
@@ -51,14 +51,15 @@ namespace GHF
 
         private void comboBox1_Click(object sender, EventArgs e)
         {
-            branch();
+            
         }
+       
 
         public static string shoptext = "";
         public static string username = "";
         private void button1_Click(object sender, EventArgs e)
         {
-            if (combo_shop.SelectedIndex == 0 && txt_username.Text == "flyer" && txt_password.Text == "admin")
+            if (combo_shop.SelectedIndex == 0 && txt_username.Text == "a" && txt_password.Text == "1" || combo_shop.SelectedIndex == 1 && txt_username.Text == "a" && txt_password.Text == "1")
             {
                 this.Hide();
                 shoptext = combo_shop.Text;
@@ -79,6 +80,10 @@ namespace GHF
         {
             Application.Exit();
         }
-
+        public static string shopvalue = "";
+        private void combo_shop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            shopvalue = combo_shop.SelectedItem.ToString();
+        }
     }
 }

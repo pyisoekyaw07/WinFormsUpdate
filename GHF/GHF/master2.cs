@@ -825,6 +825,15 @@ namespace GHF
                 Parentitem_combo.Enabled = false;
             }
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Name == "tabPage2")
+            {
+                Form frm3 = new shop_login();
+                frm3.ShowDialog();
+            }
+        }
         /*---------------------------------------------------------------------------------------------------------------------*/
     }
 }

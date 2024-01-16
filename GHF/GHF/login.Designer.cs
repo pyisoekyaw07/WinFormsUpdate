@@ -108,6 +108,7 @@
             combo_shop.Name = "combo_shop";
             combo_shop.Size = new Size(67, 29);
             combo_shop.TabIndex = 6;
+            combo_shop.SelectedIndexChanged += combo_shop_SelectedIndexChanged;
             combo_shop.Click += comboBox1_Click;
             // 
             // label3

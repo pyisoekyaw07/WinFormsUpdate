@@ -11,14 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        
 
         #region Windows Form Designer generated code
 
@@ -40,7 +33,7 @@
             dataGridView1 = new DataGridView();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+           
             // 
             // startdate
             // 
@@ -112,7 +105,7 @@
             iconButton1.Text = "Search";
             iconButton1.TextAlign = ContentAlignment.MiddleLeft;
             iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
+        
             // 
             // label4
             // 
@@ -139,7 +132,7 @@
             txt_searchbox.PlaceholderText = "Search ProductID";
             txt_searchbox.Size = new Size(180, 28);
             txt_searchbox.TabIndex = 210;
-            txt_searchbox.TextChanged += txt_searchbox_TextChanged;
+           
             // 
             // dataGridView1
             // 
@@ -155,21 +148,11 @@
             // 
             // g_reg_preview
             // 
-            AutoScaleDimensions = new SizeF(6F, 21F);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
-            BackColor = Color.White;
-            ClientSize = new Size(1175, 470);
-            Controls.Add(panel3);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Name = "g_reg_preview";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Gold Register Preview";
-            Load += g_reg_preview_Load;
+           
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+          
         }
 
         #endregion

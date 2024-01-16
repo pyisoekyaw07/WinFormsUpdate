@@ -65,7 +65,6 @@
             reportToolStripMenuItem = new ToolStripMenuItem();
             closingStockToolStripMenuItem = new ToolStripMenuItem();
             mainpanel = new Panel();
-            pictureBox2 = new PictureBox();
             panel2.SuspendLayout();
             pan_rep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ico_rep).BeginInit();
@@ -79,8 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             menuStrip2.SuspendLayout();
-            mainpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -219,6 +216,7 @@
             // 
             // radioButton1
             // 
+            radioButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             radioButton1.ForeColor = Color.White;
@@ -268,12 +266,12 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel3.BackColor = Color.Transparent;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(iconPictureBox5);
             panel3.Controls.Add(iconPictureBox1);
             panel3.Controls.Add(lbl_username);
-            panel3.Dock = DockStyle.Right;
             panel3.ForeColor = Color.White;
             panel3.Location = new Point(1242, 0);
             panel3.Name = "panel3";
@@ -306,6 +304,7 @@
             iconPictureBox1.Size = new Size(32, 31);
             iconPictureBox1.TabIndex = 17;
             iconPictureBox1.TabStop = false;
+            iconPictureBox1.Click += iconPictureBox1_Click;
             // 
             // lbl_username
             // 
@@ -320,6 +319,7 @@
             // 
             // radioButton2
             // 
+            radioButton2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             radioButton2.ForeColor = Color.White;
@@ -461,23 +461,11 @@
             mainpanel.AutoScroll = true;
             mainpanel.AutoSize = true;
             mainpanel.BackColor = Color.White;
-            mainpanel.Controls.Add(pictureBox2);
             mainpanel.Dock = DockStyle.Fill;
             mainpanel.Location = new Point(0, 115);
             mainpanel.Name = "mainpanel";
             mainpanel.Size = new Size(1443, 624);
             mainpanel.TabIndex = 4;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(180, 230);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(472, 310);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            pictureBox2.Visible = false;
             // 
             // Form2
             // 
@@ -512,8 +500,6 @@
             panel1.PerformLayout();
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
-            mainpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -536,7 +522,6 @@
         private Panel mainpanel;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private PictureBox pictureBox2;
         private Label lbl_username;
         private Panel panel3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

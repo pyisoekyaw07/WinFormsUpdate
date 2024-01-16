@@ -4,16 +4,10 @@
     <_LastSelectedProfileId>E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update=".Designer.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="closing_stock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="gform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="g_reg_previews.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Home.cs">
@@ -25,7 +19,13 @@
     <Compile Update="master2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RDLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="register_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="shop_login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="wallpaper.cs">
@@ -34,5 +34,10 @@
     <Compile Update="Whitegold.cs">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSet1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

@@ -20,6 +20,11 @@ namespace GHF
         {
             InitializeComponent();
         }
+        private void movepanel(Control pan)
+        {
+            pan_line_home.Width = pan.Width;
+            pan_line_home.Left = pan.Left;
+        }
         public void formload(object form)
         {
             if (this.mainpanel.Controls.Count > 0)
@@ -45,6 +50,7 @@ namespace GHF
             this.WindowState = FormWindowState.Maximized;
             /*formload(new wallpaper());*/
             panel1.Show();
+            formload(new wallpaper());
             panel1.BackColor = Color.White;
             /*lbl_username.Text = login.username;*/
             setvalueemployee = lbl_username.Text;
@@ -142,21 +148,25 @@ namespace GHF
         private void pan_home_Click(object sender, EventArgs e)
         {
             homeclick();
+            /* movepanel(pan_home);*/
         }
 
         private void pan_master_Click(object sender, EventArgs e)
         {
             masterclick();
+            /* movepanel(pan_master);*/
         }
 
         private void lbl_Home_Click(object sender, EventArgs e)
         {
             homeclick();
+            /* movepanel(pan_home);*/
         }
 
         private void lbl_master_Click(object sender, EventArgs e)
         {
             masterclick();
+            /* movepanel(pan_master);*/
         }
 
         private void closingStockToolStripMenuItem_Click(object sender, EventArgs e)
@@ -164,11 +174,12 @@ namespace GHF
             formload(new closing_stock());
         }
 
-
-
-
-
-
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login showlogin = new login();
+            showlogin.Show();
+        }
 
 
         /*-----------------------------------------------------------------------------*/
