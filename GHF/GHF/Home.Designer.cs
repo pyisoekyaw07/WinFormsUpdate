@@ -65,6 +65,7 @@
             reportToolStripMenuItem = new ToolStripMenuItem();
             closingStockToolStripMenuItem = new ToolStripMenuItem();
             mainpanel = new Panel();
+            otherOutToolStripMenuItem = new ToolStripMenuItem();
             panel2.SuspendLayout();
             pan_rep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ico_rep).BeginInit();
@@ -384,13 +385,13 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { goldToolStripMenuItem1, whiteGoldToolStripMenuItem1, gemDiamondToolStripMenuItem, cashierToolStripMenuItem, reportToolStripMenuItem });
             menuStrip2.Location = new Point(8, 2);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(354, 30);
+            menuStrip2.Size = new Size(474, 30);
             menuStrip2.TabIndex = 1;
             menuStrip2.Text = "menuStrip2";
             // 
             // goldToolStripMenuItem1
             // 
-            goldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem });
+            goldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem, otherOutToolStripMenuItem });
             goldToolStripMenuItem1.Name = "goldToolStripMenuItem1";
             goldToolStripMenuItem1.Size = new Size(47, 26);
             goldToolStripMenuItem1.Text = "Gold";
@@ -400,7 +401,7 @@
             registerToolStripMenuItem.Image = (Image)resources.GetObject("registerToolStripMenuItem.Image");
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
             registerToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.R;
-            registerToolStripMenuItem.Size = new Size(171, 26);
+            registerToolStripMenuItem.Size = new Size(184, 26);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
@@ -466,6 +467,13 @@
             mainpanel.Name = "mainpanel";
             mainpanel.Size = new Size(1443, 624);
             mainpanel.TabIndex = 4;
+            // 
+            // otherOutToolStripMenuItem
+            // 
+            otherOutToolStripMenuItem.Name = "otherOutToolStripMenuItem";
+            otherOutToolStripMenuItem.Size = new Size(184, 26);
+            otherOutToolStripMenuItem.Text = "Other Out";
+            otherOutToolStripMenuItem.Click += otherOutToolStripMenuItem_Click;
             // 
             // Form2
             // 
@@ -541,5 +549,6 @@
         private ToolStripMenuItem reportToolStripMenuItem;
         private ToolStripMenuItem closingStockToolStripMenuItem;
         private RadioButton radioButton3;
+        private ToolStripMenuItem otherOutToolStripMenuItem;
     }
 }

@@ -10,6 +10,9 @@
     <Compile Update="gform.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="g_otherout.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="shop_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="preview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="wallpaper.cs">

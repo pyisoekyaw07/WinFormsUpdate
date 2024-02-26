@@ -179,6 +179,7 @@
             Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "login";
+            WindowState = FormWindowState.Maximized;
             FormClosed += login_FormClosed;
             Load += login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

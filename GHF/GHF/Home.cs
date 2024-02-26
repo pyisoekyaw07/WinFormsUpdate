@@ -65,7 +65,10 @@ namespace GHF
             /* master1.Hide();*/
             formload(new gform());
 
-
+        }
+        private void otherOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formload(new g_otherout());
         }
 
         /*-----------------Change language----------------------------------*/
@@ -180,6 +183,8 @@ namespace GHF
             login showlogin = new login();
             showlogin.Show();
         }
+
+
 
 
         /*-----------------------------------------------------------------------------*/

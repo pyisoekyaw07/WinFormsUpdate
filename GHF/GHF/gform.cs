@@ -24,6 +24,7 @@ using System.Drawing.Imaging;
 using GHF.Properties;
 using System.DirectoryServices.ActiveDirectory;
 using System.Windows.Media.Media3D;
+using Color = System.Drawing.Color;
 
 namespace GHF
 {
@@ -1285,16 +1286,44 @@ namespace GHF
             }
 
         }
-
+        public static int parentX,parentY;
         private void btn_review_Click(object sender, EventArgs e)
         {
-            /*using Form frm3 = new g_reg_preview();
+
+            preview frm = new preview();
+            frm.ShowDialog();
+
+
+            /* Form fromoverlay = new Form();
+             try
+             {  
+                 using (test frm = new test())
+                 { 
+                     fromoverlay.StartPosition = FormStartPosition.Manual;
+                     fromoverlay.FormBorderStyle = FormBorderStyle.None;
+                     fromoverlay.Opacity = 50d;
+                     fromoverlay.BackColor = System.Drawing.Color.Black; ;
+                     fromoverlay.WindowState = FormWindowState.Maximized;
+                     fromoverlay.TopMost = true;
+                     fromoverlay.Location = this.Location;
+                     fromoverlay.ShowInTaskbar = false;
+                     fromoverlay.Show();
+                     frm.Owner = fromoverlay;
+                     fromoverlay.ShowDialog();
+                     fromoverlay.Dispose();
+                 }
+             }
+             catch (Exception ex) { MessageBox.Show(ex.Message); }
+             finally { fromoverlay.Dispose(); }*/
+
+
+            /*using Form frm3 = preview();
             {
                 //create an overlay form  
                 Form overlayForm = new Form();
                 overlayForm.StartPosition = FormStartPosition.Manual;
                 overlayForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                overlayForm.Opacity =.10d;
+                overlayForm.Opacity = .10d;
                 overlayForm.BackColor = System.Drawing.Color.Black;
                 overlayForm.Size = this.Size;
                 overlayForm.Location = this.Location;
@@ -1307,8 +1336,8 @@ namespace GHF
 
                 //Get rid of the overlay form  
                 overlayForm.Dispose();
-            }*/
-            /*Form frm3 = new g_reg_preview();
+            }
+            Form frm3 = new preview();
             frm3.ShowDialog();*/
         }
 

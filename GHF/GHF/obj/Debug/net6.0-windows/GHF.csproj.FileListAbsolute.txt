@@ -227,3 +227,5 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GH
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.RDLS.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.sourcelink.json
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.shop_login.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_otherout.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.preview.resources
