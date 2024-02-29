@@ -169,7 +169,7 @@
             // 
             btn_add_photo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_add_photo.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_add_photo.Location = new Point(959, 166);
+            btn_add_photo.Location = new Point(942, 166);
             btn_add_photo.Name = "btn_add_photo";
             btn_add_photo.Size = new Size(107, 47);
             btn_add_photo.TabIndex = 14;
@@ -238,7 +238,7 @@
             pictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox.BorderStyle = BorderStyle.Fixed3D;
             pictureBox.Image = Properties.Resources.ghf3;
-            pictureBox.Location = new Point(922, 27);
+            pictureBox.Location = new Point(905, 27);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(176, 126);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -300,7 +300,7 @@
             label15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label15.AutoSize = true;
             label15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(530, 108);
+            label15.Location = new Point(513, 108);
             label15.Name = "label15";
             label15.Size = new Size(87, 22);
             label15.TabIndex = 111;
@@ -311,7 +311,7 @@
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label14.AutoSize = true;
             label14.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(530, 68);
+            label14.Location = new Point(513, 68);
             label14.Name = "label14";
             label14.Size = new Size(112, 22);
             label14.TabIndex = 110;
@@ -332,7 +332,7 @@
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(450, 35);
+            label11.Location = new Point(433, 35);
             label11.Name = "label11";
             label11.Size = new Size(0, 22);
             label11.TabIndex = 107;
@@ -340,7 +340,7 @@
             // btn_review
             // 
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(460, 809);
+            btn_review.Location = new Point(460, 813);
             btn_review.Name = "btn_review";
             btn_review.Size = new Size(196, 35);
             btn_review.TabIndex = 106;
@@ -353,7 +353,7 @@
             label23.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label23.AutoSize = true;
             label23.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(530, 29);
+            label23.Location = new Point(513, 29);
             label23.Name = "label23";
             label23.Size = new Size(121, 22);
             label23.TabIndex = 128;
@@ -382,7 +382,7 @@
             // btn_cancel
             // 
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(245, 809);
+            btn_cancel.Location = new Point(245, 813);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(196, 35);
             btn_cancel.TabIndex = 105;
@@ -393,7 +393,7 @@
             // btn_save
             // 
             btn_save.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_save.Location = new Point(32, 809);
+            btn_save.Location = new Point(32, 813);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(196, 35);
             btn_save.TabIndex = 104;
@@ -418,7 +418,7 @@
             txt_barcode.BorderStyle = BorderStyle.None;
             txt_barcode.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_barcode.ForeColor = Color.Black;
-            txt_barcode.Location = new Point(674, 104);
+            txt_barcode.Location = new Point(657, 104);
             txt_barcode.Multiline = true;
             txt_barcode.Name = "txt_barcode";
             txt_barcode.ReadOnly = true;
@@ -432,7 +432,7 @@
             txt_counter.BorderStyle = BorderStyle.None;
             txt_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_counter.ForeColor = Color.Black;
-            txt_counter.Location = new Point(674, 64);
+            txt_counter.Location = new Point(657, 64);
             txt_counter.Multiline = true;
             txt_counter.Name = "txt_counter";
             txt_counter.ReadOnly = true;
@@ -454,7 +454,7 @@
             txt_voucher.BorderStyle = BorderStyle.None;
             txt_voucher.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_voucher.ForeColor = Color.Black;
-            txt_voucher.Location = new Point(674, 25);
+            txt_voucher.Location = new Point(657, 25);
             txt_voucher.Multiline = true;
             txt_voucher.Name = "txt_voucher";
             txt_voucher.ReadOnly = true;
@@ -466,8 +466,9 @@
             // 
             txt_remark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_remark.Location = new Point(169, 738);
+            txt_remark.Multiline = true;
             txt_remark.Name = "txt_remark";
-            txt_remark.Size = new Size(298, 30);
+            txt_remark.Size = new Size(298, 56);
             txt_remark.TabIndex = 13;
             // 
             // txt_totalamt
@@ -1334,7 +1335,7 @@
             panel3.Controls.Add(dataGridView1);
             panel3.Controls.Add(panel1);
             panel3.Controls.Add(panel2);
-            panel3.Location = new Point(505, 234);
+            panel3.Location = new Point(488, 234);
             panel3.Name = "panel3";
             panel3.Size = new Size(828, 349);
             panel3.TabIndex = 208;
@@ -1357,7 +1358,7 @@
             label22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label22.AutoSize = true;
             label22.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(530, 151);
+            label22.Location = new Point(513, 151);
             label22.Name = "label22";
             label22.Size = new Size(65, 22);
             label22.TabIndex = 211;
@@ -1368,7 +1369,7 @@
             label32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label32.AutoSize = true;
             label32.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(530, 191);
+            label32.Location = new Point(513, 191);
             label32.Name = "label32";
             label32.Size = new Size(108, 22);
             label32.TabIndex = 212;
@@ -1381,7 +1382,7 @@
             txt_shop.BorderStyle = BorderStyle.None;
             txt_shop.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_shop.ForeColor = Color.Black;
-            txt_shop.Location = new Point(674, 145);
+            txt_shop.Location = new Point(657, 145);
             txt_shop.Multiline = true;
             txt_shop.Name = "txt_shop";
             txt_shop.ReadOnly = true;
@@ -1395,7 +1396,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(674, 185);
+            textBox2.Location = new Point(657, 185);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;

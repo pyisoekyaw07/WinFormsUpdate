@@ -29,5 +29,34 @@ namespace GHF
             da.Fill(dt);
             CS_Table.DataSource = dt;
         }
+
+        private void closing_stock_Load(object sender, EventArgs e)
+        {
+            branch();
+        }
+        public void branch()
+        {
+            cmb_shop.Items.Clear();
+            string sqlquery = "select * from shop";
+            SqlCommand cmd = new SqlCommand(sqlquery, con);
+
+            try
+            {
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmb_shop.Items.Add(reader["Branchname"].ToString());
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }

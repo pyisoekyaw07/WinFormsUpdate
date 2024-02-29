@@ -29,31 +29,30 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(g_otherout));
-            ws = new DataGridViewTextBoxColumn();
-            wp = new DataGridViewTextBoxColumn();
-            wk = new DataGridViewTextBoxColumn();
-            S = new DataGridViewTextBoxColumn();
-            Y = new DataGridViewTextBoxColumn();
-            P = new DataGridViewTextBoxColumn();
-            K = new DataGridViewTextBoxColumn();
-            gm = new DataGridViewTextBoxColumn();
-            item_name = new DataGridViewTextBoxColumn();
-            Items = new DataGridViewTextBoxColumn();
-            gold_price = new DataGridViewTextBoxColumn();
-            goldtype = new DataGridViewTextBoxColumn();
-            wy = new DataGridViewTextBoxColumn();
-            barcode = new DataGridViewTextBoxColumn();
-            enter_remark = new DataGridViewTextBoxColumn();
-            Voucher = new DataGridViewTextBoxColumn();
-            time = new DataGridViewTextBoxColumn();
-            date = new DataGridViewTextBoxColumn();
-            image = new DataGridViewImageColumn();
             dataGridView1 = new DataGridView();
+            date = new DataGridViewTextBoxColumn();
+            time = new DataGridViewTextBoxColumn();
+            Voucher = new DataGridViewTextBoxColumn();
+            enter_remark = new DataGridViewTextBoxColumn();
             purvoc = new DataGridViewTextBoxColumn();
+            barcode = new DataGridViewTextBoxColumn();
+            goldtype = new DataGridViewTextBoxColumn();
+            gold_price = new DataGridViewTextBoxColumn();
+            Items = new DataGridViewTextBoxColumn();
+            item_name = new DataGridViewTextBoxColumn();
+            gm = new DataGridViewTextBoxColumn();
+            K = new DataGridViewTextBoxColumn();
+            P = new DataGridViewTextBoxColumn();
+            Y = new DataGridViewTextBoxColumn();
+            S = new DataGridViewTextBoxColumn();
+            wk = new DataGridViewTextBoxColumn();
+            wp = new DataGridViewTextBoxColumn();
+            wy = new DataGridViewTextBoxColumn();
+            ws = new DataGridViewTextBoxColumn();
             tk = new DataGridViewTextBoxColumn();
             tp = new DataGridViewTextBoxColumn();
             ty = new DataGridViewTextBoxColumn();
@@ -109,15 +108,9 @@
             txt_s = new TextBox();
             txt_WK = new TextBox();
             timer1 = new System.Windows.Forms.Timer(components);
-            btn_add_photo = new Button();
-            cmb_itemname = new ComboBox();
             txt_WP = new TextBox();
-            cmb_item = new ComboBox();
-            cmb_gt = new ComboBox();
             txt_WY = new TextBox();
-            cmb_remark = new ComboBox();
             txt_WC = new TextBox();
-            pictureBox = new PictureBox();
             total_K = new TextBox();
             label20 = new Label();
             label19 = new Label();
@@ -128,7 +121,6 @@
             total_S = new TextBox();
             label17 = new Label();
             label16 = new Label();
-            label15 = new Label();
             label14 = new Label();
             label12 = new Label();
             label11 = new Label();
@@ -138,7 +130,6 @@
             txt_rep = new TextBox();
             btn_save = new Button();
             label10 = new Label();
-            txt_barcode = new TextBox();
             txt_counter = new TextBox();
             txt_pur_no = new TextBox();
             txt_voucher = new TextBox();
@@ -156,133 +147,50 @@
             txt_time = new TextBox();
             label2 = new Label();
             txt_date = new TextBox();
+            textBox1 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
-            // ws
+            // dataGridView1
             // 
-            ws.HeaderText = "စိတ်";
-            ws.MinimumWidth = 6;
-            ws.Name = "ws";
-            ws.Width = 57;
-            // 
-            // wp
-            // 
-            wp.HeaderText = "ပဲ";
-            wp.MinimumWidth = 6;
-            wp.Name = "wp";
-            wp.Width = 57;
-            // 
-            // wk
-            // 
-            wk.HeaderText = "ကျပ်";
-            wk.MinimumWidth = 6;
-            wk.Name = "wk";
-            wk.Width = 57;
-            // 
-            // S
-            // 
-            S.HeaderText = "စိတ်";
-            S.MinimumWidth = 6;
-            S.Name = "S";
-            S.Width = 57;
-            // 
-            // Y
-            // 
-            Y.HeaderText = "ရွေး";
-            Y.MinimumWidth = 6;
-            Y.Name = "Y";
-            Y.Width = 57;
-            // 
-            // P
-            // 
-            P.HeaderText = "ပဲ";
-            P.MinimumWidth = 6;
-            P.Name = "P";
-            P.Width = 57;
-            // 
-            // K
-            // 
-            K.HeaderText = "ကျပ်";
-            K.MinimumWidth = 6;
-            K.Name = "K";
-            K.Width = 57;
-            // 
-            // gm
-            // 
-            gm.HeaderText = "ဂရမ်ချိန်";
-            gm.MinimumWidth = 6;
-            gm.Name = "gm";
-            gm.Width = 72;
-            // 
-            // item_name
-            // 
-            item_name.HeaderText = "ပစ္စည်းအမျိုးအမည်";
-            item_name.MinimumWidth = 6;
-            item_name.Name = "item_name";
-            item_name.Width = 122;
-            // 
-            // Items
-            // 
-            Items.HeaderText = "ပစ္စည်းအမျိုးအစား";
-            Items.MinimumWidth = 6;
-            Items.Name = "Items";
-            Items.Width = 119;
-            // 
-            // gold_price
-            // 
-            gold_price.HeaderText = "ရွှေစျေး";
-            gold_price.MinimumWidth = 6;
-            gold_price.Name = "gold_price";
-            gold_price.Width = 68;
-            // 
-            // goldtype
-            // 
-            goldtype.HeaderText = "ရွှေရည်";
-            goldtype.MinimumWidth = 6;
-            goldtype.Name = "goldtype";
-            goldtype.Width = 68;
-            // 
-            // wy
-            // 
-            wy.HeaderText = "ရွေး";
-            wy.MinimumWidth = 6;
-            wy.Name = "wy";
-            wy.Width = 57;
-            // 
-            // barcode
-            // 
-            barcode.HeaderText = "ဘားကုဒ်နံပါတ်";
-            barcode.MinimumWidth = 6;
-            barcode.Name = "barcode";
-            barcode.Width = 105;
-            // 
-            // enter_remark
-            // 
-            enter_remark.HeaderText = "အ၀င်စာရင်းမှတ်ချက်";
-            enter_remark.MinimumWidth = 6;
-            enter_remark.Name = "enter_remark";
-            enter_remark.Width = 132;
-            // 
-            // Voucher
-            // 
-            Voucher.HeaderText = "ဘောက်ချာနံပါတ်";
-            Voucher.MinimumWidth = 6;
-            Voucher.Name = "Voucher";
-            Voucher.Width = 150;
-            // 
-            // time
-            // 
-            time.HeaderText = "အချိန်";
-            time.MinimumWidth = 6;
-            time.Name = "time";
-            time.Width = 125;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle7.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, shop, Form, coledit });
+            dataGridView1.Location = new Point(30, 14);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridView1.RowTemplate.Height = 30;
+            dataGridView1.Size = new Size(773, 227);
+            dataGridView1.TabIndex = 201;
             // 
             // date
             // 
@@ -291,46 +199,26 @@
             date.Name = "date";
             date.Width = 125;
             // 
-            // image
+            // time
             // 
-            image.HeaderText = "ဓါတ်ပုံ";
-            image.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            image.MinimumWidth = 6;
-            image.Name = "image";
-            image.Width = 125;
+            time.HeaderText = "အချိန်";
+            time.MinimumWidth = 6;
+            time.Name = "time";
+            time.Width = 125;
             // 
-            // dataGridView1
+            // Voucher
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(24, 47, 81);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, shop, Form, coledit });
-            dataGridView1.Location = new Point(30, 14);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(773, 227);
-            dataGridView1.TabIndex = 201;
+            Voucher.HeaderText = "ဘောက်ချာနံပါတ်";
+            Voucher.MinimumWidth = 6;
+            Voucher.Name = "Voucher";
+            Voucher.Width = 150;
+            // 
+            // enter_remark
+            // 
+            enter_remark.HeaderText = "အ၀င်စာရင်းမှတ်ချက်";
+            enter_remark.MinimumWidth = 6;
+            enter_remark.Name = "enter_remark";
+            enter_remark.Width = 132;
             // 
             // purvoc
             // 
@@ -338,6 +226,104 @@
             purvoc.MinimumWidth = 6;
             purvoc.Name = "purvoc";
             purvoc.Width = 148;
+            // 
+            // barcode
+            // 
+            barcode.HeaderText = "ဘားကုဒ်နံပါတ်";
+            barcode.MinimumWidth = 6;
+            barcode.Name = "barcode";
+            barcode.Width = 105;
+            // 
+            // goldtype
+            // 
+            goldtype.HeaderText = "ရွှေရည်";
+            goldtype.MinimumWidth = 6;
+            goldtype.Name = "goldtype";
+            goldtype.Width = 68;
+            // 
+            // gold_price
+            // 
+            gold_price.HeaderText = "ရွှေစျေး";
+            gold_price.MinimumWidth = 6;
+            gold_price.Name = "gold_price";
+            gold_price.Width = 68;
+            // 
+            // Items
+            // 
+            Items.HeaderText = "ပစ္စည်းအမျိုးအစား";
+            Items.MinimumWidth = 6;
+            Items.Name = "Items";
+            Items.Width = 119;
+            // 
+            // item_name
+            // 
+            item_name.HeaderText = "ပစ္စည်းအမျိုးအမည်";
+            item_name.MinimumWidth = 6;
+            item_name.Name = "item_name";
+            item_name.Width = 122;
+            // 
+            // gm
+            // 
+            gm.HeaderText = "ဂရမ်ချိန်";
+            gm.MinimumWidth = 6;
+            gm.Name = "gm";
+            gm.Width = 72;
+            // 
+            // K
+            // 
+            K.HeaderText = "ကျပ်";
+            K.MinimumWidth = 6;
+            K.Name = "K";
+            K.Width = 57;
+            // 
+            // P
+            // 
+            P.HeaderText = "ပဲ";
+            P.MinimumWidth = 6;
+            P.Name = "P";
+            P.Width = 57;
+            // 
+            // Y
+            // 
+            Y.HeaderText = "ရွေး";
+            Y.MinimumWidth = 6;
+            Y.Name = "Y";
+            Y.Width = 57;
+            // 
+            // S
+            // 
+            S.HeaderText = "စိတ်";
+            S.MinimumWidth = 6;
+            S.Name = "S";
+            S.Width = 57;
+            // 
+            // wk
+            // 
+            wk.HeaderText = "ကျပ်";
+            wk.MinimumWidth = 6;
+            wk.Name = "wk";
+            wk.Width = 57;
+            // 
+            // wp
+            // 
+            wp.HeaderText = "ပဲ";
+            wp.MinimumWidth = 6;
+            wp.Name = "wp";
+            wp.Width = 57;
+            // 
+            // wy
+            // 
+            wy.HeaderText = "ရွေး";
+            wy.MinimumWidth = 6;
+            wy.Name = "wy";
+            wy.Width = 57;
+            // 
+            // ws
+            // 
+            ws.HeaderText = "စိတ်";
+            ws.MinimumWidth = 6;
+            ws.Name = "ws";
+            ws.Width = 57;
             // 
             // tk
             // 
@@ -415,10 +401,10 @@
             // coledit
             // 
             coledit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
-            coledit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle8.NullValue = resources.GetObject("dataGridViewCellStyle8.NullValue");
+            coledit.DefaultCellStyle = dataGridViewCellStyle8;
             coledit.Description = "Edit";
             coledit.HeaderText = "";
             coledit.Image = (Image)resources.GetObject("coledit.Image");
@@ -433,7 +419,7 @@
             txt_shop.BorderStyle = BorderStyle.None;
             txt_shop.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_shop.ForeColor = Color.Black;
-            txt_shop.Location = new Point(641, 139);
+            txt_shop.Location = new Point(641, 99);
             txt_shop.Multiline = true;
             txt_shop.Name = "txt_shop";
             txt_shop.ReadOnly = true;
@@ -445,7 +431,7 @@
             btn_add.BackgroundImageLayout = ImageLayout.Stretch;
             btn_add.Image = (Image)resources.GetObject("btn_add.Image");
             btn_add.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_add.Location = new Point(456, 732);
+            btn_add.Location = new Point(456, 722);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(55, 38);
             btn_add.TabIndex = 229;
@@ -602,20 +588,20 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(641, 179);
+            textBox2.Location = new Point(641, 139);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(207, 28);
             textBox2.TabIndex = 279;
-            textBox2.Text = "Other Out";
+            textBox2.Text = "Gold Other Out";
             // 
             // label32
             // 
             label32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label32.AutoSize = true;
             label32.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(497, 185);
+            label32.Location = new Point(497, 145);
             label32.Name = "label32";
             label32.Size = new Size(108, 22);
             label32.TabIndex = 277;
@@ -626,7 +612,7 @@
             label22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label22.AutoSize = true;
             label22.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(497, 145);
+            label22.Location = new Point(497, 105);
             label22.Name = "label22";
             label22.Size = new Size(65, 22);
             label22.TabIndex = 276;
@@ -634,7 +620,7 @@
             // 
             // txt_edit_check
             // 
-            txt_edit_check.Location = new Point(517, 738);
+            txt_edit_check.Location = new Point(517, 728);
             txt_edit_check.Name = "txt_edit_check";
             txt_edit_check.Size = new Size(100, 28);
             txt_edit_check.TabIndex = 275;
@@ -647,7 +633,7 @@
             panel3.Controls.Add(dataGridView1);
             panel3.Controls.Add(panel1);
             panel3.Controls.Add(panel2);
-            panel3.Location = new Point(472, 228);
+            panel3.Location = new Point(470, 187);
             panel3.Name = "panel3";
             panel3.Size = new Size(828, 349);
             panel3.TabIndex = 274;
@@ -845,6 +831,7 @@
             // 
             // txt_WK
             // 
+            txt_WK.BackColor = Color.FromArgb(173, 199, 217);
             txt_WK.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_WK.Location = new Point(151, 467);
             txt_WK.Name = "txt_WK";
@@ -856,31 +843,9 @@
             // 
             timer1.Enabled = true;
             // 
-            // btn_add_photo
-            // 
-            btn_add_photo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_add_photo.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_add_photo.Location = new Point(926, 160);
-            btn_add_photo.Name = "btn_add_photo";
-            btn_add_photo.Size = new Size(107, 47);
-            btn_add_photo.TabIndex = 228;
-            btn_add_photo.Text = "ပုံထည့်သွင်းရန်";
-            btn_add_photo.UseVisualStyleBackColor = true;
-            // 
-            // cmb_itemname
-            // 
-            cmb_itemname.DropDownHeight = 150;
-            cmb_itemname.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_itemname.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            cmb_itemname.FormattingEnabled = true;
-            cmb_itemname.IntegralHeight = false;
-            cmb_itemname.Location = new Point(150, 282);
-            cmb_itemname.Name = "cmb_itemname";
-            cmb_itemname.Size = new Size(330, 30);
-            cmb_itemname.TabIndex = 219;
-            // 
             // txt_WP
             // 
+            txt_WP.BackColor = Color.FromArgb(173, 199, 217);
             txt_WP.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_WP.Location = new Point(217, 467);
             txt_WP.Name = "txt_WP";
@@ -888,30 +853,9 @@
             txt_WP.TabIndex = 222;
             txt_WP.TextAlign = HorizontalAlignment.Center;
             // 
-            // cmb_item
-            // 
-            cmb_item.DropDownHeight = 150;
-            cmb_item.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_item.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            cmb_item.FormattingEnabled = true;
-            cmb_item.IntegralHeight = false;
-            cmb_item.Location = new Point(150, 226);
-            cmb_item.Name = "cmb_item";
-            cmb_item.Size = new Size(330, 30);
-            cmb_item.TabIndex = 218;
-            // 
-            // cmb_gt
-            // 
-            cmb_gt.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_gt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            cmb_gt.FormattingEnabled = true;
-            cmb_gt.Location = new Point(346, 174);
-            cmb_gt.Name = "cmb_gt";
-            cmb_gt.Size = new Size(134, 30);
-            cmb_gt.TabIndex = 217;
-            // 
             // txt_WY
             // 
+            txt_WY.BackColor = Color.FromArgb(173, 199, 217);
             txt_WY.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_WY.Location = new Point(283, 467);
             txt_WY.Name = "txt_WY";
@@ -919,38 +863,15 @@
             txt_WY.TabIndex = 223;
             txt_WY.TextAlign = HorizontalAlignment.Center;
             // 
-            // cmb_remark
-            // 
-            cmb_remark.DropDownHeight = 150;
-            cmb_remark.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_remark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            cmb_remark.FormattingEnabled = true;
-            cmb_remark.IntegralHeight = false;
-            cmb_remark.Location = new Point(150, 121);
-            cmb_remark.Name = "cmb_remark";
-            cmb_remark.Size = new Size(330, 30);
-            cmb_remark.TabIndex = 216;
-            // 
             // txt_WC
             // 
+            txt_WC.BackColor = Color.FromArgb(173, 199, 217);
             txt_WC.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_WC.Location = new Point(348, 467);
             txt_WC.Name = "txt_WC";
             txt_WC.Size = new Size(59, 30);
             txt_WC.TabIndex = 224;
             txt_WC.TextAlign = HorizontalAlignment.Center;
-            // 
-            // pictureBox
-            // 
-            pictureBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox.Image = Properties.Resources.ghf3;
-            pictureBox.Location = new Point(889, 21);
-            pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(176, 126);
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox.TabIndex = 266;
-            pictureBox.TabStop = false;
             // 
             // total_K
             // 
@@ -969,7 +890,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(13, 736);
+            label20.Location = new Point(13, 726);
             label20.Name = "label20";
             label20.Size = new Size(56, 22);
             label20.TabIndex = 265;
@@ -979,7 +900,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(13, 688);
+            label19.Location = new Point(13, 678);
             label19.Name = "label19";
             label19.Size = new Size(90, 22);
             label19.TabIndex = 264;
@@ -1019,7 +940,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(12, 636);
+            label18.Location = new Point(12, 626);
             label18.Name = "label18";
             label18.Size = new Size(100, 22);
             label18.TabIndex = 263;
@@ -1042,7 +963,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(13, 583);
+            label17.Location = new Point(13, 573);
             label17.Name = "label17";
             label17.Size = new Size(46, 22);
             label17.TabIndex = 262;
@@ -1057,17 +978,6 @@
             label16.Size = new Size(90, 22);
             label16.TabIndex = 261;
             label16.Text = "စုစုပေါင်းရွှေချိန်";
-            // 
-            // label15
-            // 
-            label15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label15.AutoSize = true;
-            label15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(497, 102);
-            label15.Name = "label15";
-            label15.Size = new Size(87, 22);
-            label15.TabIndex = 260;
-            label15.Text = "ဘားကုဒ်နံပါတ်";
             // 
             // label14
             // 
@@ -1086,9 +996,9 @@
             label12.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label12.Location = new Point(12, 70);
             label12.Name = "label12";
-            label12.Size = new Size(133, 22);
+            label12.Size = new Size(87, 22);
             label12.TabIndex = 258;
-            label12.Text = "အ၀ယ်ဘောက်ချာနံပါတ်";
+            label12.Text = "ဘားကုဒ်နံပါတ်";
             // 
             // label11
             // 
@@ -1103,7 +1013,7 @@
             // btn_review
             // 
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(444, 803);
+            btn_review.Location = new Point(444, 796);
             btn_review.Name = "btn_review";
             btn_review.Size = new Size(196, 35);
             btn_review.TabIndex = 256;
@@ -1124,7 +1034,7 @@
             // btn_cancel
             // 
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(229, 803);
+            btn_cancel.Location = new Point(229, 796);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(196, 35);
             btn_cancel.TabIndex = 255;
@@ -1133,8 +1043,9 @@
             // 
             // txt_rep
             // 
+            txt_rep.BackColor = Color.FromArgb(173, 199, 217);
             txt_rep.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_rep.Location = new Point(152, 632);
+            txt_rep.Location = new Point(150, 622);
             txt_rep.Name = "txt_rep";
             txt_rep.Size = new Size(189, 30);
             txt_rep.TabIndex = 226;
@@ -1142,7 +1053,7 @@
             // btn_save
             // 
             btn_save.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_save.Location = new Point(16, 803);
+            btn_save.Location = new Point(16, 796);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(196, 35);
             btn_save.TabIndex = 254;
@@ -1158,20 +1069,6 @@
             label10.Size = new Size(102, 22);
             label10.TabIndex = 253;
             label10.Text = "ပစ္စည်းအမျိုးအစား";
-            // 
-            // txt_barcode
-            // 
-            txt_barcode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txt_barcode.BackColor = Color.FromArgb(173, 199, 217);
-            txt_barcode.BorderStyle = BorderStyle.None;
-            txt_barcode.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_barcode.ForeColor = Color.Black;
-            txt_barcode.Location = new Point(641, 98);
-            txt_barcode.Multiline = true;
-            txt_barcode.Name = "txt_barcode";
-            txt_barcode.ReadOnly = true;
-            txt_barcode.Size = new Size(207, 28);
-            txt_barcode.TabIndex = 252;
             // 
             // txt_counter
             // 
@@ -1212,10 +1109,12 @@
             // 
             // txt_remark
             // 
+            txt_remark.BackColor = Color.FromArgb(173, 199, 217);
             txt_remark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_remark.Location = new Point(153, 732);
+            txt_remark.Location = new Point(149, 722);
+            txt_remark.Multiline = true;
             txt_remark.Name = "txt_remark";
-            txt_remark.Size = new Size(298, 30);
+            txt_remark.Size = new Size(298, 57);
             txt_remark.TabIndex = 227;
             // 
             // label3
@@ -1234,7 +1133,7 @@
             txt_totalamt.BorderStyle = BorderStyle.None;
             txt_totalamt.Enabled = false;
             txt_totalamt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_totalamt.Location = new Point(153, 686);
+            txt_totalamt.Location = new Point(151, 676);
             txt_totalamt.Multiline = true;
             txt_totalamt.Name = "txt_totalamt";
             txt_totalamt.Size = new Size(189, 28);
@@ -1242,8 +1141,9 @@
             // 
             // txt_mcost
             // 
+            txt_mcost.BackColor = Color.FromArgb(173, 199, 217);
             txt_mcost.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_mcost.Location = new Point(153, 577);
+            txt_mcost.Location = new Point(150, 567);
             txt_mcost.Name = "txt_mcost";
             txt_mcost.Size = new Size(189, 30);
             txt_mcost.TabIndex = 225;
@@ -1286,7 +1186,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(282, 177);
+            label9.Location = new Point(288, 177);
             label9.Name = "label9";
             label9.Size = new Size(47, 22);
             label9.TabIndex = 239;
@@ -1295,6 +1195,7 @@
             // 
             // txt_gm
             // 
+            txt_gm.BackColor = Color.FromArgb(173, 199, 217);
             txt_gm.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_gm.Location = new Point(150, 336);
             txt_gm.Name = "txt_gm";
@@ -1357,6 +1258,38 @@
             txt_date.Size = new Size(126, 28);
             txt_date.TabIndex = 231;
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(173, 199, 217);
+            textBox1.Location = new Point(346, 175);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(132, 28);
+            textBox1.TabIndex = 280;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.FromArgb(173, 199, 217);
+            textBox3.Location = new Point(150, 123);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(330, 28);
+            textBox3.TabIndex = 281;
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.FromArgb(173, 199, 217);
+            textBox4.Location = new Point(148, 228);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(330, 28);
+            textBox4.TabIndex = 282;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.FromArgb(173, 199, 217);
+            textBox5.Location = new Point(148, 283);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(330, 28);
+            textBox5.TabIndex = 283;
+            // 
             // g_otherout
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -1364,6 +1297,10 @@
             AutoScroll = true;
             BackColor = Color.White;
             ClientSize = new Size(1385, 883);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox1);
             Controls.Add(txt_shop);
             Controls.Add(btn_add);
             Controls.Add(groupBox1);
@@ -1383,15 +1320,9 @@
             Controls.Add(txt_y);
             Controls.Add(txt_s);
             Controls.Add(txt_WK);
-            Controls.Add(btn_add_photo);
-            Controls.Add(cmb_itemname);
             Controls.Add(txt_WP);
-            Controls.Add(cmb_item);
-            Controls.Add(cmb_gt);
             Controls.Add(txt_WY);
-            Controls.Add(cmb_remark);
             Controls.Add(txt_WC);
-            Controls.Add(pictureBox);
             Controls.Add(total_K);
             Controls.Add(label20);
             Controls.Add(label19);
@@ -1401,7 +1332,6 @@
             Controls.Add(total_S);
             Controls.Add(label17);
             Controls.Add(label16);
-            Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -1411,7 +1341,6 @@
             Controls.Add(txt_rep);
             Controls.Add(btn_save);
             Controls.Add(label10);
-            Controls.Add(txt_barcode);
             Controls.Add(txt_counter);
             Controls.Add(txt_pur_no);
             Controls.Add(txt_voucher);
@@ -1442,46 +1371,12 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridViewTextBoxColumn ws;
-        private DataGridViewTextBoxColumn wp;
-        private DataGridViewTextBoxColumn wk;
-        private DataGridViewTextBoxColumn S;
-        private DataGridViewTextBoxColumn Y;
-        private DataGridViewTextBoxColumn P;
-        private DataGridViewTextBoxColumn K;
-        private DataGridViewTextBoxColumn gm;
-        private DataGridViewTextBoxColumn item_name;
-        private DataGridViewTextBoxColumn Items;
-        private DataGridViewTextBoxColumn gold_price;
-        private DataGridViewTextBoxColumn goldtype;
-        private DataGridViewTextBoxColumn wy;
-        private DataGridViewTextBoxColumn barcode;
-        private DataGridViewTextBoxColumn enter_remark;
-        private DataGridViewTextBoxColumn Voucher;
-        private DataGridViewTextBoxColumn time;
-        private DataGridViewTextBoxColumn date;
-        private DataGridViewImageColumn image;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn purvoc;
-        private DataGridViewTextBoxColumn tk;
-        private DataGridViewTextBoxColumn tp;
-        private DataGridViewTextBoxColumn ty;
-        private DataGridViewTextBoxColumn ts;
-        private DataGridViewTextBoxColumn mcost;
-        private DataGridViewTextBoxColumn repamt;
-        private DataGridViewTextBoxColumn total_amt;
-        private DataGridViewTextBoxColumn remark;
-        private DataGridViewTextBoxColumn employee;
-        private DataGridViewTextBoxColumn shop;
-        private DataGridViewTextBoxColumn Form;
-        private DataGridViewImageColumn coledit;
         private TextBox txt_shop;
         private Button btn_add;
         private TextBox txt_temparray_proid;
@@ -1524,15 +1419,9 @@
         private TextBox txt_y;
         private TextBox txt_s;
         private TextBox txt_WK;
-        private Button btn_add_photo;
-        private ComboBox cmb_itemname;
         private TextBox txt_WP;
-        private ComboBox cmb_item;
-        private ComboBox cmb_gt;
         private TextBox txt_WY;
-        private ComboBox cmb_remark;
         private TextBox txt_WC;
-        private PictureBox pictureBox;
         private TextBox total_K;
         private Label label20;
         private Label label19;
@@ -1542,7 +1431,6 @@
         private TextBox total_S;
         private Label label17;
         private Label label16;
-        private Label label15;
         private Label label14;
         private Label label12;
         private Label label11;
@@ -1552,7 +1440,6 @@
         private TextBox txt_rep;
         private Button btn_save;
         private Label label10;
-        private TextBox txt_barcode;
         private TextBox txt_counter;
         private TextBox txt_pur_no;
         private TextBox txt_voucher;
@@ -1572,5 +1459,40 @@
         private TextBox txt_date;
         private System.Windows.Forms.Timer timer1;
         private OpenFileDialog openFileDialog1;
+        private TextBox textBox1;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private DataGridViewTextBoxColumn date;
+        private DataGridViewTextBoxColumn time;
+        private DataGridViewTextBoxColumn Voucher;
+        private DataGridViewTextBoxColumn enter_remark;
+        private DataGridViewTextBoxColumn purvoc;
+        private DataGridViewTextBoxColumn barcode;
+        private DataGridViewTextBoxColumn goldtype;
+        private DataGridViewTextBoxColumn gold_price;
+        private DataGridViewTextBoxColumn Items;
+        private DataGridViewTextBoxColumn item_name;
+        private DataGridViewTextBoxColumn gm;
+        private DataGridViewTextBoxColumn K;
+        private DataGridViewTextBoxColumn P;
+        private DataGridViewTextBoxColumn Y;
+        private DataGridViewTextBoxColumn S;
+        private DataGridViewTextBoxColumn wk;
+        private DataGridViewTextBoxColumn wp;
+        private DataGridViewTextBoxColumn wy;
+        private DataGridViewTextBoxColumn ws;
+        private DataGridViewTextBoxColumn tk;
+        private DataGridViewTextBoxColumn tp;
+        private DataGridViewTextBoxColumn ty;
+        private DataGridViewTextBoxColumn ts;
+        private DataGridViewTextBoxColumn mcost;
+        private DataGridViewTextBoxColumn repamt;
+        private DataGridViewTextBoxColumn total_amt;
+        private DataGridViewTextBoxColumn remark;
+        private DataGridViewTextBoxColumn employee;
+        private DataGridViewTextBoxColumn shop;
+        private DataGridViewTextBoxColumn Form;
+        private DataGridViewImageColumn coledit;
     }
 }

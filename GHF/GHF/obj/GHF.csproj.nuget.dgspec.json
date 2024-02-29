@@ -45,6 +45,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "EPPlusFree": {
+              "target": "Package",
+              "version": "[4.5.3.8, )"
+            },
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.3.0, )"
@@ -52,6 +56,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.1, )"
+            },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

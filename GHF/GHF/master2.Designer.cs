@@ -29,22 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             groupBox1 = new GroupBox();
             comboBox1 = new ComboBox();
             Pan_item = new Panel();
             radioButton1 = new RadioButton();
-            pen_counter = new Panel();
-            btn_counter_save = new Button();
-            txt_Gem_counter = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            txt_WG_counter = new TextBox();
-            label4 = new Label();
-            txt_G_counter = new TextBox();
             label2 = new Label();
             label1 = new Label();
             btn_save = new Button();
@@ -53,6 +45,14 @@
             itemtype_combo = new ComboBox();
             txt_master_item = new TextBox();
             Parentitem_combo = new ComboBox();
+            pen_counter = new Panel();
+            btn_counter_save = new Button();
+            txt_Gem_counter = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            txt_WG_counter = new TextBox();
+            label4 = new Label();
+            txt_G_counter = new TextBox();
             txt_item = new TextBox();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
@@ -69,8 +69,8 @@
             txt_Time = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             txt_Date = new Label();
-            label7 = new Label();
-            label8 = new Label();
+            btn_product = new FontAwesome.Sharp.IconButton();
+            btn_shop = new FontAwesome.Sharp.IconButton();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -92,11 +92,11 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             tabControl1.ItemSize = new Size(1, 4);
-            tabControl1.Location = new Point(107, 55);
+            tabControl1.Location = new Point(135, 1);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1272, 543);
+            tabControl1.Size = new Size(1272, 496);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabIndex = 5;
             tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
@@ -111,7 +111,7 @@
             tabPage1.Location = new Point(8, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1260, 535);
+            tabPage1.Size = new Size(1260, 488);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Product Master";
             // 
@@ -168,82 +168,6 @@
             radioButton1.UseVisualStyleBackColor = true;
             radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             radioButton1.Click += radioButton1_Click;
-            // 
-            // pen_counter
-            // 
-            pen_counter.BackColor = SystemColors.InactiveCaption;
-            pen_counter.Controls.Add(btn_counter_save);
-            pen_counter.Controls.Add(txt_Gem_counter);
-            pen_counter.Controls.Add(label6);
-            pen_counter.Controls.Add(label5);
-            pen_counter.Controls.Add(txt_WG_counter);
-            pen_counter.Controls.Add(label4);
-            pen_counter.Controls.Add(txt_G_counter);
-            pen_counter.Location = new Point(19, 84);
-            pen_counter.Name = "pen_counter";
-            pen_counter.Size = new Size(436, 311);
-            pen_counter.TabIndex = 23;
-            // 
-            // btn_counter_save
-            // 
-            btn_counter_save.Location = new Point(112, 219);
-            btn_counter_save.Name = "btn_counter_save";
-            btn_counter_save.Size = new Size(193, 42);
-            btn_counter_save.TabIndex = 6;
-            btn_counter_save.Text = "Save";
-            btn_counter_save.UseVisualStyleBackColor = true;
-            btn_counter_save.Click += btn_counter_save_Click;
-            // 
-            // txt_Gem_counter
-            // 
-            txt_Gem_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_Gem_counter.Location = new Point(112, 170);
-            txt_Gem_counter.Name = "txt_Gem_counter";
-            txt_Gem_counter.Size = new Size(193, 30);
-            txt_Gem_counter.TabIndex = 5;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(13, 171);
-            label6.Name = "label6";
-            label6.Size = new Size(40, 22);
-            label6.TabIndex = 4;
-            label6.Text = "Gems";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(13, 122);
-            label5.Name = "label5";
-            label5.Size = new Size(64, 22);
-            label5.TabIndex = 3;
-            label5.Text = "Whitegold";
-            // 
-            // txt_WG_counter
-            // 
-            txt_WG_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WG_counter.Location = new Point(112, 121);
-            txt_WG_counter.Name = "txt_WG_counter";
-            txt_WG_counter.Size = new Size(193, 30);
-            txt_WG_counter.TabIndex = 2;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(13, 73);
-            label4.Name = "label4";
-            label4.Size = new Size(35, 22);
-            label4.TabIndex = 1;
-            label4.Text = "Gold";
-            // 
-            // txt_G_counter
-            // 
-            txt_G_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_G_counter.Location = new Point(112, 73);
-            txt_G_counter.Name = "txt_G_counter";
-            txt_G_counter.Size = new Size(193, 30);
-            txt_G_counter.TabIndex = 0;
             // 
             // label2
             // 
@@ -326,6 +250,82 @@
             Parentitem_combo.TabIndex = 16;
             Parentitem_combo.Click += Parentitem_combo_Click_2;
             // 
+            // pen_counter
+            // 
+            pen_counter.BackColor = SystemColors.InactiveCaption;
+            pen_counter.Controls.Add(btn_counter_save);
+            pen_counter.Controls.Add(txt_Gem_counter);
+            pen_counter.Controls.Add(label6);
+            pen_counter.Controls.Add(label5);
+            pen_counter.Controls.Add(txt_WG_counter);
+            pen_counter.Controls.Add(label4);
+            pen_counter.Controls.Add(txt_G_counter);
+            pen_counter.Location = new Point(19, 84);
+            pen_counter.Name = "pen_counter";
+            pen_counter.Size = new Size(436, 311);
+            pen_counter.TabIndex = 23;
+            // 
+            // btn_counter_save
+            // 
+            btn_counter_save.Location = new Point(112, 219);
+            btn_counter_save.Name = "btn_counter_save";
+            btn_counter_save.Size = new Size(193, 42);
+            btn_counter_save.TabIndex = 6;
+            btn_counter_save.Text = "Save";
+            btn_counter_save.UseVisualStyleBackColor = true;
+            btn_counter_save.Click += btn_counter_save_Click;
+            // 
+            // txt_Gem_counter
+            // 
+            txt_Gem_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Gem_counter.Location = new Point(112, 170);
+            txt_Gem_counter.Name = "txt_Gem_counter";
+            txt_Gem_counter.Size = new Size(193, 30);
+            txt_Gem_counter.TabIndex = 5;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(13, 171);
+            label6.Name = "label6";
+            label6.Size = new Size(40, 22);
+            label6.TabIndex = 4;
+            label6.Text = "Gems";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(13, 122);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 22);
+            label5.TabIndex = 3;
+            label5.Text = "Whitegold";
+            // 
+            // txt_WG_counter
+            // 
+            txt_WG_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_WG_counter.Location = new Point(112, 121);
+            txt_WG_counter.Name = "txt_WG_counter";
+            txt_WG_counter.Size = new Size(193, 30);
+            txt_WG_counter.TabIndex = 2;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(13, 73);
+            label4.Name = "label4";
+            label4.Size = new Size(35, 22);
+            label4.TabIndex = 1;
+            label4.Text = "Gold";
+            // 
+            // txt_G_counter
+            // 
+            txt_G_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_G_counter.Location = new Point(112, 73);
+            txt_G_counter.Name = "txt_G_counter";
+            txt_G_counter.Size = new Size(193, 30);
+            txt_G_counter.TabIndex = 0;
+            // 
             // txt_item
             // 
             txt_item.Location = new Point(821, 441);
@@ -337,35 +337,35 @@
             // panel1
             // 
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(519, 123);
+            panel1.Location = new Point(519, 49);
             panel1.Name = "panel1";
-            panel1.Size = new Size(735, 270);
+            panel1.Size = new Size(735, 383);
             panel1.TabIndex = 27;
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(238, 239, 249);
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.WhiteSmoke;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(24, 47, 81);
-            dataGridViewCellStyle2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle4.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(2, 6);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(730, 261);
+            dataGridView1.Size = new Size(730, 374);
             dataGridView1.TabIndex = 24;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -385,7 +385,7 @@
             tabPage2.Location = new Point(8, 4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1260, 535);
+            tabPage2.Size = new Size(1260, 488);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Shop";
             tabPage2.UseVisualStyleBackColor = true;
@@ -473,11 +473,12 @@
             // 
             txt_Time.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txt_Time.AutoSize = true;
-            txt_Time.Location = new Point(1240, 18);
+            txt_Time.Location = new Point(135, 557);
             txt_Time.Name = "txt_Time";
             txt_Time.Size = new Size(41, 21);
             txt_Time.TabIndex = 28;
             txt_Time.Text = "label7";
+            txt_Time.Visible = false;
             // 
             // timer1
             // 
@@ -488,31 +489,42 @@
             // 
             txt_Date.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txt_Date.AutoSize = true;
-            txt_Date.Location = new Point(1157, 18);
+            txt_Date.Location = new Point(197, 557);
             txt_Date.Name = "txt_Date";
             txt_Date.Size = new Size(41, 21);
             txt_Date.TabIndex = 29;
             txt_Date.Text = "label8";
+            txt_Date.Visible = false;
             // 
-            // label7
+            // btn_product
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(12, 78);
-            label7.Name = "label7";
-            label7.Size = new Size(89, 21);
-            label7.TabIndex = 30;
-            label7.Text = "Product master";
-            label7.Click += label7_Click;
+            btn_product.IconChar = FontAwesome.Sharp.IconChar.Database;
+            btn_product.IconColor = Color.FromArgb(0, 192, 0);
+            btn_product.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_product.IconSize = 20;
+            btn_product.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_product.Location = new Point(12, 12);
+            btn_product.Name = "btn_product";
+            btn_product.Size = new Size(117, 41);
+            btn_product.TabIndex = 32;
+            btn_product.Text = "Product";
+            btn_product.UseVisualStyleBackColor = true;
+            btn_product.Click += btn_product_Click;
             // 
-            // label8
+            // btn_shop
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(12, 131);
-            label8.Name = "label8";
-            label8.Size = new Size(37, 21);
-            label8.TabIndex = 31;
-            label8.Text = "Shop";
-            label8.Click += label8_Click;
+            btn_shop.IconChar = FontAwesome.Sharp.IconChar.Shop;
+            btn_shop.IconColor = Color.FromArgb(0, 192, 0);
+            btn_shop.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_shop.IconSize = 25;
+            btn_shop.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_shop.Location = new Point(12, 64);
+            btn_shop.Name = "btn_shop";
+            btn_shop.Size = new Size(117, 41);
+            btn_shop.TabIndex = 33;
+            btn_shop.Text = "Shop";
+            btn_shop.UseVisualStyleBackColor = true;
+            btn_shop.Click += btn_shop_Click;
             // 
             // master2
             // 
@@ -520,8 +532,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1419, 706);
-            Controls.Add(label8);
-            Controls.Add(label7);
+            Controls.Add(btn_shop);
+            Controls.Add(btn_product);
             Controls.Add(txt_Date);
             Controls.Add(txt_Time);
             Controls.Add(tabControl1);
@@ -586,8 +598,8 @@
         private RadioButton radioButton1;
         private Panel panel1;
         private TextBox txt_item;
-        private Label label7;
-        private Label label8;
         private GroupBox groupBox1;
+        private FontAwesome.Sharp.IconButton btn_product;
+        private FontAwesome.Sharp.IconButton btn_shop;
     }
 }

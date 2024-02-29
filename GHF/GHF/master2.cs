@@ -35,7 +35,7 @@ namespace GHF
 
             Parentitem_combo.Hide();
             Pan_item.Hide();
-          
+
             button1.Enabled = false;
 
 
@@ -836,12 +836,12 @@ namespace GHF
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void btn_product_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void btn_shop_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
         }

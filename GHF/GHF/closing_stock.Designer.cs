@@ -31,6 +31,7 @@
             CS_Table = new DataGridView();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
+            cmb_shop = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)CS_Table).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -67,11 +68,20 @@
             panel1.Size = new Size(1270, 363);
             panel1.TabIndex = 2;
             // 
+            // cmb_shop
+            // 
+            cmb_shop.FormattingEnabled = true;
+            cmb_shop.Location = new Point(171, 28);
+            cmb_shop.Name = "cmb_shop";
+            cmb_shop.Size = new Size(121, 29);
+            cmb_shop.TabIndex = 3;
+            // 
             // closing_stock
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1294, 524);
+            Controls.Add(cmb_shop);
             Controls.Add(panel1);
             Controls.Add(iconButton1);
             FormBorderStyle = FormBorderStyle.None;
@@ -79,6 +89,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "closing_stock";
             WindowState = FormWindowState.Maximized;
+            Load += closing_stock_Load;
             ((System.ComponentModel.ISupportInitialize)CS_Table).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -89,5 +100,6 @@
         private DataGridView CS_Table;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel1;
+        private ComboBox cmb_shop;
     }
 }
