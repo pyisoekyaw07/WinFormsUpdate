@@ -26,6 +26,7 @@ using System.DirectoryServices.ActiveDirectory;
 using System.Windows.Media.Media3D;
 using Color = System.Drawing.Color;
 
+
 namespace GHF
 {
 
@@ -35,12 +36,13 @@ namespace GHF
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
 
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
+        
 
-        SqlCommand cmd;
+        SqlCommand cmd,cmd2,cmd3;
         SqlDataAdapter adpt;
         DataTable dt;
         DataSet ds;
-        string sql;
+        string sql,sql2,sql3;
 
         public gform()
         {
@@ -342,7 +344,6 @@ namespace GHF
             label19.Text = "စုစုပေါင်းတန်ဖိုး";
             label20.Text = "မှတ်ချက်";
             label21.Text = "စုစုပေါင်းအခုရေ";
-
             label23.Text = "စက်ဘောက်ချာနံပါတ်";
             btn_save.Text = "သိမ်းဆည်းမည်";
             btn_cancel.Text = "ပယ်ဖျက်မည်";
@@ -372,7 +373,6 @@ namespace GHF
             label20.Text = "Remark";
             label21.Text = "Total Gm";
             label33.Text = "All Total Amount";
-
             label23.Text = "Voucher No";
             btn_save.Text = "Save";
             btn_cancel.Text = "Cancel";
@@ -554,77 +554,158 @@ namespace GHF
         }
         public void show_reg_piddata()/*Show Register Data To Table Function*/
         {
-            /* pid();*/
-            /* string invoiceno = textBox25.Text;
-             string productid = textBox29.Text;*/
-            int primarykey;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            try 
             {
-                con.Open();
-                sql = "SELECT ProductID FROM reg_gold";
-                cmd = new SqlCommand(sql, Con1);
-                var maxid = cmd.ExecuteScalar() as string;
-
-                if (maxid == dataGridView1.Rows[i].Cells[6].Value)
+                int primarykey;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
-                    MessageBox.Show("ProductID Is Already Have");
+                    con.Open();
+                    sql = "SELECT ProductID FROM reg_gold";
+                    sql2 = "SELECT ProductID FROM closing_stock";
+                    sql3 = "SELECT ProductID FROM all_stocks";
+                    cmd = new SqlCommand(sql, con);
+                    cmd2 = new SqlCommand(sql2, con);
+                    cmd3 = new SqlCommand(sql3, con);
+                    var maxid = cmd.ExecuteScalar() as string;
+
+
+                    if (maxid == dataGridView1.Rows[i].Cells[6].Value)
+                    {
+                        MessageBox.Show("ProductID Is Already Have");
+                    }
+                    else
+                    {
+
+                        cmd = new SqlCommand("insert into reg_gold (Image,Date,Time,SaleVoucher,Enter_Remark,PurVoucher,ProductID,GoldType,GoldPrice,Item," +
+                         "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee,Shop,Form,Counter) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
+                         "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee,@Shop,@Form,@Counter)", con);
+
+                        cmd2 = new SqlCommand("insert into closing_stock (Image,Date,Time,SaleVoucher,Enter_Remark,PurVoucher,ProductID,GoldType,GoldPrice,Item," +
+                        "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee,Shop,Form,Counter) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
+                        "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee,@Shop,@Form,@Counter)", con);
+
+                        cmd3 = new SqlCommand("insert into all_stocks (Image,Date,Time,SaleVoucher,Enter_Remark,PurVoucher,ProductID,GoldType,GoldPrice,Item," +
+                        "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee,Shop,Form,Counter) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
+                        "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee,@Shop,@Form,@Counter)", con);
+
+                        byte[] img = (byte[])dataGridView1.Rows[i].Cells[0].Value;
+                        cmd.Parameters.AddWithValue("@Image", img);
+                        cmd.Parameters.AddWithValue("@Date", dataGridView1.Rows[i].Cells[1].Value);
+                        cmd.Parameters.AddWithValue("@Time", dataGridView1.Rows[i].Cells[2].Value);
+                        cmd.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value);
+                        cmd.Parameters.AddWithValue("@Enter_Remark", dataGridView1.Rows[i].Cells[4].Value);
+                        cmd.Parameters.AddWithValue("@PurVoucher", dataGridView1.Rows[i].Cells[5].Value);
+                        cmd.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value);
+                        cmd.Parameters.AddWithValue("@GoldType", dataGridView1.Rows[i].Cells[7].Value);
+                        cmd.Parameters.AddWithValue("@GoldPrice", dataGridView1.Rows[i].Cells[8].Value);
+                        cmd.Parameters.AddWithValue("@Item", dataGridView1.Rows[i].Cells[9].Value);
+                        cmd.Parameters.AddWithValue("@ItemName", dataGridView1.Rows[i].Cells[10].Value);
+                        cmd.Parameters.AddWithValue("@Gm", dataGridView1.Rows[i].Cells[11].Value);
+                        cmd.Parameters.AddWithValue("@K", dataGridView1.Rows[i].Cells[12].Value);
+                        cmd.Parameters.AddWithValue("@P", dataGridView1.Rows[i].Cells[13].Value);
+                        cmd.Parameters.AddWithValue("@Y", dataGridView1.Rows[i].Cells[14].Value);
+                        cmd.Parameters.AddWithValue("@S", dataGridView1.Rows[i].Cells[15].Value);
+                        cmd.Parameters.AddWithValue("@WK", dataGridView1.Rows[i].Cells[16].Value);
+                        cmd.Parameters.AddWithValue("@WP", dataGridView1.Rows[i].Cells[17].Value);
+                        cmd.Parameters.AddWithValue("@WY", dataGridView1.Rows[i].Cells[18].Value);
+                        cmd.Parameters.AddWithValue("@WS", dataGridView1.Rows[i].Cells[19].Value);
+                        cmd.Parameters.AddWithValue("@TK", dataGridView1.Rows[i].Cells[20].Value);
+                        cmd.Parameters.AddWithValue("@TP", dataGridView1.Rows[i].Cells[21].Value);
+                        cmd.Parameters.AddWithValue("@TY", dataGridView1.Rows[i].Cells[22].Value);
+                        cmd.Parameters.AddWithValue("@TS", dataGridView1.Rows[i].Cells[23].Value);
+                        cmd.Parameters.AddWithValue("@Mcost", dataGridView1.Rows[i].Cells[24].Value);
+                        cmd.Parameters.AddWithValue("@Repamt", dataGridView1.Rows[i].Cells[25].Value);
+                        cmd.Parameters.AddWithValue("@Totalamt", dataGridView1.Rows[i].Cells[26].Value);
+                        cmd.Parameters.AddWithValue("@Remark", dataGridView1.Rows[i].Cells[27].Value);
+                        cmd.Parameters.AddWithValue("@Employee", dataGridView1.Rows[i].Cells[28].Value);
+                        cmd.Parameters.AddWithValue("@Shop", dataGridView1.Rows[i].Cells[29].Value);
+                        cmd.Parameters.AddWithValue("@Form", dataGridView1.Rows[i].Cells[30].Value);
+                        cmd.Parameters.AddWithValue("@Counter", dataGridView1.Rows[i].Cells[31].Value);
+
+                        cmd2.Parameters.AddWithValue("@Image", img);
+                        cmd2.Parameters.AddWithValue("@Date", dataGridView1.Rows[i].Cells[1].Value);
+                        cmd2.Parameters.AddWithValue("@Time", dataGridView1.Rows[i].Cells[2].Value);
+                        cmd2.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value);
+                        cmd2.Parameters.AddWithValue("@Enter_Remark", dataGridView1.Rows[i].Cells[4].Value);
+                        cmd2.Parameters.AddWithValue("@PurVoucher", dataGridView1.Rows[i].Cells[5].Value);
+                        cmd2.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value);
+                        cmd2.Parameters.AddWithValue("@GoldType", dataGridView1.Rows[i].Cells[7].Value);
+                        cmd2.Parameters.AddWithValue("@GoldPrice", dataGridView1.Rows[i].Cells[8].Value);
+                        cmd2.Parameters.AddWithValue("@Item", dataGridView1.Rows[i].Cells[9].Value);
+                        cmd2.Parameters.AddWithValue("@ItemName", dataGridView1.Rows[i].Cells[10].Value);
+                        cmd2.Parameters.AddWithValue("@Gm", dataGridView1.Rows[i].Cells[11].Value);
+                        cmd2.Parameters.AddWithValue("@K", dataGridView1.Rows[i].Cells[12].Value);
+                        cmd2.Parameters.AddWithValue("@P", dataGridView1.Rows[i].Cells[13].Value);
+                        cmd2.Parameters.AddWithValue("@Y", dataGridView1.Rows[i].Cells[14].Value);
+                        cmd2.Parameters.AddWithValue("@S", dataGridView1.Rows[i].Cells[15].Value);
+                        cmd2.Parameters.AddWithValue("@WK", dataGridView1.Rows[i].Cells[16].Value);
+                        cmd2.Parameters.AddWithValue("@WP", dataGridView1.Rows[i].Cells[17].Value);
+                        cmd2.Parameters.AddWithValue("@WY", dataGridView1.Rows[i].Cells[18].Value);
+                        cmd2.Parameters.AddWithValue("@WS", dataGridView1.Rows[i].Cells[19].Value);
+                        cmd2.Parameters.AddWithValue("@TK", dataGridView1.Rows[i].Cells[20].Value);
+                        cmd2.Parameters.AddWithValue("@TP", dataGridView1.Rows[i].Cells[21].Value);
+                        cmd2.Parameters.AddWithValue("@TY", dataGridView1.Rows[i].Cells[22].Value);
+                        cmd2.Parameters.AddWithValue("@TS", dataGridView1.Rows[i].Cells[23].Value);
+                        cmd2.Parameters.AddWithValue("@Mcost", dataGridView1.Rows[i].Cells[24].Value);
+                        cmd2.Parameters.AddWithValue("@Repamt", dataGridView1.Rows[i].Cells[25].Value);
+                        cmd2.Parameters.AddWithValue("@Totalamt", dataGridView1.Rows[i].Cells[26].Value);
+                        cmd2.Parameters.AddWithValue("@Remark", dataGridView1.Rows[i].Cells[27].Value);
+                        cmd2.Parameters.AddWithValue("@Employee", dataGridView1.Rows[i].Cells[28].Value);
+                        cmd2.Parameters.AddWithValue("@Shop", dataGridView1.Rows[i].Cells[29].Value);
+                        cmd2.Parameters.AddWithValue("@Form", dataGridView1.Rows[i].Cells[30].Value);
+                        cmd2.Parameters.AddWithValue("@Counter", dataGridView1.Rows[i].Cells[31].Value);
+
+                        cmd3.Parameters.AddWithValue("@Image", img);
+                        cmd3.Parameters.AddWithValue("@Date", dataGridView1.Rows[i].Cells[1].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@Time", dataGridView1.Rows[i].Cells[2].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@Enter_Remark", dataGridView1.Rows[i].Cells[4].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@PurVoucher", dataGridView1.Rows[i].Cells[5].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@GoldType", dataGridView1.Rows[i].Cells[7].Value.ToString());
+                        cmd3.Parameters.AddWithValue("@GoldPrice", dataGridView1.Rows[i].Cells[8].Value);
+                        cmd3.Parameters.AddWithValue("@Item", dataGridView1.Rows[i].Cells[9].Value);
+                        cmd3.Parameters.AddWithValue("@ItemName", dataGridView1.Rows[i].Cells[10].Value);
+                        cmd3.Parameters.AddWithValue("@Gm", dataGridView1.Rows[i].Cells[11].Value);
+                        cmd3.Parameters.AddWithValue("@K", dataGridView1.Rows[i].Cells[12].Value);
+                        cmd3.Parameters.AddWithValue("@P", dataGridView1.Rows[i].Cells[13].Value);
+                        cmd3.Parameters.AddWithValue("@Y", dataGridView1.Rows[i].Cells[14].Value);
+                        cmd3.Parameters.AddWithValue("@S", dataGridView1.Rows[i].Cells[15].Value);
+                        cmd3.Parameters.AddWithValue("@WK", dataGridView1.Rows[i].Cells[16].Value);
+                        cmd3.Parameters.AddWithValue("@WP", dataGridView1.Rows[i].Cells[17].Value);
+                        cmd3.Parameters.AddWithValue("@WY", dataGridView1.Rows[i].Cells[18].Value);
+                        cmd3.Parameters.AddWithValue("@WS", dataGridView1.Rows[i].Cells[19].Value);
+                        cmd3.Parameters.AddWithValue("@TK", dataGridView1.Rows[i].Cells[20].Value);
+                        cmd3.Parameters.AddWithValue("@TP", dataGridView1.Rows[i].Cells[21].Value);
+                        cmd3.Parameters.AddWithValue("@TY", dataGridView1.Rows[i].Cells[22].Value);
+                        cmd3.Parameters.AddWithValue("@TS", dataGridView1.Rows[i].Cells[23].Value);
+                        cmd3.Parameters.AddWithValue("@Mcost", dataGridView1.Rows[i].Cells[24].Value);
+                        cmd3.Parameters.AddWithValue("@Repamt", dataGridView1.Rows[i].Cells[25].Value);
+                        cmd3.Parameters.AddWithValue("@Totalamt", dataGridView1.Rows[i].Cells[26].Value);
+                        cmd3.Parameters.AddWithValue("@Remark", dataGridView1.Rows[i].Cells[27].Value);
+                        cmd3.Parameters.AddWithValue("@Employee", dataGridView1.Rows[i].Cells[28].Value);
+                        cmd3.Parameters.AddWithValue("@Shop", dataGridView1.Rows[i].Cells[29].Value);
+                        cmd3.Parameters.AddWithValue("@Form", dataGridView1.Rows[i].Cells[30].Value);
+                        cmd3.Parameters.AddWithValue("@Counter", dataGridView1.Rows[i].Cells[31].Value);
+
+                        primarykey = Convert.ToInt32(cmd.ExecuteScalar());
+                        primarykey = Convert.ToInt32(cmd2.ExecuteScalar());
+                        primarykey = Convert.ToInt32(cmd3.ExecuteScalar());
+
+                    }
+                    con.Close();
+
                 }
-                else
-                {
-
-                    cmd = new SqlCommand("insert into reg_gold(Image,Date,Time,SaleVoucher,Enter_Remark,PurVoucher,ProductID,GoldType,GoldPrice,Item," +
-                    "ItemName,Gm,K,P,Y,S,WK,WP,WY,WS,TK,TP,TY,TS,Mcost,Repamt,Totalamt,Remark,Employee,Shop,Form) values(@Image,@Date,@Time,@SaleVoucher,@Enter_Remark,@PurVoucher,@ProductID,@GoldType,@GoldPrice,@Item," +
-                    "@ItemName,@Gm,@K,@P,@Y,@S,@WK,@WP,@WY,@WS,@TK,@TP,@TY,@TS,@Mcost,@Repamt,@Totalamt,@Remark,@Employee,@Shop,@Form)", con);
-
-                    byte[] img = (byte[])dataGridView1.Rows[i].Cells[0].Value;
-                    cmd.Parameters.AddWithValue("@Image", img);
-                    cmd.Parameters.AddWithValue("@Date", dataGridView1.Rows[i].Cells[1].Value);
-                    cmd.Parameters.AddWithValue("@Time", dataGridView1.Rows[i].Cells[2].Value);
-                    cmd.Parameters.AddWithValue("@SaleVoucher", dataGridView1.Rows[i].Cells[3].Value);
-                    cmd.Parameters.AddWithValue("@Enter_Remark", dataGridView1.Rows[i].Cells[4].Value);
-                    cmd.Parameters.AddWithValue("@PurVoucher", dataGridView1.Rows[i].Cells[5].Value);
-                    cmd.Parameters.AddWithValue("@ProductID", dataGridView1.Rows[i].Cells[6].Value);
-                    cmd.Parameters.AddWithValue("@GoldType", dataGridView1.Rows[i].Cells[7].Value);
-                    cmd.Parameters.AddWithValue("@GoldPrice", dataGridView1.Rows[i].Cells[8].Value);
-                    cmd.Parameters.AddWithValue("@Item", dataGridView1.Rows[i].Cells[9].Value);
-                    cmd.Parameters.AddWithValue("@ItemName", dataGridView1.Rows[i].Cells[10].Value);
-                    cmd.Parameters.AddWithValue("@Gm", dataGridView1.Rows[i].Cells[11].Value);
-                    cmd.Parameters.AddWithValue("@K", dataGridView1.Rows[i].Cells[12].Value);
-                    cmd.Parameters.AddWithValue("@P", dataGridView1.Rows[i].Cells[13].Value);
-                    cmd.Parameters.AddWithValue("@Y", dataGridView1.Rows[i].Cells[14].Value);
-                    cmd.Parameters.AddWithValue("@S", dataGridView1.Rows[i].Cells[15].Value);
-                    cmd.Parameters.AddWithValue("@WK", dataGridView1.Rows[i].Cells[16].Value);
-                    cmd.Parameters.AddWithValue("@WP", dataGridView1.Rows[i].Cells[17].Value);
-                    cmd.Parameters.AddWithValue("@WY", dataGridView1.Rows[i].Cells[18].Value);
-                    cmd.Parameters.AddWithValue("@WS", dataGridView1.Rows[i].Cells[19].Value);
-                    cmd.Parameters.AddWithValue("@TK", dataGridView1.Rows[i].Cells[20].Value);
-                    cmd.Parameters.AddWithValue("@TP", dataGridView1.Rows[i].Cells[21].Value);
-                    cmd.Parameters.AddWithValue("@TY", dataGridView1.Rows[i].Cells[22].Value);
-                    cmd.Parameters.AddWithValue("@TS", dataGridView1.Rows[i].Cells[23].Value);
-                    cmd.Parameters.AddWithValue("@Mcost", dataGridView1.Rows[i].Cells[24].Value);
-                    cmd.Parameters.AddWithValue("@Repamt", dataGridView1.Rows[i].Cells[25].Value);
-                    cmd.Parameters.AddWithValue("@Totalamt", dataGridView1.Rows[i].Cells[26].Value);
-                    cmd.Parameters.AddWithValue("@Remark", dataGridView1.Rows[i].Cells[27].Value);
-                    cmd.Parameters.AddWithValue("@Employee", dataGridView1.Rows[i].Cells[28].Value);
-                    cmd.Parameters.AddWithValue("@Shop", dataGridView1.Rows[i].Cells[29].Value);
-                    cmd.Parameters.AddWithValue("@Form", dataGridView1.Rows[i].Cells[30].Value);
-
-
-                    primarykey = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    /*cmd.ExecuteNonQuery();*/
-                    MessageBox.Show("success");
-                }
-
-                con.Close();
+                MessageBox.Show("success");
                 dataGridView1.Rows.Clear();
-            }
-           
-            /*adpt = new SqlDataAdapter("select * from g_register", con);
-            dt = new DataTable();
-            adpt.Fill(dt);
-            dataGridView2.DataSource = dt;*/
 
+            } 
+            
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message); 
+            }
+            
         }
         private void validatefunction()
         {
@@ -723,6 +804,7 @@ namespace GHF
 
         public void clearform()
         {
+           
             cmb_item.Items.Clear();
             cmb_itemname.Items.Clear();
             txt_gm.Text = "0";
@@ -733,6 +815,8 @@ namespace GHF
             txt_mcost.Text = "0";
             txt_rep.Text = "0";
             txt_remark.Text = "";
+            lbl_totalgm.Text = "0";
+            lbl_totalamt.Text = "0";
 
 
         }
@@ -1096,7 +1180,7 @@ namespace GHF
         private void History_addGrid(string date, string time, string Voucher, string enter_remark, string purvoc, string barcode,
             string goldtype, string gold_price, string items, string itemname, string gm, string k, string p, string y, string s,
             string wk, string wp, string wy, string ws, string totalk, string totalp, string totaly, string totals, string mcost,
-            string repamt, string totalamt, string remark, string employee,string shop,string form)
+            string repamt, string totalamt, string remark, string employee,string shop,string form,string type)
         {
             try
             {
@@ -1110,7 +1194,7 @@ namespace GHF
                 newRow.Cells[17].Value = wp; newRow.Cells[18].Value = wy; newRow.Cells[19].Value = ws; newRow.Cells[20].Value = totalk;
                 newRow.Cells[21].Value = totalp; newRow.Cells[22].Value = totaly; newRow.Cells[23].Value = totals; newRow.Cells[24].Value = mcost;
                 newRow.Cells[25].Value = repamt; newRow.Cells[26].Value = totalamt; newRow.Cells[27].Value = remark; newRow.Cells[28].Value = employee;
-                newRow.Cells[29].Value = shop; newRow.Cells[30].Value = form;
+                newRow.Cells[29].Value = shop; newRow.Cells[30].Value = form; newRow.Cells[31].Value = type;
 
                 dataGridView1.Rows.Add(newRow);
                 MemoryStream mmst = new MemoryStream();
@@ -1139,7 +1223,7 @@ namespace GHF
 
                     History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
                         cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
-                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee,txt_shop.Text,textBox2.Text);
+                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee,txt_shop.Text,textBox2.Text, txt_counter.Text);
 
                     cmb_item.Focus();
                     clearform();
@@ -1293,52 +1377,6 @@ namespace GHF
             preview frm = new preview();
             frm.ShowDialog();
 
-
-            /* Form fromoverlay = new Form();
-             try
-             {  
-                 using (test frm = new test())
-                 { 
-                     fromoverlay.StartPosition = FormStartPosition.Manual;
-                     fromoverlay.FormBorderStyle = FormBorderStyle.None;
-                     fromoverlay.Opacity = 50d;
-                     fromoverlay.BackColor = System.Drawing.Color.Black; ;
-                     fromoverlay.WindowState = FormWindowState.Maximized;
-                     fromoverlay.TopMost = true;
-                     fromoverlay.Location = this.Location;
-                     fromoverlay.ShowInTaskbar = false;
-                     fromoverlay.Show();
-                     frm.Owner = fromoverlay;
-                     fromoverlay.ShowDialog();
-                     fromoverlay.Dispose();
-                 }
-             }
-             catch (Exception ex) { MessageBox.Show(ex.Message); }
-             finally { fromoverlay.Dispose(); }*/
-
-
-            /*using Form frm3 = preview();
-            {
-                //create an overlay form  
-                Form overlayForm = new Form();
-                overlayForm.StartPosition = FormStartPosition.Manual;
-                overlayForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                overlayForm.Opacity = .10d;
-                overlayForm.BackColor = System.Drawing.Color.Black;
-                overlayForm.Size = this.Size;
-                overlayForm.Location = this.Location;
-                overlayForm.ShowInTaskbar = true;
-                overlayForm.Show();
-
-                //Show the dialog  
-                frm3.Owner = overlayForm;
-                frm3.ShowDialog();
-
-                //Get rid of the overlay form  
-                overlayForm.Dispose();
-            }
-            Form frm3 = new preview();
-            frm3.ShowDialog();*/
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -1475,7 +1513,7 @@ namespace GHF
         private int selectedRowIndex = -1;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 29 && e.RowIndex > -1)
+            if (e.ColumnIndex == 32 && e.RowIndex > -1)
             {
                 /*Form frm3 = new register_edit();
                 frm3.ShowDialog();*/

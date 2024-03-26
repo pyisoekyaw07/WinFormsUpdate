@@ -38,6 +38,7 @@
             // 
             // CS_Table
             // 
+            CS_Table.AllowUserToAddRows = false;
             CS_Table.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CS_Table.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CS_Table.Location = new Point(15, 17);
