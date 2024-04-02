@@ -36,13 +36,13 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1361, 500);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.Size = new Size(328, 328);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -50,7 +50,8 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 666);
+            label1.Dock = DockStyle.Bottom;
+            label1.Location = new Point(0, 675);
             label1.Name = "label1";
             label1.Size = new Size(75, 21);
             label1.TabIndex = 1;

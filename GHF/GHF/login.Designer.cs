@@ -59,6 +59,7 @@
             // grp_login
             // 
             grp_login.Anchor = AnchorStyles.None;
+            grp_login.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             grp_login.BackColor = SystemColors.Control;
             grp_login.Controls.Add(label6);
             grp_login.Controls.Add(label5);
@@ -72,7 +73,7 @@
             grp_login.Controls.Add(label1);
             grp_login.Location = new Point(981, 201);
             grp_login.Name = "grp_login";
-            grp_login.Size = new Size(397, 365);
+            grp_login.Size = new Size(356, 348);
             grp_login.TabIndex = 1;
             grp_login.TabStop = false;
             // 
@@ -164,7 +165,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Pyidaungsu", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(143, 24);
+            label1.Location = new Point(119, 24);
             label1.Name = "label1";
             label1.Size = new Size(119, 60);
             label1.TabIndex = 0;
