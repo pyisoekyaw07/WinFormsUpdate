@@ -47,10 +47,11 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1, -1);
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1000, 700);
+            pictureBox1.Size = new Size(1459, 713);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -175,7 +176,7 @@
             ClientSize = new Size(1459, 713);
             Controls.Add(grp_login);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "login";
