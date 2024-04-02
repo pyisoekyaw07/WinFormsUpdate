@@ -47,16 +47,18 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(-36, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1459, 713);
+            pictureBox1.Size = new Size(1011, 701);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // grp_login
             // 
+            grp_login.Anchor = AnchorStyles.None;
             grp_login.BackColor = SystemColors.Control;
             grp_login.Controls.Add(label6);
             grp_login.Controls.Add(label5);
@@ -68,7 +70,7 @@
             grp_login.Controls.Add(txt_password);
             grp_login.Controls.Add(txt_username);
             grp_login.Controls.Add(label1);
-            grp_login.Location = new Point(1008, 169);
+            grp_login.Location = new Point(981, 201);
             grp_login.Name = "grp_login";
             grp_login.Size = new Size(397, 365);
             grp_login.TabIndex = 1;
@@ -173,7 +175,7 @@
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1459, 713);
+            ClientSize = new Size(1386, 713);
             Controls.Add(grp_login);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
