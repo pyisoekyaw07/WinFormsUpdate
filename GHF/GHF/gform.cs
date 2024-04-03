@@ -1560,6 +1560,112 @@ namespace GHF
                 /* textBox1.Text = open.FileName;*/
             }
         }
+
+        private void ico_add_Click(object sender, EventArgs e)
+        {
+            if (txt_edit_check.Text == "0")
+            {
+                if (cmb_remark.Text == "" || cmb_gt.Text == "" || cmb_item.Text == "" || cmb_itemname.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+                {
+                    validatefunction();
+                }
+                else
+                {
+                    string empolyee = "";
+                    empolyee = Form2.setvalueemployee;
+
+
+                    History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
+                        cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
+                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee, txt_shop.Text, textBox2.Text, txt_counter.Text);
+
+                    cmb_item.Focus();
+                    clearform();
+
+                    /*show_reg_piddata();*/
+                    /* DGW_register.Rows.Add(textBox25.Text, textBox29.Text);*/
+                    /*DGW_register.AllowUserToAddRows = false;*/
+
+                    string shop = login.shopvalue;
+                    string date = DateTime.Now.ToString("ddMMyy");
+                    txt_ince_proid.Text = txt_barcode.Text;
+                    string[] temparray = txt_ince_proid.Text.Split('-');
+                    txt_temparray_proid.Text = shop + date;
+                    txt_incre_pid.Text = temparray[1];
+                    int i = Convert.ToInt32(txt_incre_pid.Text);
+                    i++;
+                    string autopoid = txt_temparray_proid.Text + "-" + String.Format("{0:0000}", i);
+                    txt_barcode.Text = autopoid;
+
+                    totalgm();
+                    totalamt();
+                    txt_pur_no.Enabled = false;
+                    cmb_remark.Enabled = false;
+                    cmb_gt.Enabled = false;
+
+                    pictureBox.Image = Properties.Resources.ghf3;
+                    txt_edit_check.Text = "0";
+                }
+            }
+
+            if (txt_edit_check.Text == "1")
+            {
+
+
+                if (cmb_remark.Text == "" || cmb_gt.Text == "" || cmb_item.Text == "" || cmb_itemname.Text == "" || txt_gm.Text == "" || txt_gm.Text == "0" || txt_totalamt.Text == "" || txt_totalamt.Text == "0")
+                {
+                    validatefunction();
+                }
+                else if (selectedRowIndex >= 0)
+                {
+                    string empolyee = "";
+                    empolyee = Form2.setvalueemployee;
+                    MemoryStream mmst = new MemoryStream();
+                    pictureBox.Image.Save(mmst, pictureBox.Image.RawFormat);
+                    byte[] img = mmst.ToArray();
+
+                    dataGridView1.Rows[selectedRowIndex].Cells[0].Value = img;
+                    dataGridView1.Rows[selectedRowIndex].Cells[1].Value = txt_date.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[2].Value = txt_time.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[4].Value = cmb_remark.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[5].Value = txt_pur_no.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[7].Value = cmb_gt.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[9].Value = cmb_item.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[10].Value = cmb_itemname.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[11].Value = txt_gm.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[12].Value = txt_k.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[13].Value = txt_p.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[14].Value = txt_y.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[15].Value = txt_s.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[16].Value = txt_WK.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[17].Value = txt_WP.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[18].Value = txt_WY.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[19].Value = txt_WC.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[20].Value = total_K.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[21].Value = total_P.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[22].Value = total_Y.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[23].Value = total_S.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[24].Value = txt_mcost.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[25].Value = txt_rep.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[26].Value = txt_totalamt.Text;
+                    dataGridView1.Rows[selectedRowIndex].Cells[27].Value = txt_remark.Text;
+
+                    selectedRowIndex = -1;
+
+                    cmb_item.Focus();
+                    clearform();
+                    totalgm();
+                    totalamt();
+
+                    txt_pur_no.Enabled = false;
+                    cmb_remark.Enabled = false;
+                    cmb_gt.Enabled = false;
+
+                    pictureBox.Image = Properties.Resources.ghf3;
+                    txt_edit_check.Text = "0";
+                }
+            }
+        }
     }
 }
 
