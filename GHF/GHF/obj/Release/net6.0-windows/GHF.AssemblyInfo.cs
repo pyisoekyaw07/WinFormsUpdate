@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GHF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2722a0a42c7c8efd674b07a94c8c4eb7dd91800e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dabc29831291ce15a9602d72b8c3a15cb59bba0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GHF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GHF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
