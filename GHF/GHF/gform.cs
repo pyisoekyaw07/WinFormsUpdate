@@ -36,13 +36,13 @@ namespace GHF
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
 
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
-        
 
-        SqlCommand cmd,cmd2,cmd3;
+
+        SqlCommand cmd, cmd2, cmd3;
         SqlDataAdapter adpt;
         DataTable dt;
         DataSet ds;
-        string sql,sql2,sql3;
+        string sql, sql2, sql3;
 
         public gform()
         {
@@ -408,7 +408,7 @@ namespace GHF
                 }
                 else
                 {
-                    
+
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader sr = null;
                     cmd.Connection = con;
@@ -461,7 +461,7 @@ namespace GHF
                 sql = $"SELECT ProductID FROM reg_gold WHERE Shop = @shoped ORDER BY ProductID DESC";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@shoped", shopvalue);
-               /* cmd = new SqlCommand(sql, Con1);*/
+                /* cmd = new SqlCommand(sql, Con1);*/
                 var maxid = cmd.ExecuteScalar() as string;
 
                 if (maxid == null)
@@ -527,7 +527,7 @@ namespace GHF
                 datevalue = serverdate.ToString();
             }
             con.Close();
-            if (datevalue=="" || DateTime.Parse(date,CultureInfo.InvariantCulture ) != DateTime.Parse(serverdate,CultureInfo.InvariantCulture))
+            if (datevalue == "" || DateTime.Parse(date, CultureInfo.InvariantCulture) != DateTime.Parse(serverdate, CultureInfo.InvariantCulture))
             {
                 string shop = login.shopvalue;
                 string date2 = DateTime.Now.ToString("ddMMyy");
@@ -544,7 +544,7 @@ namespace GHF
 
             }
 
-            else 
+            else
 
             {
                 pid();
@@ -554,7 +554,7 @@ namespace GHF
         }
         public void show_reg_piddata()/*Show Register Data To Table Function*/
         {
-            try 
+            try
             {
                 int primarykey;
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
@@ -699,13 +699,13 @@ namespace GHF
                 MessageBox.Show("success");
                 dataGridView1.Rows.Clear();
 
-            } 
-            
-            catch (Exception ex) 
-            { 
-                MessageBox.Show(ex.Message); 
             }
-            
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void validatefunction()
         {
@@ -804,7 +804,7 @@ namespace GHF
 
         public void clearform()
         {
-           
+
             cmb_item.Items.Clear();
             cmb_itemname.Items.Clear();
             txt_gm.Text = "0";
@@ -1180,7 +1180,7 @@ namespace GHF
         private void History_addGrid(string date, string time, string Voucher, string enter_remark, string purvoc, string barcode,
             string goldtype, string gold_price, string items, string itemname, string gm, string k, string p, string y, string s,
             string wk, string wp, string wy, string ws, string totalk, string totalp, string totaly, string totals, string mcost,
-            string repamt, string totalamt, string remark, string employee,string shop,string form,string type)
+            string repamt, string totalamt, string remark, string employee, string shop, string form, string type)
         {
             try
             {
@@ -1223,7 +1223,7 @@ namespace GHF
 
                     History_addGrid(txt_date.Text, txt_time.Text, txt_voucher.Text, cmb_remark.Text, txt_pur_no.Text, txt_barcode.Text, cmb_gt.Text, txt_goldprice.Text,
                         cmb_item.Text, cmb_itemname.Text, txt_gm.Text, txt_k.Text, txt_p.Text, txt_y.Text, txt_s.Text, txt_WK.Text, txt_WP.Text, txt_WY.Text, txt_WC.Text,
-                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee,txt_shop.Text,textBox2.Text, txt_counter.Text);
+                        total_K.Text, total_P.Text, total_Y.Text, total_S.Text, txt_mcost.Text, txt_rep.Text, txt_totalamt.Text, txt_remark.Text, empolyee, txt_shop.Text, textBox2.Text, txt_counter.Text);
 
                     cmb_item.Focus();
                     clearform();
@@ -1370,7 +1370,7 @@ namespace GHF
             }
 
         }
-        public static int parentX,parentY;
+        public static int parentX, parentY;
         private void btn_review_Click(object sender, EventArgs e)
         {
 
@@ -1543,6 +1543,23 @@ namespace GHF
 
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.Image = new Bitmap(open.FileName);
+                // image file path  
+                /* textBox1.Text = open.FileName;*/
+            }
+        }
     }
 }
 

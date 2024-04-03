@@ -347,7 +347,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -592,6 +592,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.Left;
             groupBox2.Controls.Add(textBox1);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(iconButton1);
@@ -609,7 +610,6 @@
             groupBox2.Controls.Add(label23);
             groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(label12);
-            groupBox2.Dock = DockStyle.Top;
             groupBox2.FlatStyle = FlatStyle.Popup;
             groupBox2.Location = new Point(0, 0);
             groupBox2.Name = "groupBox2";
