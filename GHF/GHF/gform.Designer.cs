@@ -182,7 +182,7 @@
             cmb_itemname.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_itemname.FormattingEnabled = true;
             cmb_itemname.IntegralHeight = false;
-            cmb_itemname.Location = new Point(158, 241);
+            cmb_itemname.Location = new Point(158, 268);
             cmb_itemname.Name = "cmb_itemname";
             cmb_itemname.Size = new Size(330, 30);
             cmb_itemname.TabIndex = 5;
@@ -195,7 +195,7 @@
             cmb_item.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_item.FormattingEnabled = true;
             cmb_item.IntegralHeight = false;
-            cmb_item.Location = new Point(157, 196);
+            cmb_item.Location = new Point(157, 214);
             cmb_item.Name = "cmb_item";
             cmb_item.Size = new Size(330, 30);
             cmb_item.TabIndex = 4;
@@ -208,7 +208,7 @@
             cmb_gt.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_gt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmb_gt.FormattingEnabled = true;
-            cmb_gt.Location = new Point(356, 152);
+            cmb_gt.Location = new Point(356, 162);
             cmb_gt.Name = "cmb_gt";
             cmb_gt.Size = new Size(131, 30);
             cmb_gt.TabIndex = 3;
@@ -248,7 +248,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(23, 585);
+            label19.Location = new Point(24, 672);
             label19.Name = "label19";
             label19.Size = new Size(90, 22);
             label19.TabIndex = 115;
@@ -258,7 +258,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(23, 543);
+            label18.Location = new Point(25, 622);
             label18.Name = "label18";
             label18.Size = new Size(100, 22);
             label18.TabIndex = 114;
@@ -268,7 +268,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(24, 497);
+            label17.Location = new Point(26, 568);
             label17.Name = "label17";
             label17.Size = new Size(46, 22);
             label17.TabIndex = 113;
@@ -278,7 +278,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(23, 449);
+            label16.Location = new Point(23, 510);
             label16.Name = "label16";
             label16.Size = new Size(90, 22);
             label16.TabIndex = 112;
@@ -288,7 +288,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(561, 142);
+            label15.Location = new Point(561, 165);
             label15.Name = "label15";
             label15.Size = new Size(87, 22);
             label15.TabIndex = 111;
@@ -298,7 +298,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(561, 55);
+            label14.Location = new Point(561, 66);
             label14.Name = "label14";
             label14.Size = new Size(112, 22);
             label14.TabIndex = 110;
@@ -327,7 +327,7 @@
             // btn_review
             // 
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(1275, 471);
+            btn_review.Location = new Point(1275, 513);
             btn_review.Name = "btn_review";
             btn_review.Size = new Size(136, 35);
             btn_review.TabIndex = 106;
@@ -359,7 +359,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(561, 477);
+            label21.Location = new Point(561, 519);
             label21.Name = "label21";
             label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
@@ -368,7 +368,7 @@
             // btn_cancel
             // 
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(1128, 471);
+            btn_cancel.Location = new Point(1128, 513);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(136, 35);
             btn_cancel.TabIndex = 105;
@@ -379,7 +379,7 @@
             // btn_save
             // 
             btn_save.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_save.Location = new Point(982, 471);
+            btn_save.Location = new Point(982, 513);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(136, 35);
             btn_save.TabIndex = 104;
@@ -391,7 +391,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(23, 204);
+            label10.Location = new Point(23, 222);
             label10.Name = "label10";
             label10.Size = new Size(102, 22);
             label10.TabIndex = 103;
@@ -402,7 +402,7 @@
             txt_barcode.BackColor = Color.FromArgb(173, 199, 217);
             txt_barcode.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_barcode.ForeColor = Color.Black;
-            txt_barcode.Location = new Point(705, 139);
+            txt_barcode.Location = new Point(705, 162);
             txt_barcode.Multiline = true;
             txt_barcode.Name = "txt_barcode";
             txt_barcode.ReadOnly = true;
@@ -414,7 +414,7 @@
             txt_counter.BackColor = Color.FromArgb(173, 199, 217);
             txt_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_counter.ForeColor = Color.Black;
-            txt_counter.Location = new Point(705, 51);
+            txt_counter.Location = new Point(705, 62);
             txt_counter.Multiline = true;
             txt_counter.Name = "txt_counter";
             txt_counter.ReadOnly = true;
@@ -447,7 +447,7 @@
             txt_totalamt.BackColor = Color.FromArgb(173, 199, 217);
             txt_totalamt.Enabled = false;
             txt_totalamt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_totalamt.Location = new Point(155, 579);
+            txt_totalamt.Location = new Point(157, 666);
             txt_totalamt.Multiline = true;
             txt_totalamt.Name = "txt_totalamt";
             txt_totalamt.Size = new Size(191, 30);
@@ -457,7 +457,7 @@
             // txt_rep
             // 
             txt_rep.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_rep.Location = new Point(156, 535);
+            txt_rep.Location = new Point(158, 614);
             txt_rep.Name = "txt_rep";
             txt_rep.Size = new Size(189, 30);
             txt_rep.TabIndex = 12;
@@ -468,7 +468,7 @@
             // txt_mcost
             // 
             txt_mcost.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_mcost.Location = new Point(155, 489);
+            txt_mcost.Location = new Point(157, 560);
             txt_mcost.Name = "txt_mcost";
             txt_mcost.Size = new Size(189, 30);
             txt_mcost.TabIndex = 11;
@@ -480,7 +480,7 @@
             // 
             total_S.BackColor = Color.FromArgb(173, 199, 217);
             total_S.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_S.Location = new Point(354, 446);
+            total_S.Location = new Point(354, 507);
             total_S.Multiline = true;
             total_S.Name = "total_S";
             total_S.ReadOnly = true;
@@ -492,7 +492,7 @@
             // 
             total_Y.BackColor = Color.FromArgb(173, 199, 217);
             total_Y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_Y.Location = new Point(289, 445);
+            total_Y.Location = new Point(289, 506);
             total_Y.Multiline = true;
             total_Y.Name = "total_Y";
             total_Y.ReadOnly = true;
@@ -504,7 +504,7 @@
             // 
             total_P.BackColor = Color.FromArgb(173, 199, 217);
             total_P.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_P.Location = new Point(223, 445);
+            total_P.Location = new Point(223, 506);
             total_P.Multiline = true;
             total_P.Name = "total_P";
             total_P.ReadOnly = true;
@@ -516,7 +516,7 @@
             // 
             total_K.BackColor = Color.FromArgb(173, 199, 217);
             total_K.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_K.Location = new Point(157, 445);
+            total_K.Location = new Point(157, 506);
             total_K.Multiline = true;
             total_K.Name = "total_K";
             total_K.ReadOnly = true;
@@ -527,7 +527,7 @@
             // txt_WC
             // 
             txt_WC.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WC.Location = new Point(353, 397);
+            txt_WC.Location = new Point(353, 451);
             txt_WC.Name = "txt_WC";
             txt_WC.Size = new Size(59, 30);
             txt_WC.TabIndex = 10;
@@ -539,7 +539,7 @@
             // txt_WY
             // 
             txt_WY.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WY.Location = new Point(288, 397);
+            txt_WY.Location = new Point(288, 451);
             txt_WY.Name = "txt_WY";
             txt_WY.Size = new Size(59, 30);
             txt_WY.TabIndex = 9;
@@ -551,7 +551,7 @@
             // txt_WP
             // 
             txt_WP.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WP.Location = new Point(222, 397);
+            txt_WP.Location = new Point(222, 451);
             txt_WP.Name = "txt_WP";
             txt_WP.Size = new Size(59, 30);
             txt_WP.TabIndex = 8;
@@ -563,7 +563,7 @@
             // txt_WK
             // 
             txt_WK.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WK.Location = new Point(156, 397);
+            txt_WK.Location = new Point(156, 451);
             txt_WK.Name = "txt_WK";
             txt_WK.Size = new Size(59, 30);
             txt_WK.TabIndex = 7;
@@ -576,7 +576,7 @@
             // 
             txt_s.BackColor = Color.FromArgb(173, 199, 217);
             txt_s.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_s.Location = new Point(352, 352);
+            txt_s.Location = new Point(352, 399);
             txt_s.Multiline = true;
             txt_s.Name = "txt_s";
             txt_s.ReadOnly = true;
@@ -588,7 +588,7 @@
             // 
             txt_y.BackColor = Color.FromArgb(173, 199, 217);
             txt_y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_y.Location = new Point(288, 352);
+            txt_y.Location = new Point(288, 399);
             txt_y.Multiline = true;
             txt_y.Name = "txt_y";
             txt_y.ReadOnly = true;
@@ -600,7 +600,7 @@
             // 
             txt_p.BackColor = Color.FromArgb(173, 199, 217);
             txt_p.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_p.Location = new Point(223, 352);
+            txt_p.Location = new Point(223, 399);
             txt_p.Multiline = true;
             txt_p.Name = "txt_p";
             txt_p.ReadOnly = true;
@@ -623,7 +623,7 @@
             txt_goldprice.BackColor = Color.FromArgb(173, 199, 217);
             txt_goldprice.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_goldprice.ForeColor = Color.Black;
-            txt_goldprice.Location = new Point(157, 152);
+            txt_goldprice.Location = new Point(157, 162);
             txt_goldprice.Multiline = true;
             txt_goldprice.Name = "txt_goldprice";
             txt_goldprice.ReadOnly = true;
@@ -635,7 +635,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(23, 160);
+            label8.Location = new Point(23, 170);
             label8.Name = "label8";
             label8.Size = new Size(48, 22);
             label8.TabIndex = 80;
@@ -646,7 +646,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(300, 158);
+            label9.Location = new Point(300, 168);
             label9.Name = "label9";
             label9.Size = new Size(47, 22);
             label9.TabIndex = 79;
@@ -657,7 +657,7 @@
             // 
             txt_k.BackColor = Color.FromArgb(173, 199, 217);
             txt_k.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_k.Location = new Point(157, 352);
+            txt_k.Location = new Point(157, 399);
             txt_k.Multiline = true;
             txt_k.Name = "txt_k";
             txt_k.ReadOnly = true;
@@ -669,7 +669,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(23, 403);
+            label7.Location = new Point(23, 457);
             label7.Name = "label7";
             label7.Size = new Size(80, 22);
             label7.TabIndex = 77;
@@ -678,7 +678,7 @@
             // txt_gm
             // 
             txt_gm.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_gm.Location = new Point(158, 287);
+            txt_gm.Location = new Point(158, 321);
             txt_gm.Name = "txt_gm";
             txt_gm.Size = new Size(125, 30);
             txt_gm.TabIndex = 6;
@@ -690,7 +690,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(24, 358);
+            label6.Location = new Point(24, 405);
             label6.Name = "label6";
             label6.Size = new Size(83, 22);
             label6.TabIndex = 75;
@@ -700,7 +700,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(25, 295);
+            label5.Location = new Point(25, 329);
             label5.Name = "label5";
             label5.Size = new Size(100, 22);
             label5.TabIndex = 74;
@@ -710,7 +710,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(24, 249);
+            label4.Location = new Point(24, 276);
             label4.Name = "label4";
             label4.Size = new Size(105, 22);
             label4.TabIndex = 73;
@@ -779,7 +779,7 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(561, 537);
+            groupBox1.Location = new Point(561, 696);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(556, 194);
             groupBox1.TabIndex = 130;
@@ -930,7 +930,7 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, shop, Form, type, coledit });
-            dataGridView1.Location = new Point(561, 226);
+            dataGridView1.Location = new Point(561, 268);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1186,7 +1186,7 @@
             label13.AutoSize = true;
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(171, 325);
+            label13.Location = new Point(171, 368);
             label13.Name = "label13";
             label13.Size = new Size(34, 22);
             label13.TabIndex = 202;
@@ -1197,7 +1197,7 @@
             label29.AutoSize = true;
             label29.BackColor = Color.Transparent;
             label29.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(244, 325);
+            label29.Location = new Point(244, 368);
             label29.Name = "label29";
             label29.Size = new Size(18, 22);
             label29.TabIndex = 203;
@@ -1208,7 +1208,7 @@
             label30.AutoSize = true;
             label30.BackColor = Color.Transparent;
             label30.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(303, 324);
+            label30.Location = new Point(303, 367);
             label30.Name = "label30";
             label30.Size = new Size(30, 22);
             label30.TabIndex = 204;
@@ -1219,7 +1219,7 @@
             label31.AutoSize = true;
             label31.BackColor = Color.Transparent;
             label31.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(367, 326);
+            label31.Location = new Point(367, 369);
             label31.Name = "label31";
             label31.Size = new Size(32, 22);
             label31.TabIndex = 205;
@@ -1230,7 +1230,7 @@
             lbl_totalgm.AutoSize = true;
             lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalgm.ForeColor = Color.DimGray;
-            lbl_totalgm.Location = new Point(683, 473);
+            lbl_totalgm.Location = new Point(683, 515);
             lbl_totalgm.Name = "lbl_totalgm";
             lbl_totalgm.Size = new Size(20, 27);
             lbl_totalgm.TabIndex = 124;
@@ -1241,7 +1241,7 @@
             lbl_totalamt.AutoSize = true;
             lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalamt.ForeColor = Color.DimGray;
-            lbl_totalamt.Location = new Point(866, 474);
+            lbl_totalamt.Location = new Point(866, 516);
             lbl_totalamt.Name = "lbl_totalamt";
             lbl_totalamt.Size = new Size(20, 27);
             lbl_totalamt.TabIndex = 124;
@@ -1253,7 +1253,7 @@
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(754, 478);
+            label33.Location = new Point(754, 520);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1271,7 +1271,7 @@
             textBox2.BackColor = Color.FromArgb(173, 199, 217);
             textBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(705, 94);
+            textBox2.Location = new Point(705, 110);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
@@ -1284,7 +1284,7 @@
             txt_shop.BackColor = Color.FromArgb(173, 199, 217);
             txt_shop.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_shop.ForeColor = Color.Black;
-            txt_shop.Location = new Point(705, 180);
+            txt_shop.Location = new Point(705, 212);
             txt_shop.Multiline = true;
             txt_shop.Name = "txt_shop";
             txt_shop.ReadOnly = true;
@@ -1295,7 +1295,7 @@
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(561, 100);
+            label32.Location = new Point(561, 116);
             label32.Name = "label32";
             label32.Size = new Size(108, 22);
             label32.TabIndex = 212;
@@ -1305,7 +1305,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(561, 185);
+            label22.Location = new Point(561, 217);
             label22.Name = "label22";
             label22.Size = new Size(65, 22);
             label22.TabIndex = 211;
@@ -1319,7 +1319,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(27, 734);
+            label20.Location = new Point(27, 840);
             label20.Name = "label20";
             label20.Size = new Size(56, 22);
             label20.TabIndex = 212;
@@ -1328,7 +1328,7 @@
             // txt_remark
             // 
             txt_remark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_remark.Location = new Point(160, 719);
+            txt_remark.Location = new Point(160, 825);
             txt_remark.Multiline = true;
             txt_remark.Name = "txt_remark";
             txt_remark.Size = new Size(327, 65);
@@ -1338,7 +1338,7 @@
             // 
             groupBox2.Controls.Add(pictureBox);
             groupBox2.ForeColor = Color.Black;
-            groupBox2.Location = new Point(158, 621);
+            groupBox2.Location = new Point(158, 717);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(329, 83);
             groupBox2.TabIndex = 216;
@@ -1349,7 +1349,7 @@
             // 
             label34.AutoSize = true;
             label34.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.Location = new Point(26, 656);
+            label34.Location = new Point(26, 752);
             label34.Name = "label34";
             label34.Size = new Size(42, 22);
             label34.TabIndex = 217;
@@ -1365,7 +1365,7 @@
             ico_add.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ico_add.IconSize = 40;
             ico_add.ImageAlign = ContentAlignment.MiddleLeft;
-            ico_add.Location = new Point(160, 801);
+            ico_add.Location = new Point(155, 901);
             ico_add.Name = "ico_add";
             ico_add.Size = new Size(330, 46);
             ico_add.TabIndex = 218;
@@ -1380,7 +1380,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1428, 892);
+            ClientSize = new Size(1428, 980);
             Controls.Add(ico_add);
             Controls.Add(label34);
             Controls.Add(groupBox2);
