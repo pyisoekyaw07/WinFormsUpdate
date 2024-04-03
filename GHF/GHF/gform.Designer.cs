@@ -210,7 +210,7 @@
             cmb_gt.FormattingEnabled = true;
             cmb_gt.Location = new Point(356, 142);
             cmb_gt.Name = "cmb_gt";
-            cmb_gt.Size = new Size(134, 30);
+            cmb_gt.Size = new Size(131, 30);
             cmb_gt.TabIndex = 3;
             cmb_gt.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             cmb_gt.Click += comboBox2_Click;
@@ -288,7 +288,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(1031, 14);
+            label15.Location = new Point(561, 142);
             label15.Name = "label15";
             label15.Size = new Size(87, 22);
             label15.TabIndex = 111;
@@ -298,7 +298,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(661, 57);
+            label14.Location = new Point(561, 55);
             label14.Name = "label14";
             label14.Size = new Size(112, 22);
             label14.TabIndex = 110;
@@ -319,7 +319,7 @@
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(-84, 35);
+            label11.Location = new Point(-203, 35);
             label11.Name = "label11";
             label11.Size = new Size(0, 22);
             label11.TabIndex = 107;
@@ -327,7 +327,7 @@
             // btn_review
             // 
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(1375, 395);
+            btn_review.Location = new Point(1275, 471);
             btn_review.Name = "btn_review";
             btn_review.Size = new Size(136, 35);
             btn_review.TabIndex = 106;
@@ -339,7 +339,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(661, 18);
+            label23.Location = new Point(561, 16);
             label23.Name = "label23";
             label23.Size = new Size(121, 22);
             label23.TabIndex = 128;
@@ -359,7 +359,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(661, 401);
+            label21.Location = new Point(561, 477);
             label21.Name = "label21";
             label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
@@ -368,7 +368,7 @@
             // btn_cancel
             // 
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(1228, 395);
+            btn_cancel.Location = new Point(1128, 471);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(136, 35);
             btn_cancel.TabIndex = 105;
@@ -379,7 +379,7 @@
             // btn_save
             // 
             btn_save.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_save.Location = new Point(1082, 395);
+            btn_save.Location = new Point(982, 471);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(136, 35);
             btn_save.TabIndex = 104;
@@ -402,7 +402,7 @@
             txt_barcode.BackColor = Color.FromArgb(173, 199, 217);
             txt_barcode.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_barcode.ForeColor = Color.Black;
-            txt_barcode.Location = new Point(1139, 11);
+            txt_barcode.Location = new Point(705, 139);
             txt_barcode.Multiline = true;
             txt_barcode.Name = "txt_barcode";
             txt_barcode.ReadOnly = true;
@@ -414,7 +414,7 @@
             txt_counter.BackColor = Color.FromArgb(173, 199, 217);
             txt_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_counter.ForeColor = Color.Black;
-            txt_counter.Location = new Point(805, 53);
+            txt_counter.Location = new Point(705, 51);
             txt_counter.Multiline = true;
             txt_counter.Name = "txt_counter";
             txt_counter.ReadOnly = true;
@@ -434,7 +434,7 @@
             txt_voucher.BackColor = Color.FromArgb(173, 199, 217);
             txt_voucher.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_voucher.ForeColor = Color.Black;
-            txt_voucher.Location = new Point(805, 14);
+            txt_voucher.Location = new Point(705, 12);
             txt_voucher.Multiline = true;
             txt_voucher.Name = "txt_voucher";
             txt_voucher.ReadOnly = true;
@@ -779,7 +779,7 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(661, 461);
+            groupBox1.Location = new Point(561, 537);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(556, 194);
             groupBox1.TabIndex = 130;
@@ -930,7 +930,7 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, shop, Form, type, coledit });
-            dataGridView1.Location = new Point(661, 150);
+            dataGridView1.Location = new Point(561, 226);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1230,7 +1230,7 @@
             lbl_totalgm.AutoSize = true;
             lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalgm.ForeColor = Color.DimGray;
-            lbl_totalgm.Location = new Point(783, 397);
+            lbl_totalgm.Location = new Point(683, 473);
             lbl_totalgm.Name = "lbl_totalgm";
             lbl_totalgm.Size = new Size(20, 27);
             lbl_totalgm.TabIndex = 124;
@@ -1241,7 +1241,7 @@
             lbl_totalamt.AutoSize = true;
             lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalamt.ForeColor = Color.DimGray;
-            lbl_totalamt.Location = new Point(966, 398);
+            lbl_totalamt.Location = new Point(866, 474);
             lbl_totalamt.Name = "lbl_totalamt";
             lbl_totalamt.Size = new Size(20, 27);
             lbl_totalamt.TabIndex = 124;
@@ -1253,7 +1253,7 @@
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(854, 402);
+            label33.Location = new Point(754, 478);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1271,7 +1271,7 @@
             textBox2.BackColor = Color.FromArgb(173, 199, 217);
             textBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(805, 96);
+            textBox2.Location = new Point(705, 94);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
@@ -1284,7 +1284,7 @@
             txt_shop.BackColor = Color.FromArgb(173, 199, 217);
             txt_shop.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_shop.ForeColor = Color.Black;
-            txt_shop.Location = new Point(1139, 52);
+            txt_shop.Location = new Point(705, 180);
             txt_shop.Multiline = true;
             txt_shop.Name = "txt_shop";
             txt_shop.ReadOnly = true;
@@ -1295,7 +1295,7 @@
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(661, 102);
+            label32.Location = new Point(561, 100);
             label32.Name = "label32";
             label32.Size = new Size(108, 22);
             label32.TabIndex = 212;
@@ -1305,7 +1305,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(1031, 57);
+            label22.Location = new Point(561, 185);
             label22.Name = "label22";
             label22.Size = new Size(65, 22);
             label22.TabIndex = 211;
@@ -1366,7 +1366,7 @@
             ico_add.ImageAlign = ContentAlignment.MiddleLeft;
             ico_add.Location = new Point(160, 777);
             ico_add.Name = "ico_add";
-            ico_add.Size = new Size(330, 41);
+            ico_add.Size = new Size(330, 46);
             ico_add.TabIndex = 218;
             ico_add.Text = "&ADD";
             ico_add.UseVisualStyleBackColor = false;
@@ -1379,7 +1379,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1547, 848);
+            ClientSize = new Size(1428, 848);
             Controls.Add(ico_add);
             Controls.Add(label34);
             Controls.Add(groupBox2);
