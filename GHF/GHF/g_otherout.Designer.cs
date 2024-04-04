@@ -100,7 +100,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             showdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             showdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            showdata.Location = new Point(36, 289);
+            showdata.Location = new Point(36, 291);
             showdata.Name = "showdata";
             showdata.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -172,9 +172,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(52, 667);
+            groupBox1.Location = new Point(52, 715);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(376, 217);
+            groupBox1.Size = new Size(376, 169);
             groupBox1.TabIndex = 268;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -329,7 +329,7 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(36, 438);
+            dataGridView1.Location = new Point(36, 437);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 30;
             dataGridView1.Size = new Size(1003, 212);
@@ -343,9 +343,9 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 20;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(869, 375);
+            iconButton1.Location = new Point(869, 377);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(170, 32);
+            iconButton1.Size = new Size(170, 41);
             iconButton1.TabIndex = 209;
             iconButton1.Text = "Add";
             iconButton1.UseVisualStyleBackColor = true;
@@ -371,7 +371,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(38, 132);
+            label12.Location = new Point(38, 126);
             label12.Name = "label12";
             label12.Size = new Size(87, 22);
             label12.TabIndex = 258;
@@ -381,9 +381,9 @@
             // 
             btn_review.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(869, 667);
+            btn_review.Location = new Point(869, 666);
             btn_review.Name = "btn_review";
-            btn_review.Size = new Size(170, 35);
+            btn_review.Size = new Size(170, 44);
             btn_review.TabIndex = 256;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = true;
@@ -402,9 +402,9 @@
             // 
             btn_cancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(693, 667);
+            btn_cancel.Location = new Point(693, 666);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(170, 35);
+            btn_cancel.Size = new Size(170, 44);
             btn_cancel.TabIndex = 255;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
@@ -414,9 +414,9 @@
             // 
             btn_out.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_out.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_out.Location = new Point(517, 667);
+            btn_out.Location = new Point(517, 674);
             btn_out.Name = "btn_out";
-            btn_out.Size = new Size(170, 35);
+            btn_out.Size = new Size(170, 44);
             btn_out.TabIndex = 254;
             btn_out.Text = "&Out Product";
             btn_out.UseVisualStyleBackColor = true;
@@ -425,7 +425,7 @@
             // txt_out_no
             // 
             txt_out_no.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_out_no.Location = new Point(38, 157);
+            txt_out_no.Location = new Point(38, 154);
             txt_out_no.Name = "txt_out_no";
             txt_out_no.PlaceholderText = "##080324-0002";
             txt_out_no.Size = new Size(207, 30);
@@ -495,7 +495,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(38, 215);
+            textBox1.Location = new Point(38, 216);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "error";
@@ -516,7 +516,7 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label4.BackColor = Color.DarkGray;
-            label4.Location = new Point(3, 124);
+            label4.Location = new Point(3, 114);
             label4.Name = "label4";
             label4.Size = new Size(1428, 2);
             label4.TabIndex = 282;
@@ -525,7 +525,7 @@
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.BackColor = Color.DarkGray;
-            label5.Location = new Point(3, 417);
+            label5.Location = new Point(3, 425);
             label5.Name = "label5";
             label5.Size = new Size(1428, 2);
             label5.TabIndex = 283;
@@ -536,7 +536,7 @@
             txt_counter.BorderStyle = BorderStyle.None;
             txt_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_counter.ForeColor = Color.Black;
-            txt_counter.Location = new Point(729, 79);
+            txt_counter.Location = new Point(729, 73);
             txt_counter.Multiline = true;
             txt_counter.Name = "txt_counter";
             txt_counter.ReadOnly = true;

@@ -365,7 +365,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(1079, 61);
+            label21.Location = new Point(913, 733);
             label21.Name = "label21";
             label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
@@ -794,9 +794,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(682, 609);
+            groupBox1.Location = new Point(558, 892);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(531, 129);
+            groupBox1.Size = new Size(531, 52);
             groupBox1.TabIndex = 130;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -1245,9 +1245,9 @@
             lbl_totalgm.BackColor = Color.FromArgb(255, 128, 128);
             lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalgm.ForeColor = Color.WhiteSmoke;
-            lbl_totalgm.Location = new Point(1079, 94);
+            lbl_totalgm.Location = new Point(913, 766);
             lbl_totalgm.Name = "lbl_totalgm";
-            lbl_totalgm.Size = new Size(130, 58);
+            lbl_totalgm.Size = new Size(162, 58);
             lbl_totalgm.TabIndex = 124;
             lbl_totalgm.Text = "0";
             lbl_totalgm.TextAlign = ContentAlignment.MiddleLeft;
@@ -1257,9 +1257,9 @@
             lbl_totalamt.BackColor = Color.FromArgb(255, 128, 0);
             lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalamt.ForeColor = Color.WhiteSmoke;
-            lbl_totalamt.Location = new Point(1243, 93);
+            lbl_totalamt.Location = new Point(1163, 765);
             lbl_totalamt.Name = "lbl_totalamt";
-            lbl_totalamt.Size = new Size(130, 58);
+            lbl_totalamt.Size = new Size(162, 58);
             lbl_totalamt.TabIndex = 124;
             lbl_totalamt.Text = "0";
             lbl_totalamt.TextAlign = ContentAlignment.MiddleLeft;
@@ -1270,7 +1270,7 @@
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(1243, 61);
+            label33.Location = new Point(1163, 733);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1395,9 +1395,9 @@
             lbl_qty.BackColor = Color.MediumOrchid;
             lbl_qty.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_qty.ForeColor = Color.WhiteSmoke;
-            lbl_qty.Location = new Point(914, 94);
+            lbl_qty.Location = new Point(662, 766);
             lbl_qty.Name = "lbl_qty";
-            lbl_qty.Size = new Size(130, 58);
+            lbl_qty.Size = new Size(162, 58);
             lbl_qty.TabIndex = 220;
             lbl_qty.Text = "0";
             lbl_qty.TextAlign = ContentAlignment.MiddleLeft;
@@ -1407,7 +1407,7 @@
             label36.AutoSize = true;
             label36.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label36.ForeColor = Color.DimGray;
-            label36.Location = new Point(914, 61);
+            label36.Location = new Point(661, 733);
             label36.Name = "label36";
             label36.Size = new Size(90, 22);
             label36.TabIndex = 219;
