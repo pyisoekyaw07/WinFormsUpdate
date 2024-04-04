@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gform));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             btn_add_photo = new Button();
             cmb_itemname = new ComboBox();
             cmb_item = new ComboBox();
@@ -335,7 +335,7 @@
             btn_review.ImageAlign = ContentAlignment.MiddleLeft;
             btn_review.Location = new Point(1257, 543);
             btn_review.Name = "btn_review";
-            btn_review.Size = new Size(156, 39);
+            btn_review.Size = new Size(156, 52);
             btn_review.TabIndex = 106;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = false;
@@ -365,7 +365,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(1079, 70);
+            label21.Location = new Point(1079, 61);
             label21.Name = "label21";
             label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
@@ -380,7 +380,7 @@
             btn_cancel.ImageAlign = ContentAlignment.MiddleLeft;
             btn_cancel.Location = new Point(1095, 543);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(156, 39);
+            btn_cancel.Size = new Size(156, 52);
             btn_cancel.TabIndex = 105;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = false;
@@ -396,7 +396,7 @@
             btn_save.ImageAlign = ContentAlignment.MiddleLeft;
             btn_save.Location = new Point(933, 543);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(156, 39);
+            btn_save.Size = new Size(156, 52);
             btn_save.TabIndex = 104;
             btn_save.Text = "&Save";
             btn_save.UseVisualStyleBackColor = false;
@@ -935,27 +935,27 @@
             dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle4.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(24, 47, 81);
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle1.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, shop, Form, type, coledit });
             dataGridView1.Location = new Point(561, 268);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView1.RowTemplate.Height = 30;
@@ -1185,10 +1185,10 @@
             // coledit
             // 
             coledit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle5.NullValue = resources.GetObject("dataGridViewCellStyle5.NullValue");
-            coledit.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
+            coledit.DefaultCellStyle = dataGridViewCellStyle2;
             coledit.Description = "Edit";
             coledit.HeaderText = "";
             coledit.Image = (Image)resources.GetObject("coledit.Image");
@@ -1270,7 +1270,7 @@
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(1243, 69);
+            label33.Location = new Point(1243, 61);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1384,7 +1384,7 @@
             ico_add.ImageAlign = ContentAlignment.MiddleLeft;
             ico_add.Location = new Point(244, 892);
             ico_add.Name = "ico_add";
-            ico_add.Size = new Size(155, 34);
+            ico_add.Size = new Size(155, 52);
             ico_add.TabIndex = 218;
             ico_add.Text = "&Add to table";
             ico_add.UseVisualStyleBackColor = false;
@@ -1407,7 +1407,7 @@
             label36.AutoSize = true;
             label36.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label36.ForeColor = Color.DimGray;
-            label36.Location = new Point(914, 70);
+            label36.Location = new Point(914, 61);
             label36.Name = "label36";
             label36.Size = new Size(90, 22);
             label36.TabIndex = 219;
