@@ -791,6 +791,10 @@ namespace GHF
                 lbl_totalgm.Text = gm.ToString();
             }
         }
+        public void totalqty()
+        {
+            lbl_qty.Text = dataGridView1.Rows.Count.ToString();
+        }
 
         public void totalamt()
         {
@@ -1385,6 +1389,13 @@ namespace GHF
             pid();
             invoiceid();
             dataGridView1.Rows.Clear();
+            lbl_totalamt.Text = "0";
+            lbl_totalgm.Text="0";
+            lbl_qty.Text = "0";
+            txt_pur_no.Enabled = true;
+            txt_pur_no.Text = "";
+            cmb_remark.Enabled = true;
+            cmb_gt.Enabled = true;
         }
 
         private void txt_YP_TextChanged(object sender, EventArgs e)
@@ -1599,6 +1610,7 @@ namespace GHF
 
                     totalgm();
                     totalamt();
+                    totalqty();
                     txt_pur_no.Enabled = false;
                     cmb_remark.Enabled = false;
                     cmb_gt.Enabled = false;
@@ -1656,6 +1668,7 @@ namespace GHF
                     clearform();
                     totalgm();
                     totalamt();
+                    totalqty();
 
                     txt_pur_no.Enabled = false;
                     cmb_remark.Enabled = false;

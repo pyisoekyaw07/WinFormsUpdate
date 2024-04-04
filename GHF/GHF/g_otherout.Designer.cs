@@ -56,20 +56,12 @@
             label32 = new Label();
             label22 = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
-            panel3 = new Panel();
             dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            lbl_totalgm = new Label();
-            label21 = new Label();
-            panel2 = new Panel();
-            lbl_totalamt = new Label();
-            label33 = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             errorProvider1 = new ErrorProvider(components);
             timer1 = new System.Windows.Forms.Timer(components);
             openFileDialog1 = new OpenFileDialog();
             label12 = new Label();
-            label11 = new Label();
             btn_review = new Button();
             label23 = new Label();
             btn_cancel = new Button();
@@ -80,17 +72,16 @@
             txt_time = new TextBox();
             label2 = new Label();
             txt_date = new TextBox();
-            groupBox2 = new GroupBox();
             textBox1 = new TextBox();
             label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            txt_counter = new TextBox();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)showdata).BeginInit();
             groupBox1.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // showdata
@@ -109,7 +100,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             showdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             showdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            showdata.Location = new Point(12, 114);
+            showdata.Location = new Point(36, 289);
             showdata.Name = "showdata";
             showdata.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -123,7 +114,7 @@
             showdata.RowHeadersVisible = false;
             showdata.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             showdata.RowTemplate.Height = 30;
-            showdata.Size = new Size(1245, 98);
+            showdata.Size = new Size(1003, 78);
             showdata.TabIndex = 201;
             // 
             // txt_shop
@@ -132,7 +123,7 @@
             txt_shop.BorderStyle = BorderStyle.None;
             txt_shop.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_shop.ForeColor = Color.Black;
-            txt_shop.Location = new Point(345, 64);
+            txt_shop.Location = new Point(379, 73);
             txt_shop.Multiline = true;
             txt_shop.Name = "txt_shop";
             txt_shop.ReadOnly = true;
@@ -181,9 +172,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(536, 569);
+            groupBox1.Location = new Point(52, 667);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(729, 112);
+            groupBox1.Size = new Size(376, 217);
             groupBox1.TabIndex = 268;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -305,7 +296,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(677, 24);
+            textBox2.Location = new Point(729, 22);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
@@ -317,7 +308,7 @@
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(563, 26);
+            label32.Location = new Point(615, 22);
             label32.Name = "label32";
             label32.Size = new Size(108, 22);
             label32.TabIndex = 277;
@@ -327,103 +318,22 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(213, 70);
+            label22.Location = new Point(253, 79);
             label22.Name = "label22";
             label22.Size = new Size(65, 22);
             label22.TabIndex = 276;
             label22.Text = "ဆိုင်အမှတ်";
             // 
-            // panel3
-            // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(dataGridView1);
-            panel3.Controls.Add(panel1);
-            panel3.Controls.Add(panel2);
-            panel3.Location = new Point(12, 299);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1248, 198);
-            panel3.TabIndex = 274;
-            // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
-            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-2, -2);
+            dataGridView1.Location = new Point(36, 438);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(1248, 198);
+            dataGridView1.Size = new Size(1003, 212);
             dataGridView1.TabIndex = 208;
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(lbl_totalgm);
-            panel1.Controls.Add(label21);
-            panel1.ForeColor = SystemColors.ButtonFace;
-            panel1.Location = new Point(1074, 373);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(253, 53);
-            panel1.TabIndex = 206;
-            // 
-            // lbl_totalgm
-            // 
-            lbl_totalgm.AutoSize = true;
-            lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_totalgm.ForeColor = Color.DimGray;
-            lbl_totalgm.Location = new Point(139, 9);
-            lbl_totalgm.Name = "lbl_totalgm";
-            lbl_totalgm.Size = new Size(20, 27);
-            lbl_totalgm.TabIndex = 124;
-            lbl_totalgm.Text = "0";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(17, 13);
-            label21.Name = "label21";
-            label21.Size = new Size(97, 22);
-            label21.TabIndex = 123;
-            label21.Text = "စုစုပေါင်းဂရမ်ချိန်";
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(lbl_totalamt);
-            panel2.Controls.Add(label33);
-            panel2.ForeColor = SystemColors.ButtonFace;
-            panel2.Location = new Point(1342, 373);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(253, 53);
-            panel2.TabIndex = 207;
-            // 
-            // lbl_totalamt
-            // 
-            lbl_totalamt.AutoSize = true;
-            lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_totalamt.ForeColor = Color.DimGray;
-            lbl_totalamt.Location = new Point(130, 9);
-            lbl_totalamt.Name = "lbl_totalamt";
-            lbl_totalamt.Size = new Size(20, 27);
-            lbl_totalamt.TabIndex = 124;
-            lbl_totalamt.Text = "0";
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(18, 13);
-            label33.Name = "label33";
-            label33.Size = new Size(89, 22);
-            label33.TabIndex = 123;
-            label33.Text = "စုစုပေါင်းတန်ဖိုး";
             // 
             // iconButton1
             // 
@@ -433,12 +343,13 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 20;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(1123, 221);
+            iconButton1.Location = new Point(869, 375);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(134, 33);
+            iconButton1.Size = new Size(170, 32);
             iconButton1.TabIndex = 209;
             iconButton1.Text = "Add";
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // errorProvider1
             // 
@@ -460,29 +371,19 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(563, 65);
+            label12.Location = new Point(38, 132);
             label12.Name = "label12";
             label12.Size = new Size(87, 22);
             label12.TabIndex = 258;
             label12.Text = "ဘားကုဒ်နံပါတ်";
             // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label11.AutoSize = true;
-            label11.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(113, 41);
-            label11.Name = "label11";
-            label11.Size = new Size(0, 22);
-            label11.TabIndex = 257;
-            // 
             // btn_review
             // 
             btn_review.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(1064, 514);
+            btn_review.Location = new Point(869, 667);
             btn_review.Name = "btn_review";
-            btn_review.Size = new Size(196, 35);
+            btn_review.Size = new Size(170, 35);
             btn_review.TabIndex = 256;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = true;
@@ -491,7 +392,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(213, 24);
+            label23.Location = new Point(252, 22);
             label23.Name = "label23";
             label23.Size = new Size(121, 22);
             label23.TabIndex = 267;
@@ -501,20 +402,21 @@
             // 
             btn_cancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(850, 514);
+            btn_cancel.Location = new Point(693, 667);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(196, 35);
+            btn_cancel.Size = new Size(170, 35);
             btn_cancel.TabIndex = 255;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_out
             // 
             btn_out.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_out.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_out.Location = new Point(633, 514);
+            btn_out.Location = new Point(517, 667);
             btn_out.Name = "btn_out";
-            btn_out.Size = new Size(196, 35);
+            btn_out.Size = new Size(170, 35);
             btn_out.TabIndex = 254;
             btn_out.Text = "&Out Product";
             btn_out.UseVisualStyleBackColor = true;
@@ -523,7 +425,7 @@
             // txt_out_no
             // 
             txt_out_no.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_out_no.Location = new Point(677, 61);
+            txt_out_no.Location = new Point(38, 157);
             txt_out_no.Name = "txt_out_no";
             txt_out_no.PlaceholderText = "##080324-0002";
             txt_out_no.Size = new Size(207, 30);
@@ -536,7 +438,7 @@
             txt_voucher.BorderStyle = BorderStyle.None;
             txt_voucher.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_voucher.ForeColor = Color.Black;
-            txt_voucher.Location = new Point(347, 20);
+            txt_voucher.Location = new Point(379, 22);
             txt_voucher.Multiline = true;
             txt_voucher.Name = "txt_voucher";
             txt_voucher.ReadOnly = true;
@@ -548,7 +450,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 24);
+            label1.Location = new Point(36, 22);
             label1.Name = "label1";
             label1.Size = new Size(40, 22);
             label1.TabIndex = 230;
@@ -560,7 +462,7 @@
             txt_time.BorderStyle = BorderStyle.None;
             txt_time.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_time.ForeColor = Color.Black;
-            txt_time.Location = new Point(65, 66);
+            txt_time.Location = new Point(88, 73);
             txt_time.Multiline = true;
             txt_time.Name = "txt_time";
             txt_time.ReadOnly = true;
@@ -571,7 +473,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(12, 70);
+            label2.Location = new Point(38, 79);
             label2.Name = "label2";
             label2.Size = new Size(40, 22);
             label2.TabIndex = 232;
@@ -583,73 +485,108 @@
             txt_date.BorderStyle = BorderStyle.None;
             txt_date.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txt_date.ForeColor = Color.Black;
-            txt_date.Location = new Point(65, 22);
+            txt_date.Location = new Point(87, 22);
             txt_date.Multiline = true;
             txt_date.Name = "txt_date";
             txt_date.ReadOnly = true;
             txt_date.Size = new Size(142, 28);
             txt_date.TabIndex = 231;
             // 
-            // groupBox2
-            // 
-            groupBox2.Anchor = AnchorStyles.Left;
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(iconButton1);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(txt_shop);
-            groupBox2.Controls.Add(showdata);
-            groupBox2.Controls.Add(txt_date);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(txt_time);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(txt_voucher);
-            groupBox2.Controls.Add(label32);
-            groupBox2.Controls.Add(txt_out_no);
-            groupBox2.Controls.Add(label22);
-            groupBox2.Controls.Add(label23);
-            groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(label12);
-            groupBox2.FlatStyle = FlatStyle.Popup;
-            groupBox2.Location = new Point(0, 0);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1405, 262);
-            groupBox2.TabIndex = 280;
-            groupBox2.TabStop = false;
-            // 
             // textBox1
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(953, 27);
+            textBox1.Location = new Point(38, 215);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(304, 65);
+            textBox1.PlaceholderText = "error";
+            textBox1.Size = new Size(290, 65);
             textBox1.TabIndex = 281;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(892, 26);
+            label3.Location = new Point(38, 190);
             label3.Name = "label3";
             label3.Size = new Size(56, 22);
             label3.TabIndex = 280;
             label3.Text = "မှတ်ချက်";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label4.BackColor = Color.DarkGray;
+            label4.Location = new Point(3, 124);
+            label4.Name = "label4";
+            label4.Size = new Size(1428, 2);
+            label4.TabIndex = 282;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label5.BackColor = Color.DarkGray;
+            label5.Location = new Point(3, 417);
+            label5.Name = "label5";
+            label5.Size = new Size(1428, 2);
+            label5.TabIndex = 283;
+            // 
+            // txt_counter
+            // 
+            txt_counter.BackColor = Color.FromArgb(173, 199, 217);
+            txt_counter.BorderStyle = BorderStyle.None;
+            txt_counter.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_counter.ForeColor = Color.Black;
+            txt_counter.Location = new Point(729, 79);
+            txt_counter.Multiline = true;
+            txt_counter.Name = "txt_counter";
+            txt_counter.ReadOnly = true;
+            txt_counter.Size = new Size(207, 28);
+            txt_counter.TabIndex = 285;
+            txt_counter.Text = "A Counter";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(615, 79);
+            label6.Name = "label6";
+            label6.Size = new Size(66, 22);
+            label6.TabIndex = 284;
+            label6.Text = "ကောင်တာ";
             // 
             // g_otherout
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1405, 693);
-            Controls.Add(groupBox2);
+            ClientSize = new Size(1428, 925);
+            Controls.Add(txt_counter);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(dataGridView1);
+            Controls.Add(iconButton1);
+            Controls.Add(textBox1);
+            Controls.Add(showdata);
+            Controls.Add(label3);
             Controls.Add(groupBox1);
             Controls.Add(btn_out);
-            Controls.Add(panel3);
+            Controls.Add(label1);
+            Controls.Add(txt_shop);
             Controls.Add(btn_review);
+            Controls.Add(txt_date);
             Controls.Add(btn_cancel);
+            Controls.Add(label2);
+            Controls.Add(label12);
+            Controls.Add(txt_time);
+            Controls.Add(label23);
+            Controls.Add(textBox2);
+            Controls.Add(label22);
+            Controls.Add(txt_voucher);
+            Controls.Add(txt_out_no);
+            Controls.Add(label32);
             FormBorderStyle = FormBorderStyle.None;
             Name = "g_otherout";
             StartPosition = FormStartPosition.CenterScreen;
@@ -659,16 +596,10 @@
             ((System.ComponentModel.ISupportInitialize)showdata).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -695,16 +626,8 @@
         private Label label22;
         private TextBox txt_edit_check;
         private System.Windows.Forms.Timer timer2;
-        private Panel panel3;
-        private Panel panel1;
-        private Label lbl_totalgm;
-        private Label label21;
-        private Panel panel2;
-        private Label lbl_totalamt;
-        private Label label33;
         private ErrorProvider errorProvider1;
         private Label label12;
-        private Label label11;
         private Button btn_review;
         private Label label23;
         private Button btn_cancel;
@@ -717,11 +640,14 @@
         private TextBox txt_date;
         private System.Windows.Forms.Timer timer1;
         private OpenFileDialog openFileDialog1;
-        private GroupBox groupBox2;
         private TextBox check_shop;
         private FontAwesome.Sharp.IconButton iconButton1;
         private DataGridView dataGridView1;
         private TextBox textBox1;
         private Label label3;
+        protected Label label4;
+        protected Label label5;
+        private TextBox txt_counter;
+        private Label label6;
     }
 }

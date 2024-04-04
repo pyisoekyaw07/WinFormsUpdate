@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gform));
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             btn_add_photo = new Button();
             cmb_itemname = new ComboBox();
             cmb_item = new ComboBox();
@@ -156,6 +156,8 @@
             groupBox2 = new GroupBox();
             label34 = new Label();
             ico_add = new FontAwesome.Sharp.IconButton();
+            lbl_qty = new Label();
+            label36 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -167,7 +169,7 @@
             // 
             btn_add_photo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_add_photo.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_add_photo.Location = new Point(417, 116);
+            btn_add_photo.Location = new Point(392, 116);
             btn_add_photo.Name = "btn_add_photo";
             btn_add_photo.Size = new Size(107, 47);
             btn_add_photo.TabIndex = 14;
@@ -319,20 +321,24 @@
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(-188, 35);
+            label11.Location = new Point(-468, 35);
             label11.Name = "label11";
             label11.Size = new Size(0, 22);
             label11.TabIndex = 107;
             // 
             // btn_review
             // 
-            btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_review.Location = new Point(1275, 513);
+            btn_review.BackColor = Color.FromArgb(24, 47, 81);
+            btn_review.Font = new Font("Pyidaungsu", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_review.ForeColor = Color.White;
+            btn_review.Image = (Image)resources.GetObject("btn_review.Image");
+            btn_review.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_review.Location = new Point(1257, 543);
             btn_review.Name = "btn_review";
-            btn_review.Size = new Size(136, 35);
+            btn_review.Size = new Size(156, 39);
             btn_review.TabIndex = 106;
             btn_review.Text = "&Preview";
-            btn_review.UseVisualStyleBackColor = true;
+            btn_review.UseVisualStyleBackColor = false;
             btn_review.Click += btn_review_Click;
             // 
             // label23
@@ -359,7 +365,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(561, 519);
+            label21.Location = new Point(1079, 70);
             label21.Name = "label21";
             label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
@@ -367,24 +373,33 @@
             // 
             // btn_cancel
             // 
-            btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_cancel.Location = new Point(1128, 513);
+            btn_cancel.BackColor = Color.FromArgb(24, 47, 81);
+            btn_cancel.Font = new Font("Pyidaungsu", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_cancel.ForeColor = Color.White;
+            btn_cancel.Image = (Image)resources.GetObject("btn_cancel.Image");
+            btn_cancel.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_cancel.Location = new Point(1095, 543);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(136, 35);
+            btn_cancel.Size = new Size(156, 39);
             btn_cancel.TabIndex = 105;
             btn_cancel.Text = "&Cancel";
-            btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
-            btn_save.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_save.Location = new Point(982, 513);
+            btn_save.BackColor = Color.FromArgb(24, 47, 81);
+            btn_save.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_save.Font = new Font("Pyidaungsu", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_save.ForeColor = Color.White;
+            btn_save.Image = (Image)resources.GetObject("btn_save.Image");
+            btn_save.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_save.Location = new Point(933, 543);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(136, 35);
+            btn_save.Size = new Size(156, 39);
             btn_save.TabIndex = 104;
             btn_save.Text = "&Save";
-            btn_save.UseVisualStyleBackColor = true;
+            btn_save.UseVisualStyleBackColor = false;
             btn_save.Click += button1_Click;
             // 
             // label10
@@ -779,9 +794,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(855, 568);
+            groupBox1.Location = new Point(682, 609);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(556, 194);
+            groupBox1.Size = new Size(531, 129);
             groupBox1.TabIndex = 130;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -920,31 +935,31 @@
             dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(24, 47, 81);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle4.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { image, date, time, Voucher, enter_remark, purvoc, barcode, goldtype, gold_price, Items, item_name, gm, K, P, Y, S, wk, wp, wy, ws, tk, tp, ty, ts, mcost, repamt, total_amt, remark, employee, shop, Form, type, coledit });
             dataGridView1.Location = new Point(561, 268);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(852, 227);
+            dataGridView1.Size = new Size(852, 261);
             dataGridView1.TabIndex = 201;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -1170,10 +1185,10 @@
             // coledit
             // 
             coledit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
-            coledit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle5.NullValue = resources.GetObject("dataGridViewCellStyle5.NullValue");
+            coledit.DefaultCellStyle = dataGridViewCellStyle5;
             coledit.Description = "Edit";
             coledit.HeaderText = "";
             coledit.Image = (Image)resources.GetObject("coledit.Image");
@@ -1227,25 +1242,27 @@
             // 
             // lbl_totalgm
             // 
-            lbl_totalgm.AutoSize = true;
+            lbl_totalgm.BackColor = Color.FromArgb(255, 128, 128);
             lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_totalgm.ForeColor = Color.DimGray;
-            lbl_totalgm.Location = new Point(683, 515);
+            lbl_totalgm.ForeColor = Color.WhiteSmoke;
+            lbl_totalgm.Location = new Point(1079, 94);
             lbl_totalgm.Name = "lbl_totalgm";
-            lbl_totalgm.Size = new Size(20, 27);
+            lbl_totalgm.Size = new Size(130, 58);
             lbl_totalgm.TabIndex = 124;
             lbl_totalgm.Text = "0";
+            lbl_totalgm.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbl_totalamt
             // 
-            lbl_totalamt.AutoSize = true;
+            lbl_totalamt.BackColor = Color.FromArgb(255, 128, 0);
             lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_totalamt.ForeColor = Color.DimGray;
-            lbl_totalamt.Location = new Point(866, 516);
+            lbl_totalamt.ForeColor = Color.WhiteSmoke;
+            lbl_totalamt.Location = new Point(1243, 93);
             lbl_totalamt.Name = "lbl_totalamt";
-            lbl_totalamt.Size = new Size(20, 27);
+            lbl_totalamt.Size = new Size(130, 58);
             lbl_totalamt.TabIndex = 124;
             lbl_totalamt.Text = "0";
+            lbl_totalamt.TextAlign = ContentAlignment.MiddleLeft;
             lbl_totalamt.TextChanged += lbl_totalamt_TextChanged;
             // 
             // label33
@@ -1253,7 +1270,7 @@
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(754, 520);
+            label33.Location = new Point(1243, 69);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1357,21 +1374,44 @@
             // 
             // ico_add
             // 
-            ico_add.BackColor = Color.FromArgb(24, 47, 81);
-            ico_add.Font = new Font("Pyidaungsu", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            ico_add.ForeColor = Color.White;
-            ico_add.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            ico_add.IconColor = Color.Snow;
+            ico_add.BackColor = Color.White;
+            ico_add.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ico_add.ForeColor = Color.Black;
+            ico_add.IconChar = FontAwesome.Sharp.IconChar.Add;
+            ico_add.IconColor = Color.Black;
             ico_add.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ico_add.IconSize = 40;
+            ico_add.IconSize = 30;
             ico_add.ImageAlign = ContentAlignment.MiddleLeft;
-            ico_add.Location = new Point(192, 882);
+            ico_add.Location = new Point(244, 892);
             ico_add.Name = "ico_add";
-            ico_add.Size = new Size(249, 53);
+            ico_add.Size = new Size(155, 34);
             ico_add.TabIndex = 218;
-            ico_add.Text = "&ADD";
+            ico_add.Text = "&Add to table";
             ico_add.UseVisualStyleBackColor = false;
             ico_add.Click += ico_add_Click;
+            // 
+            // lbl_qty
+            // 
+            lbl_qty.BackColor = Color.MediumOrchid;
+            lbl_qty.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_qty.ForeColor = Color.WhiteSmoke;
+            lbl_qty.Location = new Point(914, 94);
+            lbl_qty.Name = "lbl_qty";
+            lbl_qty.Size = new Size(130, 58);
+            lbl_qty.TabIndex = 220;
+            lbl_qty.Text = "0";
+            lbl_qty.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label36.ForeColor = Color.DimGray;
+            label36.Location = new Point(914, 70);
+            label36.Name = "label36";
+            label36.Size = new Size(90, 22);
+            label36.TabIndex = 219;
+            label36.Text = "စုစုပေါင်းအခုရေ";
             // 
             // gform
             // 
@@ -1380,7 +1420,9 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1428, 962);
+            ClientSize = new Size(1428, 980);
+            Controls.Add(lbl_qty);
+            Controls.Add(label36);
             Controls.Add(ico_add);
             Controls.Add(label34);
             Controls.Add(groupBox2);
@@ -1591,5 +1633,7 @@
         private GroupBox groupBox2;
         private Label label34;
         private FontAwesome.Sharp.IconButton ico_add;
+        private Label lbl_qty;
+        private Label label36;
     }
 }

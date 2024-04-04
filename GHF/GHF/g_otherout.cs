@@ -95,5 +95,15 @@ namespace GHF
             txt_date.Text = d.ToString("dd/MMM/yyyy");
             txt_time.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
