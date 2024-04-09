@@ -365,7 +365,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(913, 733);
+            label21.Location = new Point(898, 720);
             label21.Name = "label21";
             label21.Size = new Size(97, 22);
             label21.TabIndex = 123;
@@ -1245,7 +1245,7 @@
             lbl_totalgm.BackColor = Color.FromArgb(255, 128, 128);
             lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalgm.ForeColor = Color.WhiteSmoke;
-            lbl_totalgm.Location = new Point(913, 766);
+            lbl_totalgm.Location = new Point(898, 753);
             lbl_totalgm.Name = "lbl_totalgm";
             lbl_totalgm.Size = new Size(162, 58);
             lbl_totalgm.TabIndex = 124;
@@ -1257,7 +1257,7 @@
             lbl_totalamt.BackColor = Color.FromArgb(255, 128, 0);
             lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_totalamt.ForeColor = Color.WhiteSmoke;
-            lbl_totalamt.Location = new Point(1163, 765);
+            lbl_totalamt.Location = new Point(1148, 752);
             lbl_totalamt.Name = "lbl_totalamt";
             lbl_totalamt.Size = new Size(162, 58);
             lbl_totalamt.TabIndex = 124;
@@ -1270,7 +1270,7 @@
             label33.AutoSize = true;
             label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(1163, 733);
+            label33.Location = new Point(1148, 720);
             label33.Name = "label33";
             label33.Size = new Size(89, 22);
             label33.TabIndex = 123;
@@ -1395,7 +1395,7 @@
             lbl_qty.BackColor = Color.MediumOrchid;
             lbl_qty.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_qty.ForeColor = Color.WhiteSmoke;
-            lbl_qty.Location = new Point(662, 766);
+            lbl_qty.Location = new Point(647, 753);
             lbl_qty.Name = "lbl_qty";
             lbl_qty.Size = new Size(162, 58);
             lbl_qty.TabIndex = 220;
@@ -1407,7 +1407,7 @@
             label36.AutoSize = true;
             label36.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label36.ForeColor = Color.DimGray;
-            label36.Location = new Point(661, 733);
+            label36.Location = new Point(646, 720);
             label36.Name = "label36";
             label36.Size = new Size(90, 22);
             label36.TabIndex = 219;

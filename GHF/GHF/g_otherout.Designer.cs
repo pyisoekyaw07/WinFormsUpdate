@@ -52,12 +52,44 @@
             txt_temparay_pid = new TextBox();
             txt_result_pid = new TextBox();
             txt_Dece_pid = new TextBox();
-            textBox2 = new TextBox();
+            txt_form = new TextBox();
             label32 = new Label();
             label22 = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
-            dataGridView1 = new DataGridView();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            store_data = new DataGridView();
+            img = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
+            Time = new DataGridViewTextBoxColumn();
+            OutVoucher_No = new DataGridViewTextBoxColumn();
+            Out_Remark = new DataGridViewTextBoxColumn();
+            PurVoucher = new DataGridViewTextBoxColumn();
+            Product_ID = new DataGridViewTextBoxColumn();
+            GoldType = new DataGridViewTextBoxColumn();
+            GoldPrice = new DataGridViewTextBoxColumn();
+            Item = new DataGridViewTextBoxColumn();
+            Itemname = new DataGridViewTextBoxColumn();
+            Gm = new DataGridViewTextBoxColumn();
+            K = new DataGridViewTextBoxColumn();
+            P = new DataGridViewTextBoxColumn();
+            Y = new DataGridViewTextBoxColumn();
+            S = new DataGridViewTextBoxColumn();
+            WK = new DataGridViewTextBoxColumn();
+            WP = new DataGridViewTextBoxColumn();
+            WY = new DataGridViewTextBoxColumn();
+            WS = new DataGridViewTextBoxColumn();
+            TK = new DataGridViewTextBoxColumn();
+            TP = new DataGridViewTextBoxColumn();
+            TY = new DataGridViewTextBoxColumn();
+            TS = new DataGridViewTextBoxColumn();
+            Mcost = new DataGridViewTextBoxColumn();
+            Repamt = new DataGridViewTextBoxColumn();
+            Totalamt = new DataGridViewTextBoxColumn();
+            Remark = new DataGridViewTextBoxColumn();
+            Employee = new DataGridViewTextBoxColumn();
+            Shop = new DataGridViewTextBoxColumn();
+            Form = new DataGridViewTextBoxColumn();
+            Counter = new DataGridViewTextBoxColumn();
+            ico_add_btn = new FontAwesome.Sharp.IconButton();
             errorProvider1 = new ErrorProvider(components);
             timer1 = new System.Windows.Forms.Timer(components);
             openFileDialog1 = new OpenFileDialog();
@@ -67,20 +99,23 @@
             btn_cancel = new Button();
             btn_out = new Button();
             txt_out_no = new TextBox();
-            txt_voucher = new TextBox();
+            txt_outvoucher = new TextBox();
             label1 = new Label();
             txt_time = new TextBox();
             label2 = new Label();
             txt_date = new TextBox();
-            textBox1 = new TextBox();
+            txt_outremark = new TextBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             txt_counter = new TextBox();
             label6 = new Label();
+            lbl_qty = new Label();
+            lbl_totalamt = new Label();
+            lbl_gm = new Label();
             ((System.ComponentModel.ISupportInitialize)showdata).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)store_data).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -172,9 +207,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(52, 715);
+            groupBox1.Location = new Point(52, 743);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(376, 169);
+            groupBox1.Size = new Size(402, 143);
             groupBox1.TabIndex = 268;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -290,19 +325,19 @@
             txt_Dece_pid.Size = new Size(57, 28);
             txt_Dece_pid.TabIndex = 136;
             // 
-            // textBox2
+            // txt_form
             // 
-            textBox2.BackColor = Color.FromArgb(173, 199, 217);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(729, 22);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(207, 28);
-            textBox2.TabIndex = 279;
-            textBox2.Text = "Gold Other Out";
+            txt_form.BackColor = Color.FromArgb(173, 199, 217);
+            txt_form.BorderStyle = BorderStyle.None;
+            txt_form.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_form.ForeColor = Color.Black;
+            txt_form.Location = new Point(729, 22);
+            txt_form.Multiline = true;
+            txt_form.Name = "txt_form";
+            txt_form.ReadOnly = true;
+            txt_form.Size = new Size(207, 28);
+            txt_form.TabIndex = 279;
+            txt_form.Text = "Gold Other Out";
             // 
             // label32
             // 
@@ -324,32 +359,193 @@
             label22.TabIndex = 276;
             label22.Text = "ဆိုင်အမှတ်";
             // 
-            // dataGridView1
+            // store_data
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.FromArgb(173, 199, 217);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(36, 437);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 30;
-            dataGridView1.Size = new Size(1003, 212);
-            dataGridView1.TabIndex = 208;
+            store_data.AllowUserToAddRows = false;
+            store_data.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            store_data.BackgroundColor = Color.FromArgb(173, 199, 217);
+            store_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            store_data.Columns.AddRange(new DataGridViewColumn[] { img, Date, Time, OutVoucher_No, Out_Remark, PurVoucher, Product_ID, GoldType, GoldPrice, Item, Itemname, Gm, K, P, Y, S, WK, WP, WY, WS, TK, TP, TY, TS, Mcost, Repamt, Totalamt, Remark, Employee, Shop, Form, Counter });
+            store_data.Location = new Point(36, 425);
+            store_data.Name = "store_data";
+            store_data.RowTemplate.Height = 30;
+            store_data.Size = new Size(1003, 212);
+            store_data.TabIndex = 208;
             // 
-            // iconButton1
+            // img
             // 
-            iconButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            iconButton1.IconColor = Color.Red;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 20;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(869, 377);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(170, 41);
-            iconButton1.TabIndex = 209;
-            iconButton1.Text = "Add";
-            iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
+            img.HeaderText = "Image";
+            img.Name = "img";
+            // 
+            // Date
+            // 
+            Date.HeaderText = "Date";
+            Date.Name = "Date";
+            // 
+            // Time
+            // 
+            Time.HeaderText = "Time";
+            Time.Name = "Time";
+            // 
+            // OutVoucher_No
+            // 
+            OutVoucher_No.HeaderText = "OutVoucher_No";
+            OutVoucher_No.Name = "OutVoucher_No";
+            // 
+            // Out_Remark
+            // 
+            Out_Remark.HeaderText = "Out_Remark";
+            Out_Remark.Name = "Out_Remark";
+            // 
+            // PurVoucher
+            // 
+            PurVoucher.HeaderText = "PurVoucher";
+            PurVoucher.Name = "PurVoucher";
+            // 
+            // Product_ID
+            // 
+            Product_ID.HeaderText = "Product_ID";
+            Product_ID.Name = "Product_ID";
+            // 
+            // GoldType
+            // 
+            GoldType.HeaderText = "GoldType";
+            GoldType.Name = "GoldType";
+            // 
+            // GoldPrice
+            // 
+            GoldPrice.HeaderText = "GoldPrice";
+            GoldPrice.Name = "GoldPrice";
+            // 
+            // Item
+            // 
+            Item.HeaderText = "Item";
+            Item.Name = "Item";
+            // 
+            // Itemname
+            // 
+            Itemname.HeaderText = "Itemname";
+            Itemname.Name = "Itemname";
+            // 
+            // Gm
+            // 
+            Gm.HeaderText = "Gm";
+            Gm.Name = "Gm";
+            // 
+            // K
+            // 
+            K.HeaderText = "K";
+            K.Name = "K";
+            // 
+            // P
+            // 
+            P.HeaderText = "P";
+            P.Name = "P";
+            // 
+            // Y
+            // 
+            Y.HeaderText = "Y";
+            Y.Name = "Y";
+            // 
+            // S
+            // 
+            S.HeaderText = "S";
+            S.Name = "S";
+            // 
+            // WK
+            // 
+            WK.HeaderText = "WK";
+            WK.Name = "WK";
+            // 
+            // WP
+            // 
+            WP.HeaderText = "WP";
+            WP.Name = "WP";
+            // 
+            // WY
+            // 
+            WY.HeaderText = "WY";
+            WY.Name = "WY";
+            // 
+            // WS
+            // 
+            WS.HeaderText = "WS";
+            WS.Name = "WS";
+            // 
+            // TK
+            // 
+            TK.HeaderText = "TK";
+            TK.Name = "TK";
+            // 
+            // TP
+            // 
+            TP.HeaderText = "TP";
+            TP.Name = "TP";
+            // 
+            // TY
+            // 
+            TY.HeaderText = "TY";
+            TY.Name = "TY";
+            // 
+            // TS
+            // 
+            TS.HeaderText = "TS";
+            TS.Name = "TS";
+            // 
+            // Mcost
+            // 
+            Mcost.HeaderText = "Mcost";
+            Mcost.Name = "Mcost";
+            // 
+            // Repamt
+            // 
+            Repamt.HeaderText = "Repamt";
+            Repamt.Name = "Repamt";
+            // 
+            // Totalamt
+            // 
+            Totalamt.HeaderText = "Totalamt";
+            Totalamt.Name = "Totalamt";
+            // 
+            // Remark
+            // 
+            Remark.HeaderText = "Remark";
+            Remark.Name = "Remark";
+            // 
+            // Employee
+            // 
+            Employee.HeaderText = "Employee";
+            Employee.Name = "Employee";
+            // 
+            // Shop
+            // 
+            Shop.HeaderText = "Shop";
+            Shop.Name = "Shop";
+            // 
+            // Form
+            // 
+            Form.HeaderText = "Form";
+            Form.Name = "Form";
+            // 
+            // Counter
+            // 
+            Counter.HeaderText = "Counter";
+            Counter.Name = "Counter";
+            // 
+            // ico_add_btn
+            // 
+            ico_add_btn.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
+            ico_add_btn.IconColor = Color.Red;
+            ico_add_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ico_add_btn.IconSize = 20;
+            ico_add_btn.ImageAlign = ContentAlignment.MiddleLeft;
+            ico_add_btn.Location = new Point(334, 229);
+            ico_add_btn.Name = "ico_add_btn";
+            ico_add_btn.Size = new Size(130, 52);
+            ico_add_btn.TabIndex = 209;
+            ico_add_btn.Text = "Add";
+            ico_add_btn.UseVisualStyleBackColor = true;
+            ico_add_btn.Click += ico_add_btn_Click;
             // 
             // errorProvider1
             // 
@@ -414,7 +610,7 @@
             // 
             btn_out.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_out.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_out.Location = new Point(517, 674);
+            btn_out.Location = new Point(517, 666);
             btn_out.Name = "btn_out";
             btn_out.Size = new Size(170, 44);
             btn_out.TabIndex = 254;
@@ -432,19 +628,19 @@
             txt_out_no.TabIndex = 215;
             txt_out_no.TextChanged += txt_pur_no_TextChanged;
             // 
-            // txt_voucher
+            // txt_outvoucher
             // 
-            txt_voucher.BackColor = Color.FromArgb(173, 199, 217);
-            txt_voucher.BorderStyle = BorderStyle.None;
-            txt_voucher.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_voucher.ForeColor = Color.Black;
-            txt_voucher.Location = new Point(379, 22);
-            txt_voucher.Multiline = true;
-            txt_voucher.Name = "txt_voucher";
-            txt_voucher.ReadOnly = true;
-            txt_voucher.Size = new Size(207, 28);
-            txt_voucher.TabIndex = 250;
-            txt_voucher.TabStop = false;
+            txt_outvoucher.BackColor = Color.FromArgb(173, 199, 217);
+            txt_outvoucher.BorderStyle = BorderStyle.None;
+            txt_outvoucher.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_outvoucher.ForeColor = Color.Black;
+            txt_outvoucher.Location = new Point(379, 22);
+            txt_outvoucher.Multiline = true;
+            txt_outvoucher.Name = "txt_outvoucher";
+            txt_outvoucher.ReadOnly = true;
+            txt_outvoucher.Size = new Size(207, 28);
+            txt_outvoucher.TabIndex = 250;
+            txt_outvoucher.TabStop = false;
             // 
             // label1
             // 
@@ -492,15 +688,15 @@
             txt_date.Size = new Size(142, 28);
             txt_date.TabIndex = 231;
             // 
-            // textBox1
+            // txt_outremark
             // 
-            textBox1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(38, 216);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "error";
-            textBox1.Size = new Size(290, 65);
-            textBox1.TabIndex = 281;
+            txt_outremark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_outremark.Location = new Point(38, 216);
+            txt_outremark.Multiline = true;
+            txt_outremark.Name = "txt_outremark";
+            txt_outremark.PlaceholderText = "error";
+            txt_outremark.Size = new Size(290, 65);
+            txt_outremark.TabIndex = 281;
             // 
             // label3
             // 
@@ -525,7 +721,7 @@
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.BackColor = Color.DarkGray;
-            label5.Location = new Point(3, 425);
+            label5.Location = new Point(3, 397);
             label5.Name = "label5";
             label5.Size = new Size(1428, 2);
             label5.TabIndex = 283;
@@ -554,6 +750,36 @@
             label6.TabIndex = 284;
             label6.Text = "ကောင်တာ";
             // 
+            // lbl_qty
+            // 
+            lbl_qty.BackColor = Color.FromArgb(192, 0, 192);
+            lbl_qty.Location = new Point(910, 176);
+            lbl_qty.Name = "lbl_qty";
+            lbl_qty.Size = new Size(131, 53);
+            lbl_qty.TabIndex = 2;
+            lbl_qty.Text = "label9";
+            lbl_qty.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lbl_totalamt
+            // 
+            lbl_totalamt.BackColor = Color.Cyan;
+            lbl_totalamt.Location = new Point(753, 176);
+            lbl_totalamt.Name = "lbl_totalamt";
+            lbl_totalamt.Size = new Size(131, 53);
+            lbl_totalamt.TabIndex = 1;
+            lbl_totalamt.Text = "label8";
+            lbl_totalamt.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lbl_gm
+            // 
+            lbl_gm.BackColor = Color.Yellow;
+            lbl_gm.Location = new Point(592, 175);
+            lbl_gm.Name = "lbl_gm";
+            lbl_gm.Size = new Size(131, 53);
+            lbl_gm.TabIndex = 0;
+            lbl_gm.Text = "label7";
+            lbl_gm.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // g_otherout
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -562,13 +788,16 @@
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(1428, 925);
+            Controls.Add(lbl_qty);
+            Controls.Add(lbl_totalamt);
             Controls.Add(txt_counter);
+            Controls.Add(lbl_gm);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(dataGridView1);
-            Controls.Add(iconButton1);
-            Controls.Add(textBox1);
+            Controls.Add(store_data);
+            Controls.Add(ico_add_btn);
+            Controls.Add(txt_outremark);
             Controls.Add(showdata);
             Controls.Add(label3);
             Controls.Add(groupBox1);
@@ -582,9 +811,9 @@
             Controls.Add(label12);
             Controls.Add(txt_time);
             Controls.Add(label23);
-            Controls.Add(textBox2);
+            Controls.Add(txt_form);
             Controls.Add(label22);
-            Controls.Add(txt_voucher);
+            Controls.Add(txt_outvoucher);
             Controls.Add(txt_out_no);
             Controls.Add(label32);
             FormBorderStyle = FormBorderStyle.None;
@@ -596,7 +825,7 @@
             ((System.ComponentModel.ISupportInitialize)showdata).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)store_data).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -621,7 +850,7 @@
         private TextBox txt_temparay_pid;
         private TextBox txt_result_pid;
         private TextBox txt_Dece_pid;
-        private TextBox textBox2;
+        private TextBox txt_form;
         private Label label32;
         private Label label22;
         private TextBox txt_edit_check;
@@ -633,7 +862,7 @@
         private Button btn_cancel;
         private Button btn_out;
         private TextBox txt_out_no;
-        private TextBox txt_voucher;
+        private TextBox txt_outvoucher;
         private Label label1;
         private TextBox txt_time;
         private Label label2;
@@ -641,13 +870,48 @@
         private System.Windows.Forms.Timer timer1;
         private OpenFileDialog openFileDialog1;
         private TextBox check_shop;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private FontAwesome.Sharp.IconButton ico_add_btn;
+        private DataGridView store_data;
+        private TextBox txt_outremark;
         private Label label3;
         protected Label label4;
         protected Label label5;
         private TextBox txt_counter;
         private Label label6;
+        private DataGridViewTextBoxColumn img;
+        private DataGridViewTextBoxColumn Date;
+        private DataGridViewTextBoxColumn Time;
+        private DataGridViewTextBoxColumn OutVoucher_No;
+        private DataGridViewTextBoxColumn Out_Remark;
+        private DataGridViewTextBoxColumn PurVoucher;
+        private DataGridViewTextBoxColumn Product_ID;
+        private DataGridViewTextBoxColumn GoldType;
+        private DataGridViewTextBoxColumn GoldPrice;
+        private DataGridViewTextBoxColumn Item;
+        private DataGridViewTextBoxColumn Itemname;
+        private DataGridViewTextBoxColumn Gm;
+        private DataGridViewTextBoxColumn K;
+        private DataGridViewTextBoxColumn P;
+        private DataGridViewTextBoxColumn Y;
+        private DataGridViewTextBoxColumn S;
+        private DataGridViewTextBoxColumn WK;
+        private DataGridViewTextBoxColumn WP;
+        private DataGridViewTextBoxColumn WY;
+        private DataGridViewTextBoxColumn WS;
+        private DataGridViewTextBoxColumn TK;
+        private DataGridViewTextBoxColumn TP;
+        private DataGridViewTextBoxColumn TY;
+        private DataGridViewTextBoxColumn TS;
+        private DataGridViewTextBoxColumn Mcost;
+        private DataGridViewTextBoxColumn Repamt;
+        private DataGridViewTextBoxColumn Totalamt;
+        private DataGridViewTextBoxColumn Remark;
+        private DataGridViewTextBoxColumn Employee;
+        private DataGridViewTextBoxColumn Shop;
+        private DataGridViewTextBoxColumn Form;
+        private DataGridViewTextBoxColumn Counter;
+        private Label lbl_qty;
+        private Label lbl_totalamt;
+        private Label lbl_gm;
     }
 }
