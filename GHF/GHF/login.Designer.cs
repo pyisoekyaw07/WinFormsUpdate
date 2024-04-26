@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             pictureBox1 = new PictureBox();
             grp_login = new GroupBox();
@@ -41,6 +42,7 @@
             txt_password = new TextBox();
             txt_username = new TextBox();
             label1 = new Label();
+            timer2 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             grp_login.SuspendLayout();
             SuspendLayout();
@@ -113,7 +115,6 @@
             combo_shop.Size = new Size(67, 29);
             combo_shop.TabIndex = 6;
             combo_shop.SelectedIndexChanged += combo_shop_SelectedIndexChanged;
-            combo_shop.Click += comboBox1_Click;
             // 
             // label3
             // 
@@ -171,6 +172,10 @@
             label1.TabIndex = 0;
             label1.Text = "LOGIN";
             // 
+            // timer2
+            // 
+            timer2.Tick += timer2_Tick;
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -206,5 +211,6 @@
         private Label label5;
         private Label label4;
         private ComboBox combo_shop;
+        private System.Windows.Forms.Timer timer2;
     }
 }

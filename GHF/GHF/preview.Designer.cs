@@ -39,6 +39,9 @@
             label3 = new Label();
             saveFileDialog1 = new SaveFileDialog();
             txt_shop_preview = new TextBox();
+            txt_form_perview = new TextBox();
+            test2 = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -143,7 +146,29 @@
             txt_shop_preview.Name = "txt_shop_preview";
             txt_shop_preview.Size = new Size(100, 28);
             txt_shop_preview.TabIndex = 8;
-            txt_shop_preview.Visible = false;
+            // 
+            // txt_form_perview
+            // 
+            txt_form_perview.Location = new Point(434, 51);
+            txt_form_perview.Name = "txt_form_perview";
+            txt_form_perview.Size = new Size(100, 28);
+            txt_form_perview.TabIndex = 9;
+            // 
+            // test2
+            // 
+            test2.Location = new Point(561, 51);
+            test2.Name = "test2";
+            test2.Size = new Size(100, 28);
+            test2.TabIndex = 10;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(735, 57);
+            label4.Name = "label4";
+            label4.Size = new Size(41, 21);
+            label4.TabIndex = 11;
+            label4.Text = "label4";
             // 
             // preview
             // 
@@ -151,6 +176,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1239, 551);
+            Controls.Add(label4);
+            Controls.Add(test2);
+            Controls.Add(txt_form_perview);
             Controls.Add(txt_shop_preview);
             Controls.Add(label3);
             Controls.Add(export_excel);
@@ -187,5 +215,8 @@
         private Label label3;
         private SaveFileDialog saveFileDialog1;
         private TextBox txt_shop_preview;
+        private TextBox txt_form_perview;
+        private TextBox test2;
+        private Label label4;
     }
 }

@@ -1375,9 +1375,11 @@ namespace GHF
 
         }
         public static int parentX, parentY;
+
+        public static string registerform = "";
         private void btn_review_Click(object sender, EventArgs e)
         {
-
+            registerform = textBox2.Text;
             preview frm = new preview();
             frm.ShowDialog();
 

@@ -31,6 +31,9 @@
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(g_otherout));
             showdata = new DataGridView();
             txt_shop = new TextBox();
@@ -56,41 +59,7 @@
             label32 = new Label();
             label22 = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
-            store_data = new DataGridView();
-            img = new DataGridViewTextBoxColumn();
-            Date = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            OutVoucher_No = new DataGridViewTextBoxColumn();
-            Out_Remark = new DataGridViewTextBoxColumn();
-            PurVoucher = new DataGridViewTextBoxColumn();
-            Product_ID = new DataGridViewTextBoxColumn();
-            GoldType = new DataGridViewTextBoxColumn();
-            GoldPrice = new DataGridViewTextBoxColumn();
-            Item = new DataGridViewTextBoxColumn();
-            Itemname = new DataGridViewTextBoxColumn();
-            Gm = new DataGridViewTextBoxColumn();
-            K = new DataGridViewTextBoxColumn();
-            P = new DataGridViewTextBoxColumn();
-            Y = new DataGridViewTextBoxColumn();
-            S = new DataGridViewTextBoxColumn();
-            WK = new DataGridViewTextBoxColumn();
-            WP = new DataGridViewTextBoxColumn();
-            WY = new DataGridViewTextBoxColumn();
-            WS = new DataGridViewTextBoxColumn();
-            TK = new DataGridViewTextBoxColumn();
-            TP = new DataGridViewTextBoxColumn();
-            TY = new DataGridViewTextBoxColumn();
-            TS = new DataGridViewTextBoxColumn();
-            Mcost = new DataGridViewTextBoxColumn();
-            Repamt = new DataGridViewTextBoxColumn();
-            Totalamt = new DataGridViewTextBoxColumn();
-            Remark = new DataGridViewTextBoxColumn();
-            Employee = new DataGridViewTextBoxColumn();
-            Shop = new DataGridViewTextBoxColumn();
-            Form = new DataGridViewTextBoxColumn();
-            Counter = new DataGridViewTextBoxColumn();
             ico_add_btn = new FontAwesome.Sharp.IconButton();
-            errorProvider1 = new ErrorProvider(components);
             timer1 = new System.Windows.Forms.Timer(components);
             openFileDialog1 = new OpenFileDialog();
             label12 = new Label();
@@ -113,16 +82,56 @@
             lbl_qty = new Label();
             lbl_totalamt = new Label();
             lbl_gm = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            groupBox2 = new GroupBox();
+            show_image = new PictureBox();
+            store_data = new DataGridView();
+            dataGridViewImageColumn1 = new DataGridViewImageColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            Voucher = new DataGridViewTextBoxColumn();
+            enter_remark = new DataGridViewTextBoxColumn();
+            purvoc = new DataGridViewTextBoxColumn();
+            barcode = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            gold_price = new DataGridViewTextBoxColumn();
+            Items = new DataGridViewTextBoxColumn();
+            item_name = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
+            total_amt = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn21 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
+            type = new DataGridViewTextBoxColumn();
+            coledit = new DataGridViewImageColumn();
+            timer3 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)showdata).BeginInit();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)show_image).BeginInit();
             ((System.ComponentModel.ISupportInitialize)store_data).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // showdata
             // 
             showdata.AllowUserToAddRows = false;
-            showdata.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             showdata.BackgroundColor = Color.FromArgb(173, 199, 217);
             showdata.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             showdata.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -207,9 +216,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(52, 743);
+            groupBox1.Location = new Point(36, 643);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(402, 143);
+            groupBox1.Size = new Size(402, 176);
             groupBox1.TabIndex = 268;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -359,200 +368,22 @@
             label22.TabIndex = 276;
             label22.Text = "ဆိုင်အမှတ်";
             // 
-            // store_data
+            // timer2
             // 
-            store_data.AllowUserToAddRows = false;
-            store_data.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            store_data.BackgroundColor = Color.FromArgb(173, 199, 217);
-            store_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            store_data.Columns.AddRange(new DataGridViewColumn[] { img, Date, Time, OutVoucher_No, Out_Remark, PurVoucher, Product_ID, GoldType, GoldPrice, Item, Itemname, Gm, K, P, Y, S, WK, WP, WY, WS, TK, TP, TY, TS, Mcost, Repamt, Totalamt, Remark, Employee, Shop, Form, Counter });
-            store_data.Location = new Point(36, 425);
-            store_data.Name = "store_data";
-            store_data.RowTemplate.Height = 30;
-            store_data.Size = new Size(1003, 212);
-            store_data.TabIndex = 208;
-            // 
-            // img
-            // 
-            img.HeaderText = "Image";
-            img.Name = "img";
-            // 
-            // Date
-            // 
-            Date.HeaderText = "Date";
-            Date.Name = "Date";
-            // 
-            // Time
-            // 
-            Time.HeaderText = "Time";
-            Time.Name = "Time";
-            // 
-            // OutVoucher_No
-            // 
-            OutVoucher_No.HeaderText = "OutVoucher_No";
-            OutVoucher_No.Name = "OutVoucher_No";
-            // 
-            // Out_Remark
-            // 
-            Out_Remark.HeaderText = "Out_Remark";
-            Out_Remark.Name = "Out_Remark";
-            // 
-            // PurVoucher
-            // 
-            PurVoucher.HeaderText = "PurVoucher";
-            PurVoucher.Name = "PurVoucher";
-            // 
-            // Product_ID
-            // 
-            Product_ID.HeaderText = "Product_ID";
-            Product_ID.Name = "Product_ID";
-            // 
-            // GoldType
-            // 
-            GoldType.HeaderText = "GoldType";
-            GoldType.Name = "GoldType";
-            // 
-            // GoldPrice
-            // 
-            GoldPrice.HeaderText = "GoldPrice";
-            GoldPrice.Name = "GoldPrice";
-            // 
-            // Item
-            // 
-            Item.HeaderText = "Item";
-            Item.Name = "Item";
-            // 
-            // Itemname
-            // 
-            Itemname.HeaderText = "Itemname";
-            Itemname.Name = "Itemname";
-            // 
-            // Gm
-            // 
-            Gm.HeaderText = "Gm";
-            Gm.Name = "Gm";
-            // 
-            // K
-            // 
-            K.HeaderText = "K";
-            K.Name = "K";
-            // 
-            // P
-            // 
-            P.HeaderText = "P";
-            P.Name = "P";
-            // 
-            // Y
-            // 
-            Y.HeaderText = "Y";
-            Y.Name = "Y";
-            // 
-            // S
-            // 
-            S.HeaderText = "S";
-            S.Name = "S";
-            // 
-            // WK
-            // 
-            WK.HeaderText = "WK";
-            WK.Name = "WK";
-            // 
-            // WP
-            // 
-            WP.HeaderText = "WP";
-            WP.Name = "WP";
-            // 
-            // WY
-            // 
-            WY.HeaderText = "WY";
-            WY.Name = "WY";
-            // 
-            // WS
-            // 
-            WS.HeaderText = "WS";
-            WS.Name = "WS";
-            // 
-            // TK
-            // 
-            TK.HeaderText = "TK";
-            TK.Name = "TK";
-            // 
-            // TP
-            // 
-            TP.HeaderText = "TP";
-            TP.Name = "TP";
-            // 
-            // TY
-            // 
-            TY.HeaderText = "TY";
-            TY.Name = "TY";
-            // 
-            // TS
-            // 
-            TS.HeaderText = "TS";
-            TS.Name = "TS";
-            // 
-            // Mcost
-            // 
-            Mcost.HeaderText = "Mcost";
-            Mcost.Name = "Mcost";
-            // 
-            // Repamt
-            // 
-            Repamt.HeaderText = "Repamt";
-            Repamt.Name = "Repamt";
-            // 
-            // Totalamt
-            // 
-            Totalamt.HeaderText = "Totalamt";
-            Totalamt.Name = "Totalamt";
-            // 
-            // Remark
-            // 
-            Remark.HeaderText = "Remark";
-            Remark.Name = "Remark";
-            // 
-            // Employee
-            // 
-            Employee.HeaderText = "Employee";
-            Employee.Name = "Employee";
-            // 
-            // Shop
-            // 
-            Shop.HeaderText = "Shop";
-            Shop.Name = "Shop";
-            // 
-            // Form
-            // 
-            Form.HeaderText = "Form";
-            Form.Name = "Form";
-            // 
-            // Counter
-            // 
-            Counter.HeaderText = "Counter";
-            Counter.Name = "Counter";
+            timer2.Tick += timer2_Tick;
             // 
             // ico_add_btn
             // 
-            ico_add_btn.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            ico_add_btn.IconColor = Color.Red;
+            ico_add_btn.IconChar = FontAwesome.Sharp.IconChar.Add;
+            ico_add_btn.IconColor = Color.Black;
             ico_add_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ico_add_btn.IconSize = 20;
-            ico_add_btn.ImageAlign = ContentAlignment.MiddleLeft;
+            ico_add_btn.IconSize = 35;
             ico_add_btn.Location = new Point(334, 229);
             ico_add_btn.Name = "ico_add_btn";
-            ico_add_btn.Size = new Size(130, 52);
+            ico_add_btn.Size = new Size(64, 38);
             ico_add_btn.TabIndex = 209;
-            ico_add_btn.Text = "Add";
             ico_add_btn.UseVisualStyleBackColor = true;
             ico_add_btn.Click += ico_add_btn_Click;
-            // 
-            // errorProvider1
-            // 
-            errorProvider1.BlinkRate = 400;
-            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorProvider1.ContainerControl = this;
-            errorProvider1.Icon = (Icon)resources.GetObject("errorProvider1.Icon");
             // 
             // timer1
             // 
@@ -575,7 +406,7 @@
             // 
             // btn_review
             // 
-            btn_review.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_review.Anchor = AnchorStyles.Top;
             btn_review.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btn_review.Location = new Point(869, 666);
             btn_review.Name = "btn_review";
@@ -583,6 +414,7 @@
             btn_review.TabIndex = 256;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = true;
+            btn_review.Click += btn_review_Click;
             // 
             // label23
             // 
@@ -596,7 +428,7 @@
             // 
             // btn_cancel
             // 
-            btn_cancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_cancel.Anchor = AnchorStyles.Top;
             btn_cancel.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btn_cancel.Location = new Point(693, 666);
             btn_cancel.Name = "btn_cancel";
@@ -604,11 +436,10 @@
             btn_cancel.TabIndex = 255;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
-            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_out
             // 
-            btn_out.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_out.Anchor = AnchorStyles.Top;
             btn_out.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btn_out.Location = new Point(517, 666);
             btn_out.Name = "btn_out";
@@ -752,33 +583,356 @@
             // 
             // lbl_qty
             // 
-            lbl_qty.BackColor = Color.FromArgb(192, 0, 192);
-            lbl_qty.Location = new Point(910, 176);
+            lbl_qty.BackColor = Color.White;
+            lbl_qty.Location = new Point(137, 119);
             lbl_qty.Name = "lbl_qty";
-            lbl_qty.Size = new Size(131, 53);
+            lbl_qty.Size = new Size(131, 33);
             lbl_qty.TabIndex = 2;
-            lbl_qty.Text = "label9";
+            lbl_qty.Text = "0";
             lbl_qty.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbl_totalamt
             // 
-            lbl_totalamt.BackColor = Color.Cyan;
-            lbl_totalamt.Location = new Point(753, 176);
+            lbl_totalamt.BackColor = Color.White;
+            lbl_totalamt.Location = new Point(137, 30);
             lbl_totalamt.Name = "lbl_totalamt";
-            lbl_totalamt.Size = new Size(131, 53);
+            lbl_totalamt.Size = new Size(131, 33);
             lbl_totalamt.TabIndex = 1;
-            lbl_totalamt.Text = "label8";
+            lbl_totalamt.Text = "0";
             lbl_totalamt.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbl_gm
             // 
-            lbl_gm.BackColor = Color.Yellow;
-            lbl_gm.Location = new Point(592, 175);
+            lbl_gm.BackColor = Color.White;
+            lbl_gm.Location = new Point(137, 73);
             lbl_gm.Name = "lbl_gm";
-            lbl_gm.Size = new Size(131, 53);
+            lbl_gm.Size = new Size(131, 33);
             lbl_gm.TabIndex = 0;
-            lbl_gm.Text = "label7";
+            lbl_gm.Text = "0";
             lbl_gm.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.ForeColor = SystemColors.ButtonShadow;
+            label7.Location = new Point(33, 36);
+            label7.Name = "label7";
+            label7.Size = new Size(92, 21);
+            label7.TabIndex = 286;
+            label7.Text = "TOTAL AMOUNT";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.ForeColor = SystemColors.ButtonShadow;
+            label8.Location = new Point(33, 79);
+            label8.Name = "label8";
+            label8.Size = new Size(62, 21);
+            label8.TabIndex = 287;
+            label8.Text = "TOTAL GM";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.ForeColor = SystemColors.ButtonShadow;
+            label9.Location = new Point(33, 125);
+            label9.Name = "label9";
+            label9.Size = new Size(63, 21);
+            label9.TabIndex = 288;
+            label9.Text = "TOTALQTY";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(lbl_gm);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Controls.Add(lbl_totalamt);
+            groupBox2.Controls.Add(lbl_qty);
+            groupBox2.Location = new Point(1056, 440);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(271, 173);
+            groupBox2.TabIndex = 289;
+            groupBox2.TabStop = false;
+            // 
+            // show_image
+            // 
+            show_image.Location = new Point(729, 139);
+            show_image.Name = "show_image";
+            show_image.Size = new Size(207, 142);
+            show_image.SizeMode = PictureBoxSizeMode.Zoom;
+            show_image.TabIndex = 290;
+            show_image.TabStop = false;
+            // 
+            // store_data
+            // 
+            store_data.AllowUserToAddRows = false;
+            store_data.BackgroundColor = Color.FromArgb(173, 199, 217);
+            store_data.BorderStyle = BorderStyle.Fixed3D;
+            store_data.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle3.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            store_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            store_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            store_data.Columns.AddRange(new DataGridViewColumn[] { dataGridViewImageColumn1, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Voucher, enter_remark, purvoc, barcode, dataGridViewTextBoxColumn3, gold_price, Items, item_name, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16, dataGridViewTextBoxColumn17, dataGridViewTextBoxColumn18, total_amt, dataGridViewTextBoxColumn19, dataGridViewTextBoxColumn20, dataGridViewTextBoxColumn21, dataGridViewTextBoxColumn22, type, coledit });
+            store_data.Location = new Point(36, 422);
+            store_data.Name = "store_data";
+            store_data.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            store_data.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            store_data.RowHeadersVisible = false;
+            store_data.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            store_data.RowTemplate.Height = 30;
+            store_data.Size = new Size(1003, 218);
+            store_data.TabIndex = 291;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            dataGridViewImageColumn1.HeaderText = "ဓါတ်ပုံ";
+            dataGridViewImageColumn1.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dataGridViewImageColumn1.MinimumWidth = 6;
+            dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            dataGridViewImageColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "ရက်စွဲ";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "အချိန်";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // Voucher
+            // 
+            Voucher.HeaderText = "ဘောက်ချာနံပါတ်";
+            Voucher.MinimumWidth = 6;
+            Voucher.Name = "Voucher";
+            Voucher.Width = 150;
+            // 
+            // enter_remark
+            // 
+            enter_remark.HeaderText = "အ၀င်စာရင်းမှတ်ချက်";
+            enter_remark.MinimumWidth = 6;
+            enter_remark.Name = "enter_remark";
+            enter_remark.Width = 132;
+            // 
+            // purvoc
+            // 
+            purvoc.HeaderText = "အ၀ယ်ဘောက်ချာနံပါတ်";
+            purvoc.MinimumWidth = 6;
+            purvoc.Name = "purvoc";
+            purvoc.Width = 148;
+            // 
+            // barcode
+            // 
+            barcode.HeaderText = "ဘားကုဒ်နံပါတ်";
+            barcode.MinimumWidth = 6;
+            barcode.Name = "barcode";
+            barcode.Width = 105;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "ရွှေရည်";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 68;
+            // 
+            // gold_price
+            // 
+            gold_price.HeaderText = "ရွှေစျေး";
+            gold_price.MinimumWidth = 6;
+            gold_price.Name = "gold_price";
+            gold_price.Width = 68;
+            // 
+            // Items
+            // 
+            Items.HeaderText = "ပစ္စည်းအမျိုးအစား";
+            Items.MinimumWidth = 6;
+            Items.Name = "Items";
+            Items.Width = 119;
+            // 
+            // item_name
+            // 
+            item_name.HeaderText = "ပစ္စည်းအမျိုးအမည်";
+            item_name.MinimumWidth = 6;
+            item_name.Name = "item_name";
+            item_name.Width = 122;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "ဂရမ်ချိန်";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.HeaderText = "ကျပ်";
+            dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.HeaderText = "ပဲ";
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.HeaderText = "ရွေး";
+            dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewTextBoxColumn8.HeaderText = "စိတ်";
+            dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            dataGridViewTextBoxColumn8.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewTextBoxColumn9.HeaderText = "ကျပ်";
+            dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            dataGridViewTextBoxColumn9.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            dataGridViewTextBoxColumn10.HeaderText = "ပဲ";
+            dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            dataGridViewTextBoxColumn10.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            dataGridViewTextBoxColumn11.HeaderText = "ရွေး";
+            dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            dataGridViewTextBoxColumn11.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            dataGridViewTextBoxColumn12.HeaderText = "စိတ်";
+            dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            dataGridViewTextBoxColumn12.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            dataGridViewTextBoxColumn13.HeaderText = "ကျပ်";
+            dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            dataGridViewTextBoxColumn13.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            dataGridViewTextBoxColumn14.HeaderText = "ပဲ";
+            dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            dataGridViewTextBoxColumn14.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            dataGridViewTextBoxColumn15.HeaderText = "ရွေး";
+            dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            dataGridViewTextBoxColumn15.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            dataGridViewTextBoxColumn16.HeaderText = "စိတ်";
+            dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            dataGridViewTextBoxColumn16.Width = 57;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            dataGridViewTextBoxColumn17.HeaderText = "လက်ခ";
+            dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            dataGridViewTextBoxColumn17.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            dataGridViewTextBoxColumn18.HeaderText = "ပြန်လဲအရှုံးတန်ဖိုး";
+            dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            dataGridViewTextBoxColumn18.Width = 125;
+            // 
+            // total_amt
+            // 
+            total_amt.HeaderText = "စုစုပေါင်းတန်ဖိုး";
+            total_amt.MinimumWidth = 6;
+            total_amt.Name = "total_amt";
+            total_amt.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            dataGridViewTextBoxColumn19.HeaderText = "မှတ်ချက်";
+            dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            dataGridViewTextBoxColumn19.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            dataGridViewTextBoxColumn20.HeaderText = "စာရင်းသွင်းသူအမည်";
+            dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            dataGridViewTextBoxColumn20.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            dataGridViewTextBoxColumn21.HeaderText = "ဆိုင်အမှတ်";
+            dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            dataGridViewTextBoxColumn22.HeaderText = "အသုံးပြုသည့်ဖောင်";
+            dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // type
+            // 
+            type.HeaderText = "အရောင်းကောင်တာ";
+            type.Name = "type";
+            // 
+            // coledit
+            // 
+            coledit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle4.NullValue = resources.GetObject("dataGridViewCellStyle4.NullValue");
+            coledit.DefaultCellStyle = dataGridViewCellStyle4;
+            coledit.Description = "Edit";
+            coledit.HeaderText = "";
+            coledit.Image = (Image)resources.GetObject("coledit.Image");
+            coledit.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            coledit.Name = "coledit";
+            coledit.Width = 5;
+            // 
+            // timer3
+            // 
+            timer3.Tick += timer3_Tick;
             // 
             // g_otherout
             // 
@@ -787,15 +941,14 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1428, 925);
-            Controls.Add(lbl_qty);
-            Controls.Add(lbl_totalamt);
+            ClientSize = new Size(1428, 825);
+            Controls.Add(store_data);
+            Controls.Add(show_image);
+            Controls.Add(groupBox2);
             Controls.Add(txt_counter);
-            Controls.Add(lbl_gm);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(store_data);
             Controls.Add(ico_add_btn);
             Controls.Add(txt_outremark);
             Controls.Add(showdata);
@@ -825,8 +978,10 @@
             ((System.ComponentModel.ISupportInitialize)showdata).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)show_image).EndInit();
             ((System.ComponentModel.ISupportInitialize)store_data).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -855,7 +1010,6 @@
         private Label label22;
         private TextBox txt_edit_check;
         private System.Windows.Forms.Timer timer2;
-        private ErrorProvider errorProvider1;
         private Label label12;
         private Button btn_review;
         private Label label23;
@@ -878,7 +1032,15 @@
         protected Label label5;
         private TextBox txt_counter;
         private Label label6;
-        private DataGridViewTextBoxColumn img;
+        private Label lbl_qty;
+        private Label lbl_totalamt;
+        private Label lbl_gm;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private GroupBox groupBox2;
+        private PictureBox show_image;
+        private DataGridViewImageColumn image;
         private DataGridViewTextBoxColumn Date;
         private DataGridViewTextBoxColumn Time;
         private DataGridViewTextBoxColumn OutVoucher_No;
@@ -910,8 +1072,40 @@
         private DataGridViewTextBoxColumn Shop;
         private DataGridViewTextBoxColumn Form;
         private DataGridViewTextBoxColumn Counter;
-        private Label lbl_qty;
-        private Label lbl_totalamt;
-        private Label lbl_gm;
+       
+        private DataGridViewImageColumn dataGridViewImageColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn Voucher;
+        private DataGridViewTextBoxColumn enter_remark;
+        private DataGridViewTextBoxColumn purvoc;
+        private DataGridViewTextBoxColumn barcode;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn gold_price;
+        private DataGridViewTextBoxColumn Items;
+        private DataGridViewTextBoxColumn item_name;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn total_amt;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private DataGridViewTextBoxColumn type;
+        private DataGridViewImageColumn coledit;
+        private System.Windows.Forms.Timer timer3;
     }
 }

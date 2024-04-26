@@ -24,16 +24,43 @@ namespace GHF
         {
             InitializeComponent();
         }
+
+        string gotherout,gregister ;
         private void preview_Load(object sender, EventArgs e)
         {
             txt_shop_preview.Text = login.shopvalue;
+            label4.Text= g_otherout.formvalue;
+            label4.Text = gform.registerform;
+           
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            datefilter();
+            if(gotherout == "Gold Other Out") 
+            {
+                goldotherout_datefilter();
+            }else if(gregister == "Gold Register")
+            {
+                goldregister_datefilter();
+            }
+           
         }
-        public void datefilter()
+
+        public void goldotherout_datefilter()
+        {
+            string shopvalue = txt_shop_preview.Text;
+            con.Open();
+            string sql = "SELECT * FROM other_out Where Shop=@shop AND Date BETWEEN @date1 and @date2";
+            System.Data.DataTable dt = new System.Data.DataTable();
+            SqlDataAdapter adp = new SqlDataAdapter(sql, con);
+            adp.SelectCommand.Parameters.AddWithValue("@date1", startdate.Value);
+            adp.SelectCommand.Parameters.AddWithValue("@date2", enddate.Value);
+            adp.SelectCommand.Parameters.AddWithValue("@shop", shopvalue);
+            adp.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+        public void goldregister_datefilter()
         {
             string shopvalue = txt_shop_preview.Text;
             con.Open();
@@ -50,6 +77,18 @@ namespace GHF
 
         private void txt_searchbox_TextChanged(object sender, EventArgs e)
         {
+            if (gotherout == "Gold Other Out")
+            {
+                goldotherout_search();
+            }
+            else if (gregister == "Gold Register")
+            {
+                goldregister_search();
+            }
+        }
+
+        public void goldregister_search()
+        {
             con.Open();
             string sql = "SELECT * FROM reg_gold Where ProductID='" + txt_searchbox.Text.ToString() + "'";
             SqlDataAdapter adp = new SqlDataAdapter(sql, con);
@@ -57,7 +96,22 @@ namespace GHF
             adp.Fill(dt);
             dataGridView1.DataSource = dt;
             /*            if (dataGridView1.Rows.Count <1)
-                        {
+                        {wh
+                            MessageBox.Show("Product မရှိပါ");
+                        }*/
+            con.Close();
+        }
+
+        public void goldotherout_search()
+        {
+            con.Open();
+            string sql = "SELECT * FROM other_out Where ProductID='" + txt_searchbox.Text.ToString() + "'";
+            SqlDataAdapter adp = new SqlDataAdapter(sql, con);
+            System.Data.DataTable dt = new System.Data.DataTable();
+            adp.Fill(dt);
+            dataGridView1.DataSource = dt;
+            /*            if (dataGridView1.Rows.Count <1)
+                        {wh
                             MessageBox.Show("Product မရှိပါ");
                         }*/
             con.Close();

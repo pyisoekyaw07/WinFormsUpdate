@@ -158,6 +158,7 @@
             ico_add = new FontAwesome.Sharp.IconButton();
             lbl_qty = new Label();
             label36 = new Label();
+            timer3 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -1294,7 +1295,7 @@
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(183, 30);
             textBox2.TabIndex = 214;
-            textBox2.Text = "Register";
+            textBox2.Text = "Gold Register";
             // 
             // txt_shop
             // 
@@ -1635,5 +1636,6 @@
         private FontAwesome.Sharp.IconButton ico_add;
         private Label lbl_qty;
         private Label label36;
+        private System.Windows.Forms.Timer timer3;
     }
 }

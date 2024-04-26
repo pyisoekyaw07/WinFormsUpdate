@@ -8,22 +8,50 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace GHF
 {
     public partial class login : Form
     {
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
         public login()
         {
             InitializeComponent();
+            
         }
 
         private void login_Load(object sender, EventArgs e)
         {
-            branch();
+            timer2.Interval = 200;
+            timer2.Start();
+          
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (true)//check new order
+            {
+                timer2.Stop();
+                int Desc;
+                string check = "";
+                check = (InternetGetConnectedState(out Desc, 0).ToString());
+                if (check == "True")
+                {
+                    
+                    MessageBox.Show("ကြိုဆိုပါ၏။");
+                    branch(); 
+                }
+                else
+                {
+                    MessageBox.Show("အင်တာနက်ကွန်ယက် ပြန်လည်စစ်ဆေးရန်။");
+
+                }
+            }
+        }
         public void branch()
         {
             combo_shop.Items.Clear();
@@ -49,11 +77,6 @@ namespace GHF
             }
         }
 
-        private void comboBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-       
 
         public static string shoptext = "";
         public static string username = "";
