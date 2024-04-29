@@ -25,6 +25,7 @@ using GHF.Properties;
 using System.DirectoryServices.ActiveDirectory;
 using System.Windows.Media.Media3D;
 using Color = System.Drawing.Color;
+using System.Windows.Controls;
 
 
 namespace GHF
@@ -343,7 +344,7 @@ namespace GHF
             label18.Text = "ပြန်လဲအရှုံးတန်ဖိုး";
             label19.Text = "စုစုပေါင်းတန်ဖိုး";
             label20.Text = "မှတ်ချက်";
-            label21.Text = "စုစုပေါင်းအခုရေ";
+           
             label23.Text = "စက်ဘောက်ချာနံပါတ်";
             btn_save.Text = "သိမ်းဆည်းမည်";
             btn_cancel.Text = "ပယ်ဖျက်မည်";
@@ -371,8 +372,7 @@ namespace GHF
             label18.Text = "Repurchase Amount";
             label19.Text = "Total Amount";
             label20.Text = "Remark";
-            label21.Text = "Total Gm";
-            label33.Text = "All Total Amount";
+           
             label23.Text = "Voucher No";
             btn_save.Text = "Save";
             btn_cancel.Text = "Cancel";
@@ -1321,24 +1321,7 @@ namespace GHF
 
         private void button1_Click(object sender, EventArgs e)/*Save Button*/
         {
-            /*string checkvalue = textBox25.Text;
-            if (textBox25.Text == checkvalue)
-            {
-                MessageBox.Show("Invoice Number Is Save");
-            }
-            else
-            {
-                MessageBox.Show("Invoice Number Is Not Save");
-            }*/
-            /*if (txt_gm.Text == "")
-            {
-                MessageBox.Show("အချက်အလက်များပြန်လည်စစ်ဆေးပေးပါ");
-            }
-            else
-            {
-                invoiceid();
-                MessageBox.Show("သိမ်းဆည်းပြီးပါပြီ");
-            }*/
+       
 
             if (dataGridView1.Rows.Count == 0)
             {
@@ -1379,8 +1362,18 @@ namespace GHF
         public static string registerform = "";
         private void btn_review_Click(object sender, EventArgs e)
         {
-            registerform = textBox2.Text;
+            /*registerform = textBox2.Text;
             preview frm = new preview();
+            frm.ShowDialog();*/
+
+            string texttosent = textBox2.Text;
+
+            preview frm = new preview
+            {
+
+                ReceivedText = texttosent
+            };
+
             frm.ShowDialog();
 
         }
@@ -1392,7 +1385,7 @@ namespace GHF
             invoiceid();
             dataGridView1.Rows.Clear();
             lbl_totalamt.Text = "0";
-            lbl_totalgm.Text="0";
+            lbl_totalgm.Text = "0";
             lbl_qty.Text = "0";
             txt_pur_no.Enabled = true;
             txt_pur_no.Text = "";
@@ -1538,7 +1531,7 @@ namespace GHF
 
                 byte[] data = (byte[])dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                 MemoryStream ms = new MemoryStream(data);
-                pictureBox.Image = Image.FromStream(ms);
+                pictureBox.Image = System.Drawing.Image.FromStream(ms);
 
                 txt_pur_no.Text = dataGridView1.Rows[selectedRowIndex].Cells[5].Value.ToString();
                 /*cmb_item.Items.Add( dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
@@ -1553,6 +1546,7 @@ namespace GHF
                 txt_remark.Text = dataGridView1.Rows[selectedRowIndex].Cells[27].Value.ToString();
 
             }
+           
 
         }
 
@@ -1681,6 +1675,22 @@ namespace GHF
                 }
             }
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == 0 && e.RowIndex > -1)
+            {
+                byte[] imgdata = (byte[])dataGridView1.CurrentRow.Cells[0].Value;
+                MemoryStream ms = new MemoryStream(imgdata);
+                register_edit frm3 = new register_edit();
+                frm3.pictureBox1.Image = System.Drawing.Image.FromStream(ms); ;
+                frm3.ShowDialog();
+
+            }
+
+        }
+        
     }
 }
 

@@ -28,6 +28,7 @@ namespace GHF
         {
             timer2.Interval = 200;
             timer2.Start();
+
           
         }
 
@@ -42,12 +43,12 @@ namespace GHF
                 if (check == "True")
                 {
                     
-                    MessageBox.Show("ကြိုဆိုပါ၏။");
+                    MessageBox.Show("Connect !");
                     branch(); 
                 }
                 else
                 {
-                    MessageBox.Show("အင်တာနက်ကွန်ယက် ပြန်လည်စစ်ဆေးရန်။");
+                    MessageBox.Show("Check Your Internet Connection !");
 
                 }
             }
@@ -67,9 +68,9 @@ namespace GHF
                     combo_shop.Items.Add(reader["Branchname"].ToString());
                 }
             }
-            catch (SqlException ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Check Your Internet Connection And Connection Speed ! Because Applicaton is can't connect to the Server !");
             }
             finally
             {

@@ -25,13 +25,13 @@ namespace GHF
             InitializeComponent();
             showdata.AutoGenerateColumns = true;
         }
-       
+
         private void g_otherout_Load(object sender, EventArgs e)
         {
             txt_shop.Text = login.shopvalue;
             timer3.Interval = 100;
             timer3.Start();
-            
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -469,13 +469,49 @@ namespace GHF
 
 
         public static string formvalue = "";
+
+
         private void btn_review_Click(object sender, EventArgs e)
         {
-            formvalue = txt_form.Text;
-            preview frm = new preview();
+            /* formvalue = txt_form.Text;
+             preview frm = new preview();
+             frm.ShowDialog();
+
+             preview.otherout = txt_form.Text;*/
+
+            string texttosent = txt_form.Text;
+
+            preview frm = new preview
+            {
+
+                ReceivedText = texttosent
+            };
+
             frm.ShowDialog();
         }
-       
+
+        private void store_data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 32) {
+
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this patient report?", "Conformation", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+
+                {
+                    int rowIndex = store_data.CurrentCell.RowIndex;
+
+                    store_data.Rows.RemoveAt(rowIndex);
+                }
+
+                else if (result == DialogResult.No)
+
+                {
+                   
+                }
+
+            }
+        }
     }
 
 

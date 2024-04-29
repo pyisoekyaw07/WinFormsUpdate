@@ -222,31 +222,9 @@
   <metadata name="type.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="coledit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Action.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataGridViewCellStyle4.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAALVJREFUOE+lkrENwjAURDObp/ASpCY1qUJLdgBKUoYFPAMwAAQEadweOku2guwY
-        G4onfZ3vv9+4APAXwTAHN2itkYMnUEpBCJEEu7OC3XaP13MMwreooFyU6PsjukPnLTPjGztRAcssNs3a
-        LXNmxjlJQM6nC9pNa+Bs82TBfXigWlYGzlkCu8zLZCr5KmCxXtUfV6dZVCClNNdu18EtW5jxjZ1ZwfSz
-        xAgKQt81hif4lWCYDoo36LISoP/H0rIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="coledit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAV5JREFUSEvt001OwkAYxvG26RW66wkqiRxAFpa95QCykYMooksxfoA3UBP1DIqe
-        xaAmRgK0oEJf8zQp6ceAhb7UxLD4J810hl9mpkgjcukvWsGZ9X/g/sCh3eoebVkWnTcb9O2OhfNY4a7d
-        p03TJEmSJjUumsK5rHD77ZUMwwjBVqkknMsCY6c3d7fe8/NLO4RXa/ux+Sg17B+vLMt0cnbqjfk4xnHn
-        0TUoFRy90yCOY8f76Bq/hWHRh+Tj/rHPaiEYqFksxlC0UShQp9cVrgs2N8yBorlgLhQlhjlRlAjmRtGv
-        8DJQNBNeFoqmwkBF/1OEcbwXrUvaVLh2eECKotBaLseOIiGMH9Y0jbbLZXrvfNB6Ps+KIiF8dFz3oMvr
-        K9qpVEhVVVYUxWB7OCBd1ydHi53j2HuOHZqXthh833rwQODYOecug8Xgr/GIWk+P5HwOQ+PcCe84i1Zw
-        Rrn0A50Xwr5ryOaYAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>469, 44</value>
   </metadata>

@@ -51,7 +51,6 @@
             label23 = new Label();
             openFileDialog1 = new OpenFileDialog();
             timer1 = new System.Windows.Forms.Timer(components);
-            label21 = new Label();
             btn_cancel = new Button();
             btn_save = new Button();
             label10 = new Label();
@@ -144,7 +143,6 @@
             label31 = new Label();
             lbl_totalgm = new Label();
             lbl_totalamt = new Label();
-            label33 = new Label();
             errorProvider1 = new ErrorProvider(components);
             textBox2 = new TextBox();
             txt_shop = new TextBox();
@@ -157,13 +155,19 @@
             label34 = new Label();
             ico_add = new FontAwesome.Sharp.IconButton();
             lbl_qty = new Label();
-            label36 = new Label();
             timer3 = new System.Windows.Forms.Timer(components);
+            groupBox3 = new GroupBox();
+            label35 = new Label();
+            label37 = new Label();
+            label38 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btn_add_photo
@@ -334,9 +338,9 @@
             btn_review.ForeColor = Color.White;
             btn_review.Image = (Image)resources.GetObject("btn_review.Image");
             btn_review.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_review.Location = new Point(1257, 543);
+            btn_review.Location = new Point(1257, 552);
             btn_review.Name = "btn_review";
-            btn_review.Size = new Size(156, 52);
+            btn_review.Size = new Size(156, 48);
             btn_review.TabIndex = 106;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = false;
@@ -361,17 +365,6 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick_1;
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.ForeColor = Color.DimGray;
-            label21.Location = new Point(898, 720);
-            label21.Name = "label21";
-            label21.Size = new Size(97, 22);
-            label21.TabIndex = 123;
-            label21.Text = "စုစုပေါင်းဂရမ်ချိန်";
-            // 
             // btn_cancel
             // 
             btn_cancel.BackColor = Color.FromArgb(24, 47, 81);
@@ -379,9 +372,9 @@
             btn_cancel.ForeColor = Color.White;
             btn_cancel.Image = (Image)resources.GetObject("btn_cancel.Image");
             btn_cancel.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_cancel.Location = new Point(1095, 543);
+            btn_cancel.Location = new Point(1095, 552);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.Size = new Size(156, 52);
+            btn_cancel.Size = new Size(156, 48);
             btn_cancel.TabIndex = 105;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = false;
@@ -395,9 +388,9 @@
             btn_save.ForeColor = Color.White;
             btn_save.Image = (Image)resources.GetObject("btn_save.Image");
             btn_save.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_save.Location = new Point(933, 543);
+            btn_save.Location = new Point(933, 552);
             btn_save.Name = "btn_save";
-            btn_save.Size = new Size(156, 52);
+            btn_save.Size = new Size(156, 48);
             btn_save.TabIndex = 104;
             btn_save.Text = "&Save";
             btn_save.UseVisualStyleBackColor = false;
@@ -963,6 +956,7 @@
             dataGridView1.Size = new Size(852, 261);
             dataGridView1.TabIndex = 201;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // image
             // 
@@ -1243,39 +1237,28 @@
             // 
             // lbl_totalgm
             // 
-            lbl_totalgm.BackColor = Color.FromArgb(255, 128, 128);
-            lbl_totalgm.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_totalgm.ForeColor = Color.WhiteSmoke;
-            lbl_totalgm.Location = new Point(898, 753);
+            lbl_totalgm.BackColor = Color.White;
+            lbl_totalgm.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_totalgm.ForeColor = Color.Black;
+            lbl_totalgm.Location = new Point(137, 75);
             lbl_totalgm.Name = "lbl_totalgm";
-            lbl_totalgm.Size = new Size(162, 58);
+            lbl_totalgm.Size = new Size(118, 28);
             lbl_totalgm.TabIndex = 124;
             lbl_totalgm.Text = "0";
             lbl_totalgm.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbl_totalamt
             // 
-            lbl_totalamt.BackColor = Color.FromArgb(255, 128, 0);
-            lbl_totalamt.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_totalamt.ForeColor = Color.WhiteSmoke;
-            lbl_totalamt.Location = new Point(1148, 752);
+            lbl_totalamt.BackColor = Color.White;
+            lbl_totalamt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_totalamt.ForeColor = Color.Black;
+            lbl_totalamt.Location = new Point(137, 32);
             lbl_totalamt.Name = "lbl_totalamt";
-            lbl_totalamt.Size = new Size(162, 58);
+            lbl_totalamt.Size = new Size(118, 29);
             lbl_totalamt.TabIndex = 124;
             lbl_totalamt.Text = "0";
             lbl_totalamt.TextAlign = ContentAlignment.MiddleLeft;
             lbl_totalamt.TextChanged += lbl_totalamt_TextChanged;
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label33.ForeColor = Color.DimGray;
-            label33.Location = new Point(1148, 720);
-            label33.Name = "label33";
-            label33.Size = new Size(89, 22);
-            label33.TabIndex = 123;
-            label33.Text = "စုစုပေါင်းတန်ဖိုး";
             // 
             // errorProvider1
             // 
@@ -1393,26 +1376,68 @@
             // 
             // lbl_qty
             // 
-            lbl_qty.BackColor = Color.MediumOrchid;
-            lbl_qty.Font = new Font("Pyidaungsu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_qty.ForeColor = Color.WhiteSmoke;
-            lbl_qty.Location = new Point(647, 753);
+            lbl_qty.BackColor = Color.White;
+            lbl_qty.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_qty.ForeColor = Color.Black;
+            lbl_qty.Location = new Point(137, 121);
             lbl_qty.Name = "lbl_qty";
-            lbl_qty.Size = new Size(162, 58);
+            lbl_qty.Size = new Size(118, 28);
             lbl_qty.TabIndex = 220;
             lbl_qty.Text = "0";
             lbl_qty.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label36
+            // groupBox3
             // 
-            label36.AutoSize = true;
-            label36.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label36.ForeColor = Color.DimGray;
-            label36.Location = new Point(646, 720);
-            label36.Name = "label36";
-            label36.Size = new Size(90, 22);
-            label36.TabIndex = 219;
-            label36.Text = "စုစုပေါင်းအခုရေ";
+            groupBox3.Controls.Add(label35);
+            groupBox3.Controls.Add(lbl_qty);
+            groupBox3.Controls.Add(label37);
+            groupBox3.Controls.Add(label38);
+            groupBox3.Controls.Add(lbl_totalgm);
+            groupBox3.Controls.Add(lbl_totalamt);
+            groupBox3.Location = new Point(561, 543);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(271, 169);
+            groupBox3.TabIndex = 290;
+            groupBox3.TabStop = false;
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.ForeColor = SystemColors.ButtonShadow;
+            label35.Location = new Point(33, 36);
+            label35.Name = "label35";
+            label35.Size = new Size(92, 21);
+            label35.TabIndex = 286;
+            label35.Text = "TOTAL AMOUNT";
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.ForeColor = SystemColors.ButtonShadow;
+            label37.Location = new Point(33, 125);
+            label37.Name = "label37";
+            label37.Size = new Size(63, 21);
+            label37.TabIndex = 288;
+            label37.Text = "TOTALQTY";
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.ForeColor = SystemColors.ButtonShadow;
+            label38.Location = new Point(33, 79);
+            label38.Name = "label38";
+            label38.Size = new Size(62, 21);
+            label38.TabIndex = 287;
+            label38.Text = "TOTAL GM";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(962, 87);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(170, 131);
+            pictureBox1.TabIndex = 291;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
             // 
             // gform
             // 
@@ -1422,15 +1447,11 @@
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(1428, 980);
-            Controls.Add(lbl_qty);
-            Controls.Add(label36);
+            Controls.Add(pictureBox1);
+            Controls.Add(groupBox3);
             Controls.Add(ico_add);
             Controls.Add(label34);
             Controls.Add(groupBox2);
-            Controls.Add(lbl_totalamt);
-            Controls.Add(lbl_totalgm);
-            Controls.Add(label33);
-            Controls.Add(label21);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label20);
@@ -1505,6 +1526,9 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1529,7 +1553,6 @@
         private Label label23;
         private OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Timer timer1;
-        private Label label21;
         private Button btn_cancel;
         private Button btn_save;
         private Label label10;
@@ -1588,7 +1611,6 @@
         private Label label31;
         private Label lbl_totalgm;
         private Label lbl_totalamt;
-        private Label label33;
         private ErrorProvider errorProvider1;
         private System.Windows.Forms.Timer timer2;
         private TextBox textBox2;
@@ -1635,7 +1657,11 @@
         private Label label34;
         private FontAwesome.Sharp.IconButton ico_add;
         private Label lbl_qty;
-        private Label label36;
         private System.Windows.Forms.Timer timer3;
+        private GroupBox groupBox3;
+        private Label label35;
+        private Label label37;
+        private Label label38;
+        private PictureBox pictureBox1;
     }
 }

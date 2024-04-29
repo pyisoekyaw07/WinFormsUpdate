@@ -17,6 +17,8 @@ namespace GHF
 {
     public partial class preview : Form
     {
+        public string ReceivedText { get; set; }
+
         SqlConnection con = new SqlConnection("Data Source=sql.bsite.net\\MSSQL2016;User ID=pyisoekyaw_;Password=pyisoe@#101215");
 
 
@@ -25,21 +27,21 @@ namespace GHF
             InitializeComponent();
         }
 
-        string gotherout,gregister ;
+       
         private void preview_Load(object sender, EventArgs e)
         {
             txt_shop_preview.Text = login.shopvalue;
-            label4.Text= g_otherout.formvalue;
-            label4.Text = gform.registerform;
+            txt_form_perview.Text = ReceivedText;
+           
            
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            if(gotherout == "Gold Other Out") 
+            if(txt_form_perview.Text == "Gold Other Out") 
             {
                 goldotherout_datefilter();
-            }else if(gregister == "Gold Register")
+            }else if(txt_form_perview.Text == "Gold Register")
             {
                 goldregister_datefilter();
             }
@@ -77,11 +79,11 @@ namespace GHF
 
         private void txt_searchbox_TextChanged(object sender, EventArgs e)
         {
-            if (gotherout == "Gold Other Out")
+            if (txt_form_perview.Text == "Gold Other Out")
             {
                 goldotherout_search();
             }
-            else if (gregister == "Gold Register")
+            else if (txt_form_perview.Text == "Gold Register")
             {
                 goldregister_search();
             }

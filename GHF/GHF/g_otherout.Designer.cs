@@ -34,7 +34,6 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(g_otherout));
             showdata = new DataGridView();
             txt_shop = new TextBox();
             txt_temparray_proid = new TextBox();
@@ -88,6 +87,7 @@
             groupBox2 = new GroupBox();
             show_image = new PictureBox();
             store_data = new DataGridView();
+            timer3 = new System.Windows.Forms.Timer(components);
             dataGridViewImageColumn1 = new DataGridViewImageColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -120,8 +120,7 @@
             dataGridViewTextBoxColumn21 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
             type = new DataGridViewTextBoxColumn();
-            coledit = new DataGridViewImageColumn();
-            timer3 = new System.Windows.Forms.Timer(components);
+            Action = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)showdata).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -679,7 +678,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             store_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             store_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            store_data.Columns.AddRange(new DataGridViewColumn[] { dataGridViewImageColumn1, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Voucher, enter_remark, purvoc, barcode, dataGridViewTextBoxColumn3, gold_price, Items, item_name, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16, dataGridViewTextBoxColumn17, dataGridViewTextBoxColumn18, total_amt, dataGridViewTextBoxColumn19, dataGridViewTextBoxColumn20, dataGridViewTextBoxColumn21, dataGridViewTextBoxColumn22, type, coledit });
+            store_data.Columns.AddRange(new DataGridViewColumn[] { dataGridViewImageColumn1, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Voucher, enter_remark, purvoc, barcode, dataGridViewTextBoxColumn3, gold_price, Items, item_name, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16, dataGridViewTextBoxColumn17, dataGridViewTextBoxColumn18, total_amt, dataGridViewTextBoxColumn19, dataGridViewTextBoxColumn20, dataGridViewTextBoxColumn21, dataGridViewTextBoxColumn22, type, Action });
             store_data.Location = new Point(36, 422);
             store_data.Name = "store_data";
             store_data.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -696,6 +695,11 @@
             store_data.RowTemplate.Height = 30;
             store_data.Size = new Size(1003, 218);
             store_data.TabIndex = 291;
+            store_data.CellContentClick += store_data_CellContentClick;
+            // 
+            // timer3
+            // 
+            timer3.Tick += timer3_Tick;
             // 
             // dataGridViewImageColumn1
             // 
@@ -916,23 +920,18 @@
             type.HeaderText = "အရောင်းကောင်တာ";
             type.Name = "type";
             // 
-            // coledit
+            // Action
             // 
-            coledit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Action.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.NullValue = resources.GetObject("dataGridViewCellStyle4.NullValue");
-            coledit.DefaultCellStyle = dataGridViewCellStyle4;
-            coledit.Description = "Edit";
-            coledit.HeaderText = "";
-            coledit.Image = (Image)resources.GetObject("coledit.Image");
-            coledit.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            coledit.Name = "coledit";
-            coledit.Width = 5;
-            // 
-            // timer3
-            // 
-            timer3.Tick += timer3_Tick;
+            Action.DefaultCellStyle = dataGridViewCellStyle4;
+            Action.HeaderText = "Action";
+            Action.Name = "Action";
+            Action.Resizable = DataGridViewTriState.True;
+            Action.Text = "Remove";
+            Action.UseColumnTextForButtonValue = true;
+            Action.Width = 49;
             // 
             // g_otherout
             // 
@@ -1072,7 +1071,7 @@
         private DataGridViewTextBoxColumn Shop;
         private DataGridViewTextBoxColumn Form;
         private DataGridViewTextBoxColumn Counter;
-       
+        private System.Windows.Forms.Timer timer3;
         private DataGridViewImageColumn dataGridViewImageColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1105,7 +1104,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private DataGridViewTextBoxColumn type;
-        private DataGridViewImageColumn coledit;
-        private System.Windows.Forms.Timer timer3;
+        private DataGridViewButtonColumn Action;
     }
 }
