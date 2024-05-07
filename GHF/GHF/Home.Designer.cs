@@ -56,6 +56,7 @@
             menuStrip2 = new MenuStrip();
             goldToolStripMenuItem1 = new ToolStripMenuItem();
             registerToolStripMenuItem = new ToolStripMenuItem();
+            otherOutToolStripMenuItem = new ToolStripMenuItem();
             whiteGoldToolStripMenuItem1 = new ToolStripMenuItem();
             registerToolStripMenuItem1 = new ToolStripMenuItem();
             test1ToolStripMenuItem = new ToolStripMenuItem();
@@ -65,7 +66,7 @@
             reportToolStripMenuItem = new ToolStripMenuItem();
             closingStockToolStripMenuItem = new ToolStripMenuItem();
             mainpanel = new Panel();
-            otherOutToolStripMenuItem = new ToolStripMenuItem();
+            saleToolStripMenuItem = new ToolStripMenuItem();
             panel2.SuspendLayout();
             pan_rep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ico_rep).BeginInit();
@@ -391,7 +392,7 @@
             // 
             // goldToolStripMenuItem1
             // 
-            goldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem, otherOutToolStripMenuItem });
+            goldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem, otherOutToolStripMenuItem, saleToolStripMenuItem });
             goldToolStripMenuItem1.Name = "goldToolStripMenuItem1";
             goldToolStripMenuItem1.Size = new Size(47, 26);
             goldToolStripMenuItem1.Text = "Gold";
@@ -404,6 +405,13 @@
             registerToolStripMenuItem.Size = new Size(184, 26);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
+            // 
+            // otherOutToolStripMenuItem
+            // 
+            otherOutToolStripMenuItem.Name = "otherOutToolStripMenuItem";
+            otherOutToolStripMenuItem.Size = new Size(184, 26);
+            otherOutToolStripMenuItem.Text = "Other Out";
+            otherOutToolStripMenuItem.Click += otherOutToolStripMenuItem_Click;
             // 
             // whiteGoldToolStripMenuItem1
             // 
@@ -468,12 +476,12 @@
             mainpanel.Size = new Size(1443, 624);
             mainpanel.TabIndex = 4;
             // 
-            // otherOutToolStripMenuItem
+            // saleToolStripMenuItem
             // 
-            otherOutToolStripMenuItem.Name = "otherOutToolStripMenuItem";
-            otherOutToolStripMenuItem.Size = new Size(184, 26);
-            otherOutToolStripMenuItem.Text = "Other Out";
-            otherOutToolStripMenuItem.Click += otherOutToolStripMenuItem_Click;
+            saleToolStripMenuItem.Name = "saleToolStripMenuItem";
+            saleToolStripMenuItem.Size = new Size(184, 26);
+            saleToolStripMenuItem.Text = "Sale";
+            saleToolStripMenuItem.Click += saleToolStripMenuItem_Click;
             // 
             // Form2
             // 
@@ -550,5 +558,6 @@
         private ToolStripMenuItem closingStockToolStripMenuItem;
         private RadioButton radioButton3;
         private ToolStripMenuItem otherOutToolStripMenuItem;
+        private ToolStripMenuItem saleToolStripMenuItem;
     }
 }

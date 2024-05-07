@@ -71,6 +71,12 @@ namespace GHF
             formload(new g_otherout());
         }
 
+        private void saleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formload(new g_sale());
+        }
+
+
         /*-----------------Change language----------------------------------*/
         public static string setvalueformyan = "";
 
@@ -184,6 +190,7 @@ namespace GHF
             showlogin.Show();
         }
 
+     
 
 
 

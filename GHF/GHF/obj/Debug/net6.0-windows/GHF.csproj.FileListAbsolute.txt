@@ -261,3 +261,4 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\ru
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_sale.resources

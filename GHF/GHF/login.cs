@@ -21,7 +21,7 @@ namespace GHF
         public login()
         {
             InitializeComponent();
-            
+
         }
 
         private void login_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace GHF
             timer2.Interval = 200;
             timer2.Start();
 
-          
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -42,9 +42,9 @@ namespace GHF
                 check = (InternetGetConnectedState(out Desc, 0).ToString());
                 if (check == "True")
                 {
-                    
+
                     MessageBox.Show("Connect !");
-                    branch(); 
+                    branch();
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace GHF
                     combo_shop.Items.Add(reader["Branchname"].ToString());
                 }
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Check Your Internet Connection And Connection Speed ! Because Applicaton is can't connect to the Server !");
             }
@@ -108,6 +108,11 @@ namespace GHF
         private void combo_shop_SelectedIndexChanged(object sender, EventArgs e)
         {
             shopvalue = combo_shop.SelectedItem.ToString();
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

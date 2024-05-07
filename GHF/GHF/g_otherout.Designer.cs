@@ -87,7 +87,6 @@
             groupBox2 = new GroupBox();
             show_image = new PictureBox();
             store_data = new DataGridView();
-            timer3 = new System.Windows.Forms.Timer(components);
             dataGridViewImageColumn1 = new DataGridViewImageColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -121,6 +120,7 @@
             dataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
             type = new DataGridViewTextBoxColumn();
             Action = new DataGridViewButtonColumn();
+            timer3 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)showdata).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -157,8 +157,9 @@
             showdata.RowHeadersVisible = false;
             showdata.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             showdata.RowTemplate.Height = 30;
-            showdata.Size = new Size(1003, 78);
+            showdata.Size = new Size(1003, 89);
             showdata.TabIndex = 201;
+            showdata.TabStop = false;
             // 
             // txt_shop
             // 
@@ -172,6 +173,7 @@
             txt_shop.ReadOnly = true;
             txt_shop.Size = new Size(207, 28);
             txt_shop.TabIndex = 278;
+            txt_shop.TabStop = false;
             // 
             // txt_temparray_proid
             // 
@@ -345,6 +347,7 @@
             txt_form.ReadOnly = true;
             txt_form.Size = new Size(207, 28);
             txt_form.TabIndex = 279;
+            txt_form.TabStop = false;
             txt_form.Text = "Gold Other Out";
             // 
             // label32
@@ -380,7 +383,7 @@
             ico_add_btn.Location = new Point(334, 229);
             ico_add_btn.Name = "ico_add_btn";
             ico_add_btn.Size = new Size(64, 38);
-            ico_add_btn.TabIndex = 209;
+            ico_add_btn.TabIndex = 3;
             ico_add_btn.UseVisualStyleBackColor = true;
             ico_add_btn.Click += ico_add_btn_Click;
             // 
@@ -411,6 +414,7 @@
             btn_review.Name = "btn_review";
             btn_review.Size = new Size(170, 44);
             btn_review.TabIndex = 256;
+            btn_review.TabStop = false;
             btn_review.Text = "&Preview";
             btn_review.UseVisualStyleBackColor = true;
             btn_review.Click += btn_review_Click;
@@ -433,8 +437,10 @@
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(170, 44);
             btn_cancel.TabIndex = 255;
+            btn_cancel.TabStop = false;
             btn_cancel.Text = "&Cancel";
             btn_cancel.UseVisualStyleBackColor = true;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_out
             // 
@@ -444,6 +450,7 @@
             btn_out.Name = "btn_out";
             btn_out.Size = new Size(170, 44);
             btn_out.TabIndex = 254;
+            btn_out.TabStop = false;
             btn_out.Text = "&Out Product";
             btn_out.UseVisualStyleBackColor = true;
             btn_out.Click += btn_out_Click;
@@ -455,7 +462,7 @@
             txt_out_no.Name = "txt_out_no";
             txt_out_no.PlaceholderText = "##080324-0002";
             txt_out_no.Size = new Size(207, 30);
-            txt_out_no.TabIndex = 215;
+            txt_out_no.TabIndex = 1;
             txt_out_no.TextChanged += txt_pur_no_TextChanged;
             // 
             // txt_outvoucher
@@ -494,6 +501,7 @@
             txt_time.ReadOnly = true;
             txt_time.Size = new Size(142, 28);
             txt_time.TabIndex = 233;
+            txt_time.TabStop = false;
             // 
             // label2
             // 
@@ -517,6 +525,7 @@
             txt_date.ReadOnly = true;
             txt_date.Size = new Size(142, 28);
             txt_date.TabIndex = 231;
+            txt_date.TabStop = false;
             // 
             // txt_outremark
             // 
@@ -526,7 +535,7 @@
             txt_outremark.Name = "txt_outremark";
             txt_outremark.PlaceholderText = "error";
             txt_outremark.Size = new Size(290, 65);
-            txt_outremark.TabIndex = 281;
+            txt_outremark.TabIndex = 2;
             // 
             // label3
             // 
@@ -568,6 +577,7 @@
             txt_counter.ReadOnly = true;
             txt_counter.Size = new Size(207, 28);
             txt_counter.TabIndex = 285;
+            txt_counter.TabStop = false;
             txt_counter.Text = "A Counter";
             // 
             // label6
@@ -695,11 +705,8 @@
             store_data.RowTemplate.Height = 30;
             store_data.Size = new Size(1003, 218);
             store_data.TabIndex = 291;
+            store_data.TabStop = false;
             store_data.CellContentClick += store_data_CellContentClick;
-            // 
-            // timer3
-            // 
-            timer3.Tick += timer3_Tick;
             // 
             // dataGridViewImageColumn1
             // 
@@ -932,6 +939,10 @@
             Action.Text = "Remove";
             Action.UseColumnTextForButtonValue = true;
             Action.Width = 49;
+            // 
+            // timer3
+            // 
+            timer3.Tick += timer3_Tick;
             // 
             // g_otherout
             // 

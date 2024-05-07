@@ -207,6 +207,7 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\GHF.g_sale.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\GHF.dll.manifest
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\GHF.application
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Release\net6.0-windows\GHF.dll.manifest

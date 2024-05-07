@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="GHF.exe" version="1.0.0.56" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="GHF.exe" version="1.0.0.57" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -125,13 +125,13 @@
       <dsig:DigestValue>jC5VveTSv1gBGXlTexS2XVW0kmDM9t/v1Z0xEPuIzJk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.dll" size="522240">
+  <file name="GHF.dll" size="535552">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7AJg2rGvnUBXIXeNoitKol9RwI0a6nBXbFo4Hzcq98E=</dsig:DigestValue>
+      <dsig:DigestValue>Vdh4nO1iafq42eLDJf2VE4LCNbxZ8M3DOcYgbk7PjD8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.dll.config" size="289">
@@ -143,13 +143,13 @@
       <dsig:DigestValue>IzeX/Ni6MDDZ+YimjhoV1P2AuFWOFmZwTw4cAZAUArU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.exe" size="148992">
+  <file name="GHF.exe" size="149504">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>d9u5fI6Sdl77Ggd+KUdx4VuhN/X7NURLR34qMH3bnzg=</dsig:DigestValue>
+      <dsig:DigestValue>BhYKRySFeYtmqmeThrqSk6/tu28M5Z67GtlJesrxElI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.runtimeconfig.json" size="372">

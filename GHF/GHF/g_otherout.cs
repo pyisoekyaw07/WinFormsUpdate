@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
+using System.Globalization;
+using OfficeOpenXml.ConditionalFormatting;
 
 namespace GHF
 {
@@ -31,6 +33,47 @@ namespace GHF
             txt_shop.Text = login.shopvalue;
             timer3.Interval = 100;
             timer3.Start();
+
+        }
+
+        public void resetpid()/*function Reset Code Invoice and Product ID*/
+        {
+            string date = DateTime.Now.ToString("dd/MMM/yyyy");
+            string serverdate = "0";
+            string shopvalue = txt_shop.Text;
+            string datevalue = "";
+            con.Open();
+            /*sql = "SELECT Date FROM reg_gold ORDER BY Date DESC";*/
+            sql = $"SELECT Date FROM other_out WHERE Shop = @shoped ORDER BY Date DESC";
+            cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@shoped", shopvalue);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.HasRows && dr.Read())
+            {
+                serverdate = dr.GetValue(0).ToString();
+                datevalue = serverdate.ToString();
+            }
+            con.Close();
+            if (datevalue == "" || DateTime.Parse(date, CultureInfo.InvariantCulture) != DateTime.Parse(serverdate, CultureInfo.InvariantCulture))
+            {
+
+                string form = "GO";
+                string ivshop = login.shopvalue;
+                string ivdate = DateTime.Now.ToString("ddMMyy");
+                string ivid = "0001";
+                txt_outvoucher.Text = form + ivshop + ivdate + "-" + ivid;
+
+                MessageBox.Show("Code Is Reset");
+
+            }
+
+            else
+
+            {
+                invoiceid();
+
+            }
 
         }
 
@@ -88,7 +131,7 @@ namespace GHF
                 check = (InternetGetConnectedState(out Desc, 0).ToString());
                 if (check == "True")
                 {
-                    invoiceid();
+                    resetpid();
                 }
                 else
                 {
@@ -492,7 +535,8 @@ namespace GHF
 
         private void store_data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 32) {
+            if (e.ColumnIndex == 32)
+            {
 
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this patient report?", "Conformation", MessageBoxButtons.YesNo);
 
@@ -507,10 +551,16 @@ namespace GHF
                 else if (result == DialogResult.No)
 
                 {
-                   
+
                 }
 
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            g_otherout g_Otherout = new g_otherout();
+            g_Otherout.show();
         }
     }
 

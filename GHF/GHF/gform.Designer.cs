@@ -160,14 +160,12 @@
             label35 = new Label();
             label37 = new Label();
             label38 = new Label();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btn_add_photo
@@ -417,6 +415,7 @@
             txt_barcode.ReadOnly = true;
             txt_barcode.Size = new Size(183, 30);
             txt_barcode.TabIndex = 102;
+            txt_barcode.TabStop = false;
             // 
             // txt_counter
             // 
@@ -429,6 +428,7 @@
             txt_counter.ReadOnly = true;
             txt_counter.Size = new Size(183, 30);
             txt_counter.TabIndex = 100;
+            txt_counter.TabStop = false;
             // 
             // txt_pur_no
             // 
@@ -461,6 +461,7 @@
             txt_totalamt.Name = "txt_totalamt";
             txt_totalamt.Size = new Size(191, 30);
             txt_totalamt.TabIndex = 96;
+            txt_totalamt.TabStop = false;
             txt_totalamt.TextChanged += txt_totalamt_TextChanged;
             // 
             // txt_rep
@@ -495,6 +496,7 @@
             total_S.ReadOnly = true;
             total_S.Size = new Size(59, 30);
             total_S.TabIndex = 93;
+            total_S.TabStop = false;
             total_S.TextAlign = HorizontalAlignment.Center;
             // 
             // total_Y
@@ -507,6 +509,7 @@
             total_Y.ReadOnly = true;
             total_Y.Size = new Size(59, 30);
             total_Y.TabIndex = 92;
+            total_Y.TabStop = false;
             total_Y.TextAlign = HorizontalAlignment.Center;
             // 
             // total_P
@@ -519,6 +522,7 @@
             total_P.ReadOnly = true;
             total_P.Size = new Size(59, 30);
             total_P.TabIndex = 91;
+            total_P.TabStop = false;
             total_P.TextAlign = HorizontalAlignment.Center;
             // 
             // total_K
@@ -531,6 +535,7 @@
             total_K.ReadOnly = true;
             total_K.Size = new Size(59, 30);
             total_K.TabIndex = 90;
+            total_K.TabStop = false;
             total_K.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_WC
@@ -591,6 +596,7 @@
             txt_s.ReadOnly = true;
             txt_s.Size = new Size(59, 30);
             txt_s.TabIndex = 85;
+            txt_s.TabStop = false;
             txt_s.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_y
@@ -603,6 +609,7 @@
             txt_y.ReadOnly = true;
             txt_y.Size = new Size(59, 30);
             txt_y.TabIndex = 84;
+            txt_y.TabStop = false;
             txt_y.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_p
@@ -615,6 +622,7 @@
             txt_p.ReadOnly = true;
             txt_p.Size = new Size(59, 30);
             txt_p.TabIndex = 83;
+            txt_p.TabStop = false;
             txt_p.TextAlign = HorizontalAlignment.Center;
             // 
             // label3
@@ -638,6 +646,7 @@
             txt_goldprice.ReadOnly = true;
             txt_goldprice.Size = new Size(126, 30);
             txt_goldprice.TabIndex = 200;
+            txt_goldprice.TabStop = false;
             txt_goldprice.DoubleClick += textBox8_DoubleClick;
             // 
             // label8
@@ -672,6 +681,7 @@
             txt_k.ReadOnly = true;
             txt_k.Size = new Size(59, 30);
             txt_k.TabIndex = 78;
+            txt_k.TabStop = false;
             txt_k.TextAlign = HorizontalAlignment.Center;
             // 
             // label7
@@ -736,6 +746,7 @@
             txt_time.ReadOnly = true;
             txt_time.Size = new Size(134, 30);
             txt_time.TabIndex = 72;
+            txt_time.TabStop = false;
             // 
             // label2
             // 
@@ -758,6 +769,7 @@
             txt_date.ReadOnly = true;
             txt_date.Size = new Size(126, 30);
             txt_date.TabIndex = 70;
+            txt_date.TabStop = false;
             // 
             // label1
             // 
@@ -955,6 +967,7 @@
             dataGridView1.RowTemplate.Height = 30;
             dataGridView1.Size = new Size(852, 261);
             dataGridView1.TabIndex = 201;
+            dataGridView1.TabStop = false;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
@@ -1278,6 +1291,7 @@
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(183, 30);
             textBox2.TabIndex = 214;
+            textBox2.TabStop = false;
             textBox2.Text = "Gold Register";
             // 
             // txt_shop
@@ -1291,6 +1305,7 @@
             txt_shop.ReadOnly = true;
             txt_shop.Size = new Size(183, 30);
             txt_shop.TabIndex = 213;
+            txt_shop.TabStop = false;
             // 
             // label32
             // 
@@ -1333,7 +1348,7 @@
             txt_remark.Multiline = true;
             txt_remark.Name = "txt_remark";
             txt_remark.Size = new Size(331, 73);
-            txt_remark.TabIndex = 210;
+            txt_remark.TabIndex = 14;
             // 
             // groupBox2
             // 
@@ -1342,7 +1357,7 @@
             groupBox2.Location = new Point(158, 698);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(329, 83);
-            groupBox2.TabIndex = 216;
+            groupBox2.TabIndex = 55;
             groupBox2.TabStop = false;
             groupBox2.Text = "Image";
             // 
@@ -1369,7 +1384,7 @@
             ico_add.Location = new Point(244, 892);
             ico_add.Name = "ico_add";
             ico_add.Size = new Size(155, 52);
-            ico_add.TabIndex = 218;
+            ico_add.TabIndex = 15;
             ico_add.Text = "&Add to table";
             ico_add.UseVisualStyleBackColor = false;
             ico_add.Click += ico_add_Click;
@@ -1394,7 +1409,7 @@
             groupBox3.Controls.Add(label38);
             groupBox3.Controls.Add(lbl_totalgm);
             groupBox3.Controls.Add(lbl_totalamt);
-            groupBox3.Location = new Point(561, 543);
+            groupBox3.Location = new Point(1016, 58);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(271, 169);
             groupBox3.TabIndex = 290;
@@ -1430,15 +1445,6 @@
             label38.TabIndex = 287;
             label38.Text = "TOTAL GM";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(962, 87);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(170, 131);
-            pictureBox1.TabIndex = 291;
-            pictureBox1.TabStop = false;
-            pictureBox1.Visible = false;
-            // 
             // gform
             // 
             AutoScaleDimensions = new SizeF(6F, 21F);
@@ -1447,7 +1453,6 @@
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(1428, 980);
-            Controls.Add(pictureBox1);
             Controls.Add(groupBox3);
             Controls.Add(ico_add);
             Controls.Add(label34);
@@ -1528,7 +1533,6 @@
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1662,6 +1666,5 @@
         private Label label35;
         private Label label37;
         private Label label38;
-        private PictureBox pictureBox1;
     }
 }

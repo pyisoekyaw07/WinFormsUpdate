@@ -113,7 +113,7 @@
             combo_shop.Location = new Point(106, 100);
             combo_shop.Name = "combo_shop";
             combo_shop.Size = new Size(67, 29);
-            combo_shop.TabIndex = 6;
+            combo_shop.TabIndex = 1;
             combo_shop.SelectedIndexChanged += combo_shop_SelectedIndexChanged;
             // 
             // label3
@@ -134,7 +134,7 @@
             label2.Location = new Point(258, 303);
             label2.Name = "label2";
             label2.Size = new Size(50, 21);
-            label2.TabIndex = 4;
+            label2.TabIndex = 5;
             label2.Text = "Sign Up";
             // 
             // button1
@@ -142,7 +142,7 @@
             button1.Location = new Point(105, 250);
             button1.Name = "button1";
             button1.Size = new Size(191, 37);
-            button1.TabIndex = 3;
+            button1.TabIndex = 4;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -153,14 +153,15 @@
             txt_password.Name = "txt_password";
             txt_password.PasswordChar = '#';
             txt_password.Size = new Size(191, 28);
-            txt_password.TabIndex = 2;
+            txt_password.TabIndex = 3;
+            txt_password.TextChanged += txt_password_TextChanged;
             // 
             // txt_username
             // 
             txt_username.Location = new Point(106, 152);
             txt_username.Name = "txt_username";
             txt_username.Size = new Size(191, 28);
-            txt_username.TabIndex = 1;
+            txt_username.TabIndex = 2;
             // 
             // label1
             // 

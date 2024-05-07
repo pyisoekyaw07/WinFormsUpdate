@@ -1120,8 +1120,6 @@ namespace GHF
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-
-
             }
         }
 
@@ -1130,6 +1128,7 @@ namespace GHF
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+                
             }
         }
 
@@ -1157,6 +1156,7 @@ namespace GHF
                 txt_rep.Text = string.Format("{0:n0}", double.Parse(txt_rep.Text));
             }
             calculategm();
+            
         }
 
 
