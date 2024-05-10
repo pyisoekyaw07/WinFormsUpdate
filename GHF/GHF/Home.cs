@@ -31,7 +31,7 @@ namespace GHF
                 this.mainpanel.Controls.RemoveAt(0);
             Form f = form as Form;
             f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
+            f.Dock = DockStyle.None;
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();

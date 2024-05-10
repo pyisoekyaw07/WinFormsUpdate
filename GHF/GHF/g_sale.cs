@@ -19,6 +19,7 @@ namespace GHF
         private void g_sale_Load(object sender, EventArgs e)
         {
             txt_shop.Text = login.shopvalue;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -28,7 +29,6 @@ namespace GHF
             txt_date.Text = d.ToString("dd/MMM/yyyy");
             txt_time.Text = DateTime.Now.ToLongTimeString();
         }
-
 
     }
 }

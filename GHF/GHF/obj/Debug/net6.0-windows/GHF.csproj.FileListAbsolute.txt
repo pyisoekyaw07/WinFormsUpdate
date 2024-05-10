@@ -147,7 +147,6 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GH
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.AssemblyInfoInputs.cache
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.AssemblyInfo.cs
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.CoreCompileInputs.cache
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.CopyComplete
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\refint\GHF.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.pdb
@@ -262,3 +261,4 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\ru
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_sale.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.Up2Date
