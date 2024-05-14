@@ -84,6 +84,22 @@
           "Microsoft.WindowsDesktop.App"
         ]
       },
+      "Krypton.Toolkit/80.24.3.64": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/Krypton.Toolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Toolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -606,6 +622,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "RibbonWinForms/5.0.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net461/System.Windows.Forms.Ribbon.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Windows.Forms.Ribbon.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -2127,6 +2152,38 @@
         "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
     },
+    "Krypton.Toolkit/80.24.3.64": {
+      "sha512": "E1lxbKLD56r2LCyNbjTaQH6RVBdPr01jApXAYjJHcfs9mz6+52/LLsZkOmeqPBZ4Jq+zy5JzrW//I/kb12RNDA==",
+      "type": "package",
+      "path": "krypton.toolkit/80.24.3.64",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "License.md",
+        "README.md",
+        "krypton.toolkit.80.24.3.64.nupkg.sha512",
+        "krypton.toolkit.nuspec",
+        "lib/net462/Krypton.Toolkit.dll",
+        "lib/net462/Krypton.Toolkit.xml",
+        "lib/net47/Krypton.Toolkit.dll",
+        "lib/net47/Krypton.Toolkit.xml",
+        "lib/net471/Krypton.Toolkit.dll",
+        "lib/net471/Krypton.Toolkit.xml",
+        "lib/net472/Krypton.Toolkit.dll",
+        "lib/net472/Krypton.Toolkit.xml",
+        "lib/net48/Krypton.Toolkit.dll",
+        "lib/net48/Krypton.Toolkit.xml",
+        "lib/net481/Krypton.Toolkit.dll",
+        "lib/net481/Krypton.Toolkit.xml",
+        "lib/net6.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net6.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/net7.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net7.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/net8.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net8.0-windows7.0/Krypton.Toolkit.xml"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
@@ -2841,6 +2898,25 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "RibbonWinForms/5.0.1.1": {
+      "sha512": "3JeS/WehB/5HFsG5xIhk+VoenWnSXEGFnsq5t14usuaj7eqfl3/hEnlAgdmavifJSS2qeepXMw2Zd716USjrUA==",
+      "type": "package",
+      "path": "ribbonwinforms/5.0.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/System.Windows.Forms.Ribbon.dll",
+        "lib/net40/System.Windows.Forms.Ribbon.dll",
+        "lib/net45/System.Windows.Forms.Ribbon.dll",
+        "lib/net46/System.Windows.Forms.Ribbon.dll",
+        "lib/net461/System.Windows.Forms.Ribbon.dll",
+        "lib/net471/System.Windows.Forms.Ribbon.dll",
+        "lib/net472/System.Windows.Forms.Ribbon.dll",
+        "lib/net48/System.Windows.Forms.Ribbon.dll",
+        "ribbonwinforms.5.0.1.1.nupkg.sha512",
+        "ribbonwinforms.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -6394,8 +6470,10 @@
     "net6.0-windows7.0": [
       "EPPlusFree >= 4.5.3.8",
       "FontAwesome.Sharp >= 6.3.0",
+      "Krypton.Toolkit >= 80.24.3.64",
       "Microsoft.Data.SqlClient >= 5.2.0",
       "Microsoft.Office.Interop.Excel >= 15.0.4795.1001",
+      "RibbonWinForms >= 5.0.1.1",
       "System.Data.SqlClient >= 4.8.6"
     ]
   },
@@ -6457,6 +6535,10 @@
             "target": "Package",
             "version": "[6.3.0, )"
           },
+          "Krypton.Toolkit": {
+            "target": "Package",
+            "version": "[80.24.3.64, )"
+          },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[5.2.0, )"
@@ -6464,6 +6546,10 @@
           "Microsoft.Office.Interop.Excel": {
             "target": "Package",
             "version": "[15.0.4795.1001, )"
+          },
+          "RibbonWinForms": {
+            "target": "Package",
+            "version": "[5.0.1.1, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
@@ -6492,5 +6578,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RibbonWinForms 5.0.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RibbonWinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

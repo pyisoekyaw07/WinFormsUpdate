@@ -10,8 +10,10 @@
         "dependencies": {
           "EPPlusFree": "4.5.3.8",
           "FontAwesome.Sharp": "6.3.0",
+          "Krypton.Toolkit": "80.24.3.64",
           "Microsoft.Data.SqlClient": "5.2.0",
           "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
+          "RibbonWinForms": "5.0.1.1",
           "System.Data.SqlClient": "4.8.6"
         },
         "runtime": {
@@ -78,6 +80,14 @@
           "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {
             "assemblyVersion": "6.3.0.0",
             "fileVersion": "6.3.0.0"
+          }
+        }
+      },
+      "Krypton.Toolkit/80.24.3.64": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Toolkit.dll": {
+            "assemblyVersion": "80.24.3.64",
+            "fileVersion": "80.24.3.64"
           }
         }
       },
@@ -442,6 +452,14 @@
         }
       },
       "Microsoft.Win32.SystemEvents/6.0.0": {},
+      "RibbonWinForms/5.0.1.1": {
+        "runtime": {
+          "lib/net461/System.Windows.Forms.Ribbon.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -1148,6 +1166,13 @@
       "path": "fontawesome.sharp/6.3.0",
       "hashPath": "fontawesome.sharp.6.3.0.nupkg.sha512"
     },
+    "Krypton.Toolkit/80.24.3.64": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E1lxbKLD56r2LCyNbjTaQH6RVBdPr01jApXAYjJHcfs9mz6+52/LLsZkOmeqPBZ4Jq+zy5JzrW//I/kb12RNDA==",
+      "path": "krypton.toolkit/80.24.3.64",
+      "hashPath": "krypton.toolkit.80.24.3.64.nupkg.sha512"
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -1343,6 +1368,13 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "RibbonWinForms/5.0.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3JeS/WehB/5HFsG5xIhk+VoenWnSXEGFnsq5t14usuaj7eqfl3/hEnlAgdmavifJSS2qeepXMw2Zd716USjrUA==",
+      "path": "ribbonwinforms/5.0.1.1",
+      "hashPath": "ribbonwinforms.5.0.1.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",

@@ -30,5 +30,9 @@ namespace GHF
             txt_time.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

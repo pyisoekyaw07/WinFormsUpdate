@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             showdata = new DataGridView();
             txt_shop = new TextBox();
             txt_temparray_proid = new TextBox();
@@ -134,26 +134,26 @@
             showdata.BackgroundColor = Color.FromArgb(173, 199, 217);
             showdata.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             showdata.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle1.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(24, 47, 81);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            showdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle6.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            showdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             showdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            showdata.Location = new Point(36, 291);
+            showdata.Location = new Point(36, 297);
             showdata.Name = "showdata";
             showdata.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            showdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            showdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             showdata.RowHeadersVisible = false;
             showdata.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             showdata.RowTemplate.Height = 30;
@@ -217,9 +217,9 @@
             groupBox1.Controls.Add(txt_temparay_pid);
             groupBox1.Controls.Add(txt_result_pid);
             groupBox1.Controls.Add(txt_Dece_pid);
-            groupBox1.Location = new Point(36, 643);
+            groupBox1.Location = new Point(1131, 441);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(402, 176);
+            groupBox1.Size = new Size(216, 176);
             groupBox1.TabIndex = 268;
             groupBox1.TabStop = false;
             groupBox1.Text = "requirment for calculation";
@@ -380,7 +380,7 @@
             ico_add_btn.IconColor = Color.Black;
             ico_add_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ico_add_btn.IconSize = 35;
-            ico_add_btn.Location = new Point(334, 229);
+            ico_add_btn.Location = new Point(334, 235);
             ico_add_btn.Name = "ico_add_btn";
             ico_add_btn.Size = new Size(64, 38);
             ico_add_btn.TabIndex = 3;
@@ -530,7 +530,7 @@
             // txt_outremark
             // 
             txt_outremark.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_outremark.Location = new Point(38, 216);
+            txt_outremark.Location = new Point(38, 222);
             txt_outremark.Multiline = true;
             txt_outremark.Name = "txt_outremark";
             txt_outremark.PlaceholderText = "error";
@@ -541,7 +541,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(38, 190);
+            label3.Location = new Point(38, 196);
             label3.Name = "label3";
             label3.Size = new Size(56, 22);
             label3.TabIndex = 280;
@@ -658,7 +658,7 @@
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(lbl_totalamt);
             groupBox2.Controls.Add(lbl_qty);
-            groupBox2.Location = new Point(1056, 440);
+            groupBox2.Location = new Point(127, 646);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(271, 173);
             groupBox2.TabIndex = 289;
@@ -666,7 +666,7 @@
             // 
             // show_image
             // 
-            show_image.Location = new Point(729, 139);
+            show_image.Location = new Point(729, 145);
             show_image.Name = "show_image";
             show_image.Size = new Size(207, 142);
             show_image.SizeMode = PictureBoxSizeMode.Zoom;
@@ -679,27 +679,27 @@
             store_data.BackgroundColor = Color.FromArgb(173, 199, 217);
             store_data.BorderStyle = BorderStyle.Fixed3D;
             store_data.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle3.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(24, 47, 81);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            store_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle8.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(24, 47, 81);
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            store_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             store_data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             store_data.Columns.AddRange(new DataGridViewColumn[] { dataGridViewImageColumn1, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Voucher, enter_remark, purvoc, barcode, dataGridViewTextBoxColumn3, gold_price, Items, item_name, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16, dataGridViewTextBoxColumn17, dataGridViewTextBoxColumn18, total_amt, dataGridViewTextBoxColumn19, dataGridViewTextBoxColumn20, dataGridViewTextBoxColumn21, dataGridViewTextBoxColumn22, type, Action });
             store_data.Location = new Point(36, 422);
             store_data.Name = "store_data";
             store_data.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            store_data.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Control;
+            dataGridViewCellStyle10.Font = new Font("Pyidaungsu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            store_data.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             store_data.RowHeadersVisible = false;
             store_data.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             store_data.RowTemplate.Height = 30;
@@ -930,9 +930,9 @@
             // Action
             // 
             Action.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
-            Action.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = Color.WhiteSmoke;
+            Action.DefaultCellStyle = dataGridViewCellStyle9;
             Action.HeaderText = "Action";
             Action.Name = "Action";
             Action.Resizable = DataGridViewTriState.True;
@@ -951,7 +951,7 @@
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1428, 825);
+            ClientSize = new Size(1428, 839);
             Controls.Add(store_data);
             Controls.Add(show_image);
             Controls.Add(groupBox2);

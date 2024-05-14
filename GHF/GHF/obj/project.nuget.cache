@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QYNBE+tlk0c+R4a7Uihz3Zpoikl36CLRi/cEgwongL7db0ZPyDwhRvxxGR5kKT158EgX0ywavxRTYRLy5ImxRQ==",
+  "dgSpecHash": "VVXKLl7ff3g/b/l8xaLbvAXqEtyiYFt03I0pjN89rM2hf0ViC8IaIU5kOwXF7T6eT6LWUl2l0oBVvs8aklveTw==",
   "success": true,
   "projectFilePath": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\epplusfree\\4.5.3.8\\epplusfree.4.5.3.8.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
+    "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\krypton.toolkit\\80.24.3.64\\krypton.toolkit.80.24.3.64.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.data.sqlclient\\5.2.0\\microsoft.data.sqlclient.5.2.0.nupkg.sha512",
@@ -36,6 +37,7 @@
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\ribbonwinforms\\5.0.1.1\\ribbonwinforms.5.0.1.1.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
@@ -122,5 +124,16 @@
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RibbonWinForms 5.0.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RibbonWinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

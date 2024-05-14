@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[6.3.0, )"
             },
+            "Krypton.Toolkit": {
+              "target": "Package",
+              "version": "[80.24.3.64, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.0, )"
@@ -65,6 +69,10 @@
             "Microsoft.Office.Interop.Excel": {
               "target": "Package",
               "version": "[15.0.4795.1001, )"
+            },
+            "RibbonWinForms": {
+              "target": "Package",
+              "version": "[5.0.1.1, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

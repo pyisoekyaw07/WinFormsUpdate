@@ -114,5 +114,23 @@ namespace GHF
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (txt_password.PasswordChar == '#')
+            {
+                button2.BringToFront();
+                txt_password.PasswordChar = '\0';
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txt_password.PasswordChar == '\0')
+            {
+                button3.BringToFront();
+                txt_password.PasswordChar = '#';
+            }
+        }
     }
 }

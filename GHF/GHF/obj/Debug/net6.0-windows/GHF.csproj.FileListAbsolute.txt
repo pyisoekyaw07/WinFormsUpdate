@@ -262,3 +262,6 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\ru
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_sale.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.Up2Date
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.Windows.Forms.Ribbon.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.test_krypton.resources

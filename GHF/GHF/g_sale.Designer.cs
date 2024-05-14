@@ -47,26 +47,17 @@
             txt_out_no = new TextBox();
             label7 = new Label();
             label6 = new Label();
-            txt_k = new TextBox();
             txt_WK = new TextBox();
             txt_WP = new TextBox();
             txt_WY = new TextBox();
-            txt_p = new TextBox();
             txt_WC = new TextBox();
-            total_K = new TextBox();
-            total_P = new TextBox();
-            total_Y = new TextBox();
-            total_S = new TextBox();
-            txt_y = new TextBox();
             label13 = new Label();
-            txt_s = new TextBox();
             label29 = new Label();
             label30 = new Label();
             label31 = new Label();
             label19 = new Label();
             label18 = new Label();
             label17 = new Label();
-            txt_totalamt = new TextBox();
             txt_rep = new TextBox();
             txt_mcost = new TextBox();
             iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -75,7 +66,27 @@
             label5 = new Label();
             textBox1 = new TextBox();
             panel1 = new Panel();
-            textBox15 = new TextBox();
+            label45 = new Label();
+            label46 = new Label();
+            label44 = new Label();
+            label43 = new Label();
+            label42 = new Label();
+            label38 = new Label();
+            label39 = new Label();
+            label40 = new Label();
+            label41 = new Label();
+            label37 = new Label();
+            label36 = new Label();
+            label35 = new Label();
+            label34 = new Label();
+            button2 = new Button();
+            label14 = new Label();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            kryptonTextBox14 = new Krypton.Toolkit.KryptonTextBox();
+            label2 = new Label();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            label33 = new Label();
             label32 = new Label();
             label28 = new Label();
             textBox14 = new TextBox();
@@ -96,26 +107,14 @@
             label4 = new Label();
             lbl_gm = new Label();
             label20 = new Label();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
             dataGridView1 = new DataGridView();
             lbl_totalamt = new Label();
-            textBox9 = new TextBox();
-            panel3 = new Panel();
-            pictureBox2 = new PictureBox();
-            label14 = new Label();
             label11 = new Label();
             label15 = new Label();
-            textBox8 = new TextBox();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
             label10 = new Label();
             label3 = new Label();
-            textBox7 = new TextBox();
             label9 = new Label();
-            textBox4 = new TextBox();
             label8 = new Label();
-            label33 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -123,16 +122,14 @@
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(txt_date);
+            groupBox1.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(183, 71);
@@ -157,6 +154,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(txt_time);
+            groupBox2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.Location = new Point(227, 12);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(183, 71);
@@ -181,6 +179,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(textBox3);
+            groupBox3.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox3.Location = new Point(849, 12);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(183, 71);
@@ -205,6 +204,7 @@
             // groupBox4
             // 
             groupBox4.Controls.Add(txt_shop);
+            groupBox4.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox4.Location = new Point(1053, 12);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(183, 71);
@@ -230,6 +230,7 @@
             // 
             groupBox5.BackColor = Color.White;
             groupBox5.Controls.Add(textBox5);
+            groupBox5.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.Location = new Point(436, 12);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(183, 71);
@@ -255,6 +256,7 @@
             // groupBox6
             // 
             groupBox6.Controls.Add(textBox6);
+            groupBox6.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.Location = new Point(642, 12);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(183, 71);
@@ -295,10 +297,10 @@
             // txt_out_no
             // 
             txt_out_no.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_out_no.Location = new Point(142, 10);
+            txt_out_no.Location = new Point(139, 11);
             txt_out_no.Name = "txt_out_no";
             txt_out_no.PlaceholderText = "##080324-0002";
-            txt_out_no.Size = new Size(190, 30);
+            txt_out_no.Size = new Size(193, 30);
             txt_out_no.TabIndex = 306;
             // 
             // label7
@@ -321,132 +323,45 @@
             label6.TabIndex = 315;
             label6.Text = "ရွှေချိန်";
             // 
-            // txt_k
-            // 
-            txt_k.BackColor = Color.FromArgb(173, 199, 217);
-            txt_k.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_k.Location = new Point(143, 321);
-            txt_k.Multiline = true;
-            txt_k.Name = "txt_k";
-            txt_k.ReadOnly = true;
-            txt_k.Size = new Size(59, 30);
-            txt_k.TabIndex = 317;
-            txt_k.TabStop = false;
-            txt_k.TextAlign = HorizontalAlignment.Center;
-            // 
             // txt_WK
             // 
-            txt_WK.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_WK.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_WK.Location = new Point(143, 369);
             txt_WK.Name = "txt_WK";
-            txt_WK.Size = new Size(59, 30);
+            txt_WK.Size = new Size(59, 35);
             txt_WK.TabIndex = 311;
+            txt_WK.Text = "0";
             txt_WK.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_WP
             // 
-            txt_WP.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WP.Location = new Point(209, 369);
+            txt_WP.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_WP.Location = new Point(208, 369);
             txt_WP.Name = "txt_WP";
-            txt_WP.Size = new Size(59, 30);
+            txt_WP.Size = new Size(59, 35);
             txt_WP.TabIndex = 312;
+            txt_WP.Text = "0";
             txt_WP.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_WY
             // 
-            txt_WY.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WY.Location = new Point(275, 369);
+            txt_WY.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_WY.Location = new Point(271, 369);
             txt_WY.Name = "txt_WY";
-            txt_WY.Size = new Size(59, 30);
+            txt_WY.Size = new Size(59, 35);
             txt_WY.TabIndex = 313;
+            txt_WY.Text = "0";
             txt_WY.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txt_p
-            // 
-            txt_p.BackColor = Color.FromArgb(173, 199, 217);
-            txt_p.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_p.Location = new Point(209, 321);
-            txt_p.Multiline = true;
-            txt_p.Name = "txt_p";
-            txt_p.ReadOnly = true;
-            txt_p.Size = new Size(59, 30);
-            txt_p.TabIndex = 318;
-            txt_p.TabStop = false;
-            txt_p.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_WC
             // 
-            txt_WC.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_WC.Location = new Point(340, 369);
+            txt_WC.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_WC.Location = new Point(333, 369);
             txt_WC.Name = "txt_WC";
-            txt_WC.Size = new Size(59, 30);
+            txt_WC.Size = new Size(59, 35);
             txt_WC.TabIndex = 314;
+            txt_WC.Text = "0";
             txt_WC.TextAlign = HorizontalAlignment.Center;
-            // 
-            // total_K
-            // 
-            total_K.BackColor = Color.FromArgb(173, 199, 217);
-            total_K.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_K.Location = new Point(143, 419);
-            total_K.Multiline = true;
-            total_K.Name = "total_K";
-            total_K.ReadOnly = true;
-            total_K.Size = new Size(59, 30);
-            total_K.TabIndex = 321;
-            total_K.TabStop = false;
-            total_K.TextAlign = HorizontalAlignment.Center;
-            // 
-            // total_P
-            // 
-            total_P.BackColor = Color.FromArgb(173, 199, 217);
-            total_P.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_P.Location = new Point(209, 419);
-            total_P.Multiline = true;
-            total_P.Name = "total_P";
-            total_P.ReadOnly = true;
-            total_P.Size = new Size(59, 30);
-            total_P.TabIndex = 322;
-            total_P.TabStop = false;
-            total_P.TextAlign = HorizontalAlignment.Center;
-            // 
-            // total_Y
-            // 
-            total_Y.BackColor = Color.FromArgb(173, 199, 217);
-            total_Y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_Y.Location = new Point(275, 419);
-            total_Y.Multiline = true;
-            total_Y.Name = "total_Y";
-            total_Y.ReadOnly = true;
-            total_Y.Size = new Size(59, 30);
-            total_Y.TabIndex = 323;
-            total_Y.TabStop = false;
-            total_Y.TextAlign = HorizontalAlignment.Center;
-            // 
-            // total_S
-            // 
-            total_S.BackColor = Color.FromArgb(173, 199, 217);
-            total_S.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            total_S.Location = new Point(340, 420);
-            total_S.Multiline = true;
-            total_S.Name = "total_S";
-            total_S.ReadOnly = true;
-            total_S.Size = new Size(59, 30);
-            total_S.TabIndex = 324;
-            total_S.TabStop = false;
-            total_S.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txt_y
-            // 
-            txt_y.BackColor = Color.FromArgb(173, 199, 217);
-            txt_y.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_y.Location = new Point(274, 321);
-            txt_y.Multiline = true;
-            txt_y.Name = "txt_y";
-            txt_y.ReadOnly = true;
-            txt_y.Size = new Size(59, 30);
-            txt_y.TabIndex = 319;
-            txt_y.TabStop = false;
-            txt_y.TextAlign = HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -458,19 +373,6 @@
             label13.Size = new Size(34, 22);
             label13.TabIndex = 326;
             label13.Text = "ကျပ်";
-            // 
-            // txt_s
-            // 
-            txt_s.BackColor = Color.FromArgb(173, 199, 217);
-            txt_s.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_s.Location = new Point(338, 321);
-            txt_s.Multiline = true;
-            txt_s.Name = "txt_s";
-            txt_s.ReadOnly = true;
-            txt_s.Size = new Size(59, 30);
-            txt_s.TabIndex = 320;
-            txt_s.TabStop = false;
-            txt_s.TextAlign = HorizontalAlignment.Center;
             // 
             // label29
             // 
@@ -499,7 +401,7 @@
             label31.AutoSize = true;
             label31.BackColor = Color.Transparent;
             label31.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(353, 291);
+            label31.Location = new Point(354, 289);
             label31.Name = "label31";
             label31.Size = new Size(32, 22);
             label31.TabIndex = 329;
@@ -534,18 +436,6 @@
             label17.Size = new Size(46, 22);
             label17.TabIndex = 338;
             label17.Text = "လက်ခ";
-            // 
-            // txt_totalamt
-            // 
-            txt_totalamt.BackColor = Color.FromArgb(173, 199, 217);
-            txt_totalamt.Enabled = false;
-            txt_totalamt.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_totalamt.Location = new Point(143, 605);
-            txt_totalamt.Multiline = true;
-            txt_totalamt.Name = "txt_totalamt";
-            txt_totalamt.Size = new Size(191, 30);
-            txt_totalamt.TabIndex = 337;
-            txt_totalamt.TabStop = false;
             // 
             // txt_rep
             // 
@@ -625,8 +515,27 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoScroll = true;
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(label45);
+            panel1.Controls.Add(label46);
+            panel1.Controls.Add(label44);
+            panel1.Controls.Add(label43);
+            panel1.Controls.Add(label42);
+            panel1.Controls.Add(label38);
+            panel1.Controls.Add(label39);
+            panel1.Controls.Add(label40);
+            panel1.Controls.Add(label41);
+            panel1.Controls.Add(label37);
+            panel1.Controls.Add(label36);
+            panel1.Controls.Add(label35);
+            panel1.Controls.Add(label34);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label14);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(kryptonTextBox14);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(kryptonButton1);
             panel1.Controls.Add(label33);
-            panel1.Controls.Add(textBox15);
             panel1.Controls.Add(label32);
             panel1.Controls.Add(label28);
             panel1.Controls.Add(textBox14);
@@ -647,22 +556,15 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(lbl_gm);
             panel1.Controls.Add(label20);
-            panel1.Controls.Add(iconButton3);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(lbl_totalamt);
-            panel1.Controls.Add(textBox9);
-            panel1.Controls.Add(panel3);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label15);
-            panel1.Controls.Add(textBox8);
-            panel1.Controls.Add(panel2);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(textBox4);
             panel1.Controls.Add(label31);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label30);
@@ -670,51 +572,268 @@
             panel1.Controls.Add(label12);
             panel1.Controls.Add(txt_out_no);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(txt_s);
             panel1.Controls.Add(iconButton2);
             panel1.Controls.Add(label13);
-            panel1.Controls.Add(txt_y);
-            panel1.Controls.Add(total_S);
             panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(label19);
-            panel1.Controls.Add(total_Y);
             panel1.Controls.Add(label18);
-            panel1.Controls.Add(total_P);
             panel1.Controls.Add(label17);
-            panel1.Controls.Add(total_K);
-            panel1.Controls.Add(txt_totalamt);
             panel1.Controls.Add(txt_WC);
             panel1.Controls.Add(txt_rep);
-            panel1.Controls.Add(txt_p);
             panel1.Controls.Add(txt_mcost);
             panel1.Controls.Add(txt_WY);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(txt_WP);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(txt_WK);
-            panel1.Controls.Add(txt_k);
-            panel1.Location = new Point(12, 89);
+            panel1.Location = new Point(13, 89);
             panel1.Name = "panel1";
             panel1.Size = new Size(1414, 879);
             panel1.TabIndex = 348;
             // 
-            // textBox15
+            // label45
             // 
-            textBox15.BackColor = Color.FromArgb(173, 199, 217);
-            textBox15.Enabled = false;
-            textBox15.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox15.Location = new Point(143, 155);
-            textBox15.Multiline = true;
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(191, 30);
-            textBox15.TabIndex = 375;
-            textBox15.TabStop = false;
+            label45.BorderStyle = BorderStyle.Fixed3D;
+            label45.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label45.ForeColor = SystemColors.ControlDark;
+            label45.Location = new Point(404, 106);
+            label45.Name = "label45";
+            label45.Size = new Size(193, 34);
+            label45.TabIndex = 409;
+            label45.Text = "23.5";
+            label45.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label46
+            // 
+            label46.BorderStyle = BorderStyle.Fixed3D;
+            label46.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label46.ForeColor = SystemColors.ControlDark;
+            label46.Location = new Point(404, 55);
+            label46.Name = "label46";
+            label46.Size = new Size(193, 34);
+            label46.TabIndex = 408;
+            label46.Text = "1";
+            label46.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label44
+            // 
+            label44.BorderStyle = BorderStyle.Fixed3D;
+            label44.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label44.ForeColor = SystemColors.ControlDark;
+            label44.Location = new Point(139, 150);
+            label44.Name = "label44";
+            label44.Size = new Size(193, 34);
+            label44.TabIndex = 407;
+            label44.Text = "၁၅ပဲရည်";
+            label44.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label43
+            // 
+            label43.BorderStyle = BorderStyle.Fixed3D;
+            label43.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label43.ForeColor = SystemColors.ControlDark;
+            label43.ImageAlign = ContentAlignment.MiddleLeft;
+            label43.Location = new Point(139, 106);
+            label43.Name = "label43";
+            label43.Size = new Size(193, 34);
+            label43.TabIndex = 406;
+            label43.Text = "မောင်းကွင်းပြောင်";
+            label43.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label42
+            // 
+            label42.BorderStyle = BorderStyle.Fixed3D;
+            label42.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label42.ForeColor = SystemColors.ControlDark;
+            label42.Location = new Point(140, 55);
+            label42.Name = "label42";
+            label42.Size = new Size(193, 34);
+            label42.TabIndex = 405;
+            label42.Text = "ရွှေလက်စွပ်";
+            label42.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label38
+            // 
+            label38.BorderStyle = BorderStyle.FixedSingle;
+            label38.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label38.Location = new Point(334, 415);
+            label38.Name = "label38";
+            label38.Size = new Size(57, 39);
+            label38.TabIndex = 404;
+            label38.Text = "0";
+            label38.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            label39.BorderStyle = BorderStyle.FixedSingle;
+            label39.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label39.Location = new Point(271, 415);
+            label39.Name = "label39";
+            label39.Size = new Size(57, 39);
+            label39.TabIndex = 403;
+            label39.Text = "0";
+            label39.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            label40.BorderStyle = BorderStyle.FixedSingle;
+            label40.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label40.Location = new Point(208, 415);
+            label40.Name = "label40";
+            label40.Size = new Size(57, 39);
+            label40.TabIndex = 402;
+            label40.Text = "0";
+            label40.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label41
+            // 
+            label41.BorderStyle = BorderStyle.FixedSingle;
+            label41.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label41.Location = new Point(145, 415);
+            label41.Name = "label41";
+            label41.Size = new Size(57, 39);
+            label41.TabIndex = 401;
+            label41.Text = "0";
+            label41.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            label37.BorderStyle = BorderStyle.FixedSingle;
+            label37.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label37.Location = new Point(334, 321);
+            label37.Name = "label37";
+            label37.Size = new Size(57, 39);
+            label37.TabIndex = 400;
+            label37.Text = "0";
+            label37.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            label36.BorderStyle = BorderStyle.FixedSingle;
+            label36.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label36.Location = new Point(271, 321);
+            label36.Name = "label36";
+            label36.Size = new Size(57, 39);
+            label36.TabIndex = 399;
+            label36.Text = "0";
+            label36.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            label35.BorderStyle = BorderStyle.FixedSingle;
+            label35.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label35.Location = new Point(208, 321);
+            label35.Name = "label35";
+            label35.Size = new Size(57, 39);
+            label35.TabIndex = 398;
+            label35.Text = "0";
+            label35.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            label34.BorderStyle = BorderStyle.FixedSingle;
+            label34.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label34.Location = new Point(145, 321);
+            label34.Name = "label34";
+            label34.Size = new Size(57, 39);
+            label34.TabIndex = 397;
+            label34.Text = "0";
+            label34.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.Location = new Point(295, 249);
+            button2.Name = "button2";
+            button2.Size = new Size(29, 24);
+            button2.TabIndex = 396;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            label14.BorderStyle = BorderStyle.Fixed3D;
+            label14.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(139, 245);
+            label14.Name = "label14";
+            label14.Size = new Size(193, 34);
+            label14.TabIndex = 395;
+            label14.Text = "23.5";
+            label14.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.Location = new Point(296, 206);
+            button1.Name = "button1";
+            button1.Size = new Size(29, 24);
+            button1.TabIndex = 394;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(499, 202);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(27, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 352;
+            pictureBox1.TabStop = false;
+            // 
+            // kryptonTextBox14
+            // 
+            kryptonTextBox14.Enabled = false;
+            kryptonTextBox14.Location = new Point(143, 608);
+            kryptonTextBox14.Multiline = true;
+            kryptonTextBox14.Name = "kryptonTextBox14";
+            kryptonTextBox14.PaletteMode = Krypton.Toolkit.PaletteMode.Microsoft365Blue;
+            kryptonTextBox14.Size = new Size(190, 39);
+            kryptonTextBox14.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonTextBox14.StateNormal.Border.Rounding = 1F;
+            kryptonTextBox14.TabIndex = 393;
+            // 
+            // label2
+            // 
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlDark;
+            label2.Location = new Point(140, 202);
+            label2.Name = "label2";
+            label2.Size = new Size(193, 34);
+            label2.TabIndex = 0;
+            label2.Text = "950000";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // kryptonButton1
+            // 
+            kryptonButton1.ButtonStyle = Krypton.Toolkit.ButtonStyle.Alternate;
+            kryptonButton1.CornerRoundingRadius = 5F;
+            kryptonButton1.Location = new Point(168, 671);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlueLightMode;
+            kryptonButton1.Size = new Size(142, 41);
+            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateCommon.Border.Rounding = 5F;
+            kryptonButton1.TabIndex = 378;
+            kryptonButton1.Values.ImageTransparentColor = Color.White;
+            kryptonButton1.Values.Text = "Add";
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label33.Location = new Point(752, 722);
+            label33.Name = "label33";
+            label33.Size = new Size(345, 22);
+            label33.TabIndex = 377;
+            label33.Text = "ဝယ်ယူအားပေးသော ဝယ်သူများ အား အထူးကျေးဇူးတင်ရှိပါသည်။";
             // 
             // label32
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(10, 163);
+            label32.Location = new Point(10, 162);
             label32.Name = "label32";
             label32.Size = new Size(97, 22);
             label32.TabIndex = 376;
@@ -915,20 +1034,6 @@
             label20.TabIndex = 287;
             label20.Text = "TOTAL GM";
             // 
-            // iconButton3
-            // 
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Add;
-            iconButton3.IconColor = Color.Black;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 25;
-            iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(175, 652);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(128, 30);
-            iconButton3.TabIndex = 360;
-            iconButton3.Text = "Add";
-            iconButton3.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -948,49 +1053,6 @@
             lbl_totalamt.TabIndex = 1;
             lbl_totalamt.Text = "0";
             lbl_totalamt.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // textBox9
-            // 
-            textBox9.BackColor = Color.FromArgb(173, 199, 217);
-            textBox9.Enabled = false;
-            textBox9.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox9.Location = new Point(392, 110);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(183, 30);
-            textBox9.TabIndex = 357;
-            textBox9.TabStop = false;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.White;
-            panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(label14);
-            panel3.ForeColor = SystemColors.ControlDark;
-            panel3.Location = new Point(143, 248);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(189, 32);
-            panel3.TabIndex = 353;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(154, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(27, 24);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 352;
-            pictureBox2.TabStop = false;
-            // 
-            // label14
-            // 
-            label14.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(3, 3);
-            label14.Name = "label14";
-            label14.Size = new Size(128, 27);
-            label14.TabIndex = 0;
-            label14.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label11
             // 
@@ -1012,50 +1074,6 @@
             label15.TabIndex = 352;
             label15.Text = "အရောင်း  ဂရမ်ချိန်";
             // 
-            // textBox8
-            // 
-            textBox8.BackColor = Color.FromArgb(173, 199, 217);
-            textBox8.Enabled = false;
-            textBox8.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.Location = new Point(392, 59);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(183, 30);
-            textBox8.TabIndex = 355;
-            textBox8.TabStop = false;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(label2);
-            panel2.ForeColor = SystemColors.ControlDark;
-            panel2.Location = new Point(143, 201);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(189, 32);
-            panel2.TabIndex = 351;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(154, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(27, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 352;
-            pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Pyidaungsu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(3, 3);
-            label2.Name = "label2";
-            label2.Size = new Size(128, 27);
-            label2.TabIndex = 0;
-            label2.Text = "950000";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -1070,45 +1088,21 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(10, 210);
+            label3.Location = new Point(10, 207);
             label3.Name = "label3";
             label3.Size = new Size(98, 22);
             label3.TabIndex = 349;
             label3.Text = "အရောင်း ရွှေစျေး";
             // 
-            // textBox7
-            // 
-            textBox7.BackColor = Color.FromArgb(173, 199, 217);
-            textBox7.Enabled = false;
-            textBox7.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(142, 110);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(192, 30);
-            textBox7.TabIndex = 353;
-            textBox7.TabStop = false;
-            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(10, 113);
+            label9.Location = new Point(10, 111);
             label9.Name = "label9";
             label9.Size = new Size(76, 22);
             label9.TabIndex = 354;
             label9.Text = "ပစ္စည်းအမည်";
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = Color.FromArgb(173, 199, 217);
-            textBox4.Enabled = false;
-            textBox4.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(142, 59);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(192, 30);
-            textBox4.TabIndex = 351;
-            textBox4.TabStop = false;
             // 
             // label8
             // 
@@ -1119,16 +1113,6 @@
             label8.Size = new Size(43, 22);
             label8.TabIndex = 352;
             label8.Text = "ပစ္စည်း";
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label33.Location = new Point(752, 722);
-            label33.Name = "label33";
-            label33.Size = new Size(345, 22);
-            label33.TabIndex = 377;
-            label33.Text = "ဝယ်ယူအားပေးသော ဝယ်သူများ အား အထူးကျေးဇူးတင်ရှိပါသည်။";
             // 
             // g_sale
             // 
@@ -1163,11 +1147,8 @@
             groupBox6.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -1189,26 +1170,17 @@
         private TextBox txt_out_no;
         private Label label7;
         private Label label6;
-        private TextBox txt_k;
         private TextBox txt_WK;
         private TextBox txt_WP;
         private TextBox txt_WY;
-        private TextBox txt_p;
         private TextBox txt_WC;
-        private TextBox total_K;
-        private TextBox total_P;
-        private TextBox total_Y;
-        private TextBox total_S;
-        private TextBox txt_y;
         private Label label13;
-        private TextBox txt_s;
         private Label label29;
         private Label label30;
         private Label label31;
         private Label label19;
         private Label label18;
         private Label label17;
-        private TextBox txt_totalamt;
         private TextBox txt_rep;
         private TextBox txt_mcost;
         private FontAwesome.Sharp.IconButton iconButton1;
@@ -1219,22 +1191,13 @@
         private Panel panel1;
         private Label label3;
         private Label label8;
-        private TextBox textBox4;
-        private TextBox textBox7;
         private Label label9;
-        private TextBox textBox8;
         private Label label10;
-        private TextBox textBox9;
         private Label label11;
-        private Panel panel2;
         private Label label2;
         private PictureBox pictureBox1;
-        private Panel panel3;
-        private PictureBox pictureBox2;
-        private Label label14;
         private Label label15;
         private DataGridView dataGridView1;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private Label label4;
         private Label label16;
         private Label lbl_gm;
@@ -1255,8 +1218,25 @@
         private Label label24;
         private Label label28;
         private TextBox textBox14;
-        private TextBox textBox15;
         private Label label32;
         private Label label33;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox14;
+        private Button button1;
+        private Label label34;
+        private Button button2;
+        private Label label14;
+        private Label label45;
+        private Label label46;
+        private Label label44;
+        private Label label43;
+        private Label label42;
+        private Label label38;
+        private Label label39;
+        private Label label40;
+        private Label label41;
+        private Label label37;
+        private Label label36;
+        private Label label35;
     }
 }

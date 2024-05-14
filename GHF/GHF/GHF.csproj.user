@@ -37,6 +37,9 @@
     <Compile Update="preview.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="test krypton.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="wallpaper.cs">
       <SubType>Form</SubType>
     </Compile>
