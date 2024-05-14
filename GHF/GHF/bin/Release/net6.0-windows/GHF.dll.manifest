@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="GHF.exe" version="1.0.0.58" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="GHF.exe" version="1.0.0.59" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -116,22 +116,22 @@
       <dsig:DigestValue>aGOwIwQ2KrRMLkk+9WaFQC7fYk65ZUFJLedIDPMgf1g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.deps.json" size="84195">
+  <file name="GHF.deps.json" size="85380">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jC5VveTSv1gBGXlTexS2XVW0kmDM9t/v1Z0xEPuIzJk=</dsig:DigestValue>
+      <dsig:DigestValue>Fuxo+IBtDMtsPXTmbdNdkcDsRZ73CseqZeAO7+al3uo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.dll" size="558080">
+  <file name="GHF.dll" size="579584">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ur0I5DN0Okypo49uAdUzx2WJa6bheQiiDAahAtbkDwI=</dsig:DigestValue>
+      <dsig:DigestValue>GLXSddmpVD47WlEU4TgjHOMd2ruZhsIpJuHhyc90n7A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.dll.config" size="289">
@@ -149,7 +149,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oDmHq6tXBnsEZ6DzmOroywBCX4Jrja9IUHcEFynETRM=</dsig:DigestValue>
+      <dsig:DigestValue>KJJNwl3f8ASbQGxM4rKAfW5qkKvUMHfYkPopo8rUZ0A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.runtimeconfig.json" size="372">
@@ -186,6 +186,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>P9C2J0Ex2f6Ssp5Lp0Ub7hcCjPmke679myruAh7YZUY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Krypton.Toolkit.dll" size="5838336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6reyhwVn63d3z0vcxcIfuV6BzfFt7G7B+t+Gba4TH7w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Microsoft.Bcl.AsyncInterfaces.dll" size="14720">
@@ -636,6 +645,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>d8d847H8fQmHZa8x8ZGVUi4sZ19jJItpn2REHSmfPq0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="System.Windows.Forms.Ribbon.dll" size="356864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bY/FCZwktNCc9q444wzA1P2arlxIZFrRJZBG48s/Dxo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="System.Xml.XPath.XmlDocument.dll" size="118680">

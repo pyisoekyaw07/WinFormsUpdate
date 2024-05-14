@@ -8,6 +8,7 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Azure.Identity.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\EPPlusFree.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\FontAwesome.Sharp.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Krypton.Toolkit.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Bcl.AsyncInterfaces.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Data.SqlClient.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Extensions.Configuration.dll
@@ -32,6 +33,7 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Web.WebView2.Core.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Web.WebView2.WinForms.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Web.WebView2.Wpf.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Windows.Forms.Ribbon.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Configuration.ConfigurationManager.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Data.SqlClient.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Diagnostics.DiagnosticSource.dll
