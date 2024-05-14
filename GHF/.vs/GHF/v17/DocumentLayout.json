@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\g_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|e:\\desktop folder\\my software\\winformsupdate\\ghf\\ghf\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\gform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\gform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|e:\\desktop folder\\my software\\winformsupdate\\ghf\\ghf\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\test krypton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\g_otherout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\g_otherout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\ghf\\gform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|solutionrelative:ghf\\gform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DA2F609-6642-43FA-9B13-5F98EF303A4C}|GHF\\GHF.csproj|e:\\desktop folder\\my software\\winformsupdate\\ghf\\ghf\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Home.cs",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\Home.cs",
               "RelativeDocumentMoniker": "GHF\\Home.cs",
@@ -75,25 +75,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Home.cs [Design]",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\Home.cs",
               "RelativeDocumentMoniker": "GHF\\Home.cs",
               "ToolTip": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\Home.cs [Design]",
               "RelativeToolTip": "GHF\\Home.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:21:47.144Z"
+              "WhenOpened": "2024-05-08T16:21:47.144Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "login.cs [Design]",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\login.cs",
               "RelativeDocumentMoniker": "GHF\\login.cs",
               "ToolTip": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\login.cs [Design]",
               "RelativeToolTip": "GHF\\login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T22:46:07.509Z"
+              "WhenOpened": "2024-05-10T22:46:07.509Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -109,18 +111,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "gform.cs [Design]",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\gform.cs",
               "RelativeDocumentMoniker": "GHF\\gform.cs",
               "ToolTip": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\gform.cs [Design]",
               "RelativeToolTip": "GHF\\gform.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:21:45.233Z"
+              "WhenOpened": "2024-05-08T16:21:45.233Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "test krypton.cs [Design]",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\test krypton.cs",
               "RelativeDocumentMoniker": "GHF\\test krypton.cs",
@@ -131,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "g_sale.cs",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\g_sale.cs",
               "RelativeDocumentMoniker": "GHF\\g_sale.cs",
@@ -169,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "g_otherout.cs [Design]",
               "DocumentMoniker": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\g_otherout.cs",
               "RelativeDocumentMoniker": "GHF\\g_otherout.cs",
@@ -188,7 +191,8 @@
               "RelativeToolTip": "GHF\\login.Designer.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAgwPEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:34:51.186Z"
+              "WhenOpened": "2024-05-08T16:34:51.186Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

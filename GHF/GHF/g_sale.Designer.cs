@@ -1103,8 +1103,7 @@
             // 
             // g_sale
             // 
-            AutoScaleDimensions = new SizeF(6F, 21F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = SystemColors.Window;
             ClientSize = new Size(1428, 980);
             Controls.Add(panel1);
