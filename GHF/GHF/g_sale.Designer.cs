@@ -82,7 +82,6 @@
             button2 = new Button();
             label14 = new Label();
             button1 = new Button();
-            pictureBox1 = new PictureBox();
             kryptonTextBox14 = new Krypton.Toolkit.KryptonTextBox();
             label2 = new Label();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
@@ -122,7 +121,6 @@
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -531,7 +529,6 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(kryptonTextBox14);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(kryptonButton1);
@@ -770,16 +767,6 @@
             button1.Size = new Size(29, 24);
             button1.TabIndex = 394;
             button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(499, 202);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(27, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 352;
-            pictureBox1.TabStop = false;
             // 
             // kryptonTextBox14
             // 
@@ -1147,7 +1134,6 @@
             groupBox6.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -1195,7 +1181,6 @@
         private Label label10;
         private Label label11;
         private Label label2;
-        private PictureBox pictureBox1;
         private Label label15;
         private DataGridView dataGridView1;
         private Label label4;
