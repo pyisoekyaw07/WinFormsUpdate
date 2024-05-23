@@ -1447,7 +1447,8 @@
             // 
             // gform
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            AutoScaleDimensions = new SizeF(6F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;

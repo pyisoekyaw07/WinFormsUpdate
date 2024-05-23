@@ -1051,6 +1051,7 @@ namespace GHF
 
         public SqlConnection Con { get => Con1; set => Con1 = value; }
         public SqlConnection Con1 { get => con; set => con = value; }
+        public string ReceivedText { get; private set; }
 
         private void check_language_TextChanged_1(object sender, EventArgs e)
         {
@@ -1362,20 +1363,37 @@ namespace GHF
         public static string registerform = "";
         private void btn_review_Click(object sender, EventArgs e)
         {
-            /*registerform = textBox2.Text;
-            preview frm = new preview();
-            frm.ShowDialog();*/
-
+            
             string texttosent = textBox2.Text;
 
-            preview frm = new preview
+            Form formbackground = new Form();
+            try
             {
+                using (preview frm = new preview())
+                {
+                    formbackground.StartPosition = FormStartPosition.Manual;
+                    formbackground.FormBorderStyle = FormBorderStyle.None;
+                    formbackground.Opacity = .70d;
+                    formbackground.BackColor = Color.Black;
+                    formbackground.WindowState = FormWindowState.Maximized;
+                    formbackground.TopMost = true;
+                    formbackground.Location = this.Location;
+                    formbackground.ShowInTaskbar = false;
+                    formbackground.Show();
 
-                ReceivedText = texttosent
-            };
+                    frm.Owner = formbackground;
+                    ReceivedText = texttosent;
+                    frm.ShowDialog();
 
-            frm.ShowDialog();
+                    formbackground.Dispose();
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { formbackground.Dispose(); }
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

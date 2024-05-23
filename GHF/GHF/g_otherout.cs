@@ -513,24 +513,40 @@ namespace GHF
 
         public static string formvalue = "";
 
+        public string ReceivedText { get; private set; }
 
         private void btn_review_Click(object sender, EventArgs e)
         {
-            /* formvalue = txt_form.Text;
-             preview frm = new preview();
-             frm.ShowDialog();
-
-             preview.otherout = txt_form.Text;*/
-
             string texttosent = txt_form.Text;
-
-            preview frm = new preview
+            Form formbackground = new Form();
+            try
             {
+                using (preview frm = new preview())
+                {
+                    formbackground.StartPosition = FormStartPosition.Manual;
+                    formbackground.FormBorderStyle = FormBorderStyle.None;
+                    formbackground.Opacity = .70d;
+                    formbackground.BackColor = Color.Black;
+                    formbackground.WindowState = FormWindowState.Maximized;
+                    formbackground.TopMost = true;
+                    formbackground.Location = this.Location;
+                    formbackground.ShowInTaskbar = false;
+                    formbackground.Show();
 
-                ReceivedText = texttosent
-            };
+                    frm.Owner = formbackground;
+                    ReceivedText = texttosent;
+                    frm.ShowDialog();
 
-            frm.ShowDialog();
+                    formbackground.Dispose();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { formbackground.Dispose(); }
+
         }
 
         private void store_data_CellContentClick(object sender, DataGridViewCellEventArgs e)

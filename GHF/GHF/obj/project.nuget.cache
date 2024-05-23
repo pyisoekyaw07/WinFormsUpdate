@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VVXKLl7ff3g/b/l8xaLbvAXqEtyiYFt03I0pjN89rM2hf0ViC8IaIU5kOwXF7T6eT6LWUl2l0oBVvs8aklveTw==",
+  "dgSpecHash": "VyNredyAObwXdyuvCdnK7nNBmKiYIFBHTElra2nMO7utlHt2AOZZepWIR1SO9O+ds8XtUqWS0ue/CmLrsxnNgg==",
   "success": true,
   "projectFilePath": "E:\\Desktop Folder\\My Software\\WinFormsUpdate\\GHF\\GHF\\GHF.csproj",
   "expectedPackageFiles": [
@@ -33,11 +33,11 @@
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
+    "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.report.viewer\\11.0.0\\microsoft.report.viewer.11.0.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\ribbonwinforms\\5.0.1.1\\ribbonwinforms.5.0.1.1.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Shwe Nan Taw\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
@@ -129,8 +129,8 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'RibbonWinForms 5.0.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "RibbonWinForms",
+      "message": "Package 'Microsoft.Report.Viewer 11.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Report.Viewer",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]

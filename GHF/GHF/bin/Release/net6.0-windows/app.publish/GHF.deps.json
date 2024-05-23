@@ -13,7 +13,7 @@
           "Krypton.Toolkit": "80.24.3.64",
           "Microsoft.Data.SqlClient": "5.2.0",
           "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
-          "RibbonWinForms": "5.0.1.1",
+          "Microsoft.Report.Viewer": "11.0.0",
           "System.Data.SqlClient": "4.8.6"
         },
         "runtime": {
@@ -404,6 +404,22 @@
           }
         }
       },
+      "Microsoft.Report.Viewer/11.0.0": {
+        "runtime": {
+          "lib/net/Microsoft.ReportViewer.Common.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2802.16"
+          },
+          "lib/net/Microsoft.ReportViewer.ProcessingObjectModel.DLL": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2802.16"
+          },
+          "lib/net/Microsoft.ReportViewer.WebForms.DLL": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2802.16"
+          }
+        }
+      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -452,14 +468,6 @@
         }
       },
       "Microsoft.Win32.SystemEvents/6.0.0": {},
-      "RibbonWinForms/5.0.1.1": {
-        "runtime": {
-          "lib/net461/System.Windows.Forms.Ribbon.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.1.0"
-          }
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -1341,6 +1349,13 @@
       "path": "microsoft.office.interop.excel/15.0.4795.1001",
       "hashPath": "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
     },
+    "Microsoft.Report.Viewer/11.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QMPHoeVcTiqO55tUyG6z97nkesI0k8rNr1brbyECJezrK8XyjICzuRR3QtsZFI/7kalm4Ko/JCvK0lm+gztTVQ==",
+      "path": "microsoft.report.viewer/11.0.0",
+      "hashPath": "microsoft.report.viewer.11.0.0.nupkg.sha512"
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1368,13 +1383,6 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
-    },
-    "RibbonWinForms/5.0.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3JeS/WehB/5HFsG5xIhk+VoenWnSXEGFnsq5t14usuaj7eqfl3/hEnlAgdmavifJSS2qeepXMw2Zd716USjrUA==",
-      "path": "ribbonwinforms/5.0.1.1",
-      "hashPath": "ribbonwinforms.5.0.1.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",

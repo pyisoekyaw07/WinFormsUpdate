@@ -29,11 +29,13 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.IdentityModel.Tokens.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Office.Interop.Excel.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.ReportViewer.Common.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.ReportViewer.WebForms.DLL
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.SqlServer.Server.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Web.WebView2.Core.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Web.WebView2.WinForms.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\Microsoft.Web.WebView2.Wpf.dll
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Windows.Forms.Ribbon.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Configuration.ConfigurationManager.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Data.SqlClient.dll
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Release\net6.0-windows\app.publish\System.Diagnostics.DiagnosticSource.dll

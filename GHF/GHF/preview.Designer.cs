@@ -177,6 +177,7 @@
             MinimizeBox = false;
             Name = "preview";
             StartPosition = FormStartPosition.CenterScreen;
+            TopMost = true;
             TransparencyKey = Color.Black;
             Load += preview_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

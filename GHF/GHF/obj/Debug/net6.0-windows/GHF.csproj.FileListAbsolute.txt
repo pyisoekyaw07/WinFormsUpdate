@@ -263,5 +263,9 @@ E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\ru
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.g_sale.resources
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.csproj.Up2Date
 E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\System.Windows.Forms.Ribbon.dll
-E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.test_krypton.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.BB_Form.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.payment_form.resources
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.ReportViewer.Common.dll
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\bin\Debug\net6.0-windows\Microsoft.ReportViewer.WebForms.DLL
+E:\Desktop Folder\My Software\WinFormsUpdate\GHF\GHF\obj\Debug\net6.0-windows\GHF.reportvidew.resources

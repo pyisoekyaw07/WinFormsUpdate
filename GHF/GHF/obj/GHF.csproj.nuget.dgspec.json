@@ -70,9 +70,9 @@
               "target": "Package",
               "version": "[15.0.4795.1001, )"
             },
-            "RibbonWinForms": {
+            "Microsoft.Report.Viewer": {
               "target": "Package",
-              "version": "[5.0.1.1, )"
+              "version": "[11.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
