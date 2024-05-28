@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="GHF.exe" version="1.0.0.61" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="GHF.exe" version="1.0.0.62" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Paomedia-Small-N-Flat-Calendar.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -125,13 +126,13 @@
       <dsig:DigestValue>rPh1uAEAqw7N1E/SH4WQZ7x1mlkmN+nj/wQGD8JE1J8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.dll" size="611328">
+  <file name="GHF.dll" size="782848">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7+0yuV7VXzLE/QgZOs5RXKKCr29OxUxfVfAuZ8nl3Bw=</dsig:DigestValue>
+      <dsig:DigestValue>cxoZkx/JLjq/6FtjHVoqNXsX7CRmkquWmk7km3dCSIc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.dll.config" size="289">
@@ -143,13 +144,13 @@
       <dsig:DigestValue>IzeX/Ni6MDDZ+YimjhoV1P2AuFWOFmZwTw4cAZAUArU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GHF.exe" size="149504">
+  <file name="GHF.exe" size="315904">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>M3w/dTM4tIsgtzG+Hn+ugRuIbdM7/2kEmswag79f9Ok=</dsig:DigestValue>
+      <dsig:DigestValue>pNa+VtgmOaum1wpNVGw7zxh8wL6tv8uvz4CiijaDQWE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GHF.runtimeconfig.json" size="372">
@@ -438,6 +439,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>4QQhM8jyo9aDQufnOFZgnUzrwsksMH1b4cX/7JyAq8M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Paomedia-Small-N-Flat-Calendar.ico" size="165621">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ev/XSGLCw2fWI9+pxCrX7fcLUTgzvJXl6zc4Rx/iVDQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="pt-BR\Microsoft.Data.SqlClient.resources.dll" size="258168">

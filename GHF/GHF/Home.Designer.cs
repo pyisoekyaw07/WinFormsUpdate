@@ -57,6 +57,7 @@
             goldToolStripMenuItem1 = new ToolStripMenuItem();
             registerToolStripMenuItem = new ToolStripMenuItem();
             otherOutToolStripMenuItem = new ToolStripMenuItem();
+            saleToolStripMenuItem = new ToolStripMenuItem();
             whiteGoldToolStripMenuItem1 = new ToolStripMenuItem();
             registerToolStripMenuItem1 = new ToolStripMenuItem();
             test1ToolStripMenuItem = new ToolStripMenuItem();
@@ -66,7 +67,6 @@
             reportToolStripMenuItem = new ToolStripMenuItem();
             closingStockToolStripMenuItem = new ToolStripMenuItem();
             mainpanel = new Panel();
-            saleToolStripMenuItem = new ToolStripMenuItem();
             panel2.SuspendLayout();
             pan_rep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ico_rep).BeginInit();
@@ -339,11 +339,11 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(141, 30);
+            label2.Location = new Point(76, 49);
             label2.Name = "label2";
-            label2.Size = new Size(30, 17);
+            label2.Size = new Size(59, 17);
             label2.TabIndex = 2;
-            label2.Text = "pos";
+            label2.Text = "Modern ";
             // 
             // label1
             // 
@@ -354,7 +354,7 @@
             label1.Name = "label1";
             label1.Size = new Size(92, 63);
             label1.TabIndex = 0;
-            label1.Text = "GHF";
+            label1.Text = "MJS";
             // 
             // pictureBox1
             // 
@@ -381,12 +381,12 @@
             // 
             menuStrip2.BackColor = Color.Transparent;
             menuStrip2.Dock = DockStyle.None;
-            menuStrip2.Font = new Font("Pyidaungsu", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            menuStrip2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip2.ImageScalingSize = new Size(20, 20);
             menuStrip2.Items.AddRange(new ToolStripItem[] { goldToolStripMenuItem1, whiteGoldToolStripMenuItem1, gemDiamondToolStripMenuItem, cashierToolStripMenuItem, reportToolStripMenuItem });
             menuStrip2.Location = new Point(8, 2);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(474, 30);
+            menuStrip2.Size = new Size(335, 24);
             menuStrip2.TabIndex = 1;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -394,7 +394,7 @@
             // 
             goldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem, otherOutToolStripMenuItem, saleToolStripMenuItem });
             goldToolStripMenuItem1.Name = "goldToolStripMenuItem1";
-            goldToolStripMenuItem1.Size = new Size(47, 26);
+            goldToolStripMenuItem1.Size = new Size(44, 20);
             goldToolStripMenuItem1.Text = "Gold";
             // 
             // registerToolStripMenuItem
@@ -402,66 +402,73 @@
             registerToolStripMenuItem.Image = (Image)resources.GetObject("registerToolStripMenuItem.Image");
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
             registerToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.R;
-            registerToolStripMenuItem.Size = new Size(184, 26);
+            registerToolStripMenuItem.Size = new Size(161, 26);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
             // otherOutToolStripMenuItem
             // 
             otherOutToolStripMenuItem.Name = "otherOutToolStripMenuItem";
-            otherOutToolStripMenuItem.Size = new Size(184, 26);
+            otherOutToolStripMenuItem.Size = new Size(161, 26);
             otherOutToolStripMenuItem.Text = "Other Out";
             otherOutToolStripMenuItem.Click += otherOutToolStripMenuItem_Click;
+            // 
+            // saleToolStripMenuItem
+            // 
+            saleToolStripMenuItem.Name = "saleToolStripMenuItem";
+            saleToolStripMenuItem.Size = new Size(161, 26);
+            saleToolStripMenuItem.Text = "Sale";
+            saleToolStripMenuItem.Click += saleToolStripMenuItem_Click;
             // 
             // whiteGoldToolStripMenuItem1
             // 
             whiteGoldToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem1 });
             whiteGoldToolStripMenuItem1.Name = "whiteGoldToolStripMenuItem1";
-            whiteGoldToolStripMenuItem1.Size = new Size(77, 26);
+            whiteGoldToolStripMenuItem1.Size = new Size(75, 20);
             whiteGoldToolStripMenuItem1.Text = "WhiteGold";
             // 
             // registerToolStripMenuItem1
             // 
             registerToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { test1ToolStripMenuItem, test2ToolStripMenuItem });
             registerToolStripMenuItem1.Name = "registerToolStripMenuItem1";
-            registerToolStripMenuItem1.Size = new Size(124, 26);
+            registerToolStripMenuItem1.Size = new Size(116, 22);
             registerToolStripMenuItem1.Text = "Register";
             // 
             // test1ToolStripMenuItem
             // 
             test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
-            test1ToolStripMenuItem.Size = new Size(112, 26);
+            test1ToolStripMenuItem.Size = new Size(103, 22);
             test1ToolStripMenuItem.Text = "Test 1";
             // 
             // test2ToolStripMenuItem
             // 
             test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
-            test2ToolStripMenuItem.Size = new Size(112, 26);
+            test2ToolStripMenuItem.Size = new Size(103, 22);
             test2ToolStripMenuItem.Text = "Test 2";
             // 
             // gemDiamondToolStripMenuItem
             // 
             gemDiamondToolStripMenuItem.Name = "gemDiamondToolStripMenuItem";
-            gemDiamondToolStripMenuItem.Size = new Size(101, 26);
+            gemDiamondToolStripMenuItem.Size = new Size(96, 20);
             gemDiamondToolStripMenuItem.Text = "Gem Diamond";
             // 
             // cashierToolStripMenuItem
             // 
             cashierToolStripMenuItem.Name = "cashierToolStripMenuItem";
-            cashierToolStripMenuItem.Size = new Size(62, 26);
+            cashierToolStripMenuItem.Size = new Size(58, 20);
             cashierToolStripMenuItem.Text = "Cashier";
             // 
             // reportToolStripMenuItem
             // 
             reportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { closingStockToolStripMenuItem });
             reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            reportToolStripMenuItem.Size = new Size(59, 26);
+            reportToolStripMenuItem.Size = new Size(54, 20);
             reportToolStripMenuItem.Text = "Report";
             // 
             // closingStockToolStripMenuItem
             // 
             closingStockToolStripMenuItem.Name = "closingStockToolStripMenuItem";
-            closingStockToolStripMenuItem.Size = new Size(153, 26);
+            closingStockToolStripMenuItem.Size = new Size(146, 22);
             closingStockToolStripMenuItem.Text = "Closing Stock";
             closingStockToolStripMenuItem.Click += closingStockToolStripMenuItem_Click;
             // 
@@ -475,13 +482,6 @@
             mainpanel.Name = "mainpanel";
             mainpanel.Size = new Size(1443, 624);
             mainpanel.TabIndex = 4;
-            // 
-            // saleToolStripMenuItem
-            // 
-            saleToolStripMenuItem.Name = "saleToolStripMenuItem";
-            saleToolStripMenuItem.Size = new Size(184, 26);
-            saleToolStripMenuItem.Text = "Sale";
-            saleToolStripMenuItem.Click += saleToolStripMenuItem_Click;
             // 
             // Form2
             // 

@@ -39,7 +39,7 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(25, 155);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(328, 328);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
